@@ -21,8 +21,8 @@ def main():
     file_parser = subparsers.add_parser("file", help="Extract features from a single JS file")
     file_parser.add_argument("-i", "--input", required=True, help="Path to JS PoC file")
     file_parser.add_argument("--format", choices=["dict", "string", "json"], default="string", help="Output format")
-    file_parser.add_argument("--flags", type=str, help="Optional flags as a string")
-    file_parser.add_argument("--static", type=str, help="1 is static only, 0 is dynamic only, omit for both")
+    file_parser.add_argument("--flags", type=str, default="", help="Optional flags as a string")
+    file_parser.add_argument("--static", type=str, default=0, help="1 is static only, 0 is dynamic only, omit for both")
     args = parser.parse_args()
 
     if args.command == "folder":
@@ -55,6 +55,7 @@ def main():
             dump = json.dumps(merged_feats, separators=(",", ":"))
             tmp_path = Path("/tmp/feature_dump.json")
             tmp_path.write_text(dump, encoding="utf-8")
+            print(dump)
 
         else:  # string format
             # Flatten to comma-separated format

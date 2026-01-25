@@ -128,7 +128,7 @@ def parse_v8_log(log_output: str) -> Dict[str, Union[int, float]]:
 # ----------------------------------------------------------------------
 # (2)  >>>  single-file runner (factor-out of previous `main`)  <<<
 # ----------------------------------------------------------------------
-def run_single_poc(js_file: str, flags: List[str], v8_path: str = "/home/kgangul/.jsvu/bin/v8-14.1.146", timeout_sec: float = 1) -> Dict[str, Union[int, float, str]]:
+def run_single_poc(js_file: str, flags: List[str], v8_path: str = "/home/kgangul/DataCentricFuzzJS/v8/out/fuzzbuild/d8", timeout_sec: float = 1) -> Dict[str, Union[int, float, str]]:
     import signal
 
     features: Dict[str, Union[int, float, str]] = {
@@ -141,10 +141,10 @@ def run_single_poc(js_file: str, flags: List[str], v8_path: str = "/home/kgangul
     }
     
     script_dir = pathlib.Path(__file__).parent.resolve()
-    asserts_stub = script_dir / "asserts_stub.js"
-    if not asserts_stub.exists():
-        features["error"] = "asserts_stub.js not found"
-        return features
+    #asserts_stub = script_dir / "asserts_stub.js"
+    #if not asserts_stub.exists():
+    #    features["error"] = "asserts_stub.js not found"
+    #    return features
     if flags:
         cmd = [
             v8_path,

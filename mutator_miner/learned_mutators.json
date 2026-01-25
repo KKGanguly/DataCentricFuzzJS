@@ -1,0 +1,3020 @@
+[
+  {
+    "kind": "replace",
+    "before": [
+      "try { <VAR>(); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "try { <VAR> = []; } catch (<VAR>) {}"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "",
+    "gain": 0.701884206245608,
+    "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "            try { <VAR> = new <BUILTIN>(<VAR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "            try { <VAR> = new <BUILTIN>(<VAR>, <VAR>);",
+      "<BUILTIN>(<VAR>, <VAR>);",
+      " } catch (<VAR>) {}"
+    ],
+    "ctx_before": "            let <VAR>;",
+    "ctx_after": "            const <VAR> = <VAR>?.<VAR>;",
+    "gain": 0.6950088643201293,
+    "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "try { <VAR> = <TYPE_CHAIN>(<NUM>, <NUM>, <NUM>, <NUM>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "try { <VAR> = <VAR_CHAIN>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "let <VAR>;",
+    "ctx_after": "var <VAR> = <VAR>;",
+    "gain": 0.5834387580170697,
+    "original_file": "program_20251007032107_DE4FA610-3B48-4B08-860A-D12750F25617.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "            <VAR> = <NUM>;"
+    ],
+    "after": [
+      "            <VAR_CHAIN>;"
+    ],
+    "ctx_before": "        <VAR>() {",
+    "ctx_after": "        },",
+    "gain": 0.5758405502193639,
+    "original_file": "program_20251007032008_20063D03-B520-4C14-B23B-70A5643A48DB.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<STR>);"
+    ],
+    "ctx_before": "    <BUILTIN>.<BUILTIN_METHOD>(<VAR>, <VAR>);",
+    "ctx_after": "    <VAR> = <NUM>;",
+    "gain": 0.5758405502193639,
+    "original_file": "program_20251007032008_20063D03-B520-4C14-B23B-70A5643A48DB.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    const <VAR> = <TYPE_CHAIN>;"
+    ],
+    "after": [
+      "    const <VAR> = <VAR> = !<VAR>;"
+    ],
+    "ctx_before": "function <<TYPE>>() {",
+    "ctx_after": "    const <VAR> = [];",
+    "gain": 0.5754289588676217,
+    "original_file": "program_20251007032102_2B685D8E-35AC-450A-A2E0-6DE3154363B2.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<NUM>, <VAR>);"
+    ],
+    "ctx_before": "    <VAR_CHAIN>(<NUM>);",
+    "ctx_after": "    <VAR> = [];",
+    "gain": 0.5742019596963368,
+    "original_file": "program_20251007032337_4B66FBEA-8B55-4694-967A-6A19E57525F6.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR_CHAIN>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "        <VAR>(<VAR>(<VAR_CHAIN>(<VAR>)));",
+    "ctx_after": "    }",
+    "gain": 0.5742019596963368,
+    "original_file": "program_20251007032337_4B66FBEA-8B55-4694-967A-6A19E57525F6.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> = <NUM>;"
+    ],
+    "ctx_before": "    <VAR>(<NUM>);",
+    "ctx_after": "    <VAR>(<NUM>);",
+    "gain": 0.5683705329757258,
+    "original_file": "program_20251007031859_FB106238-1143-41F5-B88F-5E100E60BA5A.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR> = <VAR_CHAIN>(<VAR>, <NUM>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    <VAR_CHAIN>(<NUM>);",
+    "ctx_after": "    var <<TYPE>> = <BUILTIN>;",
+    "gain": 0.5683705329757258,
+    "original_file": "program_20251007031859_FB106238-1143-41F5-B88F-5E100E60BA5A.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR>(<VAR>, <BUILTIN>);"
+    ],
+    "after": [
+      "<VAR_CHAIN>(<NUM>, <VAR>);"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "function <VAR>() {",
+    "gain": 0.554601994121973,
+    "original_file": "program_20251007032008_20063D03-B520-4C14-B23B-70A5643A48DB.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR> = <NUM>;"
+    ],
+    "after": [
+      "    <VAR>();"
+    ],
+    "ctx_before": "    <BUILTIN>.<BUILTIN_METHOD>(<VAR>, <VAR>);",
+    "ctx_after": "}",
+    "gain": 0.554601994121973,
+    "original_file": "program_20251007032008_20063D03-B520-4C14-B23B-70A5643A48DB.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR>(<VAR>, <BUILTIN>);"
+    ],
+    "after": [
+      "<VAR> = <BUILTIN>;"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "",
+    "gain": 0.554601994121973,
+    "original_file": "program_20251007032008_20063D03-B520-4C14-B23B-70A5643A48DB.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR>[<BUILTIN_CHAIN>] = <VAR>;"
+    ],
+    "after": [
+      "<VAR> = <VAR_CHAIN>(<VAR>);"
+    ],
+    "ctx_before": "};",
+    "ctx_after": "",
+    "gain": 0.5407741495674254,
+    "original_file": "program_20251007032122_9962656A-D027-4534-A0CD-BA4BBD3991FD.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<BUILTIN> = <VAR>;"
+    ],
+    "ctx_before": "<VAR>[<BUILTIN_CHAIN>] = <VAR>;",
+    "ctx_after": "",
+    "gain": 0.5407741495674254,
+    "original_file": "program_20251007032122_9962656A-D027-4534-A0CD-BA4BBD3991FD.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<VAR>, <NUM>, <VAR>);"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "function <VAR>(<VAR>) {",
+    "gain": 0.5167805953970808,
+    "original_file": "program_20251007031723_DF33CFC9-C4B9-4F80-97C6-45F78B904683.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR_CHAIN>; } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    }",
+    "ctx_after": "}",
+    "gain": 0.5167805953970808,
+    "original_file": "program_20251007031723_DF33CFC9-C4B9-4F80-97C6-45F78B904683.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <BUILTIN> = <VAR_CHAIN>(<VAR>, <NUM>); } catch (<BUILTIN>) {}",
+      "<BUILTIN> < <NUM>;"
+    ],
+    "ctx_before": "        return this;",
+    "ctx_after": "    },",
+    "gain": 0.5161853957303542,
+    "original_file": "program_20251007032122_9962656A-D027-4534-A0CD-BA4BBD3991FD.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<VAR>, <NUM>, <VAR>);"
+    ],
+    "ctx_before": "try { <VAR_CHAIN>(); } catch (<VAR>) {}",
+    "ctx_after": "",
+    "gain": 0.4972037327843476,
+    "original_file": "program_20251007032050_DD02E41A-1CE5-4F8C-BF5D-F6EBD0E05EB2.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    this.<PROP> = this?.<VAR>?.<VAR>;"
+    ],
+    "after": [
+      "    <VAR_CHAIN>(<VAR>, [<VAR>,<VAR>], <VAR>);"
+    ],
+    "ctx_before": "function <VAR>() {",
+    "ctx_after": "}",
+    "gain": 0.4904853622306241,
+    "original_file": "program_20251007032050_DD02E41A-1CE5-4F8C-BF5D-F6EBD0E05EB2.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR>(<NUM>);"
+    ],
+    "after": [
+      "    <VAR_CHAIN>;"
+    ],
+    "ctx_before": "    <VAR> = { <VAR>: <STR>, <VAR>: <STR> };",
+    "ctx_after": "    var <VAR> = -<NUM> == -<NUM>;",
+    "gain": 0.4668120194337082,
+    "original_file": "program_20251007031859_FB106238-1143-41F5-B88F-5E100E60BA5A.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<VAR>, <NUM>, <BUILTIN>);"
+    ],
+    "ctx_before": "    <VAR> = { <VAR>: <STR>, <VAR>: <STR>, <VAR>: <STR>, <VAR>: <STR> };",
+    "ctx_after": "    <VAR>(<NUM>);",
+    "gain": 0.4668120194337082,
+    "original_file": "program_20251007031859_FB106238-1143-41F5-B88F-5E100E60BA5A.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR_CHAIN>(<NUM>);"
+    ],
+    "after": [
+      "    <BUILTIN> = <VAR>(<VAR>)(<NUM>);"
+    ],
+    "ctx_before": "    var <VAR> = <NUM> == <NUM>;",
+    "ctx_after": "    <VAR_CHAIN>(<NUM>);",
+    "gain": 0.4668120194337082,
+    "original_file": "program_20251007031859_FB106238-1143-41F5-B88F-5E100E60BA5A.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "        <VAR> = true;"
+    ],
+    "after": [
+      "        <VAR_CHAIN> + <NUM>;"
+    ],
+    "ctx_before": "    function <VAR>() {",
+    "ctx_after": "    }",
+    "gain": 0.46325305406979406,
+    "original_file": "program_20251007031723_DF33CFC9-C4B9-4F80-97C6-45F78B904683.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR>();"
+    ],
+    "after": [
+      "<VAR_CHAIN>(<NUM>);"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "",
+    "gain": 0.46325305406979406,
+    "original_file": "program_20251007031723_DF33CFC9-C4B9-4F80-97C6-45F78B904683.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<BUILTIN_CHAIN>(<VAR>);"
+    ],
+    "after": [
+      "<BUILTIN> === <STR>.<VAR>(<VAR>);",
+      "<VAR> = <VAR_CHAIN>(<BUILTIN>, <NUM>);"
+    ],
+    "ctx_before": "const <VAR> = [<NUM>,<NUM>,<NUM>,<NUM>,<NUM>];",
+    "ctx_after": "",
+    "gain": 0.44687272300358666,
+    "original_file": "program_20251007031655_EC7C648F-8DA2-45D7-BF29-8A421A2BE726.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<BUILTIN_CHAIN>(<VAR>);"
+    ],
+    "after": [
+      "<VAR_CHAIN>(<BUILTIN>).<VAR_CHAIN>(<VAR>);"
+    ],
+    "ctx_before": "const <VAR> = [<NUM>,<NUM>,<NUM>,<NUM>,<NUM>];",
+    "ctx_after": "",
+    "gain": 0.44687272300358666,
+    "original_file": "program_20251007031655_EC7C648F-8DA2-45D7-BF29-8A421A2BE726.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>;"
+    ],
+    "ctx_before": "    <VAR>();",
+    "ctx_after": "};",
+    "gain": 0.4447567344088746,
+    "original_file": "program_20251007032023_0D8B3E20-2C1E-4546-8EEF-20E57C326624.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "try { <VAR> = <VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "try { <VAR_CHAIN>; } catch (<BUILTIN>) {}"
+    ],
+    "ctx_before": "let <VAR>;",
+    "ctx_after": "let <VAR>;",
+    "gain": 0.4193805152522019,
+    "original_file": "program_20251007031910_3CA1D689-435B-4E3B-A575-FA5199BC70DE.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "try { <VAR> = <VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>(<VAR>); } catch (<BUILTIN>) {}"
+    ],
+    "ctx_before": "let <VAR>;",
+    "ctx_after": "var <VAR> = [<VAR>,<VAR>];",
+    "gain": 0.4193805152522019,
+    "original_file": "program_20251007031910_3CA1D689-435B-4E3B-A575-FA5199BC70DE.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "try { <VAR_CHAIN>(<VAR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "try { <VAR_CHAIN>(<VAR>); } catch (<BUILTIN>) {}"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "let <VAR>;",
+    "gain": 0.4193805152522019,
+    "original_file": "program_20251007031910_3CA1D689-435B-4E3B-A575-FA5199BC70DE.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "try { <VAR> = <VAR_CHAIN>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "try { <VAR> = <VAR_CHAIN>(<VAR>); } catch (<BUILTIN>) {}"
+    ],
+    "ctx_before": "let <VAR>;",
+    "ctx_after": "var <VAR> = <VAR>;",
+    "gain": 0.4193805152522019,
+    "original_file": "program_20251007031910_3CA1D689-435B-4E3B-A575-FA5199BC70DE.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR>(<NUM>);"
+    ],
+    "after": [
+      "    <VAR> = <BUILTIN>(<NUM>);"
+    ],
+    "ctx_before": "    <VAR> = { <VAR>: <STR>, <VAR>: <STR> };",
+    "ctx_after": "    var <VAR> = -<NUM> == -<NUM>;",
+    "gain": 0.40942920508139313,
+    "original_file": "program_20251007031859_FB106238-1143-41F5-B88F-5E100E60BA5A.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR_CHAIN>(<VAR>, <NUM>, <NUM>, <BUILTIN>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    <VAR>(<NUM>);",
+    "ctx_after": "    <VAR>(<NUM>);",
+    "gain": 0.3998187383441413,
+    "original_file": "program_20251007031859_FB106238-1143-41F5-B88F-5E100E60BA5A.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    var <<TYPE>> = <VAR>;"
+    ],
+    "after": [
+      "    var <BUILTIN> = <VAR>;"
+    ],
+    "ctx_before": "    const <VAR> = new <BUILTIN>([<NUM>,-<NUM>,-<NUM>,-<NUM>,<NUM>,<NUM>,-<NUM>,<NUM>]);",
+    "ctx_after": "    <VAR_CHAIN>(<NUM>);",
+    "gain": 0.3998187383441413,
+    "original_file": "program_20251007031859_FB106238-1143-41F5-B88F-5E100E60BA5A.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "        <VAR> = [];"
+    ],
+    "after": [
+      "        <VAR_CHAIN>(<VAR> + <NUM>, <VAR_CHAIN>, <VAR>);"
+    ],
+    "ctx_before": "    for (let <VAR> = null, <VAR> = <NUM>, <VAR> = <NUM>; <VAR> < <VAR>; <VAR>++) {",
+    "ctx_after": "        for (let <VAR> = <NUM>; <VAR> < <VAR>; <VAR>++) {",
+    "gain": 0.39200482187679464,
+    "original_file": "program_20251007031834_B3730C98-BD49-43D9-911C-D275D738759B.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "                try { <VAR> = <VAR_CHAIN>(<VAR>, <VAR>, <VAR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "                try { <VAR> = (<STR> + <VAR>) + <VAR>; } catch (<VAR>) {}"
+    ],
+    "ctx_before": "                let <VAR>;",
+    "ctx_after": "                <VAR> && <VAR>;",
+    "gain": 0.39200482187679464,
+    "original_file": "program_20251007031834_B3730C98-BD49-43D9-911C-D275D738759B.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    this.<PROP> = <VAR>;"
+    ],
+    "after": [
+      "try { <VAR_CHAIN>(<STR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "    this.<PROP> = <VAR>;",
+    "gain": 0.38088004288503513,
+    "original_file": "program_20251007031951_DE9BD565-F3CC-4DFA-A138-8137F84F562D.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "    this.<PROP> = <VAR>;"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "    this.<PROP> = <VAR>;",
+    "gain": 0.38088004288503513,
+    "original_file": "program_20251007031951_DE9BD565-F3CC-4DFA-A138-8137F84F562D.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<VAR>, <NUM>, <VAR>);"
+    ],
+    "ctx_before": "    return <VAR_CHAIN>(<NUM>);",
+    "ctx_after": "};",
+    "gain": 0.33240038044025777,
+    "original_file": "program_20251007031746_C021777A-6E26-4CA8-BF3C-99AE95D1FABC.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<STR>);"
+    ],
+    "ctx_before": "    return <VAR_CHAIN>(<NUM>);",
+    "ctx_after": "};",
+    "gain": 0.33122577544767107,
+    "original_file": "program_20251007031746_C021777A-6E26-4CA8-BF3C-99AE95D1FABC.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "try { <VAR> = <VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>(<VAR>); } catch (<VAR>) {}",
+      "<VAR>(<NUM>, <VAR>[<NUM>]);"
+    ],
+    "ctx_before": "let <VAR>;",
+    "ctx_after": "let <VAR>;",
+    "gain": 0.32773211467891783,
+    "original_file": "program_20251007031910_3CA1D689-435B-4E3B-A575-FA5199BC70DE.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> = <STR> + <VAR_CHAIN>(<VAR> * <NUM>, (<VAR> * <NUM>) + <NUM>);"
+    ],
+    "ctx_before": "try { <VAR> = <VAR>(<VAR>); } catch (<VAR>) {}",
+    "ctx_after": "var <VAR> = [<VAR>,<VAR>];",
+    "gain": 0.32773211467891783,
+    "original_file": "program_20251007031910_3CA1D689-435B-4E3B-A575-FA5199BC70DE.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR> = <VAR>(<NUM>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "new <<TYPE>>();",
+    "ctx_after": "",
+    "gain": 0.3167243933733855,
+    "original_file": "program_20251007031818_A0CBBDD9-6003-429B-A35B-5F75A778DB5B.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "for (let <VAR> = <NUM>; <VAR> < <NUM>; <VAR>++) {",
+      "        const <VAR> = <VAR>(<VAR>, <VAR>, <VAR>, <VAR>);",
+      "    }"
+    ],
+    "ctx_before": "                <BUILTIN>[<VAR>] = <STR>;",
+    "ctx_after": "                <BUILTIN_CHAIN> = <NUM>;",
+    "gain": 0.30835465833461756,
+    "original_file": "program_20251007031710_58101404-B39D-466F-A2E1-F96CD5A39382.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR_CHAIN>(...<VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "<VAR>();",
+    "ctx_after": "",
+    "gain": 0.30835465833461756,
+    "original_file": "program_20251007031710_58101404-B39D-466F-A2E1-F96CD5A39382.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<VAR>, <NUM>, <VAR>);"
+    ],
+    "ctx_before": "try { <VAR> = <VAR_CHAIN>(<VAR>); } catch (<VAR>) {}",
+    "ctx_after": "var <VAR> = <VAR>;",
+    "gain": 0.284527845167028,
+    "original_file": "program_20251007031910_3CA1D689-435B-4E3B-A575-FA5199BC70DE.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "throw <NUM>;"
+    ],
+    "ctx_before": "    }",
+    "ctx_after": "}",
+    "gain": 0.2721083418978399,
+    "original_file": "program_20251007031955_522472B9-B997-42E5-9183-6B8A8B25D5AC.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR>();"
+    ],
+    "after": [
+      "    <VAR> < <NUM>;"
+    ],
+    "ctx_before": "function <VAR>() {",
+    "ctx_after": "    <VAR>[<NUM>] = <NUM>;",
+    "gain": 0.2721083418978399,
+    "original_file": "program_20251007031955_522472B9-B997-42E5-9183-6B8A8B25D5AC.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>();"
+    ],
+    "ctx_before": "        <VAR>(<VAR>, <VAR>, <VAR>);",
+    "ctx_after": "    } catch(<VAR>) {",
+    "gain": 0.26988655854358035,
+    "original_file": "program_20251007032414_C56A6DD8-5F90-4440-A08F-F3B214305C94.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "var <VAR> = <NUM>;"
+    ],
+    "after": [
+      "var <BUILTIN> = <NUM>;"
+    ],
+    "ctx_before": "",
+    "ctx_after": "for (let <VAR> = <NUM>; <VAR> < <NUM>; <VAR>++) {",
+    "gain": 0.2530932801905688,
+    "original_file": "program_20251007032028_B6B61250-C50D-4747-AA2C-503B26668C28.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <BUILTIN> == <VAR>;"
+    ],
+    "after": [
+      "    <BUILTIN> == <BUILTIN>;",
+      "<VAR>();",
+      "<VAR> = <VAR>(<BUILTIN>);"
+    ],
+    "ctx_before": "for (let <VAR> = <NUM>; <VAR> < <NUM>; <VAR>++) {",
+    "ctx_after": "}",
+    "gain": 0.2530932801905688,
+    "original_file": "program_20251007032028_B6B61250-C50D-4747-AA2C-503B26668C28.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR_CHAIN>(); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "try { <VAR_CHAIN>(<VAR>, <STR>); } catch (<VAR>) {}",
+    "ctx_after": "",
+    "gain": 0.2520185044914207,
+    "original_file": "program_20251007032012_64360A91-6DD4-4D13-B642-AAE45359A6A7.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<NUM>);"
+    ],
+    "ctx_before": "        <BUILTIN>.<BUILTIN_METHOD>(<VAR>);",
+    "ctx_after": "        break;",
+    "gain": 0.24805309892969463,
+    "original_file": "program_20251007031850_32831BE6-36AB-4346-B4D9-8E1A7C245BC3.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "        const <VAR> = <VAR>(-<NUM>, <BUILTIN>, <VAR>, <NUM>);"
+    ],
+    "after": [
+      "        const <VAR> = <VAR_CHAIN>(<VAR>);"
+    ],
+    "ctx_before": "        }",
+    "ctx_after": "        const <VAR> = <VAR>(-<NUM>, <VAR>, <VAR>, <VAR>, <VAR>);",
+    "gain": 0.22755835556082699,
+    "original_file": "program_20251007031710_58101404-B39D-466F-A2E1-F96CD5A39382.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    const <VAR> = <VAR>(<VAR>);"
+    ],
+    "after": [
+      "    const <VAR> = <VAR>(<NUM>);"
+    ],
+    "ctx_before": "    }",
+    "ctx_after": "}",
+    "gain": 0.22755835556082699,
+    "original_file": "program_20251007031710_58101404-B39D-466F-A2E1-F96CD5A39382.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "var <VAR> = <BUILTIN>.<BUILTIN_METHOD>(<NUM>);"
+    ],
+    "after": [
+      "var <BUILTIN> = <BUILTIN>.<BUILTIN_METHOD>(<NUM>);"
+    ],
+    "ctx_before": "",
+    "ctx_after": "const <VAR> = new <BUILTIN>(<NUM>);",
+    "gain": 0.21979678748998077,
+    "original_file": "program_20251007032012_64360A91-6DD4-4D13-B642-AAE45359A6A7.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "var <VAR> = <BUILTIN>.<BUILTIN_METHOD>(<NUM>);"
+    ],
+    "after": [
+      "var <VAR> = <VAR_CHAIN>(<NUM>);"
+    ],
+    "ctx_before": "",
+    "ctx_after": "const <VAR> = new <BUILTIN>(<NUM>);",
+    "gain": 0.21923636560047743,
+    "original_file": "program_20251007032012_64360A91-6DD4-4D13-B642-AAE45359A6A7.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR> = <VAR>(<NUM>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "var <VAR> = <VAR>;",
+    "ctx_after": "",
+    "gain": 0.21923636560047743,
+    "original_file": "program_20251007032012_64360A91-6DD4-4D13-B642-AAE45359A6A7.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR_CHAIN>(<NUM>, <NUM>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "var <VAR> = <VAR>;",
+    "ctx_after": "",
+    "gain": 0.21923636560047743,
+    "original_file": "program_20251007032012_64360A91-6DD4-4D13-B642-AAE45359A6A7.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <BUILTIN> = <BUILTIN>(<NUM>); } catch (<BUILTIN>) {}"
+    ],
+    "ctx_before": "        return this;",
+    "ctx_after": "    },",
+    "gain": 0.21421293165050256,
+    "original_file": "program_20251007032122_9962656A-D027-4534-A0CD-BA4BBD3991FD.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR>(<NUM>, <BUILTIN>.<BUILTIN_METHOD>(<VAR>));"
+    ],
+    "after": [
+      "<VAR_CHAIN>(...<VAR>);",
+      "(-<NUM> * <NUM>) * <NUM>;"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "",
+    "gain": 0.2107792276037759,
+    "original_file": "program_20251007031725_0D4249F3-A8F8-4203-AB2B-2A67C53D765A.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR>(<STR>);"
+    ],
+    "after": [
+      "<VAR>(<VAR>, <VAR>);"
+    ],
+    "ctx_before": "",
+    "ctx_after": "<VAR>(<STR>);",
+    "gain": 0.20989539719919473,
+    "original_file": "program_20251007031938_6F23E83A-3D79-4182-8A30-E8B7FB8BA949.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR>(<STR>);"
+    ],
+    "after": [
+      "<VAR>(<NUM>) == <STR>;"
+    ],
+    "ctx_before": "<VAR>(<STR>);",
+    "ctx_after": "<VAR>(<STR>);",
+    "gain": 0.20989539719919473,
+    "original_file": "program_20251007031938_6F23E83A-3D79-4182-8A30-E8B7FB8BA949.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR> = <NUM>;"
+    ],
+    "after": [
+      "    <VAR>(<NUM>);"
+    ],
+    "ctx_before": "",
+    "ctx_after": "    <VAR> = <NUM>;",
+    "gain": 0.19461157093550333,
+    "original_file": "program_20251007031719_60864E80-4DC8-4D02-A507-5CCB2973F3EA.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR> = <VAR>(<NUM>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "",
+    "ctx_after": "    <VAR> = <NUM>;",
+    "gain": 0.19461157093550333,
+    "original_file": "program_20251007031719_60864E80-4DC8-4D02-A507-5CCB2973F3EA.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR>(<VAR>(<VAR>), <VAR>);"
+    ],
+    "ctx_before": "        <VAR> = <VAR>;",
+    "ctx_after": "        const <VAR> = new <<TYPE>>(true);",
+    "gain": 0.1925813044534127,
+    "original_file": "program_20251007031913_D49C12A1-62B1-4441-9857-4BE046C07EA8.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "        <VAR> = <NUM>;"
+    ],
+    "ctx_before": "            return <VAR>[<VAR>].<VAR>;",
+    "ctx_after": "        }",
+    "gain": 0.1925813044534127,
+    "original_file": "program_20251007031913_D49C12A1-62B1-4441-9857-4BE046C07EA8.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "    <VAR> < <NUM>;"
+    ],
+    "ctx_before": "            return <VAR>[<VAR>].<VAR>;",
+    "ctx_after": "        }",
+    "gain": 0.1925813044534127,
+    "original_file": "program_20251007031913_D49C12A1-62B1-4441-9857-4BE046C07EA8.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "    <VAR>();"
+    ],
+    "ctx_before": "            return <VAR>[<VAR>].<VAR>;",
+    "ctx_after": "        }",
+    "gain": 0.1925813044534127,
+    "original_file": "program_20251007031913_D49C12A1-62B1-4441-9857-4BE046C07EA8.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    return <VAR>(<NUM>);"
+    ],
+    "after": [
+      "    return <VAR_CHAIN>(<VAR>, <NUM>);"
+    ],
+    "ctx_before": "    }",
+    "ctx_after": "}",
+    "gain": 0.1925813044534127,
+    "original_file": "program_20251007031913_D49C12A1-62B1-4441-9857-4BE046C07EA8.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR> = <VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "        <VAR_CHAIN>(<NUM>);",
+    "ctx_after": "        return <NUM>;",
+    "gain": 0.1925314686331709,
+    "original_file": "program_20251007032256_C0256992-88D5-4993-B921-6811588EF654.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<VAR>, <NUM>);"
+    ],
+    "ctx_before": "        return <NUM>;",
+    "ctx_after": "    }",
+    "gain": 0.1925314686331709,
+    "original_file": "program_20251007032256_C0256992-88D5-4993-B921-6811588EF654.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<VAR>);"
+    ],
+    "ctx_before": "",
+    "ctx_after": "    <VAR> = <NUM>;",
+    "gain": 0.19049626634780517,
+    "original_file": "program_20251007031719_60864E80-4DC8-4D02-A507-5CCB2973F3EA.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<BUILTIN>.<BUILTIN_METHOD>(<VAR>(<VAR>));"
+    ],
+    "ctx_before": "        <VAR>[<VAR>] = <VAR>(<VAR>);",
+    "ctx_after": "    }",
+    "gain": 0.18308004672933303,
+    "original_file": "program_20251007032337_4B66FBEA-8B55-4694-967A-6A19E57525F6.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR>(<STR> + <VAR_CHAIN>());"
+    ],
+    "after": [
+      "    <VAR>(<STR> + <VAR> * <VAR>());"
+    ],
+    "ctx_before": "    var <VAR> = <VAR_CHAIN>(<VAR>);",
+    "ctx_after": "    return <VAR>;",
+    "gain": 0.18308004672933303,
+    "original_file": "program_20251007032337_4B66FBEA-8B55-4694-967A-6A19E57525F6.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "            <VAR> |= <VAR> << (<VAR> << <NUM>);"
+    ],
+    "after": [
+      "            <VAR> |= <VAR> << (<VAR> < <NUM>);"
+    ],
+    "ctx_before": "            var <VAR> = <VAR> < <VAR_CHAIN> ? <VAR_CHAIN>(<VAR>) : <NUM>;",
+    "ctx_after": "        }",
+    "gain": 0.18308004672933303,
+    "original_file": "program_20251007032337_4B66FBEA-8B55-4694-967A-6A19E57525F6.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> = <VAR>(<NUM>);"
+    ],
+    "ctx_before": "    <BUILTIN>.<BUILTIN_METHOD>(<VAR>);",
+    "ctx_after": "    <VAR>(<BUILTIN_CHAIN>(<VAR>));",
+    "gain": 0.182704084518012,
+    "original_file": "program_20251007031917_ACB1CE6B-B2F6-46E2-B61B-83B17A5AB77D.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> = <VAR>;"
+    ],
+    "ctx_before": "    }",
+    "ctx_after": "}",
+    "gain": 0.1795480769031983,
+    "original_file": "program_20251007031850_32831BE6-36AB-4346-B4D9-8E1A7C245BC3.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<STR>, <VAR>);"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "",
+    "gain": 0.16026491881882757,
+    "original_file": "program_20251007032414_C56A6DD8-5F90-4440-A08F-F3B214305C94.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "const <VAR> = new <<TYPE>>();"
+    ],
+    "after": [
+      "const <VAR> = <VAR>(<NUM>);"
+    ],
+    "ctx_before": "try { <<TYPE>>(); } catch (<VAR>) {}",
+    "ctx_after": "<VAR>[<NUM>] = <VAR>;",
+    "gain": 0.15712941469874842,
+    "original_file": "program_20251007031834_55C6E175-54F2-4E15-BBF2-3BF87E8D7D73.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR_CHAIN>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    <VAR>[<VAR>] = undefined;",
+    "ctx_after": "}",
+    "gain": 0.15712941469874842,
+    "original_file": "program_20251007031834_55C6E175-54F2-4E15-BBF2-3BF87E8D7D73.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "            return <VAR>[<VAR>].<VAR>;"
+    ],
+    "after": [
+      "            return <VAR> < <VAR_CHAIN>;"
+    ],
+    "ctx_before": "        if (<VAR>[<VAR>]) {",
+    "ctx_after": "        }",
+    "gain": 0.1566461365029753,
+    "original_file": "program_20251007031913_D49C12A1-62B1-4441-9857-4BE046C07EA8.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> = <VAR_CHAIN>(<VAR>, <NUM>);"
+    ],
+    "ctx_before": "<VAR>(<STR>);",
+    "ctx_after": "<VAR>(<STR>);",
+    "gain": 0.15654293717388776,
+    "original_file": "program_20251007031938_6F23E83A-3D79-4182-8A30-E8B7FB8BA949.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR>(<STR>);"
+    ],
+    "after": [
+      "<VAR_CHAIN>(<NUM>, <NUM>);"
+    ],
+    "ctx_before": "",
+    "ctx_after": "<VAR>(<STR>);",
+    "gain": 0.15654293717388776,
+    "original_file": "program_20251007031938_6F23E83A-3D79-4182-8A30-E8B7FB8BA949.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "([-<NUM>,-<NUM>,-<NUM>,<NUM>])[<NUM>];"
+    ],
+    "ctx_before": "<VAR>(<STR>);",
+    "ctx_after": "<VAR>(<STR>);",
+    "gain": 0.15654293717388776,
+    "original_file": "program_20251007031938_6F23E83A-3D79-4182-8A30-E8B7FB8BA949.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<NUM>, <NUM>, <VAR>, <VAR>);"
+    ],
+    "ctx_before": "<VAR>(<STR>);",
+    "ctx_after": "",
+    "gain": 0.15654293717388776,
+    "original_file": "program_20251007031938_6F23E83A-3D79-4182-8A30-E8B7FB8BA949.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR>[<NUM>] = {};"
+    ],
+    "after": [
+      "    <VAR>();"
+    ],
+    "ctx_before": "function <VAR>() {",
+    "ctx_after": "    return true;",
+    "gain": 0.15485278045550352,
+    "original_file": "program_20251007031910_3CA1D689-435B-4E3B-A575-FA5199BC70DE.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "try { <VAR> = <VAR_CHAIN>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "try { <VAR> = <VAR_CHAIN>(<VAR>);",
+      "<VAR>[<VAR>] = <VAR>;",
+      " } catch (<VAR>) {}"
+    ],
+    "ctx_before": "let <VAR>;",
+    "ctx_after": "var <VAR> = <VAR>;",
+    "gain": 0.15485278045550352,
+    "original_file": "program_20251007031910_3CA1D689-435B-4E3B-A575-FA5199BC70DE.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "var <VAR> = <VAR_CHAIN>().<VAR>(<<TYPE>>);"
+    ],
+    "after": [],
+    "ctx_before": "var <VAR> = <VAR>;",
+    "ctx_after": "var <VAR> = <VAR_CHAIN>().<VAR>(<<TYPE>>);",
+    "gain": 0.1530722271698195,
+    "original_file": "program_20251007032023_0D8B3E20-2C1E-4546-8EEF-20E57C326624.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<BUILTIN>.<BUILTIN_METHOD>(<VAR_CHAIN>(<STR>));"
+    ],
+    "after": [
+      "<VAR> = {}(<VAR_CHAIN>(<STR>));"
+    ],
+    "ctx_before": "<VAR>[<NUM>] = <STR>;",
+    "ctx_after": "",
+    "gain": 0.1496236126809133,
+    "original_file": "program_20251007031730_4C146D9C-5945-41FA-A25A-1F8B4E83600F.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<VAR>);",
+      "<VAR> = <VAR>(<VAR>, <VAR>);"
+    ],
+    "ctx_before": "    <VAR>();",
+    "ctx_after": "};",
+    "gain": 0.14056565255804332,
+    "original_file": "program_20251007032023_0D8B3E20-2C1E-4546-8EEF-20E57C326624.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "var <VAR> = <VAR_CHAIN>().<VAR>(<<TYPE>>);"
+    ],
+    "after": [
+      "var <VAR> = <VAR>(<VAR>, <VAR>);"
+    ],
+    "ctx_before": "var <VAR> = <VAR>;",
+    "ctx_after": "var <VAR> = <VAR_CHAIN>().<VAR>(<<TYPE>>);",
+    "gain": 0.14056565255804332,
+    "original_file": "program_20251007032023_0D8B3E20-2C1E-4546-8EEF-20E57C326624.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR>(<VAR>, <NUM>);",
+      "<VAR> = [];",
+      " } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    try { <VAR>(<VAR>); } catch (<VAR>) {}",
+    "ctx_after": "    const <VAR> = <VAR>?.<VAR>;",
+    "gain": 0.13446590452806714,
+    "original_file": "program_20251007031720_FF165F90-F91E-444F-B037-9072176CF76D.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> = <NUM>;"
+    ],
+    "ctx_before": "    try { <VAR> = new <<TYPE>>(); } catch (<VAR>) {}",
+    "ctx_after": "    var <VAR> = <VAR>;",
+    "gain": 0.13085924181052627,
+    "original_file": "program_20251007032112_3FDFE347-BB90-4A0A-AFE4-29050B128F44.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    try { <VAR_CHAIN>(<NUM>, <NUM>, false); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "    try { <VAR_CHAIN>(<VAR>)(<NUM>, <NUM>, false); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    var <VAR> = <VAR>;",
+    "ctx_after": "    const <VAR> = [<VAR>,<NUM>,<VAR>,<NUM>,<VAR>,<NUM>,<VAR>,<NUM>,<VAR>,<VAR>,<NUM>,<VAR>,<NUM>,<VAR>,<VAR>,<VAR>,<NUM>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>];",
+    "gain": 0.13085924181052627,
+    "original_file": "program_20251007032112_3FDFE347-BB90-4A0A-AFE4-29050B128F44.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    try { <VAR> = <VAR_CHAIN>(<STR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "    try { <VAR> = <VAR_CHAIN>(<STR>, <VAR>);",
+      "try { <VAR_CHAIN>(<VAR>, <NUM>, <VAR>); } catch (<VAR>) {}",
+      " } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    let <VAR>;",
+    "ctx_after": "    let <VAR>;",
+    "gain": 0.12954538259311482,
+    "original_file": "program_20251007032112_3FDFE347-BB90-4A0A-AFE4-29050B128F44.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>();"
+    ],
+    "ctx_before": "    }",
+    "ctx_after": "}",
+    "gain": 0.11962455001528838,
+    "original_file": "program_20251007031636_56B43A18-87E8-46A0-BD8A-0381F7F89C60.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR> = <VAR>(<NUM>);",
+      "<VAR> = <VAR>(<NUM>);"
+    ],
+    "after": [
+      "<VAR> = <VAR_CHAIN>(<VAR>);",
+      "<VAR_CHAIN>;"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "<VAR>(<VAR>);",
+    "gain": 0.11021994125269102,
+    "original_file": "program_20251007031825_2512E89B-9AE2-41F3-AF21-0732C2956F0B.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR> = <VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "<VAR>(<VAR>);",
+    "ctx_after": "<VAR> = { <VAR>: <STR> };",
+    "gain": 0.11021994125269102,
+    "original_file": "program_20251007031825_2512E89B-9AE2-41F3-AF21-0732C2956F0B.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> = <VAR>(<NUM>);"
+    ],
+    "ctx_before": "    <VAR> = <VAR>;",
+    "ctx_after": "    <VAR> = null;",
+    "gain": 0.10960191375136866,
+    "original_file": "program_20251007031859_FB106238-1143-41F5-B88F-5E100E60BA5A.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<VAR>);"
+    ],
+    "ctx_before": "    <VAR_CHAIN>(<VAR>);",
+    "ctx_after": "    const <VAR> = new <BUILTIN>(<NUM>);",
+    "gain": 0.10687203134500128,
+    "original_file": "program_20251007032337_4B66FBEA-8B55-4694-967A-6A19E57525F6.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR> = <VAR_CHAIN>(<VAR>, <NUM>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    } while (<VAR> < <VAR>)",
+    "ctx_after": "    var <VAR> = <VAR_CHAIN>(<VAR>);",
+    "gain": 0.10687203134500128,
+    "original_file": "program_20251007032337_4B66FBEA-8B55-4694-967A-6A19E57525F6.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> = <VAR>(<VAR>, <VAR>);"
+    ],
+    "ctx_before": "        <VAR>[<NUM>] = <VAR>;",
+    "ctx_after": "    }",
+    "gain": 0.10507447268532638,
+    "original_file": "program_20251007031955_522472B9-B997-42E5-9183-6B8A8B25D5AC.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR>();"
+    ],
+    "after": [
+      "    <VAR> = <VAR>(<VAR>, <VAR>);"
+    ],
+    "ctx_before": "for (let <VAR> = <NUM>; <VAR> < <NUM>; <VAR>++) {",
+    "ctx_after": "}",
+    "gain": 0.10507447268532638,
+    "original_file": "program_20251007031955_522472B9-B997-42E5-9183-6B8A8B25D5AC.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR_CHAIN>(<VAR>);",
+      "try { <VAR> = <VAR_CHAIN>(<VAR>); } catch (<BUILTIN>) {}",
+      " } catch (<VAR>) {}"
+    ],
+    "ctx_before": "        }",
+    "ctx_after": "    }",
+    "gain": 0.0982271645886782,
+    "original_file": "program_20251007032407_C6ACF6A7-2EB7-4F29-ABF9-12B9B7091BDA.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<VAR>);"
+    ],
+    "ctx_before": "    }",
+    "ctx_after": "}",
+    "gain": 0.0982271645886782,
+    "original_file": "program_20251007032407_C6ACF6A7-2EB7-4F29-ABF9-12B9B7091BDA.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<STR>);"
+    ],
+    "ctx_before": "    <STR>;",
+    "ctx_after": "    const <VAR> = <VAR_CHAIN>;",
+    "gain": 0.09088472663110042,
+    "original_file": "program_20251007031823_28D92570-8FA2-4EA6-BDCD-0CD60C86A368.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    const <VAR> = new <VAR>(<VAR>);"
+    ],
+    "after": [
+      "    const <VAR> = new <VAR>(<BUILTIN>);"
+    ],
+    "ctx_before": "    const <VAR> = <VAR_CHAIN>;",
+    "ctx_after": "    var <<TYPE>> = <VAR>;",
+    "gain": 0.09088472663110042,
+    "original_file": "program_20251007031823_28D92570-8FA2-4EA6-BDCD-0CD60C86A368.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<STR>, <VAR>);",
+      "<VAR>[<NUM>] = <NUM>;"
+    ],
+    "ctx_before": "    <VAR> = {};",
+    "ctx_after": "    function <VAR>() {",
+    "gain": 0.09074648556369508,
+    "original_file": "program_20251007032256_C0256992-88D5-4993-B921-6811588EF654.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "        <VAR_CHAIN>(<NUM>);"
+    ],
+    "after": [
+      "        <VAR>(<NUM>)(<NUM>);"
+    ],
+    "ctx_before": "    function <VAR>() {",
+    "ctx_after": "        return <NUM>;",
+    "gain": 0.09074648556369508,
+    "original_file": "program_20251007032256_C0256992-88D5-4993-B921-6811588EF654.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    const <VAR> = new <BUILTIN>(<NUM>, { <VAR>: <NUM> });",
+      "    let <VAR> = <VAR>;",
+      "    const <VAR> = new <BUILTIN>(<VAR>);"
+    ],
+    "after": [
+      "    const <VAR> = new <VAR>(<NUM>, { <VAR>: <NUM> });",
+      "    let <VAR> = <VAR>;",
+      "    const <VAR> = <VAR_CHAIN>(<NUM>);"
+    ],
+    "ctx_before": "function <VAR>() {",
+    "ctx_after": "    let <VAR> = <VAR>;",
+    "gain": 0.09074648556369508,
+    "original_file": "program_20251007032256_C0256992-88D5-4993-B921-6811588EF654.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "        <VAR>[<NUM>] = <VAR>;"
+    ],
+    "after": [
+      "        <VAR> || [<NUM>];"
+    ],
+    "ctx_before": "    if (<VAR> == <NUM>) {",
+    "ctx_after": "    }",
+    "gain": 0.07678382646081311,
+    "original_file": "program_20251007031955_522472B9-B997-42E5-9183-6B8A8B25D5AC.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR> = <VAR>(<NUM>, <VAR>, <VAR>, <VAR>, ...<VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    }",
+    "ctx_after": "}",
+    "gain": 0.07678382646081311,
+    "original_file": "program_20251007031955_522472B9-B997-42E5-9183-6B8A8B25D5AC.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<VAR>, <NUM>);"
+    ],
+    "ctx_before": "    return <VAR>;",
+    "ctx_after": "}",
+    "gain": 0.07180231396572767,
+    "original_file": "program_20251007031834_55C6E175-54F2-4E15-BBF2-3BF87E8D7D73.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "const <VAR> = new <BUILTIN>(<NUM>);"
+    ],
+    "after": [
+      "const <BUILTIN> = new <BUILTIN>(<NUM>);"
+    ],
+    "ctx_before": "var <VAR> = <BUILTIN>.<BUILTIN_METHOD>(<NUM>);",
+    "ctx_after": "",
+    "gain": 0.06919756381413589,
+    "original_file": "program_20251007032012_64360A91-6DD4-4D13-B642-AAE45359A6A7.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "var <VAR> = <VAR>;"
+    ],
+    "after": [
+      "var <VAR> = <BUILTIN>;"
+    ],
+    "ctx_before": "var <VAR> = <BUILTIN>.<BUILTIN_METHOD>(<NUM>);",
+    "ctx_after": "",
+    "gain": 0.06919756381413589,
+    "original_file": "program_20251007032012_64360A91-6DD4-4D13-B642-AAE45359A6A7.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR> = <BUILTIN>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "var <VAR> = <BUILTIN>.<BUILTIN_METHOD>(<NUM>);",
+    "ctx_after": "",
+    "gain": 0.06919756381413589,
+    "original_file": "program_20251007032012_64360A91-6DD4-4D13-B642-AAE45359A6A7.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR> = {};"
+    ],
+    "after": [
+      "    <VAR> = {};",
+      "<VAR>(<STR>);"
+    ],
+    "ctx_before": "    let <VAR> = <VAR>;",
+    "ctx_after": "    function <VAR>() {",
+    "gain": 0.06649456532954962,
+    "original_file": "program_20251007032256_C0256992-88D5-4993-B921-6811588EF654.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> = <VAR_CHAIN>();"
+    ],
+    "ctx_before": "    }",
+    "ctx_after": "}",
+    "gain": 0.06579827472527089,
+    "original_file": "program_20251007031636_56B43A18-87E8-46A0-BD8A-0381F7F89C60.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "const <VAR> = new <<TYPE>>();",
+      "<VAR>[<NUM>] = <VAR>;"
+    ],
+    "after": [
+      "const <VAR> = <VAR> < <NUM>;",
+      "<VAR>();"
+    ],
+    "ctx_before": "try { <<TYPE>>(); } catch (<VAR>) {}",
+    "ctx_after": "function <<TYPE>>(<VAR>, <VAR>, <VAR>, <VAR>) {",
+    "gain": 0.06489158107092152,
+    "original_file": "program_20251007031834_55C6E175-54F2-4E15-BBF2-3BF87E8D7D73.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR>(<BUILTIN>(<VAR_CHAIN>(<BUILTIN>)));"
+    ],
+    "ctx_before": "        <VAR_CHAIN>(<NUM>);",
+    "ctx_after": "        return <NUM>;",
+    "gain": 0.06348447855950884,
+    "original_file": "program_20251007032256_C0256992-88D5-4993-B921-6811588EF654.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR> = {};"
+    ],
+    "after": [
+      "    <VAR_CHAIN>(<VAR>).<VAR>();"
+    ],
+    "ctx_before": "    let <VAR> = <VAR>;",
+    "ctx_after": "    function <VAR>() {",
+    "gain": 0.06348447855950884,
+    "original_file": "program_20251007032256_C0256992-88D5-4993-B921-6811588EF654.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> = <VAR_CHAIN>(<NUM>);"
+    ],
+    "ctx_before": "    return <VAR>;",
+    "ctx_after": "}",
+    "gain": 0.05433826346737036,
+    "original_file": "program_20251007032243_6694C93E-BD76-473D-B4E9-E34743FC0E93.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR> = <VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "<VAR_CHAIN>(<STR>, <VAR>);",
+    "ctx_after": "const <VAR> = { <VAR>: <STR> };",
+    "gain": 0.050055685470475786,
+    "original_file": "program_20251007032040_DA0BBB85-F671-4670-AE81-5E7D6CDDACEE.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR> = <VAR>(<NUM>, <VAR>, <VAR>, <VAR>, ...<VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "<VAR_CHAIN>(<STR>, <VAR>);",
+    "ctx_after": "const <VAR> = { <VAR>: <STR>, <VAR>: <STR> };",
+    "gain": 0.049295471593997386,
+    "original_file": "program_20251007032040_DA0BBB85-F671-4670-AE81-5E7D6CDDACEE.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR> = <VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "<VAR_CHAIN>(<STR>);",
+    "ctx_after": "const <VAR> = { <VAR>: <STR>, <VAR>: <STR>, <VAR>: <STR> };",
+    "gain": 0.049295471593997386,
+    "original_file": "program_20251007032040_DA0BBB85-F671-4670-AE81-5E7D6CDDACEE.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<BUILTIN>[<VAR>] = <VAR> + <VAR>;"
+    ],
+    "ctx_before": "                    <STR>;",
+    "ctx_after": "                    const <VAR> = <VAR> && <VAR>;",
+    "gain": 0.04740698474972027,
+    "original_file": "program_20251007031710_58101404-B39D-466F-A2E1-F96CD5A39382.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> = <NUM>;"
+    ],
+    "ctx_before": "    if (!new.<VAR>) { throw <STR>; }",
+    "ctx_after": "    this.<PROP> = <VAR>;",
+    "gain": 0.045372494405915675,
+    "original_file": "program_20251007031951_DE9BD565-F3CC-4DFA-A138-8137F84F562D.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    try { <VAR> = <VAR_CHAIN>(<STR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "    try { <VAR> = <VAR> = <VAR_CHAIN>(); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    let <VAR>;",
+    "ctx_after": "    let <VAR>;",
+    "gain": 0.04382468639362369,
+    "original_file": "program_20251007031936_A4FB1D9C-E726-4F6E-A163-7AD458F732D9.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> = <VAR_CHAIN>();"
+    ],
+    "ctx_before": "new <<TYPE>>(<VAR>, <VAR>);",
+    "ctx_after": "function <VAR>(<VAR>) {",
+    "gain": 0.04173242845873648,
+    "original_file": "program_20251007031834_55C6E175-54F2-4E15-BBF2-3BF87E8D7D73.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR>[<NUM>].<VAR>(<NUM>);"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "",
+    "gain": 0.04173242845873648,
+    "original_file": "program_20251007031834_55C6E175-54F2-4E15-BBF2-3BF87E8D7D73.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR>(); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    return <VAR>;",
+    "ctx_after": "}",
+    "gain": 0.04148914873144216,
+    "original_file": "program_20251007032243_6694C93E-BD76-473D-B4E9-E34743FC0E93.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <BUILTIN> == <VAR>;"
+    ],
+    "after": [
+      "    <BUILTIN> == <BUILTIN>;",
+      "<BUILTIN>(<BUILTIN>, <BUILTIN>, <VAR>, <BUILTIN>);"
+    ],
+    "ctx_before": "for (let <VAR> = <NUM>; <VAR> < <NUM>; <VAR>++) {",
+    "ctx_after": "}",
+    "gain": 0.03989221093377676,
+    "original_file": "program_20251007032028_B6B61250-C50D-4747-AA2C-503B26668C28.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> = <VAR> / <BUILTIN>;"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "",
+    "gain": 0.03989221093377676,
+    "original_file": "program_20251007032028_B6B61250-C50D-4747-AA2C-503B26668C28.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR> = <VAR>;"
+    ],
+    "after": [
+      "<VAR_CHAIN>(<VAR>);"
+    ],
+    "ctx_before": "try { <VAR> = new <VAR>(<VAR>); } catch (<VAR>) {}",
+    "ctx_after": "let <VAR>;",
+    "gain": 0.03741407693593901,
+    "original_file": "program_20251007031843_63910E76-BA3A-48B1-A91C-8F80E0139AF5.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR>(<VAR>, <VAR>());"
+    ],
+    "ctx_before": "<VAR> = <VAR>;",
+    "ctx_after": "let <VAR>;",
+    "gain": 0.03741407693593901,
+    "original_file": "program_20251007031843_63910E76-BA3A-48B1-A91C-8F80E0139AF5.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR>(<STR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    <VAR> = [];",
+    "ctx_after": "    return <VAR>;",
+    "gain": 0.03266982230431581,
+    "original_file": "program_20251007031910_3CA1D689-435B-4E3B-A575-FA5199BC70DE.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    try { <VAR>(<STR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "    try { <VAR>(<STR>);",
+      "<VAR> = <VAR>(<NUM>);",
+      " } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    try { <VAR>(<STR>); } catch (<VAR>) {}",
+    "ctx_after": "    let <VAR>;",
+    "gain": 0.030732608511394255,
+    "original_file": "program_20251007031813_E9173C42-EF03-42A1-8790-4C878CC5887F.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<NUM>, <VAR>);"
+    ],
+    "ctx_before": "    try { <VAR_CHAIN>(<VAR>); } catch (<VAR>) {}",
+    "ctx_after": "    const <VAR> = [<VAR>,<NUM>,<NUM>,<NUM>,<NUM>];",
+    "gain": 0.030732608511394255,
+    "original_file": "program_20251007031813_E9173C42-EF03-42A1-8790-4C878CC5887F.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    try { <VAR> = <VAR_CHAIN>(undefined, <VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "    try { <VAR> = <VAR> ?? <VAR>; } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    let <VAR>;",
+    "ctx_after": "    try { <VAR_CHAIN>(<VAR>); } catch (<VAR>) {}",
+    "gain": 0.030732608511394255,
+    "original_file": "program_20251007031813_E9173C42-EF03-42A1-8790-4C878CC5887F.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR>(<VAR_CHAIN>, <NUM>);"
+    ],
+    "ctx_before": "    try { <VAR> = new <<TYPE>>(); } catch (<VAR>) {}",
+    "ctx_after": "    const <VAR> = <VAR>;",
+    "gain": 0.030732608511394255,
+    "original_file": "program_20251007031957_861EF394-2E82-41F5-976D-FD23A37AE52A.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    try { <VAR_CHAIN>(); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "    try { <VAR_CHAIN>();",
+      "<VAR> = <VAR_CHAIN>(<VAR>, <NUM>);",
+      " } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    try { <VAR_CHAIN>(<VAR>); } catch (<VAR>) {}",
+    "ctx_after": "} catch(<VAR>) {",
+    "gain": 0.030732608511394255,
+    "original_file": "program_20251007031957_861EF394-2E82-41F5-976D-FD23A37AE52A.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    try { <VAR> = new <<TYPE>>(); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "    try { <VAR>(); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    let <VAR>;",
+    "ctx_after": "    const <VAR> = <VAR>;",
+    "gain": 0.030732608511394255,
+    "original_file": "program_20251007031957_861EF394-2E82-41F5-976D-FD23A37AE52A.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    try { <VAR_CHAIN>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "    try { <VAR> = <VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    try { <VAR> = <VAR_CHAIN>(<VAR>, <NUM>); } catch (<VAR>) {}",
+    "ctx_after": "    try { <VAR_CHAIN>(); } catch (<VAR>) {}",
+    "gain": 0.030732608511394255,
+    "original_file": "program_20251007031957_861EF394-2E82-41F5-976D-FD23A37AE52A.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "            <VAR>[<VAR>] = <VAR>(<VAR>[<VAR>]);"
+    ],
+    "after": [
+      "            <VAR>[<VAR>] = <BUILTIN>(<VAR>[<VAR>]);"
+    ],
+    "ctx_before": "        for (const <VAR> in <VAR>) {",
+    "ctx_after": "            <VAR>[<VAR>] = true;",
+    "gain": 0.029534734286008148,
+    "original_file": "program_20251007031758_80CC65E5-E6B3-49D3-A41A-7094D551393A.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR>();"
+    ],
+    "after": [
+      "<VAR> < <VAR>;",
+      "try { <VAR>(<NUM>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "",
+    "gain": 0.025991104232814567,
+    "original_file": "program_20251007032125_191D0331-270A-4B47-A897-AA5F94D181F5.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> = <VAR_CHAIN>(<VAR>, <NUM>);"
+    ],
+    "ctx_before": "    try { <VAR> = <VAR_CHAIN>(undefined, <VAR>); } catch (<VAR>) {}",
+    "ctx_after": "    try { <VAR_CHAIN>(<VAR>); } catch (<VAR>) {}",
+    "gain": 0.024634239206951847,
+    "original_file": "program_20251007032329_048AA2E9-BE3B-40FE-8C8F-BA280E4411C4.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR_CHAIN>(<BUILTIN>, <NUM>, <NUM>, <BUILTIN>); } catch (<BUILTIN>) {}"
+    ],
+    "ctx_before": "            <VAR> = <NUM>;",
+    "ctx_after": "        },",
+    "gain": 0.024308186034795704,
+    "original_file": "program_20251007032008_20063D03-B520-4C14-B23B-70A5643A48DB.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    var <<TYPE>> = <VAR>;"
+    ],
+    "after": [
+      "    var <VAR> = <VAR>;"
+    ],
+    "ctx_before": "    const <VAR> = new <BUILTIN>([<NUM>,-<NUM>,-<NUM>,-<NUM>,<NUM>,<NUM>,-<NUM>,<NUM>]);",
+    "ctx_after": "    <VAR_CHAIN>(<NUM>);",
+    "gain": 0.02408914738101839,
+    "original_file": "program_20251007031859_FB106238-1143-41F5-B88F-5E100E60BA5A.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> <= <NUM>;",
+      "<VAR> >>> <VAR>;"
+    ],
+    "ctx_before": "    <VAR_CHAIN>(<NUM>);",
+    "ctx_after": "    <VAR_CHAIN>(<NUM>);",
+    "gain": 0.02408914738101839,
+    "original_file": "program_20251007031859_FB106238-1143-41F5-B88F-5E100E60BA5A.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "new <<TYPE>>();",
+      "new <<TYPE>>();"
+    ],
+    "after": [
+      "<VAR>(<NUM>);",
+      "new <VAR>();"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "",
+    "gain": 0.02394735502386825,
+    "original_file": "program_20251007031943_3EB5F1FA-E62A-420A-B6F7-2A970F953F5C.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "try { <VAR> = <TYPE_CHAIN>(<NUM>, <NUM>, <NUM>, <NUM>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "try { <VAR>(<VAR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "let <VAR>;",
+    "ctx_after": "var <VAR> = <VAR>;",
+    "gain": 0.021781883023392012,
+    "original_file": "program_20251007032107_DE4FA610-3B48-4B08-860A-D12750F25617.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR> = <NUM>;"
+    ],
+    "after": [
+      "    <VAR> <= <NUM>;"
+    ],
+    "ctx_before": "    <VAR> = <NUM>;",
+    "ctx_after": "    <VAR> = <NUM>;",
+    "gain": 0.021653741311379954,
+    "original_file": "program_20251007031719_60864E80-4DC8-4D02-A507-5CCB2973F3EA.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR> = <NUM>;"
+    ],
+    "after": [
+      "<VAR_CHAIN>(<STR>, <VAR>);"
+    ],
+    "ctx_before": "    <VAR> = <NUM>;",
+    "ctx_after": "    <VAR> = <NUM>;",
+    "gain": 0.021653741311379954,
+    "original_file": "program_20251007031719_60864E80-4DC8-4D02-A507-5CCB2973F3EA.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "    <VAR> = <VAR_CHAIN>(<VAR>);"
+    ],
+    "ctx_before": "    <VAR> = <NUM>;",
+    "ctx_after": "    <VAR> = <NUM>;",
+    "gain": 0.021653741311379954,
+    "original_file": "program_20251007031719_60864E80-4DC8-4D02-A507-5CCB2973F3EA.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR> = <NUM>;"
+    ],
+    "after": [
+      "<VAR> = <VAR_CHAIN>();"
+    ],
+    "ctx_before": "    <VAR> = <NUM>;",
+    "ctx_after": "    <VAR> = <NUM>;",
+    "gain": 0.021653741311379954,
+    "original_file": "program_20251007031719_60864E80-4DC8-4D02-A507-5CCB2973F3EA.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR> = <NUM>;"
+    ],
+    "after": [
+      "    <VAR_CHAIN>(...<VAR>);"
+    ],
+    "ctx_before": "    <VAR> = <NUM>;",
+    "ctx_after": "    <VAR> = <NUM>;",
+    "gain": 0.021653741311379954,
+    "original_file": "program_20251007031719_60864E80-4DC8-4D02-A507-5CCB2973F3EA.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR> = <NUM>;"
+    ],
+    "after": [
+      "<VAR_CHAIN>(<VAR>);"
+    ],
+    "ctx_before": "",
+    "ctx_after": "}",
+    "gain": 0.021653741311379954,
+    "original_file": "program_20251007031719_60864E80-4DC8-4D02-A507-5CCB2973F3EA.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "    <VAR> = <NUM>;"
+    ],
+    "ctx_before": "",
+    "ctx_after": "}",
+    "gain": 0.021653741311379954,
+    "original_file": "program_20251007031719_60864E80-4DC8-4D02-A507-5CCB2973F3EA.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR> = <NUM>;"
+    ],
+    "after": [
+      "    <VAR_CHAIN>;"
+    ],
+    "ctx_before": "    <VAR> = <NUM>;",
+    "ctx_after": "    <VAR> = <NUM>;",
+    "gain": 0.021653741311379954,
+    "original_file": "program_20251007031719_60864E80-4DC8-4D02-A507-5CCB2973F3EA.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    await <BUILTIN>.<BUILTIN_METHOD>(<NUM>);"
+    ],
+    "after": [
+      "    await <VAR>(<STR>);"
+    ],
+    "ctx_before": "async function <VAR>() {",
+    "ctx_after": "}",
+    "gain": 0.021653741311379954,
+    "original_file": "program_20251007032125_191D0331-270A-4B47-A897-AA5F94D181F5.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "            <VAR>[<NUM>] = {};"
+    ],
+    "after": [
+      "            <VAR>[<NUM>] = {};",
+      "try { <VAR> = <VAR>(<VAR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "        if (<VAR> === <NUM>) {",
+    "ctx_after": "        }",
+    "gain": 0.02002988317578852,
+    "original_file": "program_20251007032013_9C37CD38-0DB3-467D-B5EA-535A78375031.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "        return (<VAR> = <VAR> | <NUM>) | <NUM>;"
+    ],
+    "after": [
+      "        return (<VAR_CHAIN>) | <NUM>;"
+    ],
+    "ctx_before": "    function <VAR>(<VAR>) {",
+    "ctx_after": "    }",
+    "gain": 0.02002988317578852,
+    "original_file": "program_20251007032013_9C37CD38-0DB3-467D-B5EA-535A78375031.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR_CHAIN>(<NUM>, <VAR>);",
+      "<VAR> = <VAR_CHAIN>(<VAR>);"
+    ],
+    "after": [
+      "<VAR_CHAIN>(<NUM>, <VAR>);",
+      "try { <VAR_CHAIN>(<VAR>, <NUM>, <VAR>); } catch (<VAR>) {}",
+      "<VAR> = <VAR_CHAIN>(<VAR>);"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "",
+    "gain": 0.017208459785705874,
+    "original_file": "program_20251007031825_D1509FCD-C2EE-4F88-AD4F-69F469F838A0.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "try { <VAR> = new <<TYPE>>(<NUM>, <NUM>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "try { <VAR> = new <VAR>(<NUM>, <NUM>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "let <VAR>;",
+    "ctx_after": "<VAR> = <VAR>;",
+    "gain": 0.01619802567751701,
+    "original_file": "program_20251007031937_EEEBE843-A8CB-4EED-B1EB-1D3398F600E0.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR>();",
+      "try { <VAR> = <VAR_CHAIN>(<STR>); } catch (<VAR>) {}",
+      " } catch (<VAR>) {}"
+    ],
+    "ctx_before": "try { <VAR_CHAIN>(<STR>, <VAR>); } catch (<VAR>) {}",
+    "ctx_after": "try { <VAR>(); } catch (<VAR>) {}",
+    "gain": 0.015071010118837932,
+    "original_file": "program_20251007031937_EEEBE843-A8CB-4EED-B1EB-1D3398F600E0.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "try { <VAR>(); } catch (<VAR>) {}"
+    ],
+    "after": [],
+    "ctx_before": "try { <VAR>(); } catch (<VAR>) {}",
+    "ctx_after": "",
+    "gain": 0.015071010118837932,
+    "original_file": "program_20251007031937_EEEBE843-A8CB-4EED-B1EB-1D3398F600E0.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR_CHAIN>(<VAR>, <NUM>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "<VAR> = <VAR>;",
+    "ctx_after": "function <VAR>() {",
+    "gain": 0.015071010118837932,
+    "original_file": "program_20251007031937_EEEBE843-A8CB-4EED-B1EB-1D3398F600E0.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "try { <VAR_CHAIN>(<STR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "try { <VAR>(<VAR>)(<STR>, <VAR>); } catch (<VAR>) {}",
+      "<VAR>(<VAR>, <VAR>);"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "try { <VAR>(); } catch (<VAR>) {}",
+    "gain": 0.015071010118837932,
+    "original_file": "program_20251007031937_EEEBE843-A8CB-4EED-B1EB-1D3398F600E0.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR>(); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "",
+    "gain": 0.015071010118837932,
+    "original_file": "program_20251007031937_EEEBE843-A8CB-4EED-B1EB-1D3398F600E0.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR>(<STR>);"
+    ],
+    "after": [
+      "<VAR_CHAIN>;"
+    ],
+    "ctx_before": "",
+    "ctx_after": "<VAR>(<STR>);",
+    "gain": 0.014407313069603606,
+    "original_file": "program_20251007031938_6F23E83A-3D79-4182-8A30-E8B7FB8BA949.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>();"
+    ],
+    "ctx_before": "<VAR>(<STR>);",
+    "ctx_after": "",
+    "gain": 0.014407313069603606,
+    "original_file": "program_20251007031938_6F23E83A-3D79-4182-8A30-E8B7FB8BA949.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR> = [];"
+    ],
+    "after": [
+      "<VAR>[<NUM>].<VAR>(<NUM>);"
+    ],
+    "ctx_before": "<VAR> = [<NUM>];",
+    "ctx_after": "function <VAR>() {",
+    "gain": 0.0131534390871447,
+    "original_file": "program_20251007031825_D1509FCD-C2EE-4F88-AD4F-69F469F838A0.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR> = <VAR_CHAIN>(<VAR>);"
+    ],
+    "after": [
+      "<VAR> = <VAR>(<NUM>);"
+    ],
+    "ctx_before": "<VAR_CHAIN>(<NUM>, <VAR>);",
+    "ctx_after": "",
+    "gain": 0.0131534390871447,
+    "original_file": "program_20251007031825_D1509FCD-C2EE-4F88-AD4F-69F469F838A0.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<VAR>, <NUM>, <VAR>);"
+    ],
+    "ctx_before": "    try { <VAR>(<STR>); } catch (<VAR>) {}",
+    "ctx_after": "    try { <VAR>(<STR>); } catch (<VAR>) {}",
+    "gain": 0.01232420490689945,
+    "original_file": "program_20251007031813_E9173C42-EF03-42A1-8790-4C878CC5887F.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "for (let <VAR> = <NUM>; <VAR> < <NUM>; <VAR>++) {",
+      "    <VAR_CHAIN>(<VAR> + <NUM>);",
+      "}"
+    ],
+    "ctx_before": "        }",
+    "ctx_after": "        return <VAR>;",
+    "gain": 0.011895071030042136,
+    "original_file": "program_20251007031758_80CC65E5-E6B3-49D3-A41A-7094D551393A.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR>();"
+    ],
+    "after": [
+      "<BUILTIN>(<NUM>);"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "",
+    "gain": 0.010020078111378596,
+    "original_file": "program_20251007032125_191D0331-270A-4B47-A897-AA5F94D181F5.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    await <BUILTIN>.<BUILTIN_METHOD>(<NUM>);"
+    ],
+    "after": [
+      "    await <VAR_CHAIN>(<VAR>, <NUM>)(<NUM>);"
+    ],
+    "ctx_before": "async function <VAR>() {",
+    "ctx_after": "}",
+    "gain": 0.010020078111378596,
+    "original_file": "program_20251007032125_191D0331-270A-4B47-A897-AA5F94D181F5.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "new <<TYPE>>();"
+    ],
+    "after": [
+      "<VAR>(<NUM>);"
+    ],
+    "ctx_before": "new <<TYPE>>();",
+    "ctx_after": "",
+    "gain": 0.00992426054672374,
+    "original_file": "program_20251007031943_3EB5F1FA-E62A-420A-B6F7-2A970F953F5C.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR> = <VAR_CHAIN>(<NUM>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    if (!new.<VAR>) { throw <STR>; }",
+    "ctx_after": "    const <VAR> = this.<PROP>;",
+    "gain": 0.00992426054672374,
+    "original_file": "program_20251007031943_3EB5F1FA-E62A-420A-B6F7-2A970F953F5C.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "try { <VAR>(<STR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "try { <VAR>(<STR>);",
+      "try { <VAR_CHAIN>(<VAR>); } catch (<VAR>) {}",
+      " } catch (<VAR>) {}"
+    ],
+    "ctx_before": "try { <VAR>(<STR>); } catch (<VAR>) {}",
+    "ctx_after": "function <VAR>() {",
+    "gain": 0.008354934682858806,
+    "original_file": "program_20251007031753_D9390863-2FBC-40EB-B185-FC3D734E36AC.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "try { <VAR>(); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "try { <VAR> === <NUM>; } catch (<VAR>) {}"
+    ],
+    "ctx_before": "try { <VAR_CHAIN>(<STR>, <VAR>); } catch (<VAR>) {}",
+    "ctx_after": "",
+    "gain": 0.008300021104071461,
+    "original_file": "program_20251007031937_EEEBE843-A8CB-4EED-B1EB-1D3398F600E0.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    await <BUILTIN>.<BUILTIN_METHOD>(<NUM>);"
+    ],
+    "after": [
+      "    await <BUILTIN> = <VAR>();"
+    ],
+    "ctx_before": "async function <VAR>() {",
+    "ctx_after": "}",
+    "gain": 0.007845628022185629,
+    "original_file": "program_20251007032125_191D0331-270A-4B47-A897-AA5F94D181F5.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR_CHAIN>(<NUM>);"
+    ],
+    "after": [
+      "<VAR> = <VAR>(<VAR>, <VAR>);",
+      "try { <VAR_CHAIN>(<VAR>, <NUM>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "const <VAR> = new <VAR>(<STR>, <VAR>);",
+    "ctx_after": "",
+    "gain": 0.007829480640449749,
+    "original_file": "program_20251007031810_8D759C37-ACD0-4518-AEB1-03DE178AF5F5.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <BUILTIN> = <VAR>(<VAR>); } catch (<VAR>) {}",
+      "<VAR>(<VAR>);"
+    ],
+    "ctx_before": "<VAR_CHAIN>(<NUM>);",
+    "ctx_after": "",
+    "gain": 0.0075306272558707255,
+    "original_file": "program_20251007031810_8D759C37-ACD0-4518-AEB1-03DE178AF5F5.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "    <VAR> < <NUM>;"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "<VAR>(<VAR>);",
+    "gain": 0.0071427730169740244,
+    "original_file": "program_20251007031825_2512E89B-9AE2-41F3-AF21-0732C2956F0B.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "        const <VAR> = <VAR>++;"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "<VAR>(<VAR>);",
+    "gain": 0.0071427730169740244,
+    "original_file": "program_20251007031825_2512E89B-9AE2-41F3-AF21-0732C2956F0B.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "        const <VAR> = { [<VAR>]: <VAR> };"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "<VAR>(<VAR>);",
+    "gain": 0.0071427730169740244,
+    "original_file": "program_20251007031825_2512E89B-9AE2-41F3-AF21-0732C2956F0B.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "        <VAR> === <NUM>;"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "<VAR>(<VAR>);",
+    "gain": 0.0071427730169740244,
+    "original_file": "program_20251007031825_2512E89B-9AE2-41F3-AF21-0732C2956F0B.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> = <VAR_CHAIN>(<VAR_CHAIN>());"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "<VAR>(<VAR>);",
+    "gain": 0.0071427730169740244,
+    "original_file": "program_20251007031825_2512E89B-9AE2-41F3-AF21-0732C2956F0B.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> = <VAR>(<NUM>);"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "<VAR>(<VAR>);",
+    "gain": 0.0071427730169740244,
+    "original_file": "program_20251007031825_2512E89B-9AE2-41F3-AF21-0732C2956F0B.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR> = <VAR>(<VAR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    <VAR>(<VAR_CHAIN>);",
+    "ctx_after": "    if (<VAR> !== undefined) {",
+    "gain": 0.007075221579654012,
+    "original_file": "program_20251007031724_9FCD4AB1-5823-4DC9-97C7-5517D1C3031B.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "        try { <VAR_CHAIN>(<STR>, <STR>, <VAR>); } catch (<VAR>) {}",
+    "ctx_after": "        const <VAR> = [<VAR>,<NUM>];",
+    "gain": 0.007075221579654012,
+    "original_file": "program_20251007031724_9FCD4AB1-5823-4DC9-97C7-5517D1C3031B.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "        try { <VAR> = <VAR_CHAIN>(<STR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "        try { <VAR> = <VAR> ?? <VAR>(<STR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "        let <VAR>;",
+    "ctx_after": "        let <VAR>;",
+    "gain": 0.007075221579654012,
+    "original_file": "program_20251007031724_9FCD4AB1-5823-4DC9-97C7-5517D1C3031B.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    try { <VAR> = <VAR_CHAIN>(undefined, <NUM>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "    try { <VAR> < <NUM>; } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    let <VAR>;",
+    "ctx_after": "    let <VAR>;",
+    "gain": 0.006926236671170205,
+    "original_file": "program_20251007032131_2E5D1466-60BD-470F-A5E5-E7CC983BE020.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "new <<TYPE>>();",
+      "new <<TYPE>>();"
+    ],
+    "after": [
+      "new <VAR>();",
+      "<VAR_CHAIN>(<NUM>);"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "",
+    "gain": 0.006578558191629107,
+    "original_file": "program_20251007031943_3EB5F1FA-E62A-420A-B6F7-2A970F953F5C.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "        <BUILTIN>.<BUILTIN_METHOD>(<VAR>);"
+    ],
+    "after": [
+      "        <VAR>(<NUM>);"
+    ],
+    "ctx_before": "    } catch(<VAR>) {",
+    "ctx_after": "        <BUILTIN>.<BUILTIN_METHOD>(<VAR>);",
+    "gain": 0.005303705226372357,
+    "original_file": "program_20251007031850_32831BE6-36AB-4346-B4D9-8E1A7C245BC3.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR> = <NUM>;"
+    ],
+    "after": [
+      "<VAR> = <VAR>(<NUM>);"
+    ],
+    "ctx_before": "    <VAR> = <NUM>;",
+    "ctx_after": "    <VAR> = <NUM>;",
+    "gain": 0.0052037819242263805,
+    "original_file": "program_20251007031719_60864E80-4DC8-4D02-A507-5CCB2973F3EA.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR> = <NUM>;"
+    ],
+    "after": [
+      "    <VAR_CHAIN>(<NUM>);"
+    ],
+    "ctx_before": "    <VAR> = <NUM>;",
+    "ctx_after": "    <VAR> = <NUM>;",
+    "gain": 0.0052037819242263805,
+    "original_file": "program_20251007031719_60864E80-4DC8-4D02-A507-5CCB2973F3EA.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "    <VAR>(<VAR>);"
+    ],
+    "ctx_before": "    <VAR> = <NUM>;",
+    "ctx_after": "    <VAR> = <NUM>;",
+    "gain": 0.0052037819242263805,
+    "original_file": "program_20251007031719_60864E80-4DC8-4D02-A507-5CCB2973F3EA.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR>();",
+      "<VAR> < <NUM>;"
+    ],
+    "ctx_before": "    try { new <VAR>(this, this); } catch (<VAR>) {}",
+    "ctx_after": "}",
+    "gain": 0.004798253530461025,
+    "original_file": "program_20251007031943_3EB5F1FA-E62A-420A-B6F7-2A970F953F5C.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>;"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "new <<TYPE>>();",
+    "gain": 0.004798253530461025,
+    "original_file": "program_20251007031943_3EB5F1FA-E62A-420A-B6F7-2A970F953F5C.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "new <<TYPE>>();"
+    ],
+    "after": [],
+    "ctx_before": "new <<TYPE>>();",
+    "ctx_after": "",
+    "gain": 0.004798253530461025,
+    "original_file": "program_20251007031943_3EB5F1FA-E62A-420A-B6F7-2A970F953F5C.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR_CHAIN>(<NUM>, <NUM>);"
+    ],
+    "after": [
+      "try { <VAR_CHAIN>(<STR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "",
+    "gain": 0.004667016785995237,
+    "original_file": "program_20251007031854_A21D6683-2A12-4EC6-BE25-05DA0DC6B0CD.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<NUM>, <NUM>);"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "",
+    "gain": 0.004667016785995237,
+    "original_file": "program_20251007031854_A21D6683-2A12-4EC6-BE25-05DA0DC6B0CD.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR_CHAIN>(<NUM>, <NUM>, <NUM>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "        <VAR> = true;",
+    "ctx_after": "    }",
+    "gain": 0.004569688533998327,
+    "original_file": "program_20251007031723_DF33CFC9-C4B9-4F80-97C6-45F78B904683.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR>();"
+    ],
+    "after": [
+      "<VAR> = <VAR>(<NUM>);"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "",
+    "gain": 0.004569688533998327,
+    "original_file": "program_20251007031723_DF33CFC9-C4B9-4F80-97C6-45F78B904683.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR> = <VAR>;"
+    ],
+    "after": [
+      "<VAR> = <BUILTIN>;"
+    ],
+    "ctx_before": "",
+    "ctx_after": "const <VAR> = <TYPE_CHAIN>;",
+    "gain": 0.004282937672147047,
+    "original_file": "program_20251007031843_63910E76-BA3A-48B1-A91C-8F80E0139AF5.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR_CHAIN>(...<BUILTIN>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "",
+    "ctx_after": "const <VAR> = <TYPE_CHAIN>;",
+    "gain": 0.004282937672147047,
+    "original_file": "program_20251007031843_63910E76-BA3A-48B1-A91C-8F80E0139AF5.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "try { <VAR> = new <VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "try { <VAR> = new <VAR>(<VAR>);",
+      "try { <VAR_CHAIN>(<VAR>, <NUM>, <BUILTIN>); } catch (<VAR>) {}",
+      " } catch (<VAR>) {}"
+    ],
+    "ctx_before": "let <VAR>;",
+    "ctx_after": "<VAR> = <VAR>;",
+    "gain": 0.004282937672147047,
+    "original_file": "program_20251007031843_63910E76-BA3A-48B1-A91C-8F80E0139AF5.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "try { <VAR_CHAIN>(<STR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "try { <VAR>(<NUM>, <VAR>, <VAR>, <VAR>, ...<VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "try { <VAR>(); } catch (<VAR>) {}",
+    "gain": 0.004280045137818166,
+    "original_file": "program_20251007031937_EEEBE843-A8CB-4EED-B1EB-1D3398F600E0.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "        <VAR>(<VAR>, <VAR>, <VAR>);"
+    ],
+    "ctx_before": "try { <VAR>(); } catch (<VAR>) {}",
+    "ctx_after": "",
+    "gain": 0.004280045137818166,
+    "original_file": "program_20251007031937_EEEBE843-A8CB-4EED-B1EB-1D3398F600E0.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR> = <VAR_CHAIN>; } catch (<BUILTIN>) {}"
+    ],
+    "ctx_before": "    <VAR_CHAIN>;",
+    "ctx_after": "    <VAR>[<NUM>] = <NUM>;",
+    "gain": 0.003964062264516063,
+    "original_file": "program_20251007032043_25079BC9-F1C1-4B3A-80AD-49F6202FA8D5.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> = <VAR_CHAIN>(<VAR>, <NUM>);"
+    ],
+    "ctx_before": "    if (!new.<VAR>) { throw <STR>; }",
+    "ctx_after": "}",
+    "gain": 0.003592056806433888,
+    "original_file": "program_20251007031943_3EB5F1FA-E62A-420A-B6F7-2A970F953F5C.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> = <VAR>(<VAR>);"
+    ],
+    "ctx_before": "    if (!new.<VAR>) { throw <STR>; }",
+    "ctx_after": "}",
+    "gain": 0.003592056806433888,
+    "original_file": "program_20251007031943_3EB5F1FA-E62A-420A-B6F7-2A970F953F5C.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "[-<NUM>,<NUM>,<NUM>,-<NUM>,<NUM>,<NUM>,<NUM>];"
+    ],
+    "ctx_before": "[-<NUM>,<<TYPE>>,<NUM>,<NUM>,-<NUM>,<NUM>,<NUM>];",
+    "ctx_after": "[<NUM>,<NUM>,-<NUM>];",
+    "gain": 0.0027839113592526,
+    "original_file": "program_20251007031951_67CD1B4A-9264-4153-89F5-3AEAE3A2D2F2.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> = <VAR>(<NUM>);"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "function <VAR>(<VAR>) {",
+    "gain": 0.002544849024493513,
+    "original_file": "program_20251007031723_DF33CFC9-C4B9-4F80-97C6-45F78B904683.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<BUILTIN> = <VAR>(<BUILTIN>);"
+    ],
+    "ctx_before": "    <VAR> = this;",
+    "ctx_after": "}",
+    "gain": 0.002104234980294755,
+    "original_file": "program_20251007031854_A21D6683-2A12-4EC6-BE25-05DA0DC6B0CD.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR_CHAIN>(<STR>, <VAR>);"
+    ],
+    "after": [
+      "<VAR_CHAIN>(<STR>, <VAR>);",
+      "<VAR_CHAIN>(<VAR>);"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "<VAR_CHAIN>;",
+    "gain": 0.002104234980294755,
+    "original_file": "program_20251007031854_A21D6683-2A12-4EC6-BE25-05DA0DC6B0CD.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR> = this;"
+    ],
+    "after": [
+      "    <VAR> = this;",
+      "<VAR_CHAIN>(...<VAR>);"
+    ],
+    "ctx_before": "function <VAR>() {",
+    "ctx_after": "}",
+    "gain": 0.002104234980294755,
+    "original_file": "program_20251007031854_A21D6683-2A12-4EC6-BE25-05DA0DC6B0CD.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR_CHAIN>(<NUM>, <NUM>);"
+    ],
+    "after": [
+      "<VAR_CHAIN>(<NUM>);",
+      "<VAR_CHAIN>(<NUM>, <NUM>);"
+    ],
+    "ctx_before": "<VAR_CHAIN>;",
+    "ctx_after": "",
+    "gain": 0.002104234980294755,
+    "original_file": "program_20251007031854_A21D6683-2A12-4EC6-BE25-05DA0DC6B0CD.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR_CHAIN>;"
+    ],
+    "after": [
+      "<VAR> = <VAR>(<VAR>, <VAR>);"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "",
+    "gain": 0.002104234980294755,
+    "original_file": "program_20251007031854_A21D6683-2A12-4EC6-BE25-05DA0DC6B0CD.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR_CHAIN>(<NUM>, <NUM>);"
+    ],
+    "after": [
+      "<VAR_CHAIN>;"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "",
+    "gain": 0.002104234980294755,
+    "original_file": "program_20251007031854_A21D6683-2A12-4EC6-BE25-05DA0DC6B0CD.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR_CHAIN>(<STR>, <NUM>);"
+    ],
+    "ctx_before": "        }",
+    "ctx_after": "    }",
+    "gain": 0.0015610644834882711,
+    "original_file": "program_20251007031707_FA3E9ABA-C37C-4AC9-98D9-E193B0C0A0B3.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> < <NUM>;"
+    ],
+    "ctx_before": "        }",
+    "ctx_after": "    }",
+    "gain": 0.0015610644834882711,
+    "original_file": "program_20251007031707_FA3E9ABA-C37C-4AC9-98D9-E193B0C0A0B3.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "        let <VAR> = <VAR> - <NUM>;"
+    ],
+    "after": [
+      "        let <VAR> = <VAR_CHAIN>;"
+    ],
+    "ctx_before": "    for (let <VAR> = <NUM>; <VAR> < <NUM>; <VAR>++) {",
+    "ctx_after": "        switch (<VAR>) {",
+    "gain": 0.0015610644834882711,
+    "original_file": "program_20251007031707_FA3E9ABA-C37C-4AC9-98D9-E193B0C0A0B3.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR> = <VAR>(<NUM>);"
+    ],
+    "ctx_before": "        }",
+    "ctx_after": "    }",
+    "gain": 0.0015610644834882711,
+    "original_file": "program_20251007031707_FA3E9ABA-C37C-4AC9-98D9-E193B0C0A0B3.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR_CHAIN>(<NUM>, <VAR>);"
+    ],
+    "after": [
+      "<VAR> + <NUM>(<VAR>);",
+      "<VAR> < <NUM>;"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "<VAR> = <VAR_CHAIN>(<VAR>);",
+    "gain": 0.001308485169565058,
+    "original_file": "program_20251007031825_D1509FCD-C2EE-4F88-AD4F-69F469F838A0.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR_CHAIN>(<NUM>, <VAR>);"
+    ],
+    "after": [
+      "<VAR_CHAIN>;"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "<VAR> = <VAR_CHAIN>(<VAR>);",
+    "gain": 0.001308485169565058,
+    "original_file": "program_20251007031825_D1509FCD-C2EE-4F88-AD4F-69F469F838A0.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR>(<VAR>);"
+    ],
+    "ctx_before": "<VAR> = <VAR_CHAIN>(<VAR>);",
+    "ctx_after": "",
+    "gain": 0.001308485169565058,
+    "original_file": "program_20251007031825_D1509FCD-C2EE-4F88-AD4F-69F469F838A0.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR> = <VAR>(); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    <VAR>(<STR>);",
+    "ctx_after": "}",
+    "gain": 0.0013037198097775732,
+    "original_file": "program_20251007032043_25079BC9-F1C1-4B3A-80AD-49F6202FA8D5.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR> = <VAR>;"
+    ],
+    "after": [
+      "<VAR> = -<NUM>;"
+    ],
+    "ctx_before": "}",
+    "ctx_after": "const <VAR> = <VAR_CHAIN>;",
+    "gain": 0.0013037198097775732,
+    "original_file": "program_20251007032043_25079BC9-F1C1-4B3A-80AD-49F6202FA8D5.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR>(); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    }",
+    "ctx_after": "}",
+    "gain": 0.0010842960217709516,
+    "original_file": "program_20251007031707_FA3E9ABA-C37C-4AC9-98D9-E193B0C0A0B3.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "const <VAR> = <VAR_CHAIN>;"
+    ],
+    "after": [
+      "<VAR> |= <VAR> << (<VAR> << <NUM>);",
+      "const <VAR> = <VAR>(<VAR>, <VAR>).<VAR>;"
+    ],
+    "ctx_before": "<VAR> = <VAR>;",
+    "ctx_after": "function <VAR>() {",
+    "gain": 0.0008130295034680275,
+    "original_file": "program_20251007032043_25079BC9-F1C1-4B3A-80AD-49F6202FA8D5.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "        var <VAR> = <VAR>;"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>(<NUM>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "        const <VAR> = {};",
+    "ctx_after": "        const <VAR> = <VAR_CHAIN>;",
+    "gain": 0.0006181173775752571,
+    "original_file": "program_20251007031913_D49C12A1-62B1-4441-9857-4BE046C07EA8.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "        var <VAR> = <VAR>;"
+    ],
+    "ctx_before": "        const <VAR> = {};",
+    "ctx_after": "        const <VAR> = <VAR_CHAIN>;",
+    "gain": 0.0006181173775752571,
+    "original_file": "program_20251007031913_D49C12A1-62B1-4441-9857-4BE046C07EA8.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR>(<STR>);"
+    ],
+    "after": [
+      "    <VAR>(<STR>);",
+      "<VAR> = <VAR_CHAIN>(<NUM>);"
+    ],
+    "ctx_before": "function <VAR>() {",
+    "ctx_after": "}",
+    "gain": 0.0006051306859365287,
+    "original_file": "program_20251007032043_25079BC9-F1C1-4B3A-80AD-49F6202FA8D5.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "<VAR>(<VAR>, <VAR>);"
+    ],
+    "ctx_before": "    <VAR>[<NUM>] = {};",
+    "ctx_after": "    return null;",
+    "gain": 0.0006051306859365287,
+    "original_file": "program_20251007032043_25079BC9-F1C1-4B3A-80AD-49F6202FA8D5.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR> = <VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "<BUILTIN>.<BUILTIN_METHOD>(<VAR_CHAIN>() === <NUM>, <STR>);",
+    "ctx_after": "",
+    "gain": 0.0005540540403004175,
+    "original_file": "program_20251007031758_80CC65E5-E6B3-49D3-A41A-7094D551393A.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "<VAR>(<VAR>[<NUM>]);"
+    ],
+    "after": [
+      "<STR> + <BUILTIN>(<VAR>);"
+    ],
+    "ctx_before": "<VAR>(<VAR>, [<NUM>,<NUM>,<NUM>]);",
+    "ctx_after": "",
+    "gain": 0.0004000724492263588,
+    "original_file": "program_20251007032043_25079BC9-F1C1-4B3A-80AD-49F6202FA8D5.js"
+  },
+  {
+    "kind": "insert",
+    "before": [],
+    "after": [
+      "try { <VAR> = <VAR_CHAIN>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "ctx_before": "    }",
+    "ctx_after": "    const <VAR> = () => {",
+    "gain": 0.00030845736602824747,
+    "original_file": "program_20251007031753_FCC7F851-B3C8-4D72-BC05-D13495ABBFCB.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR>(<BUILTIN_CHAIN>(<VAR>));"
+    ],
+    "after": [
+      "    <VAR>(<VAR_CHAIN>);"
+    ],
+    "ctx_before": "    <VAR>(<BUILTIN_CHAIN>(<VAR>));",
+    "ctx_after": "}",
+    "gain": 0.00021049742248366657,
+    "original_file": "program_20251007031917_ACB1CE6B-B2F6-46E2-B61B-83B17A5AB77D.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR>(<VAR_CHAIN>);"
+    ],
+    "after": [
+      "    <VAR> = <VAR>(<NUM>);"
+    ],
+    "ctx_before": "    <VAR>(<VAR_CHAIN>);",
+    "ctx_after": "}",
+    "gain": 0.00021049742248366657,
+    "original_file": "program_20251007031917_ACB1CE6B-B2F6-46E2-B61B-83B17A5AB77D.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR>(<BUILTIN_CHAIN>(<VAR>));"
+    ],
+    "after": [
+      "    <VAR>(<BUILTIN> = <VAR_CHAIN>(<VAR>, <NUM>)(<VAR>));"
+    ],
+    "ctx_before": "    <BUILTIN>.<BUILTIN_METHOD>(<VAR>);",
+    "ctx_after": "    <VAR>(<BUILTIN_CHAIN>(<VAR>));",
+    "gain": 0.00021049742248366657,
+    "original_file": "program_20251007031917_ACB1CE6B-B2F6-46E2-B61B-83B17A5AB77D.js"
+  },
+  {
+    "kind": "replace",
+    "before": [
+      "    <VAR>(<NUM>, <VAR_CHAIN>);",
+      "    <VAR>(<VAR_CHAIN>);",
+      "    <VAR>(<VAR_CHAIN>);"
+    ],
+    "after": [
+      "    <VAR>(<NUM>, <VAR_CHAIN>);",
+      "    <VAR>(<VAR_CHAIN>);",
+      "    <VAR>(<VAR> === <BUILTIN>);"
+    ],
+    "ctx_before": "    var <VAR> = <BUILTIN_CHAIN>(<VAR>, <VAR>);",
+    "ctx_after": "}",
+    "gain": 0.00021049742248366657,
+    "original_file": "program_20251007031917_ACB1CE6B-B2F6-46E2-B61B-83B17A5AB77D.js"
+  }
+]
