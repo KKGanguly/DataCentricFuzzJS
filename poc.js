@@ -1,49 +1,22 @@
-function f1() {
-    var o1 = {};
-    var o2 = {};
-    var proto1 = { a: "a", b: "b" };
-    var proto2 = { a: "a" };
-    o1.__proto__ = proto1;
-    o2.__proto__ = proto2;
-    function a(a13) {
-        return a13.a;
-    }
-    function b(a16) {
-        return a16.b;
-    }
-    a(o1);
-    a(o2);
-    b(o1);
-    b(o2);
-    proto2.__proto__ = { b: "b" };
-    if (b(o2) !== "b") {
-        WScript.Echo("fail");
-    }
+// Create an Error instance. Error instances have an own property 'stack'
+// which is an accessor backed by a FunctionTemplateInfo (API accessor).
+const err = new Error();
+
+class B {
+  m() {
+    // Access 'stack' via super.
+    // The lookup starts at the prototype of B.prototype.
+    return super.stack;
+  }
 }
-f1();
-f1();
-function f2() {
-    var o1 = { b: "b" };
-    var o2 = { b: "b" };
-    var proto1 = { a: "a", b: "b" };
-    var proto2 = { a: "a" };
-    o1.__proto__ = proto1;
-    o2.__proto__ = proto2;
-    function a(a47) {
-        return a47.a;
-    }
-    function b(a50) {
-        return a50.b;
-    }
-    a(o1);
-    a(o2);
-    delete o1.b;
-    delete o2.b;
-    b(o1);
-    b(o2);
-    proto2.__proto__ = { b: "b" };
-    if (b(o2) !== "b") {
-    }
-}
-f2();
-f2();
+
+// Set the prototype of B.prototype to the Error instance.
+// Now, the super lookup will start at 'err'.
+Object.setPrototypeOf(B.prototype, err);
+
+const b = new B();
+
+// Call the method m with a primitive receiver.
+// This triggers LoadSuperIC and ultimately calls CallGetterIfAccessor with a
+// Smi as receiver and the default kExpectingJSReceiver mode.
+b.m.call(0x4141414 >> 1);

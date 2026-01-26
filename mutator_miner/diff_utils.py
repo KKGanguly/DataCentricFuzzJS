@@ -4,6 +4,18 @@
 import re
 from typing import Dict, Set, List
 import difflib
+import re
+from tree_sitter_languages import get_parser
+
+js_parser = get_parser("javascript")
+
+SEMANTIC_NODE_TYPES = {
+    "expression_statement","return_statement","throw_statement",
+    "if_statement","for_statement","while_statement","do_statement",
+    "try_statement","switch_statement",
+    "variable_declaration","lexical_declaration",
+    "assignment_expression","call_expression","new_expression"
+}
 
 # -----------------------------
 # Built-ins / keywords database
@@ -51,6 +63,41 @@ KEYWORDS: Set[str] = {
     "in","instanceof","yield","await","async","static","extends",
     "null","true","false","undefined","with","debugger"
 }
+
+def is_trivial_context(line: str) -> bool:
+    line = line.strip()
+    if not line:
+        return True
+    if re.fullmatch(r"[{}();]+", line):
+        return True
+    return False
+
+def is_good_context(line: str) -> bool:
+    line = line.strip()
+    if not line:
+        return False
+    if re.fullmatch(r"[{}();]+", line):
+        return False
+    if line.startswith("//"):
+        return False
+    return True
+    
+def line_to_byte_offset(code: str, line_no_1based: int) -> int:
+    lines = code.splitlines(keepends=True)
+    return sum(len(lines[i]) for i in range(min(line_no_1based-1, len(lines))))
+
+def find_semantic_context(code: str, line_no_1based: int) -> str | None:
+    byte_off = line_to_byte_offset(code, line_no_1based)
+    tree = js_parser.parse(code.encode("utf8"))
+    node = tree.root_node.descendant_for_byte_range(byte_off, byte_off)
+
+    while node:
+        if node.type in SEMANTIC_NODE_TYPES:
+            return code[node.start_byte:node.end_byte].strip()
+        node = node.parent
+
+    return None
+
 
 # -----------------------------
 # Diff extraction
@@ -191,7 +238,7 @@ def _strip_prefix(line: str) -> str:
 def _is_header(line: str) -> bool:
     return line.startswith(("---", "+++", "@@"))
 
-def extract_mutations(generalized_unified_diff: str) -> List[dict]:
+def extract_mutations(generalized_unified_diff: str, original_code: str) -> List[dict]:
     """
     Turn unified diff hunks into small replace/insert mutations with context.
 
@@ -211,7 +258,7 @@ def extract_mutations(generalized_unified_diff: str) -> List[dict]:
     for ln in lines:
         if ln.startswith("@@"):
             if cur:
-                muts.extend(_extract_from_hunk(cur))
+                muts.extend(_extract_from_hunk(cur, original_code))
                 cur = []
             in_hunk = True
             continue
@@ -224,120 +271,98 @@ def extract_mutations(generalized_unified_diff: str) -> List[dict]:
             cur.append(ln)
 
     if cur:
-        muts.extend(_extract_from_hunk(cur))
+        muts.extend(_extract_from_hunk(cur, original_code))
 
     return muts
 
-def _extract_from_hunk(hunk_lines: List[str]) -> List[dict]:
-    """
-    Break a hunk into blocks separated by context lines.
-    If block is large, fall back to per-line alignment to avoid giant rules.
-    """
+def _extract_from_hunk(hunk_lines: List[str], original_code: str) -> List[dict]:
     out: List[dict] = []
-
-    # We keep a rolling context window of the last seen context line
-    last_ctx = ""
-    pending_ctx_after_candidates: List[str] = []
 
     block_minus: List[str] = []
     block_plus: List[str] = []
 
-    def flush(next_ctx: str):
+    last_ctx = ""
+
+    def find_nearest_context(idx: int) -> str:
+        # scan backward
+        for j in range(idx - 1, -1, -1):
+            if hunk_lines[j].startswith(" "):
+                c = _strip_prefix(hunk_lines[j]).rstrip()
+                if is_good_context(c):
+                    return c
+        # scan forward
+        for j in range(idx + 1, len(hunk_lines)):
+            if hunk_lines[j].startswith(" "):
+                c = _strip_prefix(hunk_lines[j]).rstrip()
+                if is_good_context(c):
+                    return c
+        return ""
+
+    def flush(ctx_after: str):
         nonlocal block_minus, block_plus, last_ctx
         if not block_minus and not block_plus:
             return
 
-        # Clean
         before = [x.rstrip() for x in block_minus if x.strip()]
         after  = [x.rstrip() for x in block_plus  if x.strip()]
 
-        # If block huge, make smaller aligned atomic mutations
-        if len(before) + len(after) > 6:
-            # Try line-wise alignment (zip), then extras as inserts/deletes
-            k = min(len(before), len(after))
-            for i in range(k):
-                b = before[i]
-                a = after[i]
-                if b == a:
-                    continue
-                out.append({
-                    "kind": "replace",
-                    "before": [b],
-                    "after": [a],
-                    "ctx_before": (last_ctx or ""),
-                    "ctx_after": (next_ctx or ""),
-                })
-            # extra additions -> inserts
-            for j in range(k, len(after)):
-                out.append({
-                    "kind": "insert",
-                    "before": [],
-                    "after": [after[j]],
-                    "ctx_before": (last_ctx or ""),
-                    "ctx_after": (next_ctx or ""),
-                })
-            # extra deletions -> replace to empty
-            for j in range(k, len(before)):
-                out.append({
-                    "kind": "replace",
-                    "before": [before[j]],
-                    "after": [],
-                    "ctx_before": (last_ctx or ""),
-                    "ctx_after": (next_ctx or ""),
-                })
+        if before and after:
+            out.append({
+                "kind": "replace",
+                "before": before,
+                "after": after,
+                "ctx_before": last_ctx,
+                "ctx_after": ctx_after,
+            })
+        elif after and not before:
+            out.append({
+                "kind": "insert",
+                "before": [],
+                "after": after,
+                "ctx_before": last_ctx,
+                "ctx_after": ctx_after,
+            })
         else:
-            if before and after:
-                out.append({
-                    "kind": "replace",
-                    "before": before,
-                    "after": after,
-                    "ctx_before": (last_ctx or ""),
-                    "ctx_after": (next_ctx or ""),
-                })
-            elif after and not before:
-                out.append({
-                    "kind": "insert",
-                    "before": [],
-                    "after": after,
-                    "ctx_before": (last_ctx or ""),
-                    "ctx_after": (next_ctx or ""),
-                })
-            else:
-                # pure deletion -> treat as replace-to-empty (still "replace")
-                out.append({
-                    "kind": "replace",
-                    "before": before,
-                    "after": [],
-                    "ctx_before": (last_ctx or ""),
-                    "ctx_after": (next_ctx or ""),
-                })
+            out.append({
+                "kind": "replace",
+                "before": before,
+                "after": [],
+                "ctx_before": last_ctx,
+                "ctx_after": ctx_after,
+            })
 
         block_minus = []
         block_plus = []
 
-    # Walk hunk, splitting blocks on context lines
-    for ln in hunk_lines:
-        if ln.startswith(" "):
-            next_ctx = _strip_prefix(ln).rstrip()
-            flush(next_ctx)
-            last_ctx = next_ctx
-        elif ln.startswith("-"):
+    for i, ln in enumerate(hunk_lines):
+        if ln.startswith("-"):
             block_minus.append(_strip_prefix(ln))
+
         elif ln.startswith("+"):
             block_plus.append(_strip_prefix(ln))
 
-    flush("")  # end of hunk
+        elif ln.startswith(" "):
+            candidate = _strip_prefix(ln).rstrip()
 
-    # Prune obvious no-ops (before==after) and empty
+            if is_good_context(candidate):
+                flush(candidate)
+                last_ctx = candidate
+            else:
+                ctx = find_nearest_context(i)
+                flush(ctx)
+                last_ctx = ctx
+
+    flush("")  # flush at end
+
+    # prune no-ops
     pruned = []
     for m in out:
         if (m.get("before") or []) == (m.get("after") or []):
             continue
-        if m["kind"] == "insert" and not (m.get("after") or []):
-            continue
-        if m["kind"] == "replace" and not (m.get("before") or []) and not (m.get("after") or []):
+        if m["kind"] == "insert" and not m.get("after"):
             continue
         pruned.append(m)
+
     return pruned
 
 # -----------------------------

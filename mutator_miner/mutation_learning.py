@@ -1,17 +1,14 @@
 #!/usr/bin/env python3
-# mutator_learning.py - VALID-ONLY LEARNED MUTATORS (REPLACE + INSERT, CONTEXTED, AST-PARSE CHECK)
-
+# mutator_learning_fixed.py - Extract AST-aware mutations with node types
 import os, json, subprocess, tempfile, requests, re
 from multiprocessing import Pool, cpu_count
 from tqdm import tqdm
 from tree_sitter_languages import get_parser
-
 from corpus_ast_mutator import build_pool, mutate
 from diff_utils import extract_diff, generalize, extract_mutations
 
 CORPUS = "corpus"
 PREDICT_URL = "http://localhost:5000/predict"
-
 FEATURE_CMD = [
     "python3.13",
     "../feature_extractor_cli.py",
@@ -19,55 +16,84 @@ FEATURE_CMD = [
     "--i", None,
     "--format", "string"
 ]
-
 FAIL_KEYS = ["exit_code", "execution_failed", "runtime_error"]
-
-N_MUTATIONS = 20
+N_MUTATIONS = 10
 N_WORKERS = min(32, cpu_count())
 
 js_parser = get_parser("javascript")
 
-JS_ENGINE_PATH = os.environ.get("JS_ENGINE_PATH", "../v8/out/fuzzbuild/d8")
-JS_ENGINE_CHECK_ARGS = ["--check", "--allow-natives-syntax"]
-SYNTAX_TIMEOUT = 5.0
+# Valid statement node types in JS
+STATEMENT_TYPES = {
+    "expression_statement", "return_statement", "throw_statement",
+    "if_statement", "for_statement", "while_statement", "do_statement",
+    "try_statement", "switch_statement", "break_statement", "continue_statement",
+    "variable_declaration", "lexical_declaration",
+    "function_declaration", "class_declaration"
+}
 
+def walk(n):
+    yield n
+    for c in n.children:
+        yield from walk(c)
 
-def v8_parse_ok(js: str) -> bool:
-    try:
-        p = subprocess.run(
-            [JS_ENGINE_PATH] + JS_ENGINE_CHECK_ARGS,
-            input=js.encode("utf-8", errors="ignore"),
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-            timeout=SYNTAX_TIMEOUT
-        )
-        return p.returncode == 0
-    except Exception:
-        return False
-        
-# ---------------- VALIDATION RULES ---------------- #
+def node_text(code, n):
+    return code.encode()[n.start_byte:n.end_byte].decode(errors="ignore")
 
-INVALID_GENERALIZED_PATTERNS = [
-    r"<VAR_CHAIN>\s*=",             # chain assignment (usually nonsense)
-    r"<BUILTIN_CHAIN>\s*;",         # meaningless builtin chain
-    r"catch\s*\(<TYPE>\)",          # invalid catch
-    r"catch\s*\(<<TYPE>>\)",        # invalid catch (alt token)
-    r"\+=\s*<",                     # broken arithmetic
-    r"^\+?\s*$",                    # empty diff lines
-    r"Object\.setPrototypeOf\(\)",  # zero-arg builtins
-    r"<BUILTIN>\s*\(\)",            # builtin() call
+def find_node_type_at_line(code: str, line_1based: int) -> str:
+    """Find the AST node type at a given line number"""
+    lines = code.splitlines(keepends=True)
+    if line_1based < 1 or line_1based > len(lines):
+        return "unknown"
+    
+    byte_offset = sum(len(lines[i]) for i in range(line_1based - 1))
+    tree = js_parser.parse(code.encode())
+    
+    # Find smallest named statement node containing this position
+    best = None
+    best_size = float('inf')
+    
+    for n in walk(tree.root_node):
+        if not n.is_named:
+            continue
+        if n.start_byte <= byte_offset < n.end_byte:
+            size = n.end_byte - n.start_byte
+            if size < best_size and n.type in STATEMENT_TYPES:
+                best = n
+                best_size = size
+    
+    return best.type if best else "expression_statement"
+
+def extract_node_type_from_context(original_code: str, ctx_before: str, ctx_after: str) -> str:
+    """
+    Try to find where ctx_before or ctx_after appears in original code
+    and return the node type at that location
+    """
+    if not original_code:
+        return "expression_statement"
+    
+    lines = original_code.splitlines()
+    
+    # Try to find context in original
+    for i, line in enumerate(lines, 1):
+        if ctx_before and ctx_before.strip() in line:
+            return find_node_type_at_line(original_code, i)
+        if ctx_after and ctx_after.strip() in line:
+            return find_node_type_at_line(original_code, i)
+    
+    # Fallback: parse the mutation itself if it exists
+    return "expression_statement"
+
+INVALID_PATTERNS = [
+    r"<VAR_CHAIN>\s*=\s*<VAR_CHAIN>",  # nonsense chain
+    r"<BUILTIN_CHAIN>\s*;",
+    r"catch\s*\(<<TYPE>>\)",
+    r"catch\s*\(<TYPE>\)",
+    r"\+=\s*<",
+    r"^\+?\s*$",
 ]
-INVALID_GENERALIZED_PATTERNS += [
-    r"var\s+<<TYPE>>",
-    r"let\s+<<TYPE>>",
-    r"const\s+<<TYPE>>",
-    r"class\s+<VAR>",
-    r"new\s+<VAR>",
-    r"<VAR>\s*\(",
-    r"<<TYPE>>\s*=",
-]
-MAX_MUTATION_LINES = 10
-MAX_MUTATION_CHARS = 1000
+
+MAX_MUTATION_LINES = 3
+MAX_MUTATION_CHARS = 220
 
 def _block_too_big(lines):
     if not lines:
@@ -75,87 +101,46 @@ def _block_too_big(lines):
     s = "\n".join(lines)
     return (len(lines) > MAX_MUTATION_LINES) or (len(s) > MAX_MUTATION_CHARS)
 
-def generalized_text_is_valid(txt: str) -> bool:
-    for pat in INVALID_GENERALIZED_PATTERNS:
+def text_is_valid(txt: str) -> bool:
+    for pat in INVALID_PATTERNS:
         if re.search(pat, txt):
             return False
     return True
 
-
-def generalized_mut_is_valid(m: dict) -> bool:
-    # Must be insert or replace only
+def mut_is_valid(m: dict) -> bool:
     if m.get("kind") not in ("insert", "replace"):
         return False
-
+    
     before = m.get("before", []) or []
-    after  = m.get("after", []) or []
-    ctx_b  = (m.get("ctx_before") or "").strip()
-    ctx_a  = (m.get("ctx_after")  or "").strip()
-
-    # No-ops
+    after = m.get("after", []) or []
+    
     if before == after:
         return False
-
-    # Size limits
     if _block_too_big(before) or _block_too_big(after):
         return False
-
-    # Replace requires context (otherwise it matches everywhere and explodes)
-    if m["kind"] == "replace" and not ctx_b and not ctx_a:
-        return False
-
-    # Insert must add something
+    
+    # Insert must have content
     if m["kind"] == "insert" and not after:
         return False
-
-    # Reject obviously-broken generalized patterns inside any part
-    blob = "\n".join(before + after + ([ctx_b] if ctx_b else []) + ([ctx_a] if ctx_a else []))
-    if not generalized_text_is_valid(blob):
+    
+    blob = "\n".join(before + after)
+    if not text_is_valid(blob):
         return False
-
+    
     return True
 
-def can_roundtrip_apply(src: str, mut: dict) -> bool:
-    replacements = {
-        "<VAR>": "x",
-        "<TYPE>": "Array",
-        "<<TYPE>>": "Array",
-        "<NUM>": "1",
-        "<STR>": "'x'",
-        "<VAR_CHAIN>": "x",
-        "<BUILTIN>": "Object",
-        "<BUILTIN_METHOD>": "keys",
-        "<PROP>": "p",
-        "<SUPER>": "super",
-    }
+def can_parse_as_statements(lines: list) -> bool:
+    """Check if lines parse as valid JS statements"""
+    if not lines:
+        return True
+    
+    code = "\n".join(lines)
+    # Wrap in function to test as statement block
+    wrapped = f"function __test__() {{\n{code}\n}}"
+    tree = js_parser.parse(wrapped.encode())
+    return not tree.root_node.has_error
 
-    def inst(s: str) -> str:
-        out = s
-        for k, v in replacements.items():
-            out = out.replace(k, v)
-        return out
-
-    if mut["kind"] == "insert":
-        added = [inst(x) for x in (mut.get("after") or []) if x.strip()]
-        if not added:
-            return False
-
-        candidate = src + "\n" + "\n".join(added)
-        return v8_parse_ok(candidate)
-
-    # replace
-    before = [inst(x) for x in (mut.get("before") or [])]
-    after  = [inst(x) for x in (mut.get("after")  or [])]
-
-    if not after and not before:
-        return False
-
-    probe = src + "\n" + "\n".join(after) if after else src
-    return v8_parse_ok(probe)
-
-
-# ---------------- FEATURE UTILS ---------------- #
-
+# ---- Feature & scoring ---- #
 def parse_feature_string(s):
     d = {}
     for pair in s.split(","):
@@ -167,8 +152,6 @@ def parse_feature_string(s):
         except:
             d[k] = v
     return d
-
-
 
 def extract_features(jsfile):
     cmd = FEATURE_CMD.copy()
@@ -189,120 +172,119 @@ def execution_failed(feats: dict) -> bool:
             return True
     return False
 
-
-
 def crash_score(feature_dict: dict) -> float:
     try:
         res = requests.post(PREDICT_URL, json=feature_dict, timeout=10)
         data = res.json()
         return float(data.get("probability", 0.0))
-    except Exception as e:
+    except Exception:
         return 0.0
 
-
-# ---------------- CORE LEARNING ---------------- #
-
+# ---- Core learning ---- #
 def process_file(fname):
     path = os.path.join(CORPUS, fname)
     src = open(path, "r", encoding="utf-8", errors="ignore").read()
-
+    
     base_feats = extract_features(path)
     if execution_failed(base_feats):
         return []
-    base_score = crash_score(base_feats)
     
+    base_score = crash_score(base_feats)
     learned = []
-    seen = set()  # signature dedupe within file
-
+    seen = set()
+    
     for _ in range(N_MUTATIONS):
         mutated = mutate(src, POOL, rounds=3)
+        
         tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".js")
         tmp.write(mutated.encode())
         tmp.close()
-
+        
         try:
-            new_feats = extract_features(tmp.name)
-            # SYNTAX VALIDATION HERE
+            # Validate syntax
             tree = js_parser.parse(mutated.encode())
-            if not v8_parse_ok(mutated):
+            if tree.root_node.has_error:
                 continue
-
+            
+            new_feats = extract_features(tmp.name)
             new_score = crash_score(new_feats)
+            
             if new_score > base_score:
                 diff = extract_diff(src, mutated)
                 gdiff = generalize(diff)
-                print("diff is")
-                print(gdiff)
                 if not gdiff.strip():
                     continue
-                # Extract structured mutations (replace/insert with context)
+                
                 muts = extract_mutations(gdiff, src)
-                print(muts)
+                
                 for m in muts:
-                    if not generalized_mut_is_valid(m):
+                    if not mut_is_valid(m):
                         continue
-                    if not can_roundtrip_apply(src, m):
+                    
+                    # EXTRACT NODE TYPE from original context
+                    node_type = extract_node_type_from_context(
+                        src,
+                        m.get("ctx_before", ""),
+                        m.get("ctx_after", "")
+                    )
+                    
+                    # Validate 'after' block parses
+                    after = m.get("after", [])
+                    if after and not can_parse_as_statements(after):
                         continue
-
+                    
                     sig = (
                         m["kind"],
+                        node_type,
                         tuple(m.get("before") or []),
-                        tuple(m.get("after") or []),
-                        (m.get("ctx_before") or "").strip(),
-                        (m.get("ctx_after") or "").strip(),
+                        tuple(after),
                     )
                     if sig in seen:
                         continue
                     seen.add(sig)
-
+                    
                     learned.append({
                         "kind": m["kind"],
+                        "node_type": node_type,
                         "before": m.get("before") or [],
-                        "after": m.get("after") or [],
-                        "ctx_before": (m.get("ctx_before") or ""),
-                        "ctx_after": (m.get("ctx_after") or ""),
+                        "after": after,
                         "gain": float(new_score - base_score),
                         "original_file": fname
                     })
+        
         finally:
             os.unlink(tmp.name)
-
+    
     return learned
-
-
-# ---------------- MAIN ---------------- #
 
 def main():
     global POOL
-
     print(f"[+] Building fragment pool from {CORPUS}")
     POOL = build_pool(CORPUS)
-
+    
     files = [f for f in os.listdir(CORPUS) if f.endswith(".js")]
     print(f"[+] {len(files)} corpus files")
     print(f"[+] Using {N_WORKERS} cores")
-
+    
     learned = []
-
     with Pool(N_WORKERS) as p:
         for result in tqdm(
             p.imap_unordered(process_file, files),
             total=len(files),
-            desc="Mining valid mutators",
+            desc="Mining mutations",
             ncols=80
         ):
             learned.extend(result)
-
+    
     learned.sort(key=lambda x: x["gain"], reverse=True)
-
-    json.dump(learned, open("learned_mutators.json", "w"), indent=2)
-
-    print(f"\n[✓] Saved {len(learned)} learned mutators to learned_mutators.json")
+    
+    json.dump(learned, open("learned_mutators_fixed.json", "w"), indent=2)
+    print(f"\n[✓] Saved {len(learned)} mutations to learned_mutators_fixed.json")
+    
     if learned:
         print(f"[+] Gain range: {learned[-1]['gain']:.6f} to {learned[0]['gain']:.6f}")
         print("[+] Sample mutator:")
         print(json.dumps(learned[0], indent=2)[:900])
-
 
 if __name__ == "__main__":
     main()

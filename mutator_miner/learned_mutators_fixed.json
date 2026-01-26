@@ -1,0 +1,12 @@
+[
+  {
+    "kind": "replace",
+    "node_type": "expression_statement",
+    "before": [
+      "try { <VAR>(); } catch (<VAR>) {}"
+    ],
+    "after": [],
+    "gain": 0.01619802567751701,
+    "original_file": "program_20251007031937_EEEBE843-A8CB-4EED-B1EB-1D3398F600E0.js"
+  }
+]

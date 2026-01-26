@@ -4,6 +4,23 @@ import argparse, json, os, random, re
 from dataclasses import dataclass, asdict
 from typing import List, Set, Dict, Optional
 
+JS_ENGINE_PATH = os.environ.get("JS_ENGINE_PATH", "../v8/out/fuzzbuild/d8")
+JS_ENGINE_CHECK_ARGS = ["--check", "--allow-natives-syntax"]
+SYNTAX_TIMEOUT = 3.0
+
+
+def v8_parse_ok(js: str) -> bool:
+    try:
+        p = subprocess.run(
+            [JS_ENGINE_PATH] + JS_ENGINE_CHECK_ARGS,
+            input=js.encode("utf-8", errors="ignore"),
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            timeout=SYNTAX_TIMEOUT
+        )
+        return p.returncode == 0
+    except Exception:
+        return False
 # -------------------------------
 # Tree-sitter loader
 # -------------------------------
@@ -42,7 +59,40 @@ def replace_span(code,s,e,new):
 JS_KEYWORDS = {"let","var","const","function","class","return","if","for","while","try","catch","throw","break","continue"}
 JS_BUILTINS = {"Object","Array","Map","Set","Intl","Math","JSON","Promise","WebAssembly","console","Error","Symbol"}
 
-BAD_TOKENS = {"%OptimizeFunction","%PrepareFunction","OptimizeFunctionOnNextCall"}
+BAD_TOKENS = {
+    "%OptimizeFunction",
+    "%PrepareFunction",
+    "%NeverOptimizeFunction",
+    "%DeoptimizeFunction",
+    "%DebugPrint",
+    "%DebugBreak",
+    "%SystemBreak",
+    "%CollectGarbage",
+    "%GetOptimizationStatus",
+    "%HasFastProperties",
+    "%DisassembleFunction",
+    "%HeapObjectVerify",
+    "%IsBeingInterpreted",
+
+    "OptimizeFunctionOnNextCall",
+    "PrepareFunctionForOptimization",
+
+    "__defineGetter__",
+    "__defineSetter__",
+    "__lookupGetter__",
+    "__lookupSetter__",
+
+    "eval(",
+    "Function(",
+    "new Function",
+
+    "WebAssembly",
+    "SharedArrayBuffer",
+    "Atomics",
+    "Worker",
+    "import(",
+    "require(",
+}
 
 IDENT_RX = re.compile(r"\b[A-Za-z_$][A-Za-z0-9_$]*\b")
 
@@ -103,41 +153,63 @@ def make_fresh(used:Set[str])->str:
 # -------------------------------
 # Hygiene rewrite
 # -------------------------------
-def rewrite_fragment_hygienic(fragment:str, target_code:str)->Optional[str]:
-    if any(tok in fragment for tok in BAD_TOKENS):
+def rewrite_fragment_hygienic(fragment: str, target_code: str) -> Optional[str]:
+    # 1. Block dangerous tokens
+    for tok in BAD_TOKENS:
+        if tok in fragment:
+            return None
+
+    # 2. V8 syntax validation instead of tree-sitter
+    wrapped = "function __f__(){\n" + fragment + "\n}\n"
+    if not v8_parse_ok(wrapped):
         return None
 
-    tree=parse(fragment)
-    if tree.root_node.has_error:
-        return None
+    target_ids = set(collect_identifiers(target_code))
+    target_declared = collect_declared_identifiers(target_code)
 
-    target_ids=set(collect_identifiers(target_code))
-    target_declared=collect_declared_identifiers(target_code)
+    frag_declared = collect_declared_from_fragment(fragment)
 
-    frag_declared=collect_declared_from_fragment(fragment)
+    # 3. Prevent redeclaration collisions
     if frag_declared & target_declared:
         return None
 
-    all_ids=identifiers_in_text(fragment)
-    free=[x for x in all_ids if x not in frag_declared]
+    all_ids = identifiers_in_text(fragment)
+    free = [x for x in all_ids if x not in frag_declared]
 
-    mapping={}
-    used=set(all_ids)|target_ids
+    mapping = {}
+    used = set(all_ids) | target_ids
 
+    # 4. Rewrite free identifiers safely
     for name in set(free):
-        if name in JS_BUILTINS: continue
-        if name in target_ids: continue
-        if not target_ids: return None
-        mapping[name]=random.choice(list(target_ids))
+        if name in JS_BUILTINS:
+            continue
+        if name in target_ids:
+            continue
+        if not target_ids:
+            return None
+        mapping[name] = random.choice(list(target_ids))
 
+    # 5. Rename fragment-local declarations
     for d in frag_declared:
-        mapping[d]=make_fresh(used)
+        mapping[d] = make_fresh(used)
 
-    out=fragment
-    for src in sorted(mapping,key=len,reverse=True):
-        out=re.sub(rf"\b{re.escape(src)}\b",mapping[src],out)
+    out = fragment
+    for src in sorted(mapping, key=len, reverse=True):
+        out = re.sub(rf"\b{re.escape(src)}\b", mapping[src], out)
+
+    # 6. Final V8 validation after rewrite
+    wrapped2 = "function __f__(){\n" + out + "\n}\n"
+    if not v8_parse_ok(wrapped2):
+        return None
+
+    # 7. Reject obvious non-callable calls like o1(o1)
+    if re.search(r"\b([a-zA-Z_$][\w$]*)\s*\(", out):
+        callee = re.search(r"\b([a-zA-Z_$][\w$]*)\s*\(", out).group(1)
+        if callee not in target_declared and callee not in JS_BUILTINS:
+            return None
 
     return out
+
 
 # -------------------------------
 # Fragment mining
@@ -219,7 +291,8 @@ def rename_identifier_global(code,pool):
     src=random.choice(ids)
     if src in JS_BUILTINS: return code
     dst=random.choice([x for x in ids if x!=src])
-    return re.sub(rf"\b{src}\b",dst,code)
+    pattern = rf"\b{re.escape(src)}\b"
+    return re.sub(pattern, dst, code)
 
 MUTATORS=[insert_statement,replace_expression,rename_identifier_global]
 

@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+
 echo "[+] Installing dependencies with Python 3.13"
 
 python3 -m pip install --upgrade pip
@@ -16,6 +17,8 @@ python3 -m pip install \
   shap \
   joblib \
   scipy
+
+npm install esprima
 
 echo "[+] Setup complete"
 
