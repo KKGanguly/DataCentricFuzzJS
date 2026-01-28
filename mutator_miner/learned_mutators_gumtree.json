@@ -1,0 +1,276 @@
+[
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "Object.<VAR>(<VAR>, <VAR>);"
+    ],
+    "after": [
+      "(<VAR>.<VAR>)(<VAR>, <VAR>);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.5758405502193639,
+    "original_file": "program_20251007032008_20063D03-B520-4C14-B23B-70A5643A48DB.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>();"
+    ],
+    "after": [
+      "(<VAR>.<VAR>(<VAR>));"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.4729991844837749,
+    "original_file": "program_20251007031913_AB89DD81-6F67-4974-AE0D-AEA11BE04D59.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = <VAR>.<VAR>;"
+    ],
+    "after": [
+      "(<VAR>.<VAR>(<VAR>));"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.47296214188023084,
+    "original_file": "program_20251007032345_23C61707-2CBA-4AF4-A002-5F8F1EB9E2D9.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = <VAR>.<VAR>;"
+    ],
+    "after": [
+      "<VAR> = (<VAR>.<VAR>);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.47296214188023084,
+    "original_file": "program_20251007032345_23C61707-2CBA-4AF4-A002-5F8F1EB9E2D9.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR>, <VAR>);"
+    ],
+    "after": [
+      "let <VAR> = [];"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.47162083856277875,
+    "original_file": "program_20251007032345_23C61707-2CBA-4AF4-A002-5F8F1EB9E2D9.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = <VAR>;"
+    ],
+    "after": [
+      "(<VAR>.<VAR>);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.22713900002952986,
+    "original_file": "program_20251007032452_C43FDA1E-FB8F-405F-9906-FAE942F214F7.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "Object.<VAR>(<VAR>, <<VAR>>, { <VAR>: true });"
+    ],
+    "after": [
+      "const <VAR> = <VAR>.prototype;"
+    ],
+    "node_type": "identifier",
+    "gain": 0.19625033845447015,
+    "original_file": "program_20251007031913_AB89DD81-6F67-4974-AE0D-AEA11BE04D59.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "Object.<VAR>(<VAR>, <<VAR>>, { <VAR>: <<VAR>> });"
+    ],
+    "after": [
+      "(<VAR>(<VAR>, <VAR>));"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.19376762068222114,
+    "original_file": "program_20251007032013_09C2C7EC-AADB-4A33-9761-0B236872F748.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR>(<VAR>[<<VAR>>]);"
+    ],
+    "after": [
+      "<VAR>(<VAR>, <VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.19284512203362197,
+    "original_file": "program_20251007032345_23C61707-2CBA-4AF4-A002-5F8F1EB9E2D9.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "let <VAR> = [];"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.1911606225734306,
+    "original_file": "program_20251007032008_20063D03-B520-4C14-B23B-70A5643A48DB.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR>, <VAR>);"
+    ],
+    "after": [
+      "let <VAR> = [];"
+    ],
+    "node_type": "for_statement",
+    "gain": 0.1911606225734306,
+    "original_file": "program_20251007032008_20063D03-B520-4C14-B23B-70A5643A48DB.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "Object.<VAR>(<VAR>, <VAR>);"
+    ],
+    "after": [
+      "(<VAR>.<VAR>);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.1777761093255994,
+    "original_file": "program_20251007032008_20063D03-B520-4C14-B23B-70A5643A48DB.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>?.<VAR>;"
+    ],
+    "after": [
+      "const <VAR> = (new <VAR>(<VAR>, <VAR>));"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.1639095323937787,
+    "original_file": "program_20251007032336_DC485DA7-C6AF-4066-9D3B-965BEEDDEAF6.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "} while (<VAR> < <<VAR>>)",
+      "}"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.10621354176769449,
+    "original_file": "program_20251007031814_5C52DC68-FABB-402C-BBBB-20231D57360C.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>.<VAR>(<VAR>);"
+    ],
+    "after": [
+      "const <VAR> = (<VAR>.<VAR>(<VAR>))(<VAR>);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.08813874604220095,
+    "original_file": "program_20251007031814_5C52DC68-FABB-402C-BBBB-20231D57360C.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>.<VAR>(<VAR>);"
+    ],
+    "after": [
+      "const <VAR> = (new <VAR>(<VAR>, <VAR>));"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.08813874604220095,
+    "original_file": "program_20251007031814_5C52DC68-FABB-402C-BBBB-20231D57360C.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = (<<VAR>>).prototype;"
+    ],
+    "after": [
+      "const <VAR> = (<VAR>.<VAR>(<VAR>, Math));"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.08813874604220095,
+    "original_file": "program_20251007031814_5C52DC68-FABB-402C-BBBB-20231D57360C.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>.<VAR>(<VAR>);"
+    ],
+    "after": [
+      "const <VAR> = (<VAR>.length)(<VAR>);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.08813874604220095,
+    "original_file": "program_20251007031814_5C52DC68-FABB-402C-BBBB-20231D57360C.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "return <VAR> - <<VAR>>;"
+    ],
+    "after": [
+      "return (<VAR>(<VAR>, <VAR>));"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.0008051252911823945,
+    "original_file": "program_20251007031943_FD40115D-1D51-4120-8DD5-1529756B285B.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = <VAR>.<VAR>;"
+    ],
+    "after": [
+      "(<VAR> = <VAR>);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.0005394084094344775,
+    "original_file": "program_20251007032345_23C61707-2CBA-4AF4-A002-5F8F1EB9E2D9.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>();"
+    ],
+    "after": [
+      "(<VAR>.<VAR> = <VAR>);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.00016619815202840657,
+    "original_file": "program_20251007031913_AB89DD81-6F67-4974-AE0D-AEA11BE04D59.js"
+  }
+]

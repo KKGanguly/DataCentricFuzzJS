@@ -1,0 +1,10 @@
+{"file": "poc.js", "mutation_index": 0, "ok": false, "verdict": "fail", "num_operations": 0, "num_templates": 0, "avg_score": 0.0}
+{"file": "poc.js", "mutation_index": 1, "ok": false, "verdict": "fail", "num_operations": 0, "num_templates": 0, "avg_score": 0.0}
+{"file": "poc.js", "mutation_index": 2, "ok": true, "verdict": "crash", "num_operations": 1, "num_templates": 1, "avg_score": 1.1}
+{"file": "poc.js", "mutation_index": 3, "ok": true, "verdict": "crash", "num_operations": 1, "num_templates": 0, "avg_score": 0.0}
+{"file": "poc.js", "mutation_index": 4, "ok": false, "verdict": "fail", "num_operations": 0, "num_templates": 0, "avg_score": 0.0}
+{"file": "poc.js", "mutation_index": 5, "ok": false, "verdict": "fail", "num_operations": 0, "num_templates": 0, "avg_score": 0.0}
+{"file": "poc.js", "mutation_index": 6, "ok": false, "verdict": "fail", "num_operations": 0, "num_templates": 0, "avg_score": 0.0}
+{"file": "poc.js", "mutation_index": 7, "ok": true, "verdict": "crash", "num_operations": 1, "num_templates": 0, "avg_score": 0.0}
+{"file": "poc.js", "mutation_index": 8, "ok": true, "verdict": "ok", "num_operations": 2, "num_templates": 1, "avg_score": 0.95}
+{"file": "poc.js", "mutation_index": 9, "ok": false, "verdict": "fail", "num_operations": 0, "num_templates": 0, "avg_score": 0.0}

@@ -1,0 +1,94 @@
+{
+  "engine": "../v8/out/fuzzbuild/d8",
+  "engine_args": [
+    "--allow-natives-syntax",
+    "--expose-gc"
+  ],
+  "timeout_s": 3.0,
+  "corpus_dir": "./corpus",
+  "num_files": 1,
+  "mutations_per_file_per_op": 10,
+  "seed": 1,
+  "original_run": {
+    "ok": 1,
+    "fail": 0
+  },
+  "elapsed_s": 9.982,
+  "per_op": {
+    "insert": {
+      "attempts": 10,
+      "changed": 10,
+      "ok": 8,
+      "fail": 2,
+      "fail_reasons": {
+        "exit_1": 2
+      },
+      "correctness": 0.8,
+      "changed_rate": 1.0
+    },
+    "replace": {
+      "attempts": 10,
+      "changed": 10,
+      "ok": 6,
+      "fail": 4,
+      "fail_reasons": {
+        "exit_1": 4
+      },
+      "correctness": 0.6,
+      "changed_rate": 1.0
+    },
+    "delete": {
+      "attempts": 10,
+      "changed": 10,
+      "ok": 10,
+      "fail": 0,
+      "fail_reasons": {},
+      "correctness": 1.0,
+      "changed_rate": 1.0
+    }
+  },
+  "fail_examples": [
+    {
+      "file": "./corpus/poc.js",
+      "op": "insert",
+      "changed": true,
+      "reason": "exit_1",
+      "saved_to": "failed_mutations/insert_poc.js_4.js"
+    },
+    {
+      "file": "./corpus/poc.js",
+      "op": "insert",
+      "changed": true,
+      "reason": "exit_1",
+      "saved_to": "failed_mutations/insert_poc.js_8.js"
+    },
+    {
+      "file": "./corpus/poc.js",
+      "op": "replace",
+      "changed": true,
+      "reason": "exit_1",
+      "saved_to": "failed_mutations/replace_poc.js_3.js"
+    },
+    {
+      "file": "./corpus/poc.js",
+      "op": "replace",
+      "changed": true,
+      "reason": "exit_1",
+      "saved_to": "failed_mutations/replace_poc.js_7.js"
+    },
+    {
+      "file": "./corpus/poc.js",
+      "op": "replace",
+      "changed": true,
+      "reason": "exit_1",
+      "saved_to": "failed_mutations/replace_poc.js_8.js"
+    },
+    {
+      "file": "./corpus/poc.js",
+      "op": "replace",
+      "changed": true,
+      "reason": "exit_1",
+      "saved_to": "failed_mutations/replace_poc.js_9.js"
+    }
+  ]
+}

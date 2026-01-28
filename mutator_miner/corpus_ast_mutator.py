@@ -3,9 +3,9 @@ from __future__ import annotations
 import argparse, json, os, random, re
 from dataclasses import dataclass, asdict
 from typing import List, Set, Dict, Optional
-
-JS_ENGINE_PATH = os.environ.get("JS_ENGINE_PATH", "../v8/out/fuzzbuild/d8")
-JS_ENGINE_CHECK_ARGS = ["--check", "--allow-natives-syntax"]
+import subprocess
+JS_ENGINE_PATH = os.environ.get("JS_ENGINE_PATH", "/home/kgangul/DataCentricFuzzJS/v8/out/fuzzbuild/d8")
+JS_ENGINE_CHECK_ARGS = ["--check", "--allow-natives-syntax", "--expose-gc"]
 SYNTAX_TIMEOUT = 3.0
 
 
@@ -18,8 +18,8 @@ def v8_parse_ok(js: str) -> bool:
             stderr=subprocess.DEVNULL,
             timeout=SYNTAX_TIMEOUT
         )
-        return p.returncode == 0
-    except Exception:
+        return p.returncode==0
+    except Exception as e:
         return False
 # -------------------------------
 # Tree-sitter loader
@@ -138,6 +138,87 @@ def collect_declared_from_fragment(fragment:str)->Set[str]:
                     out.add(node_text(fragment,c))
     return out
 
+def infer_fragment_usage_types(fragment: str) -> Dict[str, str]:
+    t = parse(fragment)
+    usage = {}
+
+    for n in walk(t.root_node):
+        # x() → function
+        if n.type == "call_expression":
+            fn = n.children[0]
+            if fn.type == "identifier":
+                usage[node_text(fragment, fn)] = "function"
+
+        # x.push(...) → array
+        if n.type == "member_expression":
+            obj = n.children[0]
+            prop = n.children[-1]
+            if obj.type == "identifier" and prop.type == "property_identifier":
+                pname = node_text(fragment, prop)
+                if pname in ("push", "pop", "map", "filter", "slice"):
+                    usage[node_text(fragment, obj)] = "array"
+
+    return usage
+def collect_declared_positions(code: str) -> Dict[str, int]:
+    t = parse(code)
+    pos: Dict[str, int] = {}
+
+    for n in walk(t.root_node):
+        if n.type == "variable_declarator":
+            for c in n.children:
+                if c.type == "identifier":
+                    name = node_text(code, c)
+                    pos[name] = min(pos.get(name, 10**18), c.start_byte)
+
+        elif n.type in ("function_declaration", "class_declaration"):
+            for c in n.children:
+                if c.type == "identifier":
+                    name = node_text(code, c)
+                    pos[name] = min(pos.get(name, 10**18), c.start_byte)
+
+        elif n.type == "formal_parameters":
+            for c in walk(n):
+                if c.type == "identifier":
+                    name = node_text(code, c)
+                    pos[name] = min(pos.get(name, 10**18), c.start_byte)
+
+    return pos
+
+
+def visible_identifiers_at(code: str, insert_pos: int) -> List[str]:
+    decl_pos = collect_declared_positions(code)
+    # visible = declared before insertion point
+    return [name for name, p in decl_pos.items() if p <= insert_pos]
+
+def collect_variable_types(code: str) -> Dict[str, str]:
+    t = parse(code)
+    types = {}
+
+    for n in walk(t.root_node):
+        if n.type == "variable_declarator":
+            name = None
+            value = None
+            for c in n.children:
+                if c.type == "identifier":
+                    name = node_text(code, c)
+                else:
+                    value = c
+            if name and value:
+                if value.type == "array":
+                    types[name] = "array"
+                elif value.type == "object":
+                    types[name] = "object"
+                elif value.type in ("number", "true", "false"):
+                    types[name] = "number"
+                elif value.type == "function":
+                    types[name] = "function"
+
+        if n.type == "function_declaration":
+            for c in n.children:
+                if c.type == "identifier":
+                    types[node_text(code, c)] = "function"
+
+    return types
 def identifiers_in_text(txt:str)->List[str]:
     return [m.group(0) for m in IDENT_RX.finditer(txt) if m.group(0) not in JS_KEYWORDS]
 
@@ -149,66 +230,90 @@ def make_fresh(used:Set[str])->str:
             used.add(v)
             return v
         i+=1
+def rewrite_identifiers_ast(fragment: str, mapping: Dict[str, str]) -> str:
+    t = parse(fragment)
+    edits = []
+
+    for n in walk(t.root_node):
+        if n.type == "identifier":
+            old = node_text(fragment, n)
+            new = mapping.get(old)
+            if new and new != old:
+                edits.append((n.start_byte, n.end_byte, new))
+
+    # apply from back to front so byte offsets stay valid
+    out = fragment
+    for s, e, new in sorted(edits, key=lambda x: x[0], reverse=True):
+        out = out[:s] + new + out[e:]
+    return out
 
 # -------------------------------
 # Hygiene rewrite
 # -------------------------------
-def rewrite_fragment_hygienic(fragment: str, target_code: str) -> Optional[str]:
-    # 1. Block dangerous tokens
+def rewrite_fragment_hygienic(fragment: str, target_code: str, insert_pos: int) -> Optional[str]:
     for tok in BAD_TOKENS:
         if tok in fragment:
             return None
 
-    # 2. V8 syntax validation instead of tree-sitter
-    wrapped = "function __f__(){\n" + fragment + "\n}\n"
-    if not v8_parse_ok(wrapped):
-        return None
-
-    target_ids = set(collect_identifiers(target_code))
+    target_ids_all = set(collect_identifiers(target_code))
     target_declared = collect_declared_identifiers(target_code)
+    target_types = collect_variable_types(target_code)
+
+    visible_ids = set(visible_identifiers_at(target_code, insert_pos))
+    # keep only real identifiers, and keep builtins separately
+    visible_ids = {v for v in visible_ids if v in target_ids_all}
 
     frag_declared = collect_declared_from_fragment(fragment)
+    frag_usage_types = infer_fragment_usage_types(fragment)
 
-    # 3. Prevent redeclaration collisions
     if frag_declared & target_declared:
         return None
 
-    all_ids = identifiers_in_text(fragment)
+    # IMPORTANT: derive "free" names from AST identifiers (not regex)
+    t = parse(fragment)
+    all_ident_nodes = [n for n in walk(t.root_node) if n.type == "identifier"]
+    all_ids = [node_text(fragment, n) for n in all_ident_nodes if node_text(fragment, n) not in JS_KEYWORDS]
     free = [x for x in all_ids if x not in frag_declared]
 
-    mapping = {}
-    used = set(all_ids) | target_ids
+    mapping: Dict[str, str] = {}
+    used = set(all_ids) | set(collect_identifiers(target_code))
+    declarations: List[str] = []
 
-    # 4. Rewrite free identifiers safely
     for name in set(free):
         if name in JS_BUILTINS:
             continue
-        if name in target_ids:
-            continue
-        if not target_ids:
-            return None
-        mapping[name] = random.choice(list(target_ids))
 
-    # 5. Rename fragment-local declarations
+        needed_type = frag_usage_types.get(name)
+
+        candidates = []
+        for v in visible_ids:
+            if needed_type is None or target_types.get(v) == needed_type:
+                candidates.append(v)
+
+        if candidates:
+            mapping[name] = random.choice(candidates)
+        else:
+            newv = make_fresh(used)
+            mapping[name] = newv
+            if needed_type == "array":
+                declarations.append(f"let {newv} = [];")
+            elif needed_type == "object":
+                declarations.append(f"let {newv} = {{}};")
+            elif needed_type == "function":
+                declarations.append(f"function {newv}(){{}}")
+            else:
+                declarations.append(f"let {newv} = 0;")
+
     for d in frag_declared:
         mapping[d] = make_fresh(used)
 
-    out = fragment
-    for src in sorted(mapping, key=len, reverse=True):
-        out = re.sub(rf"\b{re.escape(src)}\b", mapping[src], out)
+    out = rewrite_identifiers_ast(fragment, mapping)
 
-    # 6. Final V8 validation after rewrite
-    wrapped2 = "function __f__(){\n" + out + "\n}\n"
-    if not v8_parse_ok(wrapped2):
-        return None
-
-    # 7. Reject obvious non-callable calls like o1(o1)
-    if re.search(r"\b([a-zA-Z_$][\w$]*)\s*\(", out):
-        callee = re.search(r"\b([a-zA-Z_$][\w$]*)\s*\(", out).group(1)
-        if callee not in target_declared and callee not in JS_BUILTINS:
-            return None
+    if declarations:
+        out = "\n".join(declarations) + "\n" + out
 
     return out
+
 
 
 # -------------------------------
@@ -266,45 +371,81 @@ def pick_statement_nodes(code):
     t=parse(code)
     return [n for n in walk(t.root_node) if is_statement_node(n) and n.parent and n.parent.type in ("program","statement_block")]
 
-def insert_statement(code,pool):
-    nodes=pick_statement_nodes(code)
-    if not nodes or not pool.statements: return code
-    anchor=random.choice(nodes)
-    frag=random.choice(pool.statements)
-    frag=rewrite_fragment_hygienic(frag,code)
-    if frag is None: return code
-    return replace_span(code,anchor.end_byte,anchor.end_byte,"\n"+frag+"\n")
+def insert_statement(code, pool):
+    nodes = pick_statement_nodes(code)
+    if not nodes or not pool.statements:
+        return code
 
-def replace_expression(code,pool):
-    t=parse(code)
-    exprs=[n for n in walk(t.root_node) if n.type in EXPR_TYPES]
-    if not exprs or not pool.expressions: return code
-    victim=random.choice(exprs)
-    frag=random.choice(pool.expressions)
-    frag=rewrite_fragment_hygienic(frag,code)
-    if frag is None: return code
-    return replace_span(code,victim.start_byte,victim.end_byte,frag)
+    anchor = random.choice(nodes)
 
-def rename_identifier_global(code,pool):
-    ids=list(set(collect_identifiers(code)))
-    if len(ids)<2: return code
-    src=random.choice(ids)
-    if src in JS_BUILTINS: return code
-    dst=random.choice([x for x in ids if x!=src])
+    for _ in range(20):
+        frag = random.choice(pool.statements)
+        frag = rewrite_fragment_hygienic(frag, code, insert_pos=anchor.end_byte)
+        if not frag:
+            continue
+        mutated = replace_span(code, anchor.end_byte, anchor.end_byte, "\n" + frag + "\n")
+        if v8_parse_ok(mutated):
+            return mutated
+
+    return code
+
+
+def replace_expression(code, pool):
+    t = parse(code)
+    exprs = [n for n in walk(t.root_node) if n.type in EXPR_TYPES]
+    if not exprs or not pool.expressions:
+        return code
+
+    victim = random.choice(exprs)
+
+    for _ in range(20):
+        frag = random.choice(pool.expressions)
+        frag = rewrite_fragment_hygienic(frag, code, insert_pos=victim.start_byte)
+        if not frag:
+            continue
+
+        # precedence-safe
+        frag = f"({frag})"
+
+        mutated = replace_span(code, victim.start_byte, victim.end_byte, frag)
+        if v8_parse_ok(mutated):
+            return mutated
+
+    return code
+
+
+def rename_identifier_global(code, pool):
+    ids = list(set(collect_identifiers(code)))
+    ids = [i for i in ids if i not in JS_BUILTINS]
+    if len(ids) < 2:
+        return code
+
+    src = random.choice(ids)
+    dst = random.choice([x for x in ids if x != src])
+
     pattern = rf"\b{re.escape(src)}\b"
-    return re.sub(pattern, dst, code)
+    new_code = re.sub(pattern, dst, code)
+
+    if new_code != code and v8_parse_ok(new_code):
+        return new_code
+    return code
 
 MUTATORS=[insert_statement,replace_expression,rename_identifier_global]
 
+
+def print_tree(code):
+    tree = parse(code)
+    print(tree.root_node.sexp()) 
+
 def mutate(code,pool,rounds=5):
     out=code
+
     for _ in range(rounds):
         m=random.choice(MUTATORS)
         cand=m(out,pool)
         if cand!=out:
             out=cand
     return out
-
 # -------------------------------
 # CLI
 # -------------------------------

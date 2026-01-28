@@ -1,0 +1,15 @@
+{
+  "total_mutations": 10,
+  "ok_or_crash": 4,
+  "mutations_with_templates": 2,
+  "total_templates": 2,
+  "avg_templates_per_ok_mutation": 0.5,
+  "avg_score": 1.02,
+  "min_score_threshold": 0.3,
+  "breakdown": {
+    "ok": 1,
+    "crash": 3,
+    "fail": 6,
+    "with_templates": 2
+  }
+}

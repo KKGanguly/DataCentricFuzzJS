@@ -1,0 +1,23 @@
+{
+  "file": "poc.js",
+  "mutation_index": 8,
+  "verdict": "ok",
+  "num_operations": 2,
+  "num_templates": 1,
+  "avg_score": 0.95,
+  "templates": [
+    {
+      "op_index": 0,
+      "action": "insert-tree",
+      "node_type": "parenthesized_expression",
+      "before": "Object.v(v.prototype, v);",
+      "after": "return v.v;\n }",
+      "before_raw": "Object.setPrototypeOf(B.prototype, err);",
+      "after_raw": "return super.stack;\n  }",
+      "similarity": 0.256,
+      "match_confidence": 0.385,
+      "same_after_abstraction": false,
+      "score": 0.95
+    }
+  ]
+}

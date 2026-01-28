@@ -1,0 +1,455 @@
+===
+match
+---
+member_expression [293,304]
+member_expression [291,302]
+===
+match
+---
+member_expression [668,671]
+member_expression [662,665]
+===
+match
+---
+property_identifier: m [670,671]
+property_identifier: m [664,665]
+===
+match
+---
+new_expression [159,170]
+new_expression [157,168]
+===
+match
+---
+program [0,693]
+program [0,687]
+===
+match
+---
+comment: // Set the prototype of B.prototype to the Error instance. [313,371]
+comment: // Set the prototype of B.prototype to the Error instance. [311,369]
+===
+match
+---
+identifier: Object [418,424]
+identifier: Object [414,420]
+===
+match
+---
+,: , [451,452]
+,: , [447,448]
+===
+match
+---
+member_expression [418,439]
+member_expression [414,435]
+===
+match
+---
+.: . [441,442]
+.: . [437,438]
+===
+match
+---
+variable_declarator [153,170]
+variable_declarator [153,168]
+===
+match
+---
+): ) [456,457]
+): ) [450,451]
+===
+match
+---
+.: . [424,425]
+.: . [420,421]
+===
+match
+---
+expression_statement [668,693]
+expression_statement [662,687]
+===
+match
+---
+variable_declarator [466,477]
+variable_declarator [460,471]
+===
+match
+---
+lexical_declaration [147,171]
+lexical_declaration [147,169]
+===
+match
+---
+property_identifier: call [672,676]
+property_identifier: call [666,670]
+===
+match
+---
+): ) [187,188]
+): ) [185,186]
+===
+match
+---
+.: . [671,672]
+.: . [665,666]
+===
+match
+---
+arguments [439,457]
+arguments [435,451]
+===
+match
+---
+comment: // Now, the super lookup will start at 'err'. [372,417]
+comment: // Now, the super lookup will start at 'b'. [370,413]
+===
+match
+---
+=: = [157,158]
+=: = [155,156]
+===
+match
+---
+member_expression [668,676]
+member_expression [662,670]
+===
+match
+---
+(: ( [186,187]
+(: ( [184,185]
+===
+match
+---
+property_identifier: prototype [442,451]
+property_identifier: prototype [438,447]
+===
+match
+---
+return_statement [286,305]
+return_statement [284,303]
+===
+match
+---
+comment: // Smi as receiver and the default kExpectingJSReceiver mode. [606,667]
+comment: // Smi as receiver and the default kExpectingJSReceiver mode. [600,661]
+===
+match
+---
+comment: // This triggers LoadSuperIC and ultimately calls CallGetterIfAccessor with a [528,605]
+comment: // This triggers LoadSuperIC and ultimately calls CallGetterIfAccessor with a [522,599]
+===
+match
+---
+lexical_declaration [460,478]
+lexical_declaration [454,472]
+===
+match
+---
+;: ; [477,478]
+;: ; [471,472]
+===
+match
+---
+): ) [169,170]
+): ) [167,168]
+===
+match
+---
+=: = [468,469]
+=: = [462,463]
+===
+match
+---
+comment: // Call the method m with a primitive receiver. [480,527]
+comment: // Call the method m with a primitive receiver. [474,521]
+===
+match
+---
+member_expression [440,451]
+member_expression [436,447]
+===
+match
+---
+expression_statement [418,458]
+expression_statement [414,452]
+===
+match
+---
+return: return [286,292]
+return: return [284,290]
+===
+match
+---
+arguments [676,692]
+arguments [670,686]
+===
+match
+---
+const: const [147,152]
+const: const [147,152]
+===
+match
+---
+formal_parameters [186,188]
+formal_parameters [184,186]
+===
+match
+---
+>>: >> [687,689]
+>>: >> [681,683]
+===
+match
+---
+identifier: B [474,475]
+identifier: B [468,469]
+===
+match
+---
+identifier: B [179,180]
+identifier: B [177,178]
+===
+match
+---
+{: { [181,182]
+{: { [179,180]
+===
+match
+---
+comment: // The lookup starts at the prototype of B.prototype. [228,281]
+comment: // The lookup starts at the prototype of B.prototype. [226,279]
+===
+match
+---
+}: } [308,309]
+}: } [306,307]
+===
+match
+---
+property_identifier: stack [299,304]
+property_identifier: stack [297,302]
+===
+match
+---
+identifier: b [466,467]
+identifier: b [460,461]
+===
+match
+---
+}: } [310,311]
+}: } [308,309]
+===
+match
+---
+): ) [476,477]
+): ) [470,471]
+===
+match
+---
+arguments [475,477]
+arguments [469,471]
+===
+match
+---
+number: 1 [690,691]
+number: 1 [684,685]
+===
+match
+---
+;: ; [170,171]
+;: ; [168,169]
+===
+match
+---
+property_identifier: m [185,186]
+property_identifier: m [183,184]
+===
+match
+---
+identifier: Error [163,168]
+identifier: Error [161,166]
+===
+match
+---
+;: ; [304,305]
+;: ; [302,303]
+===
+match
+---
+const: const [460,465]
+const: const [454,459]
+===
+match
+---
+super: super [293,298]
+super: super [291,296]
+===
+match
+---
+number: 0x4141414 [677,686]
+number: 0x4141414 [671,680]
+===
+match
+---
+(: ( [439,440]
+(: ( [435,436]
+===
+match
+---
+new_expression [470,477]
+new_expression [464,471]
+===
+match
+---
+comment: // which is an accessor backed by a FunctionTemplateInfo (API accessor). [74,146]
+comment: // which is an accessor backed by a FunctionTemplateInfo (API accessor). [74,146]
+===
+match
+---
+identifier: b [668,669]
+identifier: b [662,663]
+===
+match
+---
+class: class [173,178]
+class: class [171,176]
+===
+match
+---
+(: ( [168,169]
+(: ( [166,167]
+===
+match
+---
+call_expression [668,692]
+call_expression [662,686]
+===
+match
+---
+(: ( [676,677]
+(: ( [670,671]
+===
+match
+---
+class_body [181,311]
+class_body [179,309]
+===
+match
+---
+method_definition [185,309]
+method_definition [183,307]
+===
+match
+---
+{: { [189,190]
+{: { [187,188]
+===
+match
+---
+property_identifier: setPrototypeOf [425,439]
+property_identifier: setPrototypeOf [421,435]
+===
+match
+---
+class_declaration [173,311]
+class_declaration [171,309]
+===
+match
+---
+(: ( [475,476]
+(: ( [469,470]
+===
+match
+---
+identifier: err [153,156]
+identifier: b [153,154]
+===
+match
+---
+comment: // Create an Error instance. Error instances have an own property 'stack' [0,73]
+comment: // Create an Error instance. Error instances have an own property 'stack' [0,73]
+===
+match
+---
+): ) [691,692]
+): ) [685,686]
+===
+match
+---
+new: new [470,473]
+new: new [464,467]
+===
+match
+---
+statement_block [189,309]
+statement_block [187,307]
+===
+match
+---
+comment: // Access 'stack' via super. [195,223]
+comment: // Access 'stack' via super. [193,221]
+===
+match
+---
+arguments [168,170]
+arguments [166,168]
+===
+match
+---
+binary_expression [677,691]
+binary_expression [671,685]
+===
+match
+---
+call_expression [418,457]
+call_expression [414,451]
+===
+match
+---
+;: ; [692,693]
+;: ; [686,687]
+===
+match
+---
+identifier: B [440,441]
+identifier: B [436,437]
+===
+match
+---
+;: ; [457,458]
+;: ; [451,452]
+===
+match
+---
+.: . [298,299]
+.: . [296,297]
+===
+match
+---
+new: new [159,162]
+new: new [157,160]
+===
+match
+---
+identifier: err [453,456]
+identifier: b [449,450]
+===
+match
+---
+.: . [669,670]
+.: . [663,664]
+===
+update-node
+---
+comment: // Now, the super lookup will start at 'err'. [372,417]
+replace // Now, the super lookup will start at 'err'. by // Now, the super lookup will start at 'b'.
+===
+update-node
+---
+identifier: err [153,156]
+replace err by b
+===
+update-node
+---
+identifier: err [453,456]
+replace err by b
