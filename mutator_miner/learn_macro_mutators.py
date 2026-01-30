@@ -16,7 +16,7 @@ import os, json, subprocess, tempfile, requests, re
 from multiprocessing import Pool, cpu_count
 from tqdm import tqdm
 from typing import Dict, List, Optional, Tuple
-
+import tempfile
 from corpus_ast_mutator import build_pool, mutate
 from tree_sitter_languages import get_parser
 
@@ -29,7 +29,7 @@ PREDICT_URL = "http://localhost:5000/predict"
 FEATURE_CMD = ["python3.13", "../feature_extractor_cli.py", "file", "--i", None, "--format", "string"]
 FAIL_KEYS = ["exit_code", "execution_failed", "runtime_error"]
 
-N_MUTATIONS = 20
+N_MUTATIONS = 100
 N_WORKERS = min(32, cpu_count())
 
 JS_ENGINE_PATH = os.environ.get("JS_ENGINE_PATH", "/home/kgangul/DataCentricFuzzJS/v8/out/fuzzbuild/d8")
@@ -215,7 +215,7 @@ def extract_templates_from_gumtree(gumtree_json: Dict, orig_code: str, mut_code:
         
         if not orig_abs or not mut_abs or orig_abs == mut_abs:
             continue
-        
+
         # Determine kind
         if action.startswith("insert"):
             kind = "insert"
@@ -346,20 +346,51 @@ def crash_score(feature_dict: Dict) -> float:
     except:
         return 0.0
 
-
-def v8_parse_ok(js: str) -> bool:
+def v8_parse_ok(js: str, timeout: float = 5.0) -> bool:
+    """
+    Returns True if JS code is *syntax valid*, otherwise False.
+    Keeps crashes (exit code >1) and timeouts for further processing.
+    Executes code via temporary file.
+    """
+    tmp_path = None
     try:
+        # Write JS code to a temporary file
+        with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False) as f:
+            f.write(js)
+            tmp_path = f.name
+
+        # Run V8 engine on the temp file
         p = subprocess.run(
-            [JS_ENGINE_PATH] + JS_ENGINE_CHECK_ARGS,
-            input=js.encode("utf-8", errors="ignore"),
+            [JS_ENGINE_PATH, tmp_path] + JS_ENGINE_CHECK_ARGS,
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
-            timeout=SYNTAX_TIMEOUT
+            timeout=timeout
         )
-        return p.returncode <= 0
-    except Exception as e:
-        return False
 
+        ret = p.returncode
+
+        # 0 = OK → keep
+        if ret == 0:
+            return True
+
+        # 1 = syntax/type error → discard
+        if ret == 1:
+            return False
+
+        # >1 = crash → keep
+        if ret > 1:
+            return True
+
+    except subprocess.TimeoutExpired:
+        # Timeout → keep
+        return True
+    except Exception:
+        # Unexpected error → keep
+        return True
+    finally:
+        # Cleanup temp file
+        if tmp_path and os.path.exists(tmp_path):
+            os.remove(tmp_path)
 
 # ============================================================================
 # MAIN LEARNING LOOP
@@ -367,6 +398,7 @@ def v8_parse_ok(js: str) -> bool:
 
 def process_file(fname):
     """Process one file and extract learned mutators"""
+    import random
     path = os.path.join(CORPUS, fname)
     src = open(path, "r", encoding="utf-8", errors="ignore").read()
 
@@ -375,13 +407,12 @@ def process_file(fname):
     if not v8_parse_ok(src):
         return []
     base_score = crash_score(base_feats)
-    print(base_score)
     learned = []
     seen = set()
 
     # Phase 2: Mutation loop
     for _ in range(N_MUTATIONS):
-        mutated = mutate(src, POOL, rounds=1)
+        mutated = mutate(src, POOL, rounds = 3 if random.random() < 0.4 else 1)
         # Syntax validation
         if not v8_parse_ok(mutated):
             continue
@@ -397,9 +428,8 @@ def process_file(fname):
             
             
             new_score = crash_score(new_feats)
-            
             # Phase 4: Filter by score (CRITICAL)
-            if new_score <= base_score:
+            if new_score <= base_score+0.05:
                 continue
             
             gain = new_score - base_score

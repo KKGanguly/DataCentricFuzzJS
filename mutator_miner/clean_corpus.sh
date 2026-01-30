@@ -11,21 +11,21 @@ for f in "$CORPUS_DIR"/*.js; do
   timeout ${TIMEOUT}s $ENGINE $FLAGS "$f" > /dev/null 2>&1
   RET=$?
 
-  # 124 = timeout (keep it)
-  if [ $RET -eq 124 ]; then
-    echo "⏱️ Timeout (kept): $f"
-    continue
-  fi
-
-  # 0 = normal
-  if [ $RET -eq 0 ]; then
-    echo "✅ OK"
-    continue
-  fi
-
-  # everything else = remove
-  echo "❌ Removing (exit=$RET): $f"
-  rm -f "$f"
+  case $RET in
+    0)
+      echo "✅ OK: $f"
+      ;;
+    124)
+      echo "⏱️ Timeout (kept): $f"
+      ;;
+    1)
+      echo "❌ Removing (syntax/type error): $f"
+      rm -f "$f"
+      ;;
+    *)
+      echo "💥 Crash or other error (kept, exit=$RET): $f"
+      ;;
+  esac
 
 done
 

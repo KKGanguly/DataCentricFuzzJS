@@ -1,0 +1,82 @@
+[
+  {
+    "index": 0,
+    "filename": "poc_mut_000.js",
+    "valid": true,
+    "gain": 0.6410438691920936,
+    "kind": "insert",
+    "node_type": "parenthesized_expression"
+  },
+  {
+    "index": 1,
+    "filename": "poc_mut_001.js",
+    "valid": true,
+    "gain": 0.19767829832739836,
+    "kind": "insert",
+    "node_type": "expression_statement"
+  },
+  {
+    "index": 2,
+    "filename": "poc_mut_002.js",
+    "valid": true,
+    "gain": 0.44507657482881396,
+    "kind": "insert",
+    "node_type": "parenthesized_expression"
+  },
+  {
+    "index": 3,
+    "filename": "poc_mut_003.js",
+    "valid": true,
+    "gain": 0.44507657482881396,
+    "kind": "insert",
+    "node_type": "parenthesized_expression"
+  },
+  {
+    "index": 4,
+    "filename": "poc_mut_004.js",
+    "valid": true,
+    "gain": 0.4680331632448751,
+    "kind": "insert",
+    "node_type": "expression_statement"
+  },
+  {
+    "index": 5,
+    "filename": "poc_mut_005.js",
+    "valid": true,
+    "gain": 0.4607085503646321,
+    "kind": "insert",
+    "node_type": "parenthesized_expression"
+  },
+  {
+    "index": 6,
+    "filename": "poc_mut_006.js",
+    "valid": true,
+    "gain": 0.3107128346089418,
+    "kind": "insert",
+    "node_type": "parenthesized_expression"
+  },
+  {
+    "index": 7,
+    "filename": "poc_mut_007.js",
+    "valid": true,
+    "gain": 0.36992607329473354,
+    "kind": "insert",
+    "node_type": "parenthesized_expression"
+  },
+  {
+    "index": 8,
+    "filename": "poc_mut_008.js",
+    "valid": true,
+    "gain": 0.36992607329473354,
+    "kind": "insert",
+    "node_type": "parenthesized_expression"
+  },
+  {
+    "index": 9,
+    "filename": "poc_mut_009.js",
+    "valid": true,
+    "gain": 0.6410438691920936,
+    "kind": "insert",
+    "node_type": "parenthesized_expression"
+  }
+]
