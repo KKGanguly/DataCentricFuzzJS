@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 apply_learned_mutators_v6_semantic_aware.py
 
@@ -6,7 +5,7 @@ SEMANTIC-AWARE VERSION:
 1. TDZ awareness (no use-before-declaration)
 2. Type-aware instantiation (don't call non-functions)
 3. Property-aware (don't access random properties)
-4. Better validation to catch semantic errors
+4. Better validation to catch semantsic errors
 """
 
 import os
@@ -841,7 +840,7 @@ def apply_mutations_batch(
         })
         
         if verbose:
-            print(f"   Mutation {len(results)}: {template.get('kind', 'insert')}")
+            print(f"   Mutation {len(results)}: {template.get('kind', 'insert')}")
     
     if verbose:
         print(f"\n  Stats:")
@@ -961,4 +960,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main() 
+    main()

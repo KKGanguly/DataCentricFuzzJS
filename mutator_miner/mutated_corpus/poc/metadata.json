@@ -1,0 +1,82 @@
+[
+  {
+    "index": 0,
+    "filename": "poc_mut_000.js",
+    "valid": true,
+    "gain": 0.7015254586606517,
+    "kind": "insert",
+    "node_type": "try_statement"
+  },
+  {
+    "index": 1,
+    "filename": "poc_mut_001.js",
+    "valid": true,
+    "gain": 0.4638845310984435,
+    "kind": "insert",
+    "node_type": "lexical_declaration"
+  },
+  {
+    "index": 2,
+    "filename": "poc_mut_002.js",
+    "valid": true,
+    "gain": 0.7015254586606517,
+    "kind": "insert",
+    "node_type": "expression_statement"
+  },
+  {
+    "index": 3,
+    "filename": "poc_mut_003.js",
+    "valid": true,
+    "gain": 0.557555386822235,
+    "kind": "insert",
+    "node_type": "parenthesized_expression"
+  },
+  {
+    "index": 4,
+    "filename": "poc_mut_004.js",
+    "valid": true,
+    "gain": 0.5407741495674254,
+    "kind": "insert",
+    "node_type": "parenthesized_expression"
+  },
+  {
+    "index": 5,
+    "filename": "poc_mut_005.js",
+    "valid": true,
+    "gain": 0.5075952752056626,
+    "kind": "insert",
+    "node_type": "if_statement"
+  },
+  {
+    "index": 6,
+    "filename": "poc_mut_006.js",
+    "valid": true,
+    "gain": 0.7201729279672676,
+    "kind": "insert",
+    "node_type": "try_statement"
+  },
+  {
+    "index": 7,
+    "filename": "poc_mut_007.js",
+    "valid": true,
+    "gain": 0.5544709231624154,
+    "kind": "insert",
+    "node_type": "expression_statement"
+  },
+  {
+    "index": 8,
+    "filename": "poc_mut_008.js",
+    "valid": true,
+    "gain": 0.5544709231624154,
+    "kind": "insert",
+    "node_type": "expression_statement"
+  },
+  {
+    "index": 9,
+    "filename": "poc_mut_009.js",
+    "valid": true,
+    "gain": 0.4638845310984435,
+    "kind": "insert",
+    "node_type": "lexical_declaration"
+  }
+]

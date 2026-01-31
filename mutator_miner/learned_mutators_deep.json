@@ -1,0 +1,6222 @@
+{
+  "vocabulary_size": 330,
+  "total_raw_templates": 601,
+  "unique_patterns": 361,
+  "filtered_count": 361,
+  "templates": [
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.main)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.3799315418721309,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032134_FF420792-F884-4F29-A887-D93163E9BB07.js",
+      "frequency": 7,
+      "avg_gain": 0.2215298425298521,
+      "avg_depth": 3.857142857142857,
+      "num_files": 7,
+      "composite_score": 25.14386985386995
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR>(<VAR>);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.12954538259311482,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 9,
+      "avg_gain": 0.15740998533812972,
+      "avg_depth": 3.6666666666666665,
+      "num_files": 6,
+      "composite_score": 24.40743318671463
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "function <VAR>(){}"
+      ],
+      "node_type": "function_declaration",
+      "gain": 0.0038981645766873463,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032030_9F4277A2-7E1D-4440-9FC8-4732D8DE4B77.js",
+      "frequency": 10,
+      "avg_gain": 0.30079907576615217,
+      "avg_depth": 4.0,
+      "num_files": 4,
+      "composite_score": 23.00799075766152
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR>(<VAR>, <VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.007075221579654012,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032047_964B72C2-0EE7-48F7-ADA2-64E631A932F4.js",
+      "frequency": 9,
+      "avg_gain": 0.140790208807949,
+      "avg_depth": 4.111111111111111,
+      "num_files": 5,
+      "composite_score": 22.463457643635046
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.addBody)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.25062977579369167,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031637_A2123C0E-AF8C-4DCA-9CCE-3708987B3E02.js",
+      "frequency": 6,
+      "avg_gain": 0.22444896773783254,
+      "avg_depth": 3.6666666666666665,
+      "num_files": 6,
+      "composite_score": 22.07782301071166
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR> = new <VAR>(<VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.04786796178058572,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032336_2293AA10-785D-4A83-98B8-1D3121BCE5C4.js",
+      "frequency": 8,
+      "avg_gain": 0.13904642807426223,
+      "avg_depth": 3.0,
+      "num_files": 5,
+      "composite_score": 20.89046428074262
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR>(<VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.46561842836813494,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 6,
+      "avg_gain": 0.18930504851202357,
+      "avg_depth": 4.0,
+      "num_files": 5,
+      "composite_score": 19.893050485120234
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(new <VAR>(<VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.13647161926428503,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 9,
+      "avg_gain": 0.11379632215971706,
+      "avg_depth": 3.4444444444444446,
+      "num_files": 4,
+      "composite_score": 19.860185443819393
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>()"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.07714479447989592,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032134_FF420792-F884-4F29-A887-D93163E9BB07.js",
+      "frequency": 7,
+      "avg_gain": 0.255514488598092,
+      "avg_depth": 3.857142857142857,
+      "num_files": 4,
+      "composite_score": 19.483716314552346
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = new <VAR>(<VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.12954538259311482,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 5,
+      "avg_gain": 0.2069965356656839,
+      "avg_depth": 3.4,
+      "num_files": 5,
+      "composite_score": 18.76996535665684
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>())"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.006926236671170205,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031914_1403E673-FF91-4215-A430-732E6B48DC15.js",
+      "frequency": 6,
+      "avg_gain": 0.0976526332078237,
+      "avg_depth": 3.0,
+      "num_files": 5,
+      "composite_score": 18.476526332078237
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "builder.addFunction"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.04786796178058572,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032336_2293AA10-785D-4A83-98B8-1D3121BCE5C4.js",
+      "frequency": 7,
+      "avg_gain": 0.07850026952185843,
+      "avg_depth": 4.428571428571429,
+      "num_files": 4,
+      "composite_score": 17.9992884095043
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR>(<VAR>, <VAR>);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 6,
+      "avg_gain": 0.11862773700580592,
+      "avg_depth": 4.666666666666667,
+      "num_files": 4,
+      "composite_score": 17.519610703391393
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "new WasmModuleBuilder()"
+      ],
+      "after": [],
+      "node_type": "new_expression",
+      "gain": 0.008354934682858806,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 5,
+      "avg_gain": 0.2263836271368679,
+      "avg_depth": 4.2,
+      "num_files": 4,
+      "composite_score": 17.36383627136868
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = <VAR>.addBody(<VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.08152218915032705,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032030_9F4277A2-7E1D-4440-9FC8-4732D8DE4B77.js",
+      "frequency": 5,
+      "avg_gain": 0.2445012973255105,
+      "avg_depth": 3.4,
+      "num_files": 4,
+      "composite_score": 17.145012973255106
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "instance?.exports"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.006926236671170205,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031914_1403E673-FF91-4215-A430-732E6B48DC15.js",
+      "frequency": 5,
+      "avg_gain": 0.09581302521699323,
+      "avg_depth": 5.0,
+      "num_files": 4,
+      "composite_score": 16.45813025216993
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = <VAR>.addType(<VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.25062977579369167,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031637_A2123C0E-AF8C-4DCA-9CCE-3708987B3E02.js",
+      "frequency": 4,
+      "avg_gain": 0.2644877107696596,
+      "avg_depth": 3.0,
+      "num_files": 4,
+      "composite_score": 16.144877107696594
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = new <VAR>(<VAR>, <VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.1713180045521414,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031814_9488ACD2-06A8-42CE-AA7F-06FD1212E3AE.js",
+      "frequency": 5,
+      "avg_gain": 0.10403220764550895,
+      "avg_depth": 3.8,
+      "num_files": 4,
+      "composite_score": 15.94032207645509
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR> = <VAR>.get(<VAR>);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.006926236671170205,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032336_2293AA10-785D-4A83-98B8-1D3121BCE5C4.js",
+      "frequency": 4,
+      "avg_gain": 0.16816391676138326,
+      "avg_depth": 3.5,
+      "num_files": 4,
+      "composite_score": 15.431639167613833
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "builder.addType"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 6,
+      "avg_gain": 0.0499378187054739,
+      "avg_depth": 4.0,
+      "num_files": 3,
+      "composite_score": 14.499378187054738
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>.addBodyWithEnd"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.12954538259311482,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 6,
+      "avg_gain": 0.0597042442010114,
+      "avg_depth": 3.6666666666666665,
+      "num_files": 3,
+      "composite_score": 14.430375775343448
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.exportAs)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.08152218915032705,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032030_9F4277A2-7E1D-4440-9FC8-4732D8DE4B77.js",
+      "frequency": 4,
+      "avg_gain": 0.08409150268005841,
+      "avg_depth": 3.0,
+      "num_files": 4,
+      "composite_score": 14.340915026800584
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "new <VAR>(<VAR>)"
+      ],
+      "after": [],
+      "node_type": "new_expression",
+      "gain": 0.61095957838928,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 5,
+      "avg_gain": 0.3053280806975261,
+      "avg_depth": 4.2,
+      "num_files": 2,
+      "composite_score": 14.15328080697526
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR>(); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.016612883329668593,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 4,
+      "avg_gain": 0.05929396415176527,
+      "avg_depth": 3.0,
+      "num_files": 4,
+      "composite_score": 14.092939641517653
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR> = new <VAR>(<VAR>)"
+      ],
+      "after": [],
+      "node_type": "assignment_expression",
+      "gain": 0.61095957838928,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 4,
+      "avg_gain": 0.2732898808922939,
+      "avg_depth": 2.5,
+      "num_files": 3,
+      "composite_score": 13.98289880892294
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR> = new <VAR>(<VAR>, <VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.46699043939710483,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032121_F55368D2-8B5E-42C9-8893-51578A710362.js",
+      "frequency": 3,
+      "avg_gain": 0.28042400393491673,
+      "avg_depth": 4.333333333333333,
+      "num_files": 3,
+      "composite_score": 13.970906706015834
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.__proto__)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.61095957838928,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 3,
+      "avg_gain": 0.2544272663366757,
+      "avg_depth": 4.333333333333333,
+      "num_files": 3,
+      "composite_score": 13.710939330033423
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "builder"
+      ],
+      "after": [
+        "<VAR>"
+      ],
+      "node_type": "identifier",
+      "gain": 0.37382684859102655,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 5,
+      "avg_gain": 0.23447715742024347,
+      "avg_depth": 4.6,
+      "num_files": 2,
+      "composite_score": 13.644771574202434
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "kExprI8x16Splat"
+      ],
+      "after": [
+        "<VAR>,<VAR>"
+      ],
+      "node_type": "identifier",
+      "gain": 0.00881036466610663,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031914_1403E673-FF91-4215-A430-732E6B48DC15.js",
+      "frequency": 10,
+      "avg_gain": 0.00881036466610663,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 13.588103646661066
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR> = new <VAR>(<VAR>);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.03514822336118195,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 5,
+      "avg_gain": 0.10447717824679004,
+      "avg_depth": 3.0,
+      "num_files": 3,
+      "composite_score": 13.544771782467901
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "test(<VAR>, <VAR>)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.7015254586606517,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 3,
+      "avg_gain": 0.6396141038705329,
+      "avg_depth": 3.6666666666666665,
+      "num_files": 1,
+      "composite_score": 13.229474372038663
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>.<VAR>(this)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.7015254586606517,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 5,
+      "avg_gain": 0.3870339033717699,
+      "avg_depth": 4.6,
+      "num_files": 1,
+      "composite_score": 13.170339033717699
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "let <VAR> = [];"
+      ],
+      "node_type": "lexical_declaration",
+      "gain": 0.34332470591652514,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031814_9488ACD2-06A8-42CE-AA7F-06FD1212E3AE.js",
+      "frequency": 2,
+      "avg_gain": 0.5116108924727127,
+      "avg_depth": 4.0,
+      "num_files": 2,
+      "composite_score": 13.116108924727127
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.addBody(<VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.3430744622890215,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 4,
+      "avg_gain": 0.32833182766512636,
+      "avg_depth": 3.5,
+      "num_files": 2,
+      "composite_score": 13.033318276651263
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(new <VAR>(<VAR>, <VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.46699043939710483,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032121_F55368D2-8B5E-42C9-8893-51578A710362.js",
+      "frequency": 3,
+      "avg_gain": 0.2175894885877027,
+      "avg_depth": 3.6666666666666665,
+      "num_files": 3,
+      "composite_score": 13.00922821921036
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>(<VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.006926236671170205,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032336_2293AA10-785D-4A83-98B8-1D3121BCE5C4.js",
+      "frequency": 3,
+      "avg_gain": 0.1783107070997807,
+      "avg_depth": 4.333333333333333,
+      "num_files": 3,
+      "composite_score": 12.949773737664474
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR> = <VAR>.addType(<VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.46561842836813494,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 3,
+      "avg_gain": 0.21002466264077815,
+      "avg_depth": 3.6666666666666665,
+      "num_files": 3,
+      "composite_score": 12.933579959741113
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR> = new <VAR>(<VAR>, <VAR>);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.018454512546536746,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032121_F55368D2-8B5E-42C9-8893-51578A710362.js",
+      "frequency": 4,
+      "avg_gain": 0.1295649722370286,
+      "avg_depth": 3.0,
+      "num_files": 3,
+      "composite_score": 12.795649722370285
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "makeSig(<VAR>, <VAR>)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 4,
+      "avg_gain": 0.08314460148425709,
+      "avg_depth": 3.0,
+      "num_files": 3,
+      "composite_score": 12.331446014842571
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(main = <VAR>.addType(a5))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.6798970790289004,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.6798970790289004,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 12.298970790289005
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "a7 = <VAR>(<VAR>);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.6798970790289004,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.6798970790289004,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 12.298970790289005
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "main(null, <VAR>);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.6798970790289004,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.6798970790289004,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 12.298970790289005
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.6798970790289004,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.6798970790289004,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 12.298970790289005
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { a7 = new Array(); } catch (test) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.670478335325812,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.670478335325812,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 12.20478335325812
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(a5 = new a6(Proxy))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.670478335325812,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.670478335325812,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 12.20478335325812
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR> = <VAR>)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.008354934682858806,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 4,
+      "avg_gain": 0.08804206537499039,
+      "avg_depth": 2.5,
+      "num_files": 3,
+      "composite_score": 12.130420653749905
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "a2?.__proto__"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.4373994454333088,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 2,
+      "avg_gain": 0.5586482622311046,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 12.086482622311046
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "builder.instantiate()"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.006926236671170205,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032336_2293AA10-785D-4A83-98B8-1D3121BCE5C4.js",
+      "frequency": 3,
+      "avg_gain": 0.05015769250503641,
+      "avg_depth": 5.0,
+      "num_files": 3,
+      "composite_score": 12.001576925050365
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = <VAR>.addType(<VAR>); } catch (builder) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.6432037674257511,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 1,
+      "avg_gain": 0.6432037674257511,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 11.932037674257511
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = new <VAR>(); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.000625840864521103,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031725_0D4249F3-A8F8-4203-AB2B-2A67C53D765A.js",
+      "frequency": 3,
+      "avg_gain": 0.1374592094687155,
+      "avg_depth": 3.0,
+      "num_files": 3,
+      "composite_score": 11.874592094687156
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>.addBodyWithEnd(<VAR>)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.006926236671170205,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031914_1403E673-FF91-4215-A430-732E6B48DC15.js",
+      "frequency": 4,
+      "avg_gain": 0.009856012336187797,
+      "avg_depth": 3.0,
+      "num_files": 3,
+      "composite_score": 11.598560123361878
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>.a = <VAR>"
+      ],
+      "after": [],
+      "node_type": "assignment_expression",
+      "gain": 0.5172687451363974,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032121_F55368D2-8B5E-42C9-8893-51578A710362.js",
+      "frequency": 2,
+      "avg_gain": 0.4921295922667511,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 11.421295922667511
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "test();"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.6821966720108453,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.6821966720108453,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 11.321966720108453
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR>.set(<VAR>, null); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.6821966720108453,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.6821966720108453,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 11.321966720108453
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "builder.toBuffer()"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.3703806554471316,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 2,
+      "avg_gain": 0.2780921570281549,
+      "avg_depth": 5.0,
+      "num_files": 2,
+      "composite_score": 11.28092157028155
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR>();"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.006926236671170205,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031914_1403E673-FF91-4215-A430-732E6B48DC15.js",
+      "frequency": 3,
+      "avg_gain": 0.0420361948594562,
+      "avg_depth": 3.6666666666666665,
+      "num_files": 3,
+      "composite_score": 11.253695281927895
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "a7(test)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.7015254586606517,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 2,
+      "avg_gain": 0.5126004732149106,
+      "avg_depth": 4.0,
+      "num_files": 1,
+      "composite_score": 11.126004732149106
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = <VAR>.instantiate(i8); } catch (i8) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.5624991448760204,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031723_F5B51788-2F46-4516-8D6E-96D9883CA936.js",
+      "frequency": 1,
+      "avg_gain": 0.5624991448760204,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 11.124991448760204
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR> = numbers.addType(i8);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.5624991448760204,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031723_F5B51788-2F46-4516-8D6E-96D9883CA936.js",
+      "frequency": 1,
+      "avg_gain": 0.5624991448760204,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 11.124991448760204
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "i8 < a1"
+      ],
+      "after": [],
+      "node_type": "binary_expression",
+      "gain": 0.5624991448760204,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031723_F5B51788-2F46-4516-8D6E-96D9883CA936.js",
+      "frequency": 1,
+      "avg_gain": 0.5624991448760204,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 11.124991448760204
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "new <VAR>(module, <VAR>)"
+      ],
+      "after": [],
+      "node_type": "new_expression",
+      "gain": 0.61095957838928,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 2,
+      "avg_gain": 0.3911046560945628,
+      "avg_depth": 2.0,
+      "num_files": 2,
+      "composite_score": 10.911046560945628
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR> = new <VAR>();"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.2665988266486563,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032047_964B72C2-0EE7-48F7-ADA2-64E631A932F4.js",
+      "frequency": 3,
+      "avg_gain": 0.20439052242501154,
+      "avg_depth": 3.6666666666666665,
+      "num_files": 2,
+      "composite_score": 10.87723855758345
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.set(<VAR>, null))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.5374197739220464,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.5374197739220464,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 10.874197739220463
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "((<VAR>.addBody))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.5172687451363974,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032121_F55368D2-8B5E-42C9-8893-51578A710362.js",
+      "frequency": 1,
+      "avg_gain": 0.5172687451363974,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 10.672687451363974
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR> = new <VAR>(module, <VAR>)"
+      ],
+      "after": [],
+      "node_type": "assignment_expression",
+      "gain": 0.61095957838928,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 1,
+      "avg_gain": 0.61095957838928,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 10.6095957838928
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "builder.addFunctionTableInit(<VAR>, true, builder);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.61095957838928,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 1,
+      "avg_gain": 0.61095957838928,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 10.6095957838928
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "builder.instantiate"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.13647161926428503,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 4,
+      "avg_gain": 0.053207370314122884,
+      "avg_depth": 4.0,
+      "num_files": 2,
+      "composite_score": 10.53207370314123
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = new <VAR>(C6);",
+        "try { <VAR> = <VAR>.toBuffer(); } catch (C6) {}",
+        " } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.49593049328409416,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032121_F55368D2-8B5E-42C9-8893-51578A710362.js",
+      "frequency": 1,
+      "avg_gain": 0.49593049328409416,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 10.459304932840942
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = C6.instantiate(C6); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.49593049328409416,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032121_F55368D2-8B5E-42C9-8893-51578A710362.js",
+      "frequency": 1,
+      "avg_gain": 0.49593049328409416,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 10.459304932840942
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "new Proxy(test, <VAR>)"
+      ],
+      "after": [],
+      "node_type": "new_expression",
+      "gain": 0.4373994454333088,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 2,
+      "avg_gain": 0.4447961086825506,
+      "avg_depth": 4.0,
+      "num_files": 1,
+      "composite_score": 10.447961086825506
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR> = <VAR>.instantiate(<VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.13372045962142842,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032047_964B72C2-0EE7-48F7-ADA2-64E631A932F4.js",
+      "frequency": 3,
+      "avg_gain": 0.16009773341593558,
+      "avg_depth": 3.6666666666666665,
+      "num_files": 2,
+      "composite_score": 10.434310667492689
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "builder.addFunctionTableInit(<VAR>, true, <VAR>)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.46561842836813494,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 2,
+      "avg_gain": 0.5382890033787074,
+      "avg_depth": 2.0,
+      "num_files": 1,
+      "composite_score": 10.382890033787074
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(this.g)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.61095957838928,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 2,
+      "avg_gain": 0.3127439354777188,
+      "avg_depth": 2.0,
+      "num_files": 2,
+      "composite_score": 10.127439354777188
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR>.<VAR>(<VAR>);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.34332470591652514,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031814_9488ACD2-06A8-42CE-AA7F-06FD1212E3AE.js",
+      "frequency": 2,
+      "avg_gain": 0.2054960219911602,
+      "avg_depth": 4.0,
+      "num_files": 2,
+      "composite_score": 10.054960219911603
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(test = <VAR>.toBuffer())"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.4373994454333088,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.4373994454333088,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 9.873994454333088
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(a5.exp())"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.4373994454333088,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.4373994454333088,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 9.873994454333088
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR> = a6())"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.4373994454333088,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.4373994454333088,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 9.873994454333088
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "Object.defineProperty(a7, a6, <VAR>)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.4373994454333088,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.4373994454333088,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 9.873994454333088
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.get(<VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.28162044259847163,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 2,
+      "avg_gain": 0.18411687870714,
+      "avg_depth": 4.0,
+      "num_files": 2,
+      "composite_score": 9.8411687870714
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>.<VAR>"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.6798970790289004,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 3,
+      "avg_gain": 0.3004448245018664,
+      "avg_depth": 3.6666666666666665,
+      "num_files": 1,
+      "composite_score": 9.837781578351997
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>(<VAR>, <VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.17328637031318916,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 4,
+      "avg_gain": 0.179646634991102,
+      "avg_depth": 4.0,
+      "num_files": 1,
+      "composite_score": 9.79646634991102
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { a5.addBody(<VAR>); } catch (a6) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.52651328338704,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.52651328338704,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 9.7651328338704
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR> = <VAR>.toBuffer();"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.12837738808521693,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031643_C9B0D1D3-DA26-4BA7-A328-A954FF47BEBD.js",
+      "frequency": 2,
+      "avg_gain": 0.11907669008630908,
+      "avg_depth": 5.0,
+      "num_files": 2,
+      "composite_score": 9.69076690086309
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.<VAR>)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.32367548776916955,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 2,
+      "avg_gain": 0.20870260750614955,
+      "avg_depth": 3.0,
+      "num_files": 2,
+      "composite_score": 9.587026075061495
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR>.exportFunc(); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.3430744622890215,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 2,
+      "avg_gain": 0.24036064348150288,
+      "avg_depth": 2.0,
+      "num_files": 2,
+      "composite_score": 9.403606434815028
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "new <VAR>();"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.007424786088509591,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 2,
+      "avg_gain": 0.08933725994417763,
+      "avg_depth": 5.0,
+      "num_files": 2,
+      "composite_score": 9.393372599441776
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR> = <VAR>.toBuffer())"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.00011895533834194172,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032047_964B72C2-0EE7-48F7-ADA2-64E631A932F4.js",
+      "frequency": 2,
+      "avg_gain": 0.08670266282576555,
+      "avg_depth": 5.0,
+      "num_files": 2,
+      "composite_score": 9.367026628257655
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "executed = true"
+      ],
+      "after": [],
+      "node_type": "assignment_expression",
+      "gain": 0.33777210687363496,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031930_9437A2A7-777D-4608-9AE7-4492DD6AA2C1.js",
+      "frequency": 3,
+      "avg_gain": 0.38236694143870625,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 9.323669414387062
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { F2 = new <VAR>(); } catch (a4) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.38112520621405693,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031951_DE9BD565-F3CC-4DFA-A138-8137F84F562D.js",
+      "frequency": 1,
+      "avg_gain": 0.38112520621405693,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 9.31125206214057
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.addFunctionTableInit(a4, true, <VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.38112520621405693,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031951_DE9BD565-F3CC-4DFA-A138-8137F84F562D.js",
+      "frequency": 1,
+      "avg_gain": 0.38112520621405693,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 9.31125206214057
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "this.<VAR> = a14"
+      ],
+      "after": [],
+      "node_type": "assignment_expression",
+      "gain": 0.38112520621405693,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031951_DE9BD565-F3CC-4DFA-A138-8137F84F562D.js",
+      "frequency": 1,
+      "avg_gain": 0.38112520621405693,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 9.31125206214057
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR>.addFunctionTableInit(<VAR>, true, <VAR>);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.12954538259311482,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 2,
+      "avg_gain": 0.07749900162859183,
+      "avg_depth": 5.0,
+      "num_files": 2,
+      "composite_score": 9.27499001628592
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "test/<VAR>/<VAR>/<VAR>-module-builder.<VAR>"
+      ],
+      "after": [
+        "test/<VAR>/<VAR>/<VAR>-module-kWasmI32.<VAR>"
+      ],
+      "node_type": "string_fragment",
+      "gain": 0.37382684859102655,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 1,
+      "avg_gain": 0.37382684859102655,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 9.238268485910265
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = <VAR>(<VAR>, <VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.3703806554471316,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 1,
+      "avg_gain": 0.3703806554471316,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 9.203806554471317
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR>(<VAR>); } catch (builder) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.3703806554471316,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 1,
+      "avg_gain": 0.3703806554471316,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 9.203806554471317
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR> = <VAR>.addBody(<VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.3703806554471316,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 1,
+      "avg_gain": 0.3703806554471316,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 9.203806554471317
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>[<VAR>] = <VAR>?.[<VAR>])"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.3703806554471316,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 1,
+      "avg_gain": 0.3703806554471316,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 9.203806554471317
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.addBody(<VAR>));"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.46699043939710483,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032121_F55368D2-8B5E-42C9-8893-51578A710362.js",
+      "frequency": 1,
+      "avg_gain": 0.46699043939710483,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 9.169904393971049
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>.addBody(<VAR>)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.04786796178058572,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032336_2293AA10-785D-4A83-98B8-1D3121BCE5C4.js",
+      "frequency": 2,
+      "avg_gain": 0.11057716604688744,
+      "avg_depth": 4.0,
+      "num_files": 2,
+      "composite_score": 9.105771660468875
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(Error.<VAR>(<VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.45219277193179247,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.45219277193179247,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 9.021927719317926
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR> = <VAR>.addType(<VAR>);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.12954538259311482,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 2,
+      "avg_gain": 0.15039755819648024,
+      "avg_depth": 3.0,
+      "num_files": 2,
+      "composite_score": 9.003975581964802
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR> = builder.instantiate()"
+      ],
+      "after": [],
+      "node_type": "assignment_expression",
+      "gain": 0.13647161926428503,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 2,
+      "avg_gain": 0.08442523829976203,
+      "avg_depth": 4.0,
+      "num_files": 2,
+      "composite_score": 8.84425238299762
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>.__proto__ = <VAR>"
+      ],
+      "after": [],
+      "node_type": "assignment_expression",
+      "gain": 0.21130592973213652,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 2,
+      "avg_gain": 0.3243526875827226,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 8.743526875827225
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = ((arr = <VAR>.addType(<VAR>))); } catch (arr) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.42385859828531675,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031931_94C3FAC0-0164-437C-A98A-4F81BB9F3F92.js",
+      "frequency": 1,
+      "avg_gain": 0.42385859828531675,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 8.738585982853166
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(Math.<VAR>(main))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.32367548776916955,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.32367548776916955,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 8.736754877691695
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR>(a6); } catch (a5) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.32367548776916955,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.32367548776916955,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 8.736754877691695
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR> = new Proxy(test, <VAR>)"
+      ],
+      "after": [],
+      "node_type": "assignment_expression",
+      "gain": 0.32367548776916955,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.32367548776916955,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 8.736754877691695
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR> = new WasmModuleBuilder()"
+      ],
+      "after": [],
+      "node_type": "assignment_expression",
+      "gain": 0.016612883329668593,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 3,
+      "avg_gain": 0.02250604155260209,
+      "avg_depth": 3.0,
+      "num_files": 2,
+      "composite_score": 8.72506041552602
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>.addBody"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.17328637031318916,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 2,
+      "avg_gain": 0.11970518752458689,
+      "avg_depth": 3.0,
+      "num_files": 2,
+      "composite_score": 8.697051875245869
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "Object.seal(<VAR>);"
+      ],
+      "after": [],
+      "node_type": "expression_statement",
+      "gain": 0.3180220602984959,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032007_7FF37104-11B3-4A1F-850F-AE376ABF9C09.js",
+      "frequency": 1,
+      "avg_gain": 0.3180220602984959,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 8.68022060298496
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = <VAR>(); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.00013655304687434575,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032121_F55368D2-8B5E-42C9-8893-51578A710362.js",
+      "frequency": 2,
+      "avg_gain": 0.0006770050484878401,
+      "avg_depth": 5.0,
+      "num_files": 2,
+      "composite_score": 8.506770050484878
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR>.addBodyWithEnd(<VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.007347007937748229,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031951_67CD1B4A-9264-4153-89F5-3AEAE3A2D2F2.js",
+      "frequency": 2,
+      "avg_gain": 0.05053836759043889,
+      "avg_depth": 4.0,
+      "num_files": 2,
+      "composite_score": 8.505383675904389
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "foo(<VAR>)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.496886636763348,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031752_8AA1AC4E-9203-4A4E-861C-62A45C3A364E.js",
+      "frequency": 2,
+      "avg_gain": 0.2487730492502397,
+      "avg_depth": 4.0,
+      "num_files": 1,
+      "composite_score": 8.487730492502397
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR> < <VAR>;"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 2,
+      "avg_gain": 0.09835117723195724,
+      "avg_depth": 3.0,
+      "num_files": 2,
+      "composite_score": 8.483511772319572
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "Object.defineProperty"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.3799315418721309,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032134_FF420792-F884-4F29-A887-D93163E9BB07.js",
+      "frequency": 1,
+      "avg_gain": 0.3799315418721309,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 8.29931541872131
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.addType)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.17124973379984565,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 2,
+      "avg_gain": 0.1722680520565174,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 8.222680520565174
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR> = <VAR>;"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.17124973379984565,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 2,
+      "avg_gain": 0.1722680520565174,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 8.222680520565174
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>?.<VAR>?.buffer)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.03237885733523904,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 2,
+      "avg_gain": 0.02155799841350675,
+      "avg_depth": 4.0,
+      "num_files": 2,
+      "composite_score": 8.215579984135069
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = <VAR>.instantiate(<VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.4542596521511029,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032121_F55368D2-8B5E-42C9-8893-51578A710362.js",
+      "frequency": 1,
+      "avg_gain": 0.4542596521511029,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 8.04259652151103
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "kWasmI32"
+      ],
+      "after": [
+        "<VAR>"
+      ],
+      "node_type": "identifier",
+      "gain": 0.15220326528240513,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 2,
+      "avg_gain": 0.15220326528240513,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 8.022032652824052
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { a = a.addType(c); } catch (a) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.44964216048193506,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031825_E2BF2512-3697-4FF3-B4EA-DD7A5E50F2DC.js",
+      "frequency": 1,
+      "avg_gain": 0.44964216048193506,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 7.996421604819351
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = <VAR>(); } catch (builder) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.3430744622890215,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 1,
+      "avg_gain": 0.3430744622890215,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 7.930744622890215
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "builder.addType(kSig_i_ii)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.3430744622890215,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 1,
+      "avg_gain": 0.3430744622890215,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 7.930744622890215
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.oolProperty1)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.4362380527052239,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031930_9437A2A7-777D-4608-9AE7-4492DD6AA2C1.js",
+      "frequency": 1,
+      "avg_gain": 0.4362380527052239,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 7.862380527052239
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "hax()"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.07714479447989592,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032134_FF420792-F884-4F29-A887-D93163E9BB07.js",
+      "frequency": 2,
+      "avg_gain": 0.2285381681760134,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 7.785381681760134
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = <VAR>.main(<VAR>); } catch (arr) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.42385859828531675,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031931_94C3FAC0-0164-437C-A98A-4F81BB9F3F92.js",
+      "frequency": 1,
+      "avg_gain": 0.42385859828531675,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 7.738585982853167
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR> = new <VAR>())"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.17328637031318916,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 2,
+      "avg_gain": 0.17328637031318916,
+      "avg_depth": 4.0,
+      "num_files": 1,
+      "composite_score": 7.732863703131891
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR>.addBodyWithEnd(o); } catch (x) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.2134017422790146,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032252_F0F2ECBF-5905-4034-9279-0EDF449A028B.js",
+      "frequency": 1,
+      "avg_gain": 0.2134017422790146,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.634017422790146
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(z.exportFunc)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.2134017422790146,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032252_F0F2ECBF-5905-4034-9279-0EDF449A028B.js",
+      "frequency": 1,
+      "avg_gain": 0.2134017422790146,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.634017422790146
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.length)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.2134017422790146,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032252_F0F2ECBF-5905-4034-9279-0EDF449A028B.js",
+      "frequency": 1,
+      "avg_gain": 0.2134017422790146,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.634017422790146
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "foo(false, false)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.2134017422790146,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032252_F0F2ECBF-5905-4034-9279-0EDF449A028B.js",
+      "frequency": 1,
+      "avg_gain": 0.2134017422790146,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.634017422790146
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "kExprReturn"
+      ],
+      "after": [
+        "<VAR>,<VAR>"
+      ],
+      "node_type": "identifier",
+      "gain": 0.2124189193592897,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.2124189193592897,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.624189193592897
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "<VAR>"
+      ],
+      "after": [
+        "catch"
+      ],
+      "node_type": "identifier",
+      "gain": 0.2124189193592897,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.2124189193592897,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.624189193592897
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR>(null, <VAR>);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.18600689966901485,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.18600689966901485,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.360068996690148
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>(arguments.callee.name)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.18600689966901485,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.18600689966901485,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.360068996690148
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR> = <VAR>.addBody(<VAR>);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.18600689966901485,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.18600689966901485,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.360068996690148
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "builder.addType(kSig_ii_v)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.18600689966901485,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.18600689966901485,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.360068996690148
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "<VAR>"
+      ],
+      "after": [
+        "t: <VAR>"
+      ],
+      "node_type": "identifier",
+      "gain": 0.18600689966901485,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.18600689966901485,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.360068996690148
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR> = <VAR>(false);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.18600689966901485,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.18600689966901485,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.360068996690148
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR>(null, foo); } catch (foo) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.28254307178108773,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031822_84F285BC-1ACD-42A3-938D-C54AE71D7337.js",
+      "frequency": 1,
+      "avg_gain": 0.28254307178108773,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 7.325430717810877
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "builder.addFunctionTableInit"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.28162044259847163,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js",
+      "frequency": 1,
+      "avg_gain": 0.28162044259847163,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 7.316204425984717
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { z = o.get(o); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.27775622112085424,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032252_F0F2ECBF-5905-4034-9279-0EDF449A028B.js",
+      "frequency": 1,
+      "avg_gain": 0.27775622112085424,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 7.277562211208542
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(bar = this)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.17452293194776788,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031636_DB91753D-06DA-4FBC-9ABF-D7D39E2FA047.js",
+      "frequency": 1,
+      "avg_gain": 0.17452293194776788,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.245229319477679
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "m.arguments"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.17452293194776788,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031636_DB91753D-06DA-4FBC-9ABF-D7D39E2FA047.js",
+      "frequency": 1,
+      "avg_gain": 0.17452293194776788,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.245229319477679
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "bar()"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.17452293194776788,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031636_DB91753D-06DA-4FBC-9ABF-D7D39E2FA047.js",
+      "frequency": 1,
+      "avg_gain": 0.17452293194776788,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.245229319477679
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(this.x)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.17328637031318916,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17328637031318916,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.232863703131891
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR> = (<VAR> = new <VAR>())"
+      ],
+      "node_type": "assignment_expression",
+      "gain": 0.17328637031318916,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17328637031318916,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.232863703131891
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR> = instance.toBuffer())"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.17328637031318916,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17328637031318916,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.232863703131891
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>.main"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.17328637031318916,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17328637031318916,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.232863703131891
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "WebAssembly?.Instance"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.17328637031318916,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17328637031318916,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.232863703131891
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(a18.addBody)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.3730906647372599,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031930_9437A2A7-777D-4608-9AE7-4492DD6AA2C1.js",
+      "frequency": 1,
+      "avg_gain": 0.3730906647372599,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 7.230906647372599
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "((<VAR>.addBodyWithEnd))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.1713180045521414,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031814_9488ACD2-06A8-42CE-AA7F-06FD1212E3AE.js",
+      "frequency": 1,
+      "avg_gain": 0.1713180045521414,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.213180045521414
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR>.__proto__ = <VAR>;"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.17124973379984565,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17124973379984565,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.212497337998457
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(this.c)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.17124973379984565,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17124973379984565,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.212497337998457
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "new <VAR>(module)"
+      ],
+      "after": [],
+      "node_type": "new_expression",
+      "gain": 0.17124973379984565,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17124973379984565,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.212497337998457
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.toBuffer);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.17124973379984565,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17124973379984565,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.212497337998457
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.main())"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.17124973379984565,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17124973379984565,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.212497337998457
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR>.<VAR>();"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.17124973379984565,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17124973379984565,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.212497337998457
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.<VAR>(module))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.17124973379984565,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17124973379984565,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.212497337998457
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.grow());"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.17124973379984565,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17124973379984565,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.212497337998457
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR> = <VAR>.addBody(builder))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.17124973379984565,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17124973379984565,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.212497337998457
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "((WasmModuleBuilder.e = <VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.15220326528240513,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.15220326528240513,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.022032652824051
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { (<VAR> = <VAR>.addBody(<VAR>)); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.2519036652225191,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031958_12E0394E-8C89-49AB-8C5D-6FCDF1D0D24B.js",
+      "frequency": 1,
+      "avg_gain": 0.2519036652225191,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 7.019036652225191
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>?.exports?.main)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.33777210687363496,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031930_9437A2A7-777D-4608-9AE7-4492DD6AA2C1.js",
+      "frequency": 1,
+      "avg_gain": 0.33777210687363496,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 6.877721068736349
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(Array.prototype)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.13647161926428503,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 1,
+      "avg_gain": 0.13647161926428503,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.864716192642851
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "builder.addMemory"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.13647161926428503,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 1,
+      "avg_gain": 0.13647161926428503,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.864716192642851
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.addFunctionTableInit(<VAR>, true, <VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.13372045962142842,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032047_964B72C2-0EE7-48F7-ADA2-64E631A932F4.js",
+      "frequency": 1,
+      "avg_gain": 0.13372045962142842,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.837204596214284
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "Object.seal"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.34882895174357653,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032007_7FF37104-11B3-4A1F-850F-AE376ABF9C09.js",
+      "frequency": 2,
+      "avg_gain": 0.18167862215486708,
+      "avg_depth": 2.0,
+      "num_files": 1,
+      "composite_score": 6.8167862215486705
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR> = <VAR>.addType(<VAR>));"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.12954538259311482,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 1,
+      "avg_gain": 0.12954538259311482,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.795453825931148
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR> = builder.instantiate();"
+      ],
+      "after": [],
+      "node_type": "expression_statement",
+      "gain": 0.12954538259311482,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 1,
+      "avg_gain": 0.12954538259311482,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.795453825931148
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>(builder))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.12954538259311482,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 1,
+      "avg_gain": 0.12954538259311482,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.795453825931148
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "Object?.prototype"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.12837738808521693,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031643_C9B0D1D3-DA26-4BA7-A328-A954FF47BEBD.js",
+      "frequency": 2,
+      "avg_gain": 0.12837738808521693,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 6.783773880852169
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR> < <VAR>?.length;"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.12837738808521693,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031643_C9B0D1D3-DA26-4BA7-A328-A954FF47BEBD.js",
+      "frequency": 1,
+      "avg_gain": 0.12837738808521693,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.783773880852169
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "{ <VAR>(<VAR>, <VAR>); }"
+      ],
+      "node_type": "statement_block",
+      "gain": 0.12837738808521693,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031643_C9B0D1D3-DA26-4BA7-A328-A954FF47BEBD.js",
+      "frequency": 1,
+      "avg_gain": 0.12837738808521693,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.783773880852169
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "<VAR>"
+      ],
+      "after": [
+        "<VAR>();"
+      ],
+      "node_type": "identifier",
+      "gain": 0.12837738808521693,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031643_C9B0D1D3-DA26-4BA7-A328-A954FF47BEBD.js",
+      "frequency": 1,
+      "avg_gain": 0.12837738808521693,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.783773880852169
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(kWasmI32(<VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 2,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.754526206640689
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "<VAR>"
+      ],
+      "after": [
+        "let <VAR>;",
+        " <VAR>"
+      ],
+      "node_type": "string_fragment",
+      "gain": 0.17124973379984565,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 2,
+      "avg_gain": 0.1722680520565174,
+      "avg_depth": 2.0,
+      "num_files": 1,
+      "composite_score": 6.722680520565174
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { helper(<VAR>); } catch (helper) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.11659308483716735,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032134_FF420792-F884-4F29-A887-D93163E9BB07.js",
+      "frequency": 1,
+      "avg_gain": 0.11659308483716735,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.665930848371674
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "global?.groups"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.11659308483716735,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032134_FF420792-F884-4F29-A887-D93163E9BB07.js",
+      "frequency": 1,
+      "avg_gain": 0.11659308483716735,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.665930848371674
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = numbers.get(<VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.21215330878811836,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031723_F5B51788-2F46-4516-8D6E-96D9883CA936.js",
+      "frequency": 1,
+      "avg_gain": 0.21215330878811836,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 6.6215330878811836
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR>(i8);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.21215330878811836,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031723_F5B51788-2F46-4516-8D6E-96D9883CA936.js",
+      "frequency": 1,
+      "avg_gain": 0.21215330878811836,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 6.6215330878811836
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { i8 = <VAR>(); } catch (a1) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.21215330878811836,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031723_F5B51788-2F46-4516-8D6E-96D9883CA936.js",
+      "frequency": 1,
+      "avg_gain": 0.21215330878811836,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 6.6215330878811836
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR> = table.get(i931)"
+      ],
+      "after": [],
+      "node_type": "assignment_expression",
+      "gain": 0.010737139491774461,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 2,
+      "avg_gain": 0.010737139491774461,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.607371394917744
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>?.length)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.10977599208740124,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.10977599208740124,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.5977599208740125
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "builder.addImportedTable"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.10977599208740124,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.10977599208740124,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.5977599208740125
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "i915 < kMaxSize"
+      ],
+      "after": [],
+      "node_type": "binary_expression",
+      "gain": 0.10977599208740124,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.10977599208740124,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.5977599208740125
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = <VAR>.get(<VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.2088806005379122,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031828_AC847C23-133C-41D7-AD4A-6CC70D723A43.js",
+      "frequency": 1,
+      "avg_gain": 0.2088806005379122,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 6.588806005379122
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "C6.<VAR> = <VAR>;"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.20783200915348837,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032121_F55368D2-8B5E-42C9-8893-51578A710362.js",
+      "frequency": 1,
+      "avg_gain": 0.20783200915348837,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 6.578320091534884
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(js_div())"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.09372972724312956,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.09372972724312956,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.437297272431295
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { new <VAR>(<VAR>, <VAR>); } catch (f) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.09372972724312956,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.09372972724312956,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.437297272431295
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "WebAssembly?.Module"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.09372972724312956,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.09372972724312956,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.437297272431295
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "i1?.exports"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.09372972724312956,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.09372972724312956,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.437297272431295
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR> = <VAR>.addBody(mul);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.08942963528086656,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.08942963528086656,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.394296352808666
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(js_div = ImportedTableTest(false, false))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.08942963528086656,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.08942963528086656,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.394296352808666
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>(i1054, <VAR>)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.08942963528086656,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.08942963528086656,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.394296352808666
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "a7.addFunction"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.08661331481580836,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.08661331481580836,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.366133148158084
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR>.addBody(sig_ii_v); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.18600689966901485,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.18600689966901485,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 6.360068996690148
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(Math.<VAR>)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.2830163595447221,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031825_E2BF2512-3697-4FF3-B4EA-DD7A5E50F2DC.js",
+      "frequency": 1,
+      "avg_gain": 0.2830163595447221,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 6.330163595447221
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "test/<VAR>/<VAR>/<VAR>-module-builder.<VAR>"
+      ],
+      "after": [
+        "test/<VAR>/<VAR>/<VAR>-module-<VAR>"
+      ],
+      "node_type": "string_fragment",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 2,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 4.0,
+      "num_files": 1,
+      "composite_score": 6.254526206640689
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.addFunction)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.17328637031318916,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17328637031318916,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 6.232863703131891
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR> = <VAR>);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.17328637031318916,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17328637031318916,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 6.232863703131891
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "instance = <VAR>;"
+      ],
+      "after": [],
+      "node_type": "expression_statement",
+      "gain": 0.17328637031318916,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17328637031318916,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 6.232863703131891
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "<VAR>"
+      ],
+      "after": [
+        "e = <VAR>"
+      ],
+      "node_type": "identifier",
+      "gain": 0.17328637031318916,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17328637031318916,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 6.232863703131891
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(sig_i_ii = builder.addType(sig_ii_v))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.17328637031318916,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17328637031318916,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 6.232863703131891
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "global"
+      ],
+      "after": [
+        "<VAR> = a"
+      ],
+      "node_type": "identifier",
+      "gain": 0.2729473315113667,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032134_FF420792-F884-4F29-A887-D93163E9BB07.js",
+      "frequency": 1,
+      "avg_gain": 0.2729473315113667,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 6.229473315113667
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "global"
+      ],
+      "after": [
+        "match"
+      ],
+      "node_type": "identifier",
+      "gain": 0.2729473315113667,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032134_FF420792-F884-4F29-A887-D93163E9BB07.js",
+      "frequency": 1,
+      "avg_gain": 0.2729473315113667,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 6.229473315113667
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "arguments.callee"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.17124973379984565,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17124973379984565,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 6.212497337998457
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>.exportAs"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.17124973379984565,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17124973379984565,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 6.212497337998457
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>(<VAR>, TypeError, <VAR>)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.17124973379984565,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17124973379984565,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 6.212497337998457
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR> = builder.toBuffer()"
+      ],
+      "after": [],
+      "node_type": "assignment_expression",
+      "gain": 0.17124973379984565,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17124973379984565,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 6.212497337998457
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = <VAR>.toBuffer(); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.17124973379984565,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17124973379984565,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 6.212497337998457
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = <VAR>.exp(); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.060026557234785116,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031828_09C6DC95-7ABC-44AD-979A-C56F08A26672.js",
+      "frequency": 2,
+      "avg_gain": 0.060026557234785116,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 6.100265572347851
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "__f_0(<VAR>, __f_0);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.053262881804570616,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032033_225A9F94-C427-4A8E-8DC5-62B763E3836A.js",
+      "frequency": 1,
+      "avg_gain": 0.053262881804570616,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.032628818045707
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(__f_0.addBody)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.053262881804570616,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032033_225A9F94-C427-4A8E-8DC5-62B763E3836A.js",
+      "frequency": 1,
+      "avg_gain": 0.053262881804570616,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.032628818045707
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { __f_0 = new __f_0(__f_0); } catch (__f_0) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.053262881804570616,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032033_225A9F94-C427-4A8E-8DC5-62B763E3836A.js",
+      "frequency": 1,
+      "avg_gain": 0.053262881804570616,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.032628818045707
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR> = <VAR>.get(<VAR>, <VAR>);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.2519036652225191,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031958_12E0394E-8C89-49AB-8C5D-6FCDF1D0D24B.js",
+      "frequency": 1,
+      "avg_gain": 0.2519036652225191,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 6.019036652225191
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR>(null, <VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.04786796178058572,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032336_2293AA10-785D-4A83-98B8-1D3121BCE5C4.js",
+      "frequency": 1,
+      "avg_gain": 0.04786796178058572,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.978679617805858
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.instantiate)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.04786796178058572,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032336_2293AA10-785D-4A83-98B8-1D3121BCE5C4.js",
+      "frequency": 1,
+      "avg_gain": 0.04786796178058572,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.978679617805858
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>(__v_3, true)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.181207171234985,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031725_0D4249F3-A8F8-4203-AB2B-2A67C53D765A.js",
+      "frequency": 2,
+      "avg_gain": 0.0965615883289299,
+      "avg_depth": 2.0,
+      "num_files": 1,
+      "composite_score": 5.965615883289299
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "Object.seal(<VAR>)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.014528292566157619,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032007_7FF37104-11B3-4A1F-850F-AE376ABF9C09.js",
+      "frequency": 2,
+      "avg_gain": 0.044777108419745276,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.947771084197453
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "test(a2, test, <VAR>);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.042405854753804983,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.042405854753804983,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.92405854753805
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { i14 = new <VAR>(<VAR>); } catch (i14) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.14095348374915395,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031828_09C6DC95-7ABC-44AD-979A-C56F08A26672.js",
+      "frequency": 1,
+      "avg_gain": 0.14095348374915395,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.90953483749154
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "((a.main))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.13528838199825913,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031707_823A6B0A-ABFC-4496-B4B5-B972BA3192FE.js",
+      "frequency": 1,
+      "avg_gain": 0.13528838199825913,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.852883819982591
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "kSimdPrefix"
+      ],
+      "after": [
+        "<VAR>"
+      ],
+      "node_type": "identifier",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.754526206640689
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "kExprEnd"
+      ],
+      "after": [
+        "<VAR>,<VAR>"
+      ],
+      "node_type": "identifier",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.754526206640689
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "instance"
+      ],
+      "after": [
+        "<VAR>"
+      ],
+      "node_type": "identifier",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 2,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.754526206640689
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "kExprDrop"
+      ],
+      "after": [
+        "<VAR>"
+      ],
+      "node_type": "identifier",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.754526206640689
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "builder"
+      ],
+      "after": [
+        "<VAR>, <VAR>"
+      ],
+      "node_type": "identifier",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.754526206640689
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>?.mul)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.754526206640689
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "builder"
+      ],
+      "after": [
+        ";",
+        " t"
+      ],
+      "node_type": "identifier",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.754526206640689
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR> = kWasmI32;"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.754526206640689
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "kExprDrop"
+      ],
+      "after": [
+        "<VAR>,<VAR>"
+      ],
+      "node_type": "identifier",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.754526206640689
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR> = true;"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.754526206640689
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { (<VAR> = <VAR>.addType(<VAR>)); } catch (builder) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.754526206640689
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { builder = <VAR>.addType(<VAR>); } catch (kExprEnd) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.754526206640689
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.index)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.754526206640689
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(a5.addType(main))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.01832116286182965,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.01832116286182965,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.683211628618297
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(((new <VAR>(a6))(test)))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.01832116286182965,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.01832116286182965,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.683211628618297
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { res = foo.exp(); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.21675524839016097,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032252_F0F2ECBF-5905-4034-9279-0EDF449A028B.js",
+      "frequency": 1,
+      "avg_gain": 0.21675524839016097,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 5.667552483901609
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(a7.<VAR> = a2)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.21130592973213652,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.21130592973213652,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 5.6130592973213655
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(test.exportAs)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.21130592973213652,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.21130592973213652,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 5.6130592973213655
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = i587.main(<VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.010737139491774461,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.010737139491774461,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.607371394917744
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.oolProperty1 = sub)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.010737139491774461,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.010737139491774461,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.607371394917744
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "table instanceof WebAssembly?.Table"
+      ],
+      "after": [],
+      "node_type": "binary_expression",
+      "gain": 0.010737139491774461,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.010737139491774461,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.607371394917744
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR> = AddFunctions(builder)"
+      ],
+      "after": [],
+      "node_type": "assignment_expression",
+      "gain": 0.010737139491774461,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.010737139491774461,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.607371394917744
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { (<VAR>(e)); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.01032111607418005,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.01032111607418005,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.6032111607418
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "test(a6, main);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.01032111607418005,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.01032111607418005,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.6032111607418
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "test(a6);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.01032111607418005,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.01032111607418005,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.6032111607418
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR>(<VAR>, a7); } catch (a2) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.010131464744562182,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.010131464744562182,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.601314647445622
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { b = c.addBody(b); } catch (d) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.10916999590907345,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031825_E2BF2512-3697-4FF3-B4EA-DD7A5E50F2DC.js",
+      "frequency": 1,
+      "avg_gain": 0.10916999590907345,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.591699959090734
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "a + i2"
+      ],
+      "after": [],
+      "node_type": "binary_expression",
+      "gain": 0.10916999590907345,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031825_E2BF2512-3697-4FF3-B4EA-DD7A5E50F2DC.js",
+      "frequency": 1,
+      "avg_gain": 0.10916999590907345,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.591699959090734
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(console.log(<VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.008354934682858806,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 1,
+      "avg_gain": 0.008354934682858806,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.583549346828589
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "((<VAR>.main))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.008354934682858806,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 1,
+      "avg_gain": 0.008354934682858806,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.583549346828589
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR>.length;"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.008354934682858806,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 1,
+      "avg_gain": 0.008354934682858806,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.583549346828589
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(builder = builder.get(<VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.008354934682858806,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 1,
+      "avg_gain": 0.008354934682858806,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.583549346828589
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "new Promise(<VAR>);"
+      ],
+      "after": [],
+      "node_type": "expression_statement",
+      "gain": 0.007424786088509591,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.007424786088509591,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.574247860885096
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(a11 = new <VAR>())"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.007347007937748229,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031951_67CD1B4A-9264-4153-89F5-3AEAE3A2D2F2.js",
+      "frequency": 1,
+      "avg_gain": 0.007347007937748229,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.573470079377483
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "new Proxy({}, o)"
+      ],
+      "after": [],
+      "node_type": "new_expression",
+      "gain": 0.007347007937748229,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031951_67CD1B4A-9264-4153-89F5-3AEAE3A2D2F2.js",
+      "frequency": 1,
+      "avg_gain": 0.007347007937748229,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.573470079377483
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR> = true)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.006926236671170205,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032336_2293AA10-785D-4A83-98B8-1D3121BCE5C4.js",
+      "frequency": 1,
+      "avg_gain": 0.006926236671170205,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.569262366711702
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(new builder(builder, <VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.006926236671170205,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032336_2293AA10-785D-4A83-98B8-1D3121BCE5C4.js",
+      "frequency": 1,
+      "avg_gain": 0.006926236671170205,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.569262366711702
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>(<VAR>, <VAR>)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.006926236671170205,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032336_2293AA10-785D-4A83-98B8-1D3121BCE5C4.js",
+      "frequency": 1,
+      "avg_gain": 0.006926236671170205,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.569262366711702
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR> = builder.addFunction(undefined, kSig_i_v)"
+      ],
+      "after": [],
+      "node_type": "assignment_expression",
+      "gain": 0.006926236671170205,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031914_1403E673-FF91-4215-A430-732E6B48DC15.js",
+      "frequency": 2,
+      "avg_gain": 0.006926236671170205,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.569262366711702
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { (new <VAR>(<VAR>)); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.006926236671170205,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031914_1403E673-FF91-4215-A430-732E6B48DC15.js",
+      "frequency": 1,
+      "avg_gain": 0.006926236671170205,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.569262366711702
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(Object.seal(this))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.006926236671170205,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031914_1403E673-FF91-4215-A430-732E6B48DC15.js",
+      "frequency": 1,
+      "avg_gain": 0.006926236671170205,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.569262366711702
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR>.__proto__ = Array.prototype;"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.006926236671170205,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031914_1403E673-FF91-4215-A430-732E6B48DC15.js",
+      "frequency": 1,
+      "avg_gain": 0.006926236671170205,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.569262366711702
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "if (a8 < a8) {",
+        " let t6;",
+        " try { t6 = a8.get(a8); } catch (a8) {}",
+        " try { <VAR>(null, t6); } catch (a8) {}",
+        "try { <VAR>(undefined, a7); } catch (a7) {}",
+        "",
+        " }"
+      ],
+      "node_type": "if_statement",
+      "gain": 0.10668214892729172,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032033_11B72B55-F554-437F-A490-805FB5BF3BE1.js",
+      "frequency": 1,
+      "avg_gain": 0.10668214892729172,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.566821489272917
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR>(null, __proto__); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.006143499634473689,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031822_84F285BC-1ACD-42A3-938D-C54AE71D7337.js",
+      "frequency": 1,
+      "avg_gain": 0.006143499634473689,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.561434996344737
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { (new F2(a5, <VAR>)); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.10457595270386061,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031951_DE9BD565-F3CC-4DFA-A138-8137F84F562D.js",
+      "frequency": 1,
+      "avg_gain": 0.10457595270386061,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.545759527038606
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "a8 = <VAR>;"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.004098711241536823,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031951_67CD1B4A-9264-4153-89F5-3AEAE3A2D2F2.js",
+      "frequency": 1,
+      "avg_gain": 0.004098711241536823,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.540987112415368
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(a8 = opt.get(i33))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.004098711241536823,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031951_67CD1B4A-9264-4153-89F5-3AEAE3A2D2F2.js",
+      "frequency": 1,
+      "avg_gain": 0.004098711241536823,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.540987112415368
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "Error.<VAR>"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.004098711241536823,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031951_67CD1B4A-9264-4153-89F5-3AEAE3A2D2F2.js",
+      "frequency": 1,
+      "avg_gain": 0.004098711241536823,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.540987112415368
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "((x.addBody))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.002562781805700482,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031822_84F285BC-1ACD-42A3-938D-C54AE71D7337.js",
+      "frequency": 1,
+      "avg_gain": 0.002562781805700482,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.525627818057005
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>(foo)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.002562781805700482,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031822_84F285BC-1ACD-42A3-938D-C54AE71D7337.js",
+      "frequency": 1,
+      "avg_gain": 0.002562781805700482,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.525627818057005
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "WasmModuleBuilder"
+      ],
+      "after": [
+        "<VAR>()"
+      ],
+      "node_type": "identifier",
+      "gain": 0.20124216531265282,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032336_2293AA10-785D-4A83-98B8-1D3121BCE5C4.js",
+      "frequency": 1,
+      "avg_gain": 0.20124216531265282,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 5.512421653126529
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { foo.addBody(<VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.0012174570501013345,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031752_8AA1AC4E-9203-4A4E-861C-62A45C3A364E.js",
+      "frequency": 1,
+      "avg_gain": 0.0012174570501013345,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.5121745705010134
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { opt = new <VAR>(); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.0005982958896979529,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031951_67CD1B4A-9264-4153-89F5-3AEAE3A2D2F2.js",
+      "frequency": 1,
+      "avg_gain": 0.0005982958896979529,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.505982958896979
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(new opt(C6))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.0005982958896979529,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031951_67CD1B4A-9264-4153-89F5-3AEAE3A2D2F2.js",
+      "frequency": 1,
+      "avg_gain": 0.0005982958896979529,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.505982958896979
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "opt(false)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.0005982958896979529,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031951_67CD1B4A-9264-4153-89F5-3AEAE3A2D2F2.js",
+      "frequency": 1,
+      "avg_gain": 0.0005982958896979529,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.505982958896979
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR>.<VAR> = <VAR>;"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.00013655304687434575,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032121_F55368D2-8B5E-42C9-8893-51578A710362.js",
+      "frequency": 1,
+      "avg_gain": 0.00013655304687434575,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.501365530468743
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR>.addFunctionTableInit(C6, true, <VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.00013655304687434575,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032121_F55368D2-8B5E-42C9-8893-51578A710362.js",
+      "frequency": 1,
+      "avg_gain": 0.00013655304687434575,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.501365530468743
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.<VAR>())"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.00011895533834194172,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031724_9FCD4AB1-5823-4DC9-97C7-5517D1C3031B.js",
+      "frequency": 1,
+      "avg_gain": 0.00011895533834194172,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.501189553383419
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "kSig_v_v"
+      ],
+      "after": [
+        "<VAR>"
+      ],
+      "node_type": "identifier",
+      "gain": 0.00011895533834194172,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031724_9FCD4AB1-5823-4DC9-97C7-5517D1C3031B.js",
+      "frequency": 1,
+      "avg_gain": 0.00011895533834194172,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.501189553383419
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "builder.instantiate(<VAR>)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.00011895533834194172,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031724_9FCD4AB1-5823-4DC9-97C7-5517D1C3031B.js",
+      "frequency": 1,
+      "avg_gain": 0.00011895533834194172,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.501189553383419
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR> < <VAR>)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.00011895533834194172,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032047_964B72C2-0EE7-48F7-ADA2-64E631A932F4.js",
+      "frequency": 1,
+      "avg_gain": 0.00011895533834194172,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.501189553383419
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "f(i26);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.09564376365514518,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031825_E2BF2512-3697-4FF3-B4EA-DD7A5E50F2DC.js",
+      "frequency": 1,
+      "avg_gain": 0.09564376365514518,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.456437636551452
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "f(f);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.09564376365514518,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031825_E2BF2512-3697-4FF3-B4EA-DD7A5E50F2DC.js",
+      "frequency": 1,
+      "avg_gain": 0.09564376365514518,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.456437636551452
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>?.index"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.09372972724312956,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.09372972724312956,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.437297272431295
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.exp)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.09372972724312956,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.09372972724312956,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.437297272431295
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "sub?.length"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.09372972724312956,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.09372972724312956,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.437297272431295
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "executed"
+      ],
+      "after": [
+        "i6 = <VAR>"
+      ],
+      "node_type": "identifier",
+      "gain": 0.19189670631861316,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031930_9437A2A7-777D-4608-9AE7-4492DD6AA2C1.js",
+      "frequency": 1,
+      "avg_gain": 0.19189670631861316,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 5.418967063186132
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { i26 = f(c, i26); } catch (a) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.18279261242267086,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031825_E2BF2512-3697-4FF3-B4EA-DD7A5E50F2DC.js",
+      "frequency": 1,
+      "avg_gain": 0.18279261242267086,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 5.327926124226709
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "memory.grow()"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.08152218915032705,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032030_9F4277A2-7E1D-4440-9FC8-4732D8DE4B77.js",
+      "frequency": 1,
+      "avg_gain": 0.08152218915032705,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.3152218915032705
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "new <VAR>()"
+      ],
+      "node_type": "new_expression",
+      "gain": 0.07714479447989592,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032134_FF420792-F884-4F29-A887-D93163E9BB07.js",
+      "frequency": 1,
+      "avg_gain": 0.07714479447989592,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.271447944798959
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>"
+      ],
+      "after": [],
+      "node_type": "identifier",
+      "gain": 0.07714479447989592,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032134_FF420792-F884-4F29-A887-D93163E9BB07.js",
+      "frequency": 1,
+      "avg_gain": 0.07714479447989592,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.271447944798959
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "/()/g;"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.07502592427333293,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032007_7FF37104-11B3-4A1F-850F-AE376ABF9C09.js",
+      "frequency": 1,
+      "avg_gain": 0.07502592427333293,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.250259242733329
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR> = <VAR>.addType(<VAR>)"
+      ],
+      "node_type": "assignment_expression",
+      "gain": 0.07502592427333293,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032007_7FF37104-11B3-4A1F-850F-AE376ABF9C09.js",
+      "frequency": 1,
+      "avg_gain": 0.07502592427333293,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.250259242733329
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>.main()"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.17328637031318916,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17328637031318916,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 5.232863703131891
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = module.get(<VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.17328637031318916,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17328637031318916,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 5.232863703131891
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { numbers.addBodyWithEnd(i8); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.17242872220012267,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031723_F5B51788-2F46-4516-8D6E-96D9883CA936.js",
+      "frequency": 1,
+      "avg_gain": 0.17242872220012267,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 5.224287222001227
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>.<VAR>()"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.07131604425350924,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031828_09C6DC95-7ABC-44AD-979A-C56F08A26672.js",
+      "frequency": 1,
+      "avg_gain": 0.07131604425350924,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.213160442535092
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(instance[<VAR>] = <VAR>?.[<VAR>])"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.17124973379984565,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032031_6D0402AF-4C2A-4A6C-B9BB-021448DC1C0A.js",
+      "frequency": 1,
+      "avg_gain": 0.17124973379984565,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 5.212497337998457
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "foo = foo;"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.16556770252889458,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032252_F0F2ECBF-5905-4034-9279-0EDF449A028B.js",
+      "frequency": 1,
+      "avg_gain": 0.16556770252889458,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 5.155677025288946
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>(i14, <VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.060026557234785116,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031828_09C6DC95-7ABC-44AD-979A-C56F08A26672.js",
+      "frequency": 1,
+      "avg_gain": 0.060026557234785116,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.100265572347851
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR> = <VAR>(<VAR>);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.13915688590020203,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031724_9FCD4AB1-5823-4DC9-97C7-5517D1C3031B.js",
+      "frequency": 1,
+      "avg_gain": 0.13915688590020203,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 4.89156885900202
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "quit !== undefined"
+      ],
+      "after": [],
+      "node_type": "binary_expression",
+      "gain": 0.13915688590020203,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031724_9FCD4AB1-5823-4DC9-97C7-5517D1C3031B.js",
+      "frequency": 1,
+      "avg_gain": 0.13915688590020203,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 4.89156885900202
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR> = <VAR>.instantiate())"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.1376638410668608,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032255_5BB6E369-3ED6-4349-8028-0070ED6E86D5.js",
+      "frequency": 1,
+      "avg_gain": 0.1376638410668608,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 4.876638410668608
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(a.addBody)"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.13528838199825913,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031707_823A6B0A-ABFC-4496-B4B5-B972BA3192FE.js",
+      "frequency": 1,
+      "avg_gain": 0.13528838199825913,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 4.852883819982591
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.exportFunc())"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.03237885733523904,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.03237885733523904,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.82378857335239
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "instantiate"
+      ],
+      "after": [
+        "{}",
+        " <VAR>"
+      ],
+      "node_type": "property_identifier",
+      "gain": 0.03237885733523904,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.03237885733523904,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.82378857335239
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "builder = new builder(builder);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.030732608511394255,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032005_7CD68E68-46FD-4931-9359-C2C29ADA99AF.js",
+      "frequency": 1,
+      "avg_gain": 0.030732608511394255,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.807326085113942
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "builder = new builder(<VAR>, <VAR>);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.030732608511394255,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032005_7CD68E68-46FD-4931-9359-C2C29ADA99AF.js",
+      "frequency": 1,
+      "avg_gain": 0.030732608511394255,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.807326085113942
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR> = <VAR>.addBodyWithEnd(<VAR>)"
+      ],
+      "after": [],
+      "node_type": "assignment_expression",
+      "gain": 0.12954538259311482,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 1,
+      "avg_gain": 0.12954538259311482,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 4.795453825931148
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR>[<VAR>] = <VAR>?.[<VAR>];"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.754526206640689
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>());"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.754526206640689
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "WasmModuleBuilder"
+      ],
+      "after": [],
+      "node_type": "identifier",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.754526206640689
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "new builder(<VAR>, builder);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.754526206640689
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR>--;"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.754526206640689
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "kSimdPrefix"
+      ],
+      "after": [
+        "makeSig,<VAR>"
+      ],
+      "node_type": "identifier",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.754526206640689
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "builder"
+      ],
+      "after": [
+        "<VAR>,<VAR>"
+      ],
+      "node_type": "identifier",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.754526206640689
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "kExprDrop"
+      ],
+      "after": [
+        "e,e,e,e,e"
+      ],
+      "node_type": "identifier",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.754526206640689
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "builder.addExport"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.754526206640689
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>(<VAR>)"
+      ],
+      "after": [],
+      "node_type": "call_expression",
+      "gain": 0.024634239206951847,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031914_1403E673-FF91-4215-A430-732E6B48DC15.js",
+      "frequency": 1,
+      "avg_gain": 0.024634239206951847,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.7463423920695185
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { bar(a5, foo); } catch (f) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.12314085559457524,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031636_DB91753D-06DA-4FBC-9ABF-D7D39E2FA047.js",
+      "frequency": 1,
+      "avg_gain": 0.12314085559457524,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 4.731408555945753
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { builder = <VAR>.toBuffer(); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.016612883329668593,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 1,
+      "avg_gain": 0.016612883329668593,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.6661288332966855
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>(null, <VAR>));"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.011916005422874798,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031725_0D4249F3-A8F8-4203-AB2B-2A67C53D765A.js",
+      "frequency": 1,
+      "avg_gain": 0.011916005422874798,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.6191600542287485
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "kExprI8x16Splat"
+      ],
+      "after": [
+        "x,<VAR>"
+      ],
+      "node_type": "identifier",
+      "gain": 0.00881036466610663,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031914_1403E673-FF91-4215-A430-732E6B48DC15.js",
+      "frequency": 1,
+      "avg_gain": 0.00881036466610663,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.588103646661066
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "kExprI8x16Splat"
+      ],
+      "after": [
+        "l,kSimdPrefix,<VAR>"
+      ],
+      "node_type": "identifier",
+      "gain": 0.00881036466610663,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031914_1403E673-FF91-4215-A430-732E6B48DC15.js",
+      "frequency": 1,
+      "avg_gain": 0.00881036466610663,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.588103646661066
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(Object.preventExtensions(builder))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.008354934682858806,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 1,
+      "avg_gain": 0.008354934682858806,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.583549346828589
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = builder.addType(<VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.008354934682858806,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js",
+      "frequency": 1,
+      "avg_gain": 0.008354934682858806,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.583549346828589
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR>.<VAR>(<VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.006926236671170205,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031914_1403E673-FF91-4215-A430-732E6B48DC15.js",
+      "frequency": 1,
+      "avg_gain": 0.006926236671170205,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.569262366711702
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR> = <VAR>())"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.006926236671170205,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031914_1403E673-FF91-4215-A430-732E6B48DC15.js",
+      "frequency": 1,
+      "avg_gain": 0.006926236671170205,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.569262366711702
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "array"
+      ],
+      "after": [
+        "<VAR>"
+      ],
+      "node_type": "identifier",
+      "gain": 0.10530600764454062,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031930_9437A2A7-777D-4608-9AE7-4492DD6AA2C1.js",
+      "frequency": 1,
+      "avg_gain": 0.10530600764454062,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 4.553060076445407
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { a5 = new <VAR>(F2); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.10457595270386061,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031951_DE9BD565-F3CC-4DFA-A138-8137F84F562D.js",
+      "frequency": 1,
+      "avg_gain": 0.10457595270386061,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 4.545759527038606
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { a4 = <VAR>.get(<VAR>); } catch (F2) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.10457595270386061,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031951_DE9BD565-F3CC-4DFA-A138-8137F84F562D.js",
+      "frequency": 1,
+      "avg_gain": 0.10457595270386061,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 4.545759527038606
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { foo = new <VAR>(); } catch (foo) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.003122703632812262,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031822_84F285BC-1ACD-42A3-938D-C54AE71D7337.js",
+      "frequency": 1,
+      "avg_gain": 0.003122703632812262,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.531227036328122
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR>.addType(<VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.10274262560711139,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032007_7FF37104-11B3-4A1F-850F-AE376ABF9C09.js",
+      "frequency": 1,
+      "avg_gain": 0.10274262560711139,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 4.527426256071114
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR>"
+      ],
+      "node_type": "identifier",
+      "gain": 0.0011688286451799756,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.0011688286451799756,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.5116882864517995
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "builder.toBuffer"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.0011688286451799756,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.0011688286451799756,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.5116882864517995
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR>(<VAR>, <VAR>, <VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.000625840864521103,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031725_0D4249F3-A8F8-4203-AB2B-2A67C53D765A.js",
+      "frequency": 1,
+      "avg_gain": 0.000625840864521103,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.506258408645211
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "g = (<VAR>());"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.00016619815202840657,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031854_A21D6683-2A12-4EC6-BE25-05DA0DC6B0CD.js",
+      "frequency": 1,
+      "avg_gain": 0.00016619815202840657,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.501661981520284
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "numbers.set(i8, null);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 6.363005212458445e-05,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031723_F5B51788-2F46-4516-8D6E-96D9883CA936.js",
+      "frequency": 1,
+      "avg_gain": 6.363005212458445e-05,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.500636300521245
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR>(a1);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 6.363005212458445e-05,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031723_F5B51788-2F46-4516-8D6E-96D9883CA936.js",
+      "frequency": 1,
+      "avg_gain": 6.363005212458445e-05,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.500636300521245
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "numbers.<VAR>();"
+      ],
+      "after": [],
+      "node_type": "expression_statement",
+      "gain": 6.363005212458445e-05,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031723_F5B51788-2F46-4516-8D6E-96D9883CA936.js",
+      "frequency": 1,
+      "avg_gain": 6.363005212458445e-05,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.500636300521245
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "numbers"
+      ],
+      "after": [
+        "i8 = <VAR>"
+      ],
+      "node_type": "identifier",
+      "gain": 0.09898178717256714,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031723_F5B51788-2F46-4516-8D6E-96D9883CA936.js",
+      "frequency": 1,
+      "avg_gain": 0.09898178717256714,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 4.489817871725672
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { res = new a8(o); } catch (o) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.08986341762609873,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032252_F0F2ECBF-5905-4034-9279-0EDF449A028B.js",
+      "frequency": 1,
+      "avg_gain": 0.08986341762609873,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 4.3986341762609875
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = new z(a8); } catch (y) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.08986341762609873,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032252_F0F2ECBF-5905-4034-9279-0EDF449A028B.js",
+      "frequency": 1,
+      "avg_gain": 0.08986341762609873,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 4.3986341762609875
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { AddFunctions(<VAR>, <VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.08942963528086656,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.08942963528086656,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 4.394296352808666
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "buffer = <VAR>"
+      ],
+      "after": [],
+      "node_type": "assignment_expression",
+      "gain": 0.08152218915032705,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032030_9F4277A2-7E1D-4440-9FC8-4732D8DE4B77.js",
+      "frequency": 1,
+      "avg_gain": 0.08152218915032705,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 4.3152218915032705
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { m(); } catch (foo) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.0742331796790066,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031636_DB91753D-06DA-4FBC-9ABF-D7D39E2FA047.js",
+      "frequency": 1,
+      "avg_gain": 0.0742331796790066,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 4.242331796790066
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "ImportedTableTest(<VAR>);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.06786016900081476,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031706_7CE101F7-020E-4972-B0FC-307666BA6262.js",
+      "frequency": 1,
+      "avg_gain": 0.06786016900081476,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 4.178601690008147
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR> = <VAR>.get(<VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 3.7545262066406884
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "(<VAR> = builder.get(<VAR>))"
+      ],
+      "node_type": "parenthesized_expression",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 3.7545262066406884
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR> = builder.get(<VAR>)"
+      ],
+      "node_type": "assignment_expression",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 3.7545262066406884
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "addType"
+      ],
+      "after": [
+        "<VAR>.g"
+      ],
+      "node_type": "property_identifier",
+      "gain": 0.025452620664068837,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031711_8DA942F6-60D3-4342-9CBD-6B31765C2F7E.js",
+      "frequency": 1,
+      "avg_gain": 0.025452620664068837,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 3.7545262066406884
+    },
+    {
+      "kind": "delete",
+      "scope": "statement",
+      "before": [
+        "<VAR>.__proto__"
+      ],
+      "after": [],
+      "node_type": "member_expression",
+      "gain": 0.021428082209351315,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.021428082209351315,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 3.714280822093513
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "<VAR>(a2, test, a5);"
+      ],
+      "node_type": "expression_statement",
+      "gain": 0.018556138272712755,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.018556138272712755,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 3.6855613827271276
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR>(<VAR>, a7); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.018556138272712755,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js",
+      "frequency": 1,
+      "avg_gain": 0.018556138272712755,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 3.6855613827271276
+    },
+    {
+      "kind": "replace",
+      "scope": "statement",
+      "before": [
+        "<VAR>"
+      ],
+      "after": [
+        "<VAR>(__v_3, true);"
+      ],
+      "node_type": "identifier",
+      "gain": 0.011916005422874798,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031725_0D4249F3-A8F8-4203-AB2B-2A67C53D765A.js",
+      "frequency": 1,
+      "avg_gain": 0.011916005422874798,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 3.619160054228748
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = <VAR>.instantiate(); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.007376826383421964,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031951_67CD1B4A-9264-4153-89F5-3AEAE3A2D2F2.js",
+      "frequency": 1,
+      "avg_gain": 0.007376826383421964,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 3.5737682638342196
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR>(a1, <VAR>); } catch (<VAR>) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.004003192210068451,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031723_F5B51788-2F46-4516-8D6E-96D9883CA936.js",
+      "frequency": 1,
+      "avg_gain": 0.004003192210068451,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 3.5400319221006846
+    },
+    {
+      "kind": "insert",
+      "scope": "statement",
+      "before": [],
+      "after": [
+        "try { <VAR> = <VAR>.addType(foo); } catch (foo) {}"
+      ],
+      "node_type": "try_statement",
+      "gain": 0.0007557695215230642,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031752_8AA1AC4E-9203-4A4E-861C-62A45C3A364E.js",
+      "frequency": 1,
+      "avg_gain": 0.0007557695215230642,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 3.5075576952152305
+    }
+  ]
+}

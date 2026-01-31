@@ -1,0 +1,9 @@
+{
+  "total_executions": 508,
+  "total_mutations": 509,
+  "crashes": 0,
+  "unique_crashes": 0,
+  "seeds_explored": 0,
+  "execs_per_second": 5.203599266019972,
+  "crash_details": []
+}

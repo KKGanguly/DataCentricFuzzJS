@@ -1,0 +1,1137 @@
+{
+  "corpus": "corpus",
+  "predict_url": "http://localhost:5000/predict",
+  "js_engine_path": "/home/kgangul/DataCentricFuzzJS/v8/out/fuzzbuild/d8",
+  "gumtree": "gumtree",
+  "params": {
+    "N_MUTATIONS_PER_FILE": 40,
+    "DEEP_ROUNDS": [
+      1,
+      3,
+      5
+    ],
+    "N_WORKERS": 16,
+    "N_SCORE_TRIALS": 1,
+    "MIN_GAIN": 0.02,
+    "KEEP_TOP_PER_FILE": 20,
+    "MAX_LINES": 18,
+    "MAX_CHARS": 1600,
+    "TRYCATCH_PENALTY": 0.15,
+    "TRYCATCH_MIN_GAIN": 0.08
+  },
+  "total_raw_templates": 67,
+  "unique_patterns": 55,
+  "filtered_count": 55,
+  "templates": [
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [],
+      "after": [
+        "<VAR>(...<VAR>, ...<VAR>, ...<VAR>);"
+      ],
+      "gain": 0.5390927288671251,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032242_5B63EB64-B811-4A6A-A610-812EF4BDF048.js",
+      "base_score": 0.19566950808809103,
+      "mut_score": 0.7347622369552161,
+      "full_gain": 0.5390927288671251,
+      "frequency": 2,
+      "avg_gain": 0.378980839040227,
+      "avg_depth": 3.0,
+      "num_files": 2,
+      "composite_score": 11.28980839040227
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [],
+      "after": [
+        "<VAR>([]);"
+      ],
+      "gain": 0.12954538259311482,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032239_C0DC4AD0-B01F-44F3-A84D-2B5B5F88CA29.js",
+      "base_score": 0.47497196685918436,
+      "mut_score": 0.6045173494522992,
+      "full_gain": 0.12954538259311482,
+      "frequency": 3,
+      "avg_gain": 0.1585243096026469,
+      "avg_depth": 5.0,
+      "num_files": 2,
+      "composite_score": 11.085243096026469
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "if_statement",
+      "before": [],
+      "after": [
+        "if (<VAR> == <VAR>) {\n <VAR> = <VAR>;\n }"
+      ],
+      "gain": 0.12954538259311482,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032239_C0DC4AD0-B01F-44F3-A84D-2B5B5F88CA29.js",
+      "base_score": 0.47497196685918436,
+      "mut_score": 0.6045173494522992,
+      "full_gain": 0.12954538259311482,
+      "frequency": 3,
+      "avg_gain": 0.14166097939586222,
+      "avg_depth": 5.0,
+      "num_files": 2,
+      "composite_score": 10.916609793958623
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [],
+      "after": [
+        "Object.<VAR>(<VAR>);"
+      ],
+      "gain": 0.5380928543113239,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032242_5B63EB64-B811-4A6A-A610-812EF4BDF048.js",
+      "base_score": 0.19566950808809103,
+      "mut_score": 0.733762362399415,
+      "full_gain": 0.5380928543113239,
+      "frequency": 2,
+      "avg_gain": 0.33381911845221934,
+      "avg_depth": 3.0,
+      "num_files": 2,
+      "composite_score": 10.838191184522193
+    },
+    {
+      "kind": "delete",
+      "scope": "container",
+      "container_type": "call_expression",
+      "before": [
+        "<VAR>();"
+      ],
+      "after": [],
+      "gain": 0.08514468215966142,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032407_C6ACF6A7-2EB7-4F29-ABF9-12B9B7091BDA.js",
+      "base_score": 0.6977951388639854,
+      "mut_score": 0.7829398210236468,
+      "full_gain": 0.08514468215966142,
+      "frequency": 3,
+      "avg_gain": 0.15803896665621484,
+      "avg_depth": 3.6666666666666665,
+      "num_files": 2,
+      "composite_score": 10.41372299989548
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [],
+      "after": [
+        "<VAR>(false);"
+      ],
+      "gain": 0.5588342481237896,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032306_EBD47F52-25CA-4061-9EC6-EC87BE6935C1.js",
+      "base_score": 0.046799377908752625,
+      "mut_score": 0.6056336260325422,
+      "full_gain": 0.5588342481237896,
+      "frequency": 1,
+      "avg_gain": 0.5588342481237896,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 10.088342481237895
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "try_statement",
+      "before": [],
+      "after": [
+        "try { (Symbol()); } catch (<VAR>) {}"
+      ],
+      "gain": 0.5390927288671251,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032242_5B63EB64-B811-4A6A-A610-812EF4BDF048.js",
+      "base_score": 0.19566950808809103,
+      "mut_score": 0.7347622369552161,
+      "full_gain": 0.5390927288671251,
+      "frequency": 1,
+      "avg_gain": 0.5390927288671251,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 9.257288195370561
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "parenthesized_expression",
+      "before": [],
+      "after": [
+        "(Array.prototype.<VAR>.call);"
+      ],
+      "gain": 0.12954538259311482,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032239_C0DC4AD0-B01F-44F3-A84D-2B5B5F88CA29.js",
+      "base_score": 0.47497196685918436,
+      "mut_score": 0.6045173494522992,
+      "full_gain": 0.12954538259311482,
+      "frequency": 2,
+      "avg_gain": 0.1532405109900863,
+      "avg_depth": 3.0,
+      "num_files": 2,
+      "composite_score": 9.032405109900862
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "try_statement",
+      "before": [],
+      "after": [
+        "try {\n <VAR>(...<VAR>, ...<VAR>, ...<VAR>);\ntry {\n <VAR>(...<VAR>, ...<VAR>, ...<VAR>);\n } catch(<VAR>) {\n }\n\n } catch(<VAR>) {\n }"
+      ],
+      "gain": 0.5390927288671251,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032242_5B63EB64-B811-4A6A-A610-812EF4BDF048.js",
+      "base_score": 0.19566950808809103,
+      "mut_score": 0.7347622369552161,
+      "full_gain": 0.5390927288671251,
+      "frequency": 1,
+      "avg_gain": 0.5390927288671251,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 8.407288195370562
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "try_statement",
+      "before": [],
+      "after": [
+        "try { (Object.<VAR>); } catch (<VAR>) {}"
+      ],
+      "gain": 0.5390927288671251,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032242_5B63EB64-B811-4A6A-A610-812EF4BDF048.js",
+      "base_score": 0.19566950808809103,
+      "mut_score": 0.7347622369552161,
+      "full_gain": 0.5390927288671251,
+      "frequency": 1,
+      "avg_gain": 0.5390927288671251,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 8.407288195370562
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "parenthesized_expression",
+      "before": [],
+      "after": [
+        "(this.<VAR>);"
+      ],
+      "gain": 0.3495893833465983,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032242_5B63EB64-B811-4A6A-A610-812EF4BDF048.js",
+      "base_score": 0.19566950808809103,
+      "mut_score": 0.5452588914346893,
+      "full_gain": 0.3495893833465983,
+      "frequency": 1,
+      "avg_gain": 0.3495893833465983,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 7.995893833465983
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "parenthesized_expression",
+      "before": [],
+      "after": [
+        "(new <VAR>());"
+      ],
+      "gain": 0.3495893833465983,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032242_5B63EB64-B811-4A6A-A610-812EF4BDF048.js",
+      "base_score": 0.19566950808809103,
+      "mut_score": 0.5452588914346893,
+      "full_gain": 0.3495893833465983,
+      "frequency": 1,
+      "avg_gain": 0.3495893833465983,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 7.995893833465983
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [],
+      "after": [
+        "<VAR>(Object.<VAR>(<VAR>));"
+      ],
+      "gain": 0.24175536987529012,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032137_F0D45F70-2B29-4C4F-85FA-AD39EC145650.js",
+      "base_score": 0.5476067742901097,
+      "mut_score": 0.7893621441653998,
+      "full_gain": 0.24175536987529012,
+      "frequency": 1,
+      "avg_gain": 0.24175536987529012,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.917553698752901
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [],
+      "after": [
+        "<VAR>();"
+      ],
+      "gain": 0.2375744681990014,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032137_F0D45F70-2B29-4C4F-85FA-AD39EC145650.js",
+      "base_score": 0.5476067742901097,
+      "mut_score": 0.7851812424891111,
+      "full_gain": 0.2375744681990014,
+      "frequency": 1,
+      "avg_gain": 0.2375744681990014,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.875744681990014
+    },
+    {
+      "kind": "replace",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [
+        "<VAR>.<VAR> = <VAR>;"
+      ],
+      "after": [
+        "(<VAR>.<VAR>) = <VAR>;"
+      ],
+      "gain": 0.23736935138381665,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032137_F0D45F70-2B29-4C4F-85FA-AD39EC145650.js",
+      "base_score": 0.5476067742901097,
+      "mut_score": 0.7849761256739264,
+      "full_gain": 0.23736935138381665,
+      "frequency": 1,
+      "avg_gain": 0.23736935138381665,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.873693513838166
+    },
+    {
+      "kind": "replace",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [
+        "<VAR>.<VAR> = <VAR>;"
+      ],
+      "after": [
+        "(Object.<VAR>) = <VAR>;"
+      ],
+      "gain": 0.23736935138381665,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032137_F0D45F70-2B29-4C4F-85FA-AD39EC145650.js",
+      "base_score": 0.5476067742901097,
+      "mut_score": 0.7849761256739264,
+      "full_gain": 0.23736935138381665,
+      "frequency": 1,
+      "avg_gain": 0.23736935138381665,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 7.873693513838166
+    },
+    {
+      "kind": "delete",
+      "scope": "container",
+      "container_type": "assignment_expression",
+      "before": [
+        "this.<VAR> = <VAR>;"
+      ],
+      "after": [],
+      "gain": 0.31929812598359547,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031948_2565CD91-92C4-404A-BCE6-E65622499872.js",
+      "base_score": 0.42927444792234176,
+      "mut_score": 0.7485725739059372,
+      "full_gain": 0.31929812598359547,
+      "frequency": 1,
+      "avg_gain": 0.31929812598359547,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 7.692981259835955
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "parenthesized_expression",
+      "before": [],
+      "after": [
+        "(new <VAR>(<VAR>, <VAR>));"
+      ],
+      "gain": 0.31929812598359547,
+      "mutation_depth": 3,
+      "original_file": "program_20251007031948_2565CD91-92C4-404A-BCE6-E65622499872.js",
+      "base_score": 0.42927444792234176,
+      "mut_score": 0.7485725739059372,
+      "full_gain": 0.31929812598359547,
+      "frequency": 1,
+      "avg_gain": 0.31929812598359547,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 7.692981259835955
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "parenthesized_expression",
+      "before": [],
+      "after": [
+        "(Object.<VAR>);"
+      ],
+      "gain": 0.09983660460746846,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032407_C6ACF6A7-2EB7-4F29-ABF9-12B9B7091BDA.js",
+      "base_score": 0.6977951388639854,
+      "mut_score": 0.7976317434714538,
+      "full_gain": 0.09983660460746846,
+      "frequency": 3,
+      "avg_gain": 0.077336559418695,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 7.27336559418695
+    },
+    {
+      "kind": "replace",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [
+        "<VAR>([]);"
+      ],
+      "after": [
+        "(console.<VAR>);"
+      ],
+      "gain": 0.13493299274713738,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032306_EBD47F52-25CA-4061-9EC6-EC87BE6935C1.js",
+      "base_score": 0.046799377908752625,
+      "mut_score": 0.18173237065589,
+      "full_gain": 0.13493299274713738,
+      "frequency": 1,
+      "avg_gain": 0.13493299274713738,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.8493299274713735
+    },
+    {
+      "kind": "delete",
+      "scope": "container",
+      "container_type": "member_expression",
+      "before": [
+        "Atomics.<VAR>;"
+      ],
+      "after": [],
+      "gain": 0.13493299274713738,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032306_EBD47F52-25CA-4061-9EC6-EC87BE6935C1.js",
+      "base_score": 0.046799377908752625,
+      "mut_score": 0.18173237065589,
+      "full_gain": 0.13493299274713738,
+      "frequency": 1,
+      "avg_gain": 0.13493299274713738,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.8493299274713735
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [],
+      "after": [
+        "<VAR> = <VAR>;"
+      ],
+      "gain": 0.13493299274713738,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032306_EBD47F52-25CA-4061-9EC6-EC87BE6935C1.js",
+      "base_score": 0.046799377908752625,
+      "mut_score": 0.18173237065589,
+      "full_gain": 0.13493299274713738,
+      "frequency": 1,
+      "avg_gain": 0.13493299274713738,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.8493299274713735
+    },
+    {
+      "kind": "delete",
+      "scope": "container",
+      "container_type": "statement_block",
+      "before": [
+        "{ <VAR> = <VAR>.<VAR>(); }"
+      ],
+      "after": [],
+      "gain": 0.12954538259311482,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032239_C0DC4AD0-B01F-44F3-A84D-2B5B5F88CA29.js",
+      "base_score": 0.47497196685918436,
+      "mut_score": 0.6045173494522992,
+      "full_gain": 0.12954538259311482,
+      "frequency": 1,
+      "avg_gain": 0.12954538259311482,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.795453825931148
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "parenthesized_expression",
+      "before": [],
+      "after": [
+        "((<VAR>.<VAR>()));"
+      ],
+      "gain": 0.12954538259311482,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032239_C0DC4AD0-B01F-44F3-A84D-2B5B5F88CA29.js",
+      "base_score": 0.47497196685918436,
+      "mut_score": 0.6045173494522992,
+      "full_gain": 0.12954538259311482,
+      "frequency": 1,
+      "avg_gain": 0.12954538259311482,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.795453825931148
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "parenthesized_expression",
+      "before": [],
+      "after": [
+        "(<VAR>.<VAR>());"
+      ],
+      "gain": 0.12954538259311482,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032239_C0DC4AD0-B01F-44F3-A84D-2B5B5F88CA29.js",
+      "base_score": 0.47497196685918436,
+      "mut_score": 0.6045173494522992,
+      "full_gain": 0.12954538259311482,
+      "frequency": 1,
+      "avg_gain": 0.12954538259311482,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.795453825931148
+    },
+    {
+      "kind": "delete",
+      "scope": "container",
+      "container_type": "member_expression",
+      "before": [
+        "<VAR>?.<VAR>;"
+      ],
+      "after": [],
+      "gain": 0.12954538259311482,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032239_C0DC4AD0-B01F-44F3-A84D-2B5B5F88CA29.js",
+      "base_score": 0.47497196685918436,
+      "mut_score": 0.6045173494522992,
+      "full_gain": 0.12954538259311482,
+      "frequency": 1,
+      "avg_gain": 0.12954538259311482,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.795453825931148
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [],
+      "after": [
+        "<VAR>(<VAR>, <VAR>);"
+      ],
+      "gain": 0.12954538259311482,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032239_C0DC4AD0-B01F-44F3-A84D-2B5B5F88CA29.js",
+      "base_score": 0.47497196685918436,
+      "mut_score": 0.6045173494522992,
+      "full_gain": 0.12954538259311482,
+      "frequency": 1,
+      "avg_gain": 0.12954538259311482,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.795453825931148
+    },
+    {
+      "kind": "delete",
+      "scope": "container",
+      "container_type": "new_expression",
+      "before": [
+        "new WasmModuleBuilder();"
+      ],
+      "after": [],
+      "gain": 0.12954538259311482,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032239_C0DC4AD0-B01F-44F3-A84D-2B5B5F88CA29.js",
+      "base_score": 0.47497196685918436,
+      "mut_score": 0.6045173494522992,
+      "full_gain": 0.12954538259311482,
+      "frequency": 1,
+      "avg_gain": 0.12954538259311482,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.795453825931148
+    },
+    {
+      "kind": "delete",
+      "scope": "container",
+      "container_type": "assignment_expression",
+      "before": [
+        "<VAR>.<VAR> = <VAR>;"
+      ],
+      "after": [],
+      "gain": 0.21054045047222592,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032137_F0D45F70-2B29-4C4F-85FA-AD39EC145650.js",
+      "base_score": 0.5476067742901097,
+      "mut_score": 0.7581472247623356,
+      "full_gain": 0.21054045047222592,
+      "frequency": 2,
+      "avg_gain": 0.17759796135878247,
+      "avg_depth": 2.0,
+      "num_files": 1,
+      "composite_score": 6.7759796135878245
+    },
+    {
+      "kind": "replace",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [
+        "valueOf = <<VAR>>;"
+      ],
+      "after": [
+        "(<VAR> = <VAR>.<VAR>(<VAR>));"
+      ],
+      "gain": 0.10865819483100925,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032137_F0D45F70-2B29-4C4F-85FA-AD39EC145650.js",
+      "base_score": 0.5476067742901097,
+      "mut_score": 0.656264969121119,
+      "full_gain": 0.10865819483100925,
+      "frequency": 1,
+      "avg_gain": 0.10865819483100925,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.5865819483100925
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "function_declaration",
+      "before": [],
+      "after": [
+        "function <VAR>(){};"
+      ],
+      "gain": 0.10865819483100925,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032137_F0D45F70-2B29-4C4F-85FA-AD39EC145650.js",
+      "base_score": 0.5476067742901097,
+      "mut_score": 0.656264969121119,
+      "full_gain": 0.10865819483100925,
+      "frequency": 1,
+      "avg_gain": 0.10865819483100925,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.5865819483100925
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [],
+      "after": [
+        "<VAR>.<VAR> = <VAR>;"
+      ],
+      "gain": 0.10865819483100925,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032137_F0D45F70-2B29-4C4F-85FA-AD39EC145650.js",
+      "base_score": 0.5476067742901097,
+      "mut_score": 0.656264969121119,
+      "full_gain": 0.10865819483100925,
+      "frequency": 1,
+      "avg_gain": 0.10865819483100925,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.5865819483100925
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [],
+      "after": [
+        "console.<VAR>(<VAR>(true));"
+      ],
+      "gain": 0.09983660460746846,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032407_C6ACF6A7-2EB7-4F29-ABF9-12B9B7091BDA.js",
+      "base_score": 0.6977951388639854,
+      "mut_score": 0.7976317434714538,
+      "full_gain": 0.09983660460746846,
+      "frequency": 1,
+      "avg_gain": 0.09983660460746846,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.498366046074684
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [],
+      "after": [
+        "console.<VAR>(<VAR>);"
+      ],
+      "gain": 0.09983660460746846,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032407_C6ACF6A7-2EB7-4F29-ABF9-12B9B7091BDA.js",
+      "base_score": 0.6977951388639854,
+      "mut_score": 0.7976317434714538,
+      "full_gain": 0.09983660460746846,
+      "frequency": 1,
+      "avg_gain": 0.09983660460746846,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.498366046074684
+    },
+    {
+      "kind": "replace",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [
+        "<VAR>.<VAR> = <VAR>;"
+      ],
+      "after": [
+        "(Object.<VAR>);"
+      ],
+      "gain": 0.18227805572255273,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032137_F0D45F70-2B29-4C4F-85FA-AD39EC145650.js",
+      "base_score": 0.5476067742901097,
+      "mut_score": 0.7298848300126625,
+      "full_gain": 0.18227805572255273,
+      "frequency": 1,
+      "avg_gain": 0.18227805572255273,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 6.322780557225528
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [],
+      "after": [
+        "<VAR>(<VAR>.<VAR>);"
+      ],
+      "gain": 0.18227805572255273,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032137_F0D45F70-2B29-4C4F-85FA-AD39EC145650.js",
+      "base_score": 0.5476067742901097,
+      "mut_score": 0.7298848300126625,
+      "full_gain": 0.18227805572255273,
+      "frequency": 1,
+      "avg_gain": 0.18227805572255273,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 6.322780557225528
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [],
+      "after": [
+        "<VAR> = <VAR>.<VAR>();"
+      ],
+      "gain": 0.06479802599794515,
+      "mutation_depth": 5,
+      "original_file": "program_20251007031948_2565CD91-92C4-404A-BCE6-E65622499872.js",
+      "base_score": 0.42927444792234176,
+      "mut_score": 0.4940724739202869,
+      "full_gain": 0.06479802599794515,
+      "frequency": 1,
+      "avg_gain": 0.06479802599794515,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 6.147980259979452
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "parenthesized_expression",
+      "before": [],
+      "after": [
+        "(Array.prototype.<VAR>);"
+      ],
+      "gain": 0.14465547224533903,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032137_F0D45F70-2B29-4C4F-85FA-AD39EC145650.js",
+      "base_score": 0.5476067742901097,
+      "mut_score": 0.6922622465354488,
+      "full_gain": 0.14465547224533903,
+      "frequency": 1,
+      "avg_gain": 0.14465547224533903,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.94655472245339
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [],
+      "after": [
+        "<VAR>.<VAR>(<VAR>, [], (<VAR>(<VAR>, <VAR>, <VAR>, <VAR>)));"
+      ],
+      "gain": 0.1443923046204325,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032137_F0D45F70-2B29-4C4F-85FA-AD39EC145650.js",
+      "base_score": 0.5476067742901097,
+      "mut_score": 0.6919990789105422,
+      "full_gain": 0.1443923046204325,
+      "frequency": 1,
+      "avg_gain": 0.1443923046204325,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.9439230462043255
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [],
+      "after": [
+        "(Object.<VAR>);"
+      ],
+      "gain": 0.1443923046204325,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032137_F0D45F70-2B29-4C4F-85FA-AD39EC145650.js",
+      "base_score": 0.5476067742901097,
+      "mut_score": 0.6919990789105422,
+      "full_gain": 0.1443923046204325,
+      "frequency": 1,
+      "avg_gain": 0.1443923046204325,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.9439230462043255
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [],
+      "after": [
+        "<VAR>.<VAR>(<VAR>, [], Object.bind());"
+      ],
+      "gain": 0.24059817159184255,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031948_2565CD91-92C4-404A-BCE6-E65622499872.js",
+      "base_score": 0.42927444792234176,
+      "mut_score": 0.6698726195141843,
+      "full_gain": 0.24059817159184255,
+      "frequency": 1,
+      "avg_gain": 0.24059817159184255,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 5.905981715918426
+    },
+    {
+      "kind": "delete",
+      "scope": "container",
+      "container_type": "assignment_expression",
+      "before": [
+        "<VAR> = new WasmModuleBuilder();"
+      ],
+      "after": [],
+      "gain": 0.13085924181052627,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032239_C0DC4AD0-B01F-44F3-A84D-2B5B5F88CA29.js",
+      "base_score": 0.47497196685918436,
+      "mut_score": 0.6058312086697106,
+      "full_gain": 0.13085924181052627,
+      "frequency": 1,
+      "avg_gain": 0.13085924181052627,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.808592418105263
+    },
+    {
+      "kind": "delete",
+      "scope": "container",
+      "container_type": "call_expression",
+      "before": [
+        "<VAR>.<VAR>();"
+      ],
+      "after": [],
+      "gain": 0.13085924181052627,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032239_C0DC4AD0-B01F-44F3-A84D-2B5B5F88CA29.js",
+      "base_score": 0.47497196685918436,
+      "mut_score": 0.6058312086697106,
+      "full_gain": 0.13085924181052627,
+      "frequency": 1,
+      "avg_gain": 0.13085924181052627,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.808592418105263
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "parenthesized_expression",
+      "before": [],
+      "after": [
+        "(<VAR>(<VAR>));"
+      ],
+      "gain": 0.13085924181052627,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032239_C0DC4AD0-B01F-44F3-A84D-2B5B5F88CA29.js",
+      "base_score": 0.47497196685918436,
+      "mut_score": 0.6058312086697106,
+      "full_gain": 0.13085924181052627,
+      "frequency": 1,
+      "avg_gain": 0.13085924181052627,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.808592418105263
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "parenthesized_expression",
+      "before": [],
+      "after": [
+        "(<VAR>.<VAR>.call);"
+      ],
+      "gain": 0.13085924181052627,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032239_C0DC4AD0-B01F-44F3-A84D-2B5B5F88CA29.js",
+      "base_score": 0.47497196685918436,
+      "mut_score": 0.6058312086697106,
+      "full_gain": 0.13085924181052627,
+      "frequency": 1,
+      "avg_gain": 0.13085924181052627,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.808592418105263
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "expression_statement",
+      "before": [],
+      "after": [
+        "<VAR>(<VAR>);"
+      ],
+      "gain": 0.12954538259311482,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032239_C0DC4AD0-B01F-44F3-A84D-2B5B5F88CA29.js",
+      "base_score": 0.47497196685918436,
+      "mut_score": 0.6045173494522992,
+      "full_gain": 0.12954538259311482,
+      "frequency": 1,
+      "avg_gain": 0.12954538259311482,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 5.795453825931148
+    },
+    {
+      "kind": "delete",
+      "scope": "container",
+      "container_type": "try_statement",
+      "before": [
+        "try { <VAR> = <VAR>.<VAR>(); } catch (<VAR>) {}"
+      ],
+      "after": [],
+      "gain": 0.12954538259311482,
+      "mutation_depth": 5,
+      "original_file": "program_20251007032239_C0DC4AD0-B01F-44F3-A84D-2B5B5F88CA29.js",
+      "base_score": 0.47497196685918436,
+      "mut_score": 0.6045173494522992,
+      "full_gain": 0.12954538259311482,
+      "frequency": 1,
+      "avg_gain": 0.12954538259311482,
+      "avg_depth": 5.0,
+      "num_files": 1,
+      "composite_score": 5.776135752041475
+    },
+    {
+      "kind": "delete",
+      "scope": "container",
+      "container_type": "call_expression",
+      "before": [
+        "<VAR>([]);"
+      ],
+      "after": [],
+      "gain": 0.04034287762449743,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032306_EBD47F52-25CA-4061-9EC6-EC87BE6935C1.js",
+      "base_score": 0.046799377908752625,
+      "mut_score": 0.08714225553325006,
+      "full_gain": 0.04034287762449743,
+      "frequency": 1,
+      "avg_gain": 0.04034287762449743,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.903428776244974
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "parenthesized_expression",
+      "before": [],
+      "after": [
+        "(<VAR>(<VAR>, <VAR>, <VAR>, <VAR>));"
+      ],
+      "gain": 0.04034287762449743,
+      "mutation_depth": 3,
+      "original_file": "program_20251007032306_EBD47F52-25CA-4061-9EC6-EC87BE6935C1.js",
+      "base_score": 0.046799377908752625,
+      "mut_score": 0.08714225553325006,
+      "full_gain": 0.04034287762449743,
+      "frequency": 1,
+      "avg_gain": 0.04034287762449743,
+      "avg_depth": 3.0,
+      "num_files": 1,
+      "composite_score": 4.903428776244974
+    },
+    {
+      "kind": "delete",
+      "scope": "container",
+      "container_type": "member_expression",
+      "before": [
+        "<VAR>.<VAR>;"
+      ],
+      "after": [],
+      "gain": 0.03924591906604402,
+      "mutation_depth": 1,
+      "original_file": "program_20251007032137_F0D45F70-2B29-4C4F-85FA-AD39EC145650.js",
+      "base_score": 0.5476067742901097,
+      "mut_score": 0.5868526933561538,
+      "full_gain": 0.03924591906604402,
+      "frequency": 1,
+      "avg_gain": 0.03924591906604402,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 3.89245919066044
+    },
+    {
+      "kind": "delete",
+      "scope": "container",
+      "container_type": "member_expression",
+      "before": [
+        "Array.prototype.<VAR>;"
+      ],
+      "after": [],
+      "gain": 0.038061194696208944,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031847_DFD60B14-DD39-423C-B838-01EFF5FF770B.js",
+      "base_score": 0.7602127159457467,
+      "mut_score": 0.7982739106419556,
+      "full_gain": 0.038061194696208944,
+      "frequency": 1,
+      "avg_gain": 0.038061194696208944,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 3.880611946962089
+    },
+    {
+      "kind": "delete",
+      "scope": "container",
+      "container_type": "property_identifier",
+      "before": [
+        "call;"
+      ],
+      "after": [],
+      "gain": 0.038061194696208944,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031847_DFD60B14-DD39-423C-B838-01EFF5FF770B.js",
+      "base_score": 0.7602127159457467,
+      "mut_score": 0.7982739106419556,
+      "full_gain": 0.038061194696208944,
+      "frequency": 1,
+      "avg_gain": 0.038061194696208944,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 3.880611946962089
+    },
+    {
+      "kind": "delete",
+      "scope": "container",
+      "container_type": "member_expression",
+      "before": [
+        "Array.prototype.<VAR>.call;"
+      ],
+      "after": [],
+      "gain": 0.038061194696208944,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031847_DFD60B14-DD39-423C-B838-01EFF5FF770B.js",
+      "base_score": 0.7602127159457467,
+      "mut_score": 0.7982739106419556,
+      "full_gain": 0.038061194696208944,
+      "frequency": 1,
+      "avg_gain": 0.038061194696208944,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 3.880611946962089
+    },
+    {
+      "kind": "delete",
+      "scope": "container",
+      "container_type": "call_expression",
+      "before": [
+        "Array.prototype.<VAR>.call(<VAR>);"
+      ],
+      "after": [],
+      "gain": 0.038061194696208944,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031847_DFD60B14-DD39-423C-B838-01EFF5FF770B.js",
+      "base_score": 0.7602127159457467,
+      "mut_score": 0.7982739106419556,
+      "full_gain": 0.038061194696208944,
+      "frequency": 1,
+      "avg_gain": 0.038061194696208944,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 3.880611946962089
+    },
+    {
+      "kind": "insert",
+      "scope": "container",
+      "container_type": "parenthesized_expression",
+      "before": [],
+      "after": [
+        "(Array.prototype);"
+      ],
+      "gain": 0.038061194696208944,
+      "mutation_depth": 1,
+      "original_file": "program_20251007031847_DFD60B14-DD39-423C-B838-01EFF5FF770B.js",
+      "base_score": 0.7602127159457467,
+      "mut_score": 0.7982739106419556,
+      "full_gain": 0.038061194696208944,
+      "frequency": 1,
+      "avg_gain": 0.038061194696208944,
+      "avg_depth": 1.0,
+      "num_files": 1,
+      "composite_score": 3.880611946962089
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "metadata": {
+    "corpus_dir": "corpus",
+    "total_files": 10,
+    "raw_templates": 0,
+    "unique_templates": 0,
+    "min_original_score": 0.7,
+    "min_score_drop": 0.15,
+    "min_score_increase": 0.15
+  },
+  "pattern_statistics": {},
+  "templates": []
+}

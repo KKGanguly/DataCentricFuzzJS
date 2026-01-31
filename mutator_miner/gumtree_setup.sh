@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+WORKDIR=$(pwd)
+
 ### Java ###
 sudo apt update
 sudo apt install -y openjdk-17-jdk
@@ -9,31 +11,31 @@ sudo apt install -y openjdk-17-jdk
 git clone https://github.com/GumTreeDiff/gumtree
 cd gumtree
 
-# Build GumTree
 ./gradlew build
 
-# Unzip the distribution (gumtree binary is inside bin/)
-cd dist/build/distributions
-unzip -o gumtree-*.zip
+# Find the zip safely
+ZIP_FILE=$(find . -name "gumtree-*.zip" | head -n 1)
+echo "Found zip: $ZIP_FILE"
 
-# Add gumtree binary to PATH
-GUMTREE_HOME="$PWD/$(ls -d gumtree-*/ | head -n1)"
-export PATH="$GUMTREE_HOME/bin:$PATH"
+unzip -o "$ZIP_FILE" -d gumtree_dist
 
-cd ../../../
+GUMTREE_HOME=$(find gumtree_dist -maxdepth 1 -type d -name "gumtree-*" | head -n 1)
+echo "GUMTREE_HOME=$GUMTREE_HOME"
 
-### JS parser for GumTree ###
+export PATH="$PWD/$GUMTREE_HOME/bin:$PATH"
+
+cd "$WORKDIR"
+
+### JS parser ###
 git clone https://github.com/GumTreeDiff/jsparser
 cd jsparser
-
 npm install
-# GumTree expects this variable
-export GUMTREE_JS_PARSER="$PWD"
 
-# Also put JS parser on PATH (as requested)
+export GUMTREE_JS_PARSER="$PWD"
 export PATH="$PWD/dist:$PATH"
 
 ### Verification ###
-echo "gumtree location: $(which gumtree)"
+echo "PATH=$PATH"
+which gumtree || echo "gumtree not found"
 gumtree --version || true
 echo "GUMTREE_JS_PARSER=$GUMTREE_JS_PARSER"

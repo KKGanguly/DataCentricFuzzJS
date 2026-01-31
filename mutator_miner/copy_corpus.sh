@@ -1,1 +1,1 @@
-mkdir -p corpus && find ../corpus_pocs -maxdepth 1 -name "*.js" -print0 | shuf -z -n 10 | xargs -0 -I{} cp {} corpus/
+mkdir -p corpus && find ../corpus_pocs -maxdepth 1 -name "*.js" -print0 | shuf -z -n 50 | xargs -0 -I{} cp {} corpus/

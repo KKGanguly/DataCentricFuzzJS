@@ -7,7 +7,7 @@ SCORE-BASED LEARNED MUTATORS with proper GumTree template extraction.
 Key improvements over original:
 1. Uses GumTree for precise diff extraction (not diff_utils)
 2. Extracts statement-level templates properly
-3. Better abstraction that preserves JS semantics
+3. FUZZING-AWARE abstraction that preserves engine attack surfaces
 4. Multi-level validation
 5. Score-based filtering (only beneficial mutations)
 """
@@ -114,51 +114,301 @@ def clean_code_chunk(code: str) -> str:
 
 
 # ============================================================================
-# ABSTRACTION
+# FUZZING-AWARE ABSTRACTION
 # ============================================================================
 
-JS_KEEP = {
-    'if', 'else', 'for', 'while', 'function', 'return', 'throw', 'try', 'catch',
-    'Array', 'Object', 'Math', 'String', 'Number', 'Error', 'Promise',
-    'prototype', 'length', 'constructor', 'call', 'apply',
-    'undefined', 'null', 'true', 'false', 'new', 'this', 'let', 'const', 'var',
+# Tier 1: NEVER abstract - engine attack surface
+ENGINE_CRITICAL = {
+    # Typed Arrays - memory corruption surface
+    'Int8Array', 'Uint8Array', 'Int16Array', 'Uint16Array', 
+    'Int32Array', 'Uint32Array', 'Float32Array', 'Float64Array',
+    'BigInt64Array', 'BigUint64Array', 'Uint8ClampedArray',
+    'ArrayBuffer', 'SharedArrayBuffer', 'DataView',
+    
+    # Prototype chain - shape/IC bugs
+    'prototype', '__proto__', 'constructor', 
+    'setPrototypeOf', 'getPrototypeOf', 'create',
+    'getOwnPropertyDescriptor', 'defineProperty', 'defineProperties',
+    
+    # JIT hints - optimization bugs
+    'OptimizeFunctionOnNextCall', 'PrepareFunctionForOptimization',
+    'NeverOptimizeFunction', 'DeoptimizeFunction', 'ClearFunctionFeedback',
+    'OptimizeOsr', 'DisableOptimizationFinalization',
+    
+    # Engine internals
+    'gc', 'WeakMap', 'WeakSet', 'WeakRef', 'FinalizationRegistry',
+    'Proxy', 'Reflect', 'Atomics',
+    
+    # Memory/allocation
+    'Map', 'Set', 'Symbol', 'BigInt',
+    
+    # Reflective operations
+    'eval', 'Function',
 }
 
+# Tier 2: Preserve operations (can use placeholders)
+OPERATION_KEYWORDS = {
+    # Array mutations - JIT speculation surface
+    'push', 'pop', 'shift', 'unshift', 'splice', 'slice', 'concat',
+    'fill', 'copyWithin', 'reverse', 'sort',
+    
+    # Iterators - deopt surface
+    'map', 'filter', 'reduce', 'forEach', 'find', 'findIndex',
+    'every', 'some', 'entries', 'keys', 'values',
+    'flatMap', 'flat',
+    
+    # Property access - IC bugs
+    'hasOwnProperty', 'isPrototypeOf', 'propertyIsEnumerable',
+    
+    # Coercion - type confusion
+    'toString', 'valueOf', 'toPrimitive', 'toJSON',
+    'toLocaleString', 'toFixed', 'toPrecision',
+    
+    # Object ops
+    'freeze', 'seal', 'preventExtensions', 'assign',
+    'is', 'keys', 'values', 'entries',
+    
+    # Function ops
+    'call', 'apply', 'bind',
+    
+    # String ops (overflow potential)
+    'charAt', 'charCodeAt', 'substring', 'substr', 'repeat',
+    'split', 'replace', 'match', 'search',
+    
+    # Math (overflow/precision)
+    'abs', 'floor', 'ceil', 'round', 'trunc',
+    'max', 'min', 'pow', 'sqrt',
+}
+
+# Tier 3: Language keywords
+LANGUAGE_KEYWORDS = {
+    'if', 'else', 'for', 'while', 'do', 'switch', 'case', 'default',
+    'break', 'continue', 'return', 'throw', 'try', 'catch', 'finally',
+    'function', 'class', 'extends', 'static', 'async', 'await', 'yield',
+    'let', 'const', 'var', 'this', 'super', 'new', 'delete',
+    'true', 'false', 'null', 'undefined', 'NaN', 'Infinity',
+    'typeof', 'instanceof', 'in', 'of', 'with', 'debugger',
+    'import', 'export', 'from', 'as', 'default',
+    
+    # Common globals worth preserving
+    'Array', 'Object', 'String', 'Number', 'Boolean', 'Error',
+    'Math', 'Date', 'RegExp', 'JSON', 'Promise',
+    'console', 'parseInt', 'parseFloat', 'isNaN', 'isFinite',
+}
 
 def classify_number(s: str) -> str:
+    """Keep numbers that trigger edge cases"""
     try:
-        n = int(s, 16 if s.startswith('0x') else 10)
-        if n == 0: return '<ZERO>'
-        if n == 1: return '<ONE>'
-        if n == -1: return '<NEG_ONE>'
-        if n in (0x7FFFFFFF, 0xFFFFFFFF, 2147483647, 4294967295): return '<BOUNDARY>'
-        if n > 0 and (n & (n - 1)) == 0: return '<POW2>'
-        if abs(n) <= 16: return '<SMALL>'
+        # Parse different number formats
+        if s.startswith(('0x', '0X')):
+            n = int(s, 16)
+        elif s.startswith(('0o', '0O')):
+            n = int(s, 8)
+        elif s.startswith(('0b', '0B')):
+            n = int(s, 2)
+        else:
+            # Float or scientific notation
+            if '.' in s or 'e' in s.lower():
+                return '__FLOAT__'
+            n = int(s)
+        
+        # Keep specific values that commonly trigger bugs
+        if n == 0: return '0'
+        if n == 1: return '1'
+        if n == -1: return '-1'
+        if n == 2: return '2'
+        
+        # Boundary values (overflow, off-by-one)
+        BOUNDARIES = {
+            0x7FFFFFFF, -0x80000000,  # 32-bit signed
+            0xFFFFFFFF,                # 32-bit unsigned
+            2147483647, -2147483648,   # INT32_MAX/MIN
+            4294967295,                # UINT32_MAX
+            0x7FFF, -0x8000, 0xFFFF,   # 16-bit
+            0x7F, -0x80, 0xFF,         # 8-bit
+            65535, 65536,              # Common boundaries
+        }
+        if n in BOUNDARIES or -n in BOUNDARIES:
+            return '__BOUNDARY__'
+        
+        # Powers of 2 (alignment, size bugs)
+        if n > 0 and (n & (n - 1)) == 0:
+            if n <= 16:
+                return str(n)  # Keep small powers literal
+            return '__POW2__'
+        
+        # Small numbers (loop bounds, indices)
+        if -16 <= n <= 16:
+            return str(n)
+        
+        # Large numbers
+        if abs(n) > 1000000:
+            return '__LARGE__'
+        
+        return '__NUM__'
     except:
-        pass
-    return '<NUM>'
-
+        return '__NUM__'
 
 def abstract_code(code: str) -> str:
-    """Abstract code while preserving structure"""
-    # Numbers
-    def num_sub(m):
-        return classify_number(m.group(0))
-    code = re.sub(r'\b-?0x[0-9a-fA-F]+\b', num_sub, code)
-    code = re.sub(r'\b-?\d+\.?\d*([eE][+-]?\d+)?\b', num_sub, code)
+    """Multi-tier abstraction preserving fuzzing attack surface"""
     
-    # Strings
-    code = re.sub(r'''(['"`])[^\1]*?\1''', '<STR>', code)
+    # Step 0: Pre-protect existing placeholders (if any)
+    code = code.replace('<', '__LT__').replace('>', '__GT__')
     
-    # Identifiers
-    def id_sub(m):
-        w = m.group(0)
-        return w if w in JS_KEEP else '<VAR>'
-    code = re.sub(r'\b[A-Za-z_$][A-Za-z0-9_$]*\b', id_sub, code)
+    # Step 1: Protect engine-critical patterns
+    protected = []
+    def protect(match):
+        protected.append(match.group(0))
+        return f'__PROTECTED_{len(protected)-1}__'
     
-    # Normalize whitespace
+    # Protect V8 intrinsics (%OptimizeFunctionOnNextCall, etc.)
+    code = re.sub(r'%[A-Za-z]+', protect, code)
+    
+    # Protect typed array constructors and buffer types
+    typed_array_pattern = '|'.join(re.escape(k) for k in ENGINE_CRITICAL 
+                                   if 'Array' in k or 'Buffer' in k or 'View' in k)
+    if typed_array_pattern:
+        code = re.sub(r'\b(' + typed_array_pattern + r')\b', protect, code)
+    
+    # Protect prototype chain operations
+    code = re.sub(r'\.(__proto__|prototype)\b', protect, code)
+    code = re.sub(r'\bObject\.(setPrototypeOf|getPrototypeOf|create|defineProperty|defineProperties|getOwnPropertyDescriptor)\b', 
+                  protect, code)
+    
+    # Protect other critical APIs
+    critical_apis = '|'.join(re.escape(k) for k in ENGINE_CRITICAL 
+                             if k not in LANGUAGE_KEYWORDS and 'Array' not in k and 'Buffer' not in k)
+    if critical_apis:
+        code = re.sub(r'\b(' + critical_apis + r')\b', protect, code)
+    
+    # Step 2: Numbers - preserve edge cases
+    def num_sub(match):
+        return classify_number(match.group(0))
+    
+    # Hex/oct/bin literals
+    code = re.sub(r'-?0[xXoObB][0-9a-fA-F]+', num_sub, code)
+    # Decimal numbers (int and float)
+    code = re.sub(r'-?\d+\.?\d*([eE][+-]?\d+)?', num_sub, code)
+    
+    # Step 3: Strings - categorize by length/purpose
+    def string_sub(match):
+        s = match.group(0)
+        quote = s[0]
+        content = s[1:-1]
+        
+        # Empty string (common edge case)
+        if not content:
+            return '__EMPTY_STR__'
+        
+        # Single char (type confusion potential)
+        if len(content) == 1:
+            return '__CHAR__'
+        
+        # Property names that are operations
+        if content in OPERATION_KEYWORDS or content in ENGINE_CRITICAL:
+            return s  # Keep literal
+        
+        # Long strings (allocation bugs)
+        if len(content) > 100:
+            return '__LONG_STR__'
+        
+        return '__STR__'
+    
+    code = re.sub(r'''(['"`])(?:[^\1\\]|\\.)*?\1''', string_sub, code)
+    
+    # Step 4: Property access - preserve operation semantics
+    def property_sub(match):
+        prop = match.group(1)
+        
+        # Engine-critical properties
+        if prop in ENGINE_CRITICAL:
+            return '.' + prop
+        
+        # Common operations
+        if prop in OPERATION_KEYWORDS:
+            # Categorize by type
+            if prop in {'push', 'pop', 'shift', 'unshift', 'splice'}:
+                return '.__ARRAY_MUTATOR__'
+            elif prop in {'map', 'filter', 'reduce', 'forEach', 'find'}:
+                return '.__ARRAY_ITERATOR__'
+            elif prop in {'toString', 'valueOf', 'toPrimitive'}:
+                return '.__COERCION__'
+            elif prop in {'call', 'apply', 'bind'}:
+                return '.__FUNC_METHOD__'
+            else:
+                return '.__METHOD__'
+        
+        # Generic property
+        return '.__PROP__'
+    
+    code = re.sub(r'\.([a-zA-Z_$][a-zA-Z0-9_$]*)', property_sub, code)
+    
+    # Step 5: Identifiers - abstract variables but keep keywords
+    def id_sub(match):
+        word = match.group(0)
+        
+        # Skip protected tokens
+        if word.startswith('__PROTECTED_'):
+            return word
+        
+        # Skip our placeholders
+        if word in {'EMPTY_STR', 'CHAR', 'LONG_STR', 'STR', 'VAR', 'NUM', 
+                    'FLOAT', 'LARGE', 'BOUNDARY', 'POW2',
+                    'ARRAY_MUTATOR', 'ARRAY_ITERATOR', 'COERCION', 
+                    'FUNC_METHOD', 'METHOD', 'PROP'}:
+            return word
+        
+        # Keep engine-critical identifiers
+        if word in ENGINE_CRITICAL:
+            return word
+        
+        # Keep operations
+        if word in OPERATION_KEYWORDS:
+            return word
+        
+        # Keep language keywords
+        if word in LANGUAGE_KEYWORDS:
+            return word
+        
+        # Abstract everything else
+        return '__VAR__'
+    
+    code = re.sub(r'\b[a-zA-Z_$][a-zA-Z0-9_$]*\b', id_sub, code)
+    
+    # Step 6: Restore protected tokens
+    for i, token in enumerate(protected):
+        code = code.replace(f'__PROTECTED_{i}__', token)
+    
+    # Step 7: Convert placeholders to angle bracket format
+    replacements = {
+        '__VAR__': '<VAR>',
+        '__NUM__': '<NUM>',
+        '__FLOAT__': '<FLOAT>',
+        '__LARGE__': '<LARGE>',
+        '__BOUNDARY__': '<BOUNDARY>',
+        '__POW2__': '<POW2>',
+        '__STR__': '<STR>',
+        '__EMPTY_STR__': '<EMPTY_STR>',
+        '__CHAR__': '<CHAR>',
+        '__LONG_STR__': '<LONG_STR>',
+        '__ARRAY_MUTATOR__': '<ARRAY_MUTATOR>',
+        '__ARRAY_ITERATOR__': '<ARRAY_ITERATOR>',
+        '__COERCION__': '<COERCION>',
+        '__FUNC_METHOD__': '<FUNC_METHOD>',
+        '__METHOD__': '<METHOD>',
+        '__PROP__': '<PROP>',
+    }
+    
+    for old, new in replacements.items():
+        code = code.replace(old, new)
+    
+    # Step 8: Restore any pre-existing angle brackets
+    code = code.replace('__LT__', '<').replace('__GT__', '>')
+    
+    # Step 9: Normalize whitespace
     code = re.sub(r'[ \t]+', ' ', code)
     code = re.sub(r'\n+', '\n', code)
+    
     return code.strip()
 
 
@@ -209,7 +459,7 @@ def extract_templates_from_gumtree(gumtree_json: Dict, orig_code: str, mut_code:
         if orig_chunk == mut_chunk:
             continue
         
-        # Abstract
+        # Abstract with fuzzing-aware strategy
         orig_abs = abstract_code(orig_chunk)
         mut_abs = abstract_code(mut_chunk)
         
@@ -241,15 +491,12 @@ def extract_templates_from_gumtree(gumtree_json: Dict, orig_code: str, mut_code:
 # ============================================================================
 
 INVALID_PATTERNS = [
-    r"<VAR>\s*=\s*<VAR>$",
-    r"catch\s*\(<VAR>\)",
-    r"Object\.setPrototypeOf\(\)",
-    r"^\s*$",
-    r"//", r"/\*",
+    r"^\s*<VAR>\s*=\s*<VAR>\s*;?\s*$",  # Useless assignment
+    r"^\s*$",  # Empty
+    r"//", r"/\*",  # Should be cleaned already
 ]
-
-
 def is_valid_template(template: Dict) -> bool:
+    """Validate template - RELAXED for initial learning"""
     kind = template.get("kind")
     if kind not in ("insert", "replace"):
         return False
@@ -272,19 +519,98 @@ def is_valid_template(template: Dict) -> bool:
     if kind == "replace" and (not before_text.strip() or not after_text.strip()):
         return False
     
-    combined = before_text + "\n" + after_text
-    for pattern in INVALID_PATTERNS:
-        if re.search(pattern, combined):
+    # Check for actually useless patterns
+    TRULY_USELESS = [
+        r"^\s*<VAR>\s*=\s*<VAR>\s*;?\s*$",  # Just x = y
+        r"^\s*$",  # Empty
+    ]
+    
+    for pattern in TRULY_USELESS:
+        if re.search(pattern, after_text):
+            print(f"  [!] Rejected (useless): {after_text[:100]}")
             return False
+    
+    # RELAXED: Accept patterns that have STRUCTURE even if not "critical"
+    
+    # Tier 1: Engine-critical (best)
+    has_critical = any(keyword in after_text for keyword in ENGINE_CRITICAL)
+    
+    # Tier 2: Interesting operations
+    has_operation = any(marker in after_text for marker in 
+                       ['<ARRAY_MUTATOR>', '<ARRAY_ITERATOR>', '<COERCION>', 
+                        '<FUNC_METHOD>', '<METHOD>', '<PROP>'])
+    
+    # Tier 3: Edge case numbers
+    has_edge_numbers = any(marker in after_text for marker in 
+                          ['<BOUNDARY>', '<POW2>', '<LARGE>'])
+    
+    # Tier 4: Control flow (can lead to coverage)
+    has_control_flow = any(kw in after_text for kw in 
+                          ['if', 'for', 'while', 'try', 'catch', 'switch'])
+    
+    # Tier 5: Operators (might hit edge cases)
+    has_operators = any(op in after_text for op in 
+                       [' * ', ' / ', ' % ', ' << ', ' >> ', ' >>> ', ' & ', ' | ', ' ^ '])
+    
+    # Tier 6: Object/Array operations
+    has_new = 'new ' in after_text
+    has_instanceof = 'instanceof' in after_text
+    has_typeof = 'typeof' in after_text
+    has_array_access = re.search(r'\[.*\]', after_text)
+    
+    # Tier 7: Function patterns (might trigger JIT)
+    has_function = 'function' in after_text
+    has_arrow = '=>' in after_text
+    has_async = 'async' in after_text or 'await' in after_text
+    
+    # Accept if ANY tier matches
+    meaningful = (has_critical or has_operation or has_edge_numbers or
+                  has_control_flow or has_operators or has_new or 
+                  has_instanceof or has_typeof or has_array_access or
+                  has_function or has_arrow or has_async)
+    
+    if not meaningful:
+        print(f"  [!] Rejected (too generic): {after_text[:100]}")
+        return False
+    
+    # Additional check: must have at least 2 tokens (not just "try {")
+    token_count = len(re.findall(r'\b\w+\b|[(){}[\];,]', after_text))
+    if token_count < 3:
+        print(f"  [!] Rejected (too short): {after_text[:100]}")
+        return False
     
     return True
 
-
 def can_instantiate(template: Dict) -> bool:
-    """Quick sanity check"""
+    """Quick sanity check with COMPLETE replacements"""
     replacements = {
-        '<VAR>': 'x', '<NUM>': '1', '<ZERO>': '0', '<ONE>': '1',
-        '<STR>': '"test"', '<POW2>': '16', '<BOUNDARY>': '2147483647',
+        # Variables
+        '<VAR>': 'x',
+        
+        # Numbers
+        '<NUM>': '42',
+        '<FLOAT>': '3.14',
+        '<LARGE>': '999999',
+        '<BOUNDARY>': '2147483647',
+        '<POW2>': '1024',
+        '0': '0',
+        '1': '1',
+        '2': '2',
+        '-1': '-1',
+        
+        # Strings
+        '<STR>': '"test"',
+        '<EMPTY_STR>': '""',
+        '<CHAR>': '"x"',
+        '<LONG_STR>': '"' + 'x' * 200 + '"',
+        
+        # Methods/Properties
+        '<ARRAY_MUTATOR>': 'push',
+        '<ARRAY_ITERATOR>': 'map',
+        '<COERCION>': 'toString',
+        '<FUNC_METHOD>': 'call',
+        '<METHOD>': 'toString',
+        '<PROP>': 'length',
     }
     
     def instantiate(lines):
@@ -299,6 +625,8 @@ def can_instantiate(template: Dict) -> bool:
         after_inst = instantiate(template.get("after", []))
         if not after_inst.strip():
             return False
+        
+        # Wrap in function and parse
         test_code = f"function test() {{\n{after_inst}\n}}"
         tree = js_parser.parse(test_code.encode())
         return not tree.root_node.has_error
@@ -369,23 +697,23 @@ def v8_parse_ok(js: str, timeout: float = 5.0) -> bool:
 
         ret = p.returncode
 
-        # 0 = OK → keep
+        # 0 = OK � keep
         if ret == 0:
             return True
 
-        # 1 = syntax/type error → discard
+        # 1 = syntax/type error � discard
         if ret == 1:
             return False
 
-        # >1 = crash → keep
+        # >1 = crash � keep
         if ret > 1:
             return True
 
     except subprocess.TimeoutExpired:
-        # Timeout → keep
+        # Timeout � keep
         return True
     except Exception:
-        # Unexpected error → keep
+        # Unexpected error � keep
         return True
     finally:
         # Cleanup temp file
@@ -442,13 +770,11 @@ def process_file(fname):
             
             try:
                 gumtree_json = run_gumtree_diff(orig_tmp.name, tmp.name)
-                
                 if not gumtree_json:
                     continue
                 
                 # Phase 6: Extract templates
                 templates = extract_templates_from_gumtree(gumtree_json, src, mutated, gain)
-                
                 print(f"  [+] Extracted {len(templates)} templates from GumTree")
                 
                 # Phase 7-9: Validate, instantiate, dedupe
@@ -524,7 +850,11 @@ def main():
         print(f"[+] Gain range: {learned[-1]['gain']:.6f} to {learned[0]['gain']:.6f}")
         print("[+] Top mutator:")
         print(json.dumps(learned[0], indent=2))
+        
+        # Stats
+        critical_count = sum(1 for t in learned if any(k in '\n'.join(t['after']) for k in ENGINE_CRITICAL))
+        print(f"[+] Templates with engine-critical APIs: {critical_count}/{len(learned)}")
 
 
 if __name__ == "__main__":
-    main() 
+    main()
