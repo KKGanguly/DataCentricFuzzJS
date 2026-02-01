@@ -1,0 +1,24 @@
+{
+  "format_version": "1.1",
+  "package_name": "infra/3pp/tools/ninja/linux-amd64",
+  "install_mode": "copy",
+  "actual_install_mode": "copy",
+  "files": [
+    {
+      "name": "COPYING",
+      "size": 11358,
+      "hash": "636auWkBJMXJ9CvcgTg9iGo97eJjRbbtFbutfK-B9-oC"
+    },
+    {
+      "name": "README.chromium",
+      "size": 429,
+      "hash": "H-iewQSU-bxL6f9Sefc7-YedGXEIB0io4b5XQjZUhm4C"
+    },
+    {
+      "name": "ninja",
+      "size": 416480,
+      "executable": true,
+      "hash": "CfDlqKLPdisktNPtRk_7JSnmUNLvw2urMdo2qpN5HvwC"
+    }
+  ]
+}

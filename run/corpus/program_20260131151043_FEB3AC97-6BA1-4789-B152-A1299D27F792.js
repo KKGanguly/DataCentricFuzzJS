@@ -1,0 +1,21 @@
+function f0() {
+}
+function f() {
+    const v3 = arguments?.length;
+    try {
+        f0(v3);
+    } catch(e6) {
+    }
+}
+var a = Array(2 ** 16).fill(null);
+const v13 = f.bind;
+let v14;
+try {
+    v14 = v13.apply(f, a);
+} catch(e20) {
+}
+var bf = v14;
+try {
+    bf();
+} catch(e23) {
+}

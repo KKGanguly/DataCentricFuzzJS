@@ -1,0 +1,12 @@
+const v7 = new Date(2015, 5, 1, 9, 0, 0);
+const v9 = Intl.DateTimeFormat;
+const v14 = new v9("ar", { hour: "2-digit", hour12: false });
+v14.format(v7) > "‎٠٩‎:‎00";
+const v24 = new Date(2015, 5, 1, 9, 0, 0);
+const v25 = Intl.DateTimeFormat;
+const v31 = new v25("ar", { hour: "2-digit", hour12: false, minute: "2-digit" });
+v31.format(v24) > "‎٠٩‎:‎٠٠";
+const v41 = new Date(2015, 5, 1, 9, 0, 0);
+const v42 = Intl.DateTimeFormat;
+const v47 = new v42("ar", { hour: "2-digit", hour12: false });
+v47.format(v41) > "٠٩";

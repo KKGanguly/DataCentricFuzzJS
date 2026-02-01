@@ -1,0 +1,74 @@
+{
+  "v8": {
+    "v8/third_party/llvm-build/Release+Asserts": [
+      "Linux_x64/clang-llvmorg-22-init-8940-g4d4cb757-84.tar.xz",
+      "Linux_x64/clang-tidy-llvmorg-22-init-8940-g4d4cb757-84.tar.xz",
+      "Linux_x64/clangd-llvmorg-22-init-8940-g4d4cb757-84.tar.xz",
+      "Linux_x64/llvm-code-coverage-llvmorg-22-init-8940-g4d4cb757-84.tar.xz",
+      "Linux_x64/llvmobjdump-llvmorg-22-init-8940-g4d4cb757-84.tar.xz",
+      "Mac/clang-llvmorg-22-init-8940-g4d4cb757-84.tar.xz",
+      "Mac/clang-mac-runtime-library-llvmorg-22-init-8940-g4d4cb757-84.tar.xz",
+      "Mac/clang-tidy-llvmorg-22-init-8940-g4d4cb757-84.tar.xz",
+      "Mac/clangd-llvmorg-22-init-8940-g4d4cb757-84.tar.xz",
+      "Mac/llvm-code-coverage-llvmorg-22-init-8940-g4d4cb757-84.tar.xz",
+      "Mac/llvmobjdump-llvmorg-22-init-8940-g4d4cb757-84.tar.xz",
+      "Mac_arm64/clang-llvmorg-22-init-8940-g4d4cb757-84.tar.xz",
+      "Mac_arm64/clang-tidy-llvmorg-22-init-8940-g4d4cb757-84.tar.xz",
+      "Mac_arm64/clangd-llvmorg-22-init-8940-g4d4cb757-84.tar.xz",
+      "Mac_arm64/llvm-code-coverage-llvmorg-22-init-8940-g4d4cb757-84.tar.xz",
+      "Mac_arm64/llvmobjdump-llvmorg-22-init-8940-g4d4cb757-84.tar.xz",
+      "Win/clang-llvmorg-22-init-8940-g4d4cb757-84.tar.xz",
+      "Win/clang-tidy-llvmorg-22-init-8940-g4d4cb757-84.tar.xz",
+      "Win/clang-win-runtime-library-llvmorg-22-init-8940-g4d4cb757-84.tar.xz",
+      "Win/clangd-llvmorg-22-init-8940-g4d4cb757-84.tar.xz",
+      "Win/llvm-code-coverage-llvmorg-22-init-8940-g4d4cb757-84.tar.xz",
+      "Win/llvmobjdump-llvmorg-22-init-8940-g4d4cb757-84.tar.xz"
+    ],
+    "v8/third_party/rust-toolchain": [
+      "Linux_x64/rust-toolchain-15283f6fe95e5b604273d13a428bab5fc0788f5a-1-llvmorg-22-init-8940-g4d4cb757.tar.xz",
+      "Mac/rust-toolchain-15283f6fe95e5b604273d13a428bab5fc0788f5a-1-llvmorg-22-init-8940-g4d4cb757.tar.xz",
+      "Mac_arm64/rust-toolchain-15283f6fe95e5b604273d13a428bab5fc0788f5a-1-llvmorg-22-init-8940-g4d4cb757.tar.xz",
+      "Win/rust-toolchain-15283f6fe95e5b604273d13a428bab5fc0788f5a-1-llvmorg-22-init-8940-g4d4cb757.tar.xz"
+    ]
+  },
+  "v8/buildtools": {
+    "v8/buildtools/win-format": [
+      "565cab9c66d61360c27c7d4df5defe1a78ab56d3"
+    ],
+    "v8/buildtools/mac-format": [
+      "7d46d237f9664f41ef46b10c1392dcb559250f25"
+    ],
+    "v8/buildtools/mac_arm64-format": [
+      "8503422f469ae56cc74f0ea2c03f2d872f4a2303"
+    ],
+    "v8/buildtools/linux64-format": [
+      "79a7b4e5336339c17b828de10d80611ff0f85961"
+    ]
+  },
+  "v8/build": {
+    "v8/build/linux/debian_bullseye_amd64-sysroot": [
+      "36a164623d03f525e3dfb783a5e9b8a00e98e1ddd2b5cff4e449bd016dd27e50"
+    ],
+    "v8/build/linux/debian_bullseye_arm64-sysroot": [
+      "2f915d821eec27515c0c6d21b69898e23762908d8d7ccc1aa2a8f5f25e8b7e18"
+    ],
+    "v8/build/linux/debian_bullseye_armhf-sysroot": [
+      "47b3a0b161ca011b2b33d4fc1ef6ef269b8208a0b7e4c900700c345acdfd1814"
+    ],
+    "v8/build/linux/debian_bullseye_i386-sysroot": [
+      "63f0e5128b84f7b0421956a4a40affa472be8da0e58caf27e9acbc84072daee7"
+    ],
+    "v8/build/linux/debian_bullseye_mips64el-sysroot": [
+      "58f8594905bfe0fa0b7c7a7e882f01725455d07b7161e6539de5169867009b9f"
+    ],
+    "v8/build/linux/debian_bullseye_mipsel-sysroot": [
+      "2098b42d9698f5c8a15683abbf6d424b7f56200bd2488198e15f31554acb391f"
+    ],
+    "v8/build/linux/debian_bullseye_ppc64el-sysroot": [
+      "485f85dde52830594f7b58ad53b9ca8ff6088b397cacb52aff682be5ffd6f198"
+    ],
+    "v8/build/linux/debian_trixie_riscv64-sysroot": [
+      "5c8ef4067f41a625d81113a6292180acf4ef49a2ffe015c2779123c133b8e250"
+    ]
+  }
+}

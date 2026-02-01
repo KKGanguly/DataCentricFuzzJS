@@ -1,4 +1,4 @@
-ls corpus_pocs_2/*.js | parallel --eta -j4 '
+ls test_fuzzil/*.js | parallel --eta -j4 '
   f={}
   out_file="corpus_pocs_2/$(basename {} .js).fzil"
   if [ -f "$out_file" ]; then

@@ -1,0 +1,10 @@
+const v2 = new Date();
+const v4 = Array();
+const v5 = {};
+v5[Symbol.isConcatSpreadable] = 4096;
+v4.__proto__ = v5;
+const v8 = {};
+Object.defineProperty(v8, "enumerable", { configurable: true, enumerable: true, value: v2 });
+Object[Symbol.species] = Date;
+Object.defineProperty(v5, 1, v8);
+Array.prototype.concat.call(v4);

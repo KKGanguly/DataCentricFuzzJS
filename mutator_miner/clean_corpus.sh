@@ -3,7 +3,7 @@
 ENGINE="../v8/out/fuzzbuild/d8"
 FLAGS="--allow-natives-syntax --expose-gc"
 CORPUS_DIR="corpus"
-TIMEOUT=3
+TIMEOUT=1
 
 for f in "$CORPUS_DIR"/*.js; do
   echo "Checking: $f"
@@ -17,6 +17,7 @@ for f in "$CORPUS_DIR"/*.js; do
       ;;
     124)
       echo "⏱️ Timeout (kept): $f"
+      rm -f "$f"
       ;;
     1)
       echo "❌ Removing (syntax/type error): $f"

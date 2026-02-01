@@ -1,0 +1,39 @@
+function f0() {
+}
+d8.file.execute("v8/test/mjsunit/wasm/wasm-module-builder.js");
+const v6 = new WasmModuleBuilder();
+const builder = v6;
+builder.addStruct([makeField(kWasmF64, true),makeField(kWasmI64, true),makeField(kWasmI64, true)]);
+builder.addStruct([makeField(kWasmF64, true),makeField(kWasmI64, true),makeField(kWasmI64, true),makeField(kWasmI32, true),makeField(wasmRefNullType(kWasmArrayRef), true)], 0);
+builder.addStruct([makeField(kWasmF64, true),makeField(kWasmI64, true),makeField(kWasmI64, true),makeField(kWasmI32, true),makeField(wasmRefNullType(kWasmArrayRef), true),makeField(wasmRefType(kWasmI31Ref), true),makeField(kWasmFuncRef, true),makeField(wasmRefType(kWasmFuncRef), false)], 1);
+builder.addStruct([makeField(kWasmF64, true),makeField(kWasmI64, true),makeField(kWasmI64, true)], 0);
+builder.addArray(wasmRefNullType(kWasmArrayRef), true);
+builder.addArray(wasmRefNullType(kWasmArrayRef), true, 4);
+builder.addArray(kWasmI32, true);
+builder.startRecGroup();
+builder.addArray(kWasmI32, true);
+builder.endRecGroup();
+builder.startRecGroup();
+builder.addType(makeSig([kWasmI32,kWasmI32,kWasmI32], [kWasmI32]));
+builder.addType(makeSig([], []));
+builder.endRecGroup();
+builder.addMemory(16, 32);
+builder.addTable(kWasmFuncRef, 2, 2, undefined);
+builder.addActiveElementSegment(0, wasmI32Const(0), [[kExprRefFunc,0],[kExprRefFunc,1]], kWasmFuncRef);
+builder.addTag(makeSig([], []));
+const v390 = [kExprI32Const,1,kExprCallIndirect,9,0,kExprI32Const,1,kExprCallIndirect,9,0,kExprI32Const,1,kExprCallIndirect,9,0,kExprI32Const,1,kExprCallIndirect,9,0,kExprI32Const,1,kExprCallIndirect,9,0,kExprI32Const,1,kExprCallIndirect,9,0,kExprI32Const,1,kExprCallIndirect,9,0,kExprTry,124,kExprMemorySize,0,kExprI32Const,190,169,208,148,127,kExprI32Const,0,kSimdPrefix,kExprI8x16Splat,kExprI32Const,0,kSimdPrefix,kExprI8x16Splat,kSimdPrefix,kExprF32x4Add,1,kSimdPrefix,kExprI64x2ExtractLane,0,kExprI64Const,178,147,253,226,151,245,190,163,91,kExprI64Shl,kExprI64StoreMem,1,182,247,1,kExprF64Const,71,112,91,52,150,163,37,119,kExprTry,124,kExprLocalGet,1,kExprF64SConvertI32,kExprCatch,0,kExprF64Const,32,72,178,183,112,81,132,187,kExprI64Const,132,255,156,6,kExprF64SConvertI64,kExprF64Abs,kExprF64Abs,kExprF64Mul,kExprCatchAll,kExprLocalGet,0,kExprF64SConvertI32,kExprEnd,kExprF64Abs,kExprF64Abs,kExprF64Abs,kExprI32Const,1,kExprCallIndirect,9,0,kExprI32Const,232,227,204,16,kExprI32Const,244,168,253,159,2,kExprI32Const,0,kSimdPrefix,kExprI8x16Splat,kSimdPrefix,kExprS128Load32Lane,0,174,92,2,kSimdPrefix,kExprI8x16Neg,kSimdPrefix,...kExprI32x4RelaxedTruncF64x2UZero,kExprI32Const,0,kSimdPrefix,kExprI8x16Splat,kExprI32Const,0,kSimdPrefix,kExprI8x16Splat,kSimdPrefix,kExprI16x8MinS,1,kSimdPrefix,kExprI16x8Abs,1,kSimdPrefix,kExprI16x8Abs,1,kSimdPrefix,kExprI16x8Abs,1,kSimdPrefix,kExprI16x8Abs,1,kSimdPrefix,kExprI16x8Abs,1,kSimdPrefix,kExprI16x8Abs,1,kSimdPrefix,kExprI16x8GeU,kSimdPrefix,kExprF32x4SConvertI32x4,1,kSimdPrefix,kExprS128Store16Lane,0,235,215,3,6,kExprF64Mul,kExprF64Abs,kExprF64Abs,kExprF64Abs,kExprF64Abs,kExprI64Const,169,235,220,145,129,161,242,244,64,kExprI64Const,234,198,255,162,139,237,255,218,39,kExprI32Const,202,186,199,255,122,kExprRefNull,7,kGCPrefix,kExprStructNew,1,kGCPrefix,kExprStructGet,1,3,kAtomicPrefix,kExprI32AtomicExchange,2,244,36,kExprIf,124,kExprF64Const,117,171,203,96,190,121,47,117,kExprElse,kExprF64Const,156,225,47,12,173,43,144,234,kExprEnd,kExprDelegate,0,kExprI32Const,0,kSimdPrefix,kExprI8x16Splat,kExprI32Const,0,kSimdPrefix,kExprI8x16Splat,kSimdPrefix,...kExprF64x2RelaxedMax,kExprTry,125,kExprF32Const,142,161,239,9,kExprCatchAll,kExprF32Const,239,21,116,84,kExprEnd,kNumericPrefix,kExprI32UConvertSatF32,kSimdPrefix,kExprI8x16ShrU,kSimdPrefix,kExprI32x4AllTrue,1,kExprI32Const,140,202,200,50,kExprI32LtS,kExprI32Const,252,145,199,246,124,kExprI32Const,231,160,145,129,122,kExprReturnCall,0,kExprF64Const,5,16,147,44,193,44,102,34,kExprI32Const,180,208,194,196,124,kExprSelectWithType,1,124,kExprI32Const,228,136,137,243,7,kExprBr,0,kExprF64Add,kExprF64Ceil,kExprF64Sqrt,kExprF64Sqrt,kExprF64NearestInt,kExprF64Abs,kExprF64Ceil,kExprI32Const,0,kSimdPrefix,kExprI8x16Splat,kExprI32Const,178,160,130,200,120,kExprI32Const,182,169,156,165,120,kAtomicPrefix,kExprI32AtomicXor8U,0,162,121,kSimdPrefix,kExprI8x16ReplaceLane,1,kSimdPrefix,kExprF32x4SConvertI32x4,1,kExprI32Const,161,239,1,kSimdPrefix,kExprI32x4ReplaceLane,1,kSimdPrefix,kExprF64x2ExtractLane,1,kExprF64Eq,kExprEnd];
+builder.addFunction(undefined, 8).addBodyWithEnd(v390);
+const v650 = [kExprBlock,64,kExprBlock,64,kExprBlock,64,kExprBlock,64,kExprBlock,64,kExprBlock,64,kExprBlock,64,kExprI32Const,0,kSimdPrefix,kExprI8x16Splat,kSimdPrefix,kExprS128Const,121,102,38,119,244,88,92,185,149,201,57,187,133,24,163,150,kExprI32Const,0,kSimdPrefix,kExprI8x16Splat,kSimdPrefix,kExprF32x4Add,1,kExprI32Const,0,kSimdPrefix,kExprI8x16Splat,kExprF64Const,55,149,37,92,187,54,133,255,kSimdPrefix,kExprF64x2ReplaceLane,0,kExprI32Const,0,kSimdPrefix,kExprI8x16Splat,kSimdPrefix,kExprI8x16GtS,kSimdPrefix,kExprF32x4Add,1,kExprI32Const,0,kSimdPrefix,kExprI8x16Splat,kExprI32Const,0,kSimdPrefix,kExprI8x16Splat,kExprI32Const,230,193,162,159,1,kExprI32Const,239,238,208,130,126,kExprI32GeU,kSimdPrefix,kExprS128Load8Splat,0,132,73,kExprI32Const,0,kSimdPrefix,kExprI8x16Splat,kSimdPrefix,kExprI8x16LtS,kSimdPrefix,kExprI8x16Ne,kSimdPrefix,kExprF64x2Mul,1,kSimdPrefix,kExprF64x2Div,1,kSimdPrefix,kExprI16x8ExtMulHighI8x16U,1,kExprI32Const,0,kSimdPrefix,kExprI8x16Splat,kSimdPrefix,kExprI64x2Eq,1,kSimdPrefix,kExprI32x4AllTrue,1,kExprLocalGet,2,kExprF64ConvertF32,kExprF64StoreMem,3,166,21,kExprRefNull,111,kExprBrOnNull,3,kExprDrop,kExprMemorySize,0,kExprI64Const,29,kExprI32Const,222,123,kExprRefNull,9,kExprI32Const,187,165,196,247,4,kNumericPrefix,kExprTableGrow,0,kExprF64Const,107,229,244,246,46,63,225,78,kExprLocalGet,0,kExprF64ConvertF32,kExprF64Sub,kNumericPrefix,kExprI32SConvertSatF64,kExprTry,125,kExprTry,125,kExprTry,125,kExprTry,125,kExprTry,125,kExprTry,125,kExprTry,125,kExprTry,125,kExprF64Const,151,195,0,98,92,167,225,222,kExprF32ConvertF64,kExprF32NearestInt,kExprCatch,0,kExprF32Const,175,128,202,91,kExprEnd,kExprCatch,0,kExprF32Const,128,237,185,94,kExprCatchAll,kExprF32Const,218,57,195,4,kExprEnd,kExprCatch,0,kExprF32Const,34,238,255,115,kExprCatchAll,kExprF32Const,241,78,214,116,kExprEnd,kExprCatch,0,kExprF32Const,204,134,137,195,kExprCatchAll,kExprF32Const,16,94,79,85,kExprEnd,kExprCatch,0,kExprF32Const,156,248,5,52,kExprCatchAll,kExprF32Const,10,236,211,111,kExprEnd,kExprCatch,0,kExprF32Const,35,170,77,19,kExprCatchAll,kExprF32Const,152,229,65,31,kExprEnd,kExprCatch,0,kExprF32Const,77,83,220,123,kExprCatchAll,kExprF32Const,226,138,196,93,kExprEnd,kExprCatch,0,kExprF32Const,125,9,81,145,kExprCatchAll,kExprF32Const,32,75,55,119,kExprEnd,kExprLocalTee,3,kExprI32SConvertF32,kExprI32Ctz,kExprI32Ctz,kExprI32Ctz,kExprI32Ctz,kExprI32Ctz,kExprI32Ctz,kExprI32Ctz,kExprI32Ctz,kExprI32Ctz,kExprI64LoadMem32S,0,173,90,kExprI32ConvertI64,kExprI32Ctz,kExprI32Ctz,kExprI32LoadMem8S,0,173,90,kSimdPrefix,kExprS128Load64Zero,2,188,225,3,kSimdPrefix,kExprI64x2ExtractLane,0,kAtomicPrefix,kExprI64AtomicStore,3,255,254,1,kExprI32Const,151,154,230,131,127,kExprBrIf,0,kExprI64Const,254,228,242,178,161,137,157,231,40,kAtomicPrefix,kExprI64AtomicAdd32U,2,238,228,3,kAtomicPrefix,kExprI64AtomicStore16U,0,129,131,2,kExprI64StoreMem32,2,224,195,3,kExprI32Const,135,193,219,191,7,kExprBrTable,1,0,0,kExprEnd,kExprEnd,kExprEnd,kExprEnd,kExprEnd,kExprEnd,kExprEnd,kExprEnd];
+builder.addFunction(undefined, 9).addLocals(kWasmF32, 4).addBodyWithEnd(v650);
+builder.addExport("main", 0);
+let v661;
+try { v661 = builder.instantiate(); } catch (e) {}
+const instance = v661;
+try {
+    const v666 = instance?.exports;
+    let v667;
+    try { v667 = v666.main(1, 2, 3); } catch (e) {}
+    f0(v667);
+} catch(e669) {
+    try { f0("caught exception", e669); } catch (e) {}
+}

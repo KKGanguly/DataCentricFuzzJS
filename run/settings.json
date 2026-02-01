@@ -1,0 +1,19 @@
+{
+  "processArguments" : [
+    "--expose-gc",
+    "--expose-externalize-string",
+    "--omit-quit",
+    "--allow-natives-syntax",
+    "--fuzzing",
+    "--jit-fuzzing",
+    "--future",
+    "--harmony",
+    "--experimental-fuzzing",
+    "--js-staging",
+    "--wasm-staging",
+    "--wasm-fast-api",
+    "--expose-fast-api",
+    "--experimental-wasm-rab-integration",
+    "--wasm-test-streaming"
+  ]
+}

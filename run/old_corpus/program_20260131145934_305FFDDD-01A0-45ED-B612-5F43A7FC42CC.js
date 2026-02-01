@@ -1,0 +1,2 @@
+("undefined").normalize("NFKC");
+gc();

@@ -1,0 +1,15 @@
+{
+  "engine": "jsc",
+  "mode": "random",
+  "num_workers": 16,
+  "total_execs": 55,
+  "crashes": 0,
+  "unique_crashes": 0,
+  "crash_rate": 0.0,
+  "exec_rate": 6.487391926469518,
+  "correctness_rate": 100.0,
+  "normal_exits": 55,
+  "syntax_errors": 0,
+  "timeouts": 0,
+  "crash_details": []
+}

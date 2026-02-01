@@ -1,0 +1,14 @@
+{
+  "engine": "v8",
+  "mode": "interesting",
+  "total_execs": 1800,
+  "crashes": 0,
+  "unique_crashes": 0,
+  "crash_rate": 0.0,
+  "exec_rate": 1.1109574509860352,
+  "correctness_rate": 95.66666666666667,
+  "normal_exits": 1722,
+  "syntax_errors": 0,
+  "timeouts": 78,
+  "crash_details": []
+}

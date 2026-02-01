@@ -13,16 +13,35 @@ cd gumtree
 
 ./gradlew build
 
-# Find the zip safely
-ZIP_FILE=$(find . -name "gumtree-*.zip" | head -n 1)
+# Find the zip anywhere under gumtree/
+ZIP_FILE=$(find . -type f -name "gumtree-*.zip" | head -n 1)
+
+if [[ -z "$ZIP_FILE" ]]; then
+  echo "❌ GumTree zip not found!"
+  exit 1
+fi
+
 echo "Found zip: $ZIP_FILE"
 
-unzip -o "$ZIP_FILE" -d gumtree_dist
+# Go to directory containing the zip
+ZIP_DIR=$(dirname "$ZIP_FILE")
+cd "$ZIP_DIR"
 
-GUMTREE_HOME=$(find gumtree_dist -maxdepth 1 -type d -name "gumtree-*" | head -n 1)
+# Unzip in place
+unzip -o "$(basename "$ZIP_FILE")"
+
+# Find extracted GumTree folder
+GUMTREE_HOME=$(find . -maxdepth 1 -type d -name "gumtree-*" | head -n 1)
+
+if [[ -z "$GUMTREE_HOME" ]]; then
+  echo "❌ Extracted GumTree directory not found!"
+  exit 1
+fi
+
+GUMTREE_HOME=$(realpath "$GUMTREE_HOME")
 echo "GUMTREE_HOME=$GUMTREE_HOME"
 
-export PATH="$PWD/$GUMTREE_HOME/bin:$PATH"
+export PATH="$GUMTREE_HOME/bin:$PATH"
 
 cd "$WORKDIR"
 
@@ -32,7 +51,7 @@ cd jsparser
 npm install
 
 export GUMTREE_JS_PARSER="$PWD"
-export PATH="$PWD/dist:$PATH"
+export PATH="$PWD:$PATH"
 
 ### Verification ###
 echo "PATH=$PATH"

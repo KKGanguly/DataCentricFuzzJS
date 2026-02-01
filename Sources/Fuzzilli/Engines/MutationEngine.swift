@@ -69,7 +69,7 @@ public class MutationEngine: FuzzEngine {
                 logger.warning("Could not mutate sample, giving up. Sample:\n\(FuzzILLifter().lift(parent))")
                 continue
             }
-            let explorationChance = 0.1// 10% chance to allow non-preserving mutation
+            let explorationChance = 1.0// 10% chance to allow non-preserving mutation
 
             if Double.random(in: 0.0...1.0) < explorationChance {
                 assert(program !== parent)

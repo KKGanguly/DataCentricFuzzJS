@@ -1,0 +1,4 @@
+{
+  "subdir": "v8/third_party/ninja",
+  "package_name": "infra/3pp/tools/ninja/linux-amd64"
+}
