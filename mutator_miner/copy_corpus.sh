@@ -1,1 +1,5 @@
-mkdir -p corpus && find ../corpus_pocs -maxdepth 1 -name "*.js" -print0 | shuf -z -n 1000 | xargs -0 -I{} cp {} corpus/
+mkdir -p corpus && \
+find ../corpus_pocs -maxdepth 1 -name "*.js" -print0 | \
+xargs -0 grep -L '%[A-Za-z_][A-Za-z0-9_]*[[:space:]]*(' | \
+#shuf -n 30 | \
+xargs -I{} cp {} corpus/
