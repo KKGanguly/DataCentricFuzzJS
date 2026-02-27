@@ -1,0 +1,423 @@
+{
+  "evaluation_summary": {
+    "templates_ranked": 5859,
+    "corpus_files": 10,
+    "mutations_per_file": 3,
+    "total_applied": 125808,
+    "total_crashes": 0,
+    "overall_crash_rate": 0.0,
+    "elapsed_seconds": 7244.5,
+    "importance_source": "model_file"
+  },
+  "weights": {
+    "crash_rate": 0.0,
+    "feat_inject": 0.25,
+    "mean_gain": 0.45,
+    "consistency": 0.15,
+    "applicability": 0.15
+  },
+  "top_20": [
+    {
+      "rank": 1,
+      "template_idx": 4611,
+      "final_score": 0.6906,
+      "crash_rate": 0.0,
+      "crashes": 0,
+      "fis": 1.0,
+      "mean_gain": 0.1124,
+      "consistency": 1.0,
+      "applied": 3,
+      "kind": "replace",
+      "node_type": "expression_statement",
+      "after_preview": "<VAR>();"
+    },
+    {
+      "rank": 2,
+      "template_idx": 3494,
+      "final_score": 0.6854,
+      "crash_rate": 0.0,
+      "crashes": 0,
+      "fis": 1.0,
+      "mean_gain": 0.1008,
+      "consistency": 1.0,
+      "applied": 3,
+      "kind": "replace",
+      "node_type": "expression_statement",
+      "after_preview": "try { [<VAR>,<VAR>,true,<VAR>]; } catch (<VAR>) {}"
+    },
+    {
+      "rank": 3,
+      "template_idx": 1703,
+      "final_score": 0.6794,
+      "crash_rate": 0.0,
+      "crashes": 0,
+      "fis": 1.0,
+      "mean_gain": 0.0955,
+      "consistency": 0.9759,
+      "applied": 3,
+      "kind": "replace",
+      "node_type": "expression_statement",
+      "after_preview": "try { <VAR>(<VAR>, {}); } catch (<VAR>) {}"
+    },
+    {
+      "rank": 4,
+      "template_idx": 3644,
+      "final_score": 0.6787,
+      "crash_rate": 0.0,
+      "crashes": 0,
+      "fis": 1.0,
+      "mean_gain": 0.0942,
+      "consistency": 0.9756,
+      "applied": 3,
+      "kind": "replace",
+      "node_type": "formal_parameters",
+      "after_preview": "try { <VAR> = <VAR>(<VAR>); } catch (<VAR>) {}"
+    },
+    {
+      "rank": 5,
+      "template_idx": 4643,
+      "final_score": 0.6639,
+      "crash_rate": 0.0,
+      "crashes": 0,
+      "fis": 1.0,
+      "mean_gain": 0.053,
+      "consistency": 1.0,
+      "applied": 3,
+      "kind": "replace",
+      "node_type": "try_statement",
+      "after_preview": "try { try { (<VAR> = <VAR>.<VAR>(<VAR>)); } catch (<VAR>) {} } catch (<VAR>) {}"
+    },
+    {
+      "rank": 6,
+      "template_idx": 5655,
+      "final_score": 0.6639,
+      "crash_rate": 0.0,
+      "crashes": 0,
+      "fis": 1.0,
+      "mean_gain": 0.053,
+      "consistency": 1.0,
+      "applied": 3,
+      "kind": "replace",
+      "node_type": "lexical_declaration",
+      "after_preview": "try { let <VAR>; } catch (<VAR>) {}"
+    },
+    {
+      "rank": 7,
+      "template_idx": 5090,
+      "final_score": 0.6616,
+      "crash_rate": 0.0,
+      "crashes": 0,
+      "fis": 1.0,
+      "mean_gain": 0.1436,
+      "consistency": 0.7133,
+      "applied": 3,
+      "kind": "replace",
+      "node_type": "arguments",
+      "after_preview": "const <VAR> = (([]).<VAR>);"
+    },
+    {
+      "rank": 8,
+      "template_idx": 5108,
+      "final_score": 0.6324,
+      "crash_rate": 0.0,
+      "crashes": 0,
+      "fis": 0.0696,
+      "mean_gain": 0.7361,
+      "consistency": 1.0,
+      "applied": 3,
+      "kind": "replace",
+      "node_type": "for_statement",
+      "after_preview": "try { <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}"
+    },
+    {
+      "rank": 9,
+      "template_idx": 5233,
+      "final_score": 0.6044,
+      "crash_rate": 0.0,
+      "crashes": 0,
+      "fis": 0.3839,
+      "mean_gain": 0.405,
+      "consistency": 0.3744,
+      "applied": 9,
+      "kind": "replace",
+      "node_type": "for_statement",
+      "after_preview": "try { <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}"
+    },
+    {
+      "rank": 10,
+      "template_idx": 4198,
+      "final_score": 0.5696,
+      "crash_rate": 0.0,
+      "crashes": 0,
+      "fis": 0.5208,
+      "mean_gain": 0.2098,
+      "consistency": 0.0,
+      "applied": 24,
+      "kind": "insert",
+      "node_type": "try_statement",
+      "after_preview": "try {  const <VAR> = <VAR>.<VAR>();  const <VAR> = Object.<VAR>(<VAR>);  } catch"
+    },
+    {
+      "rank": 11,
+      "template_idx": 2580,
+      "final_score": 0.5643,
+      "crash_rate": 0.0,
+      "crashes": 0,
+      "fis": 0.5119,
+      "mean_gain": 0.203,
+      "consistency": 0.0,
+      "applied": 24,
+      "kind": "insert",
+      "node_type": "while_statement",
+      "after_preview": "while (true) {  try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}  try {"
+    },
+    {
+      "rank": 12,
+      "template_idx": 123,
+      "final_score": 0.5627,
+      "crash_rate": 0.0,
+      "crashes": 0,
+      "fis": 0.4651,
+      "mean_gain": 0.2253,
+      "consistency": 0.0,
+      "applied": 24,
+      "kind": "insert",
+      "node_type": "while_statement",
+      "after_preview": "while (true) {  try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}  try {"
+    },
+    {
+      "rank": 13,
+      "template_idx": 1734,
+      "final_score": 0.5583,
+      "crash_rate": 0.0,
+      "crashes": 0,
+      "fis": 0.5192,
+      "mean_gain": 0.1856,
+      "consistency": 0.0,
+      "applied": 24,
+      "kind": "insert",
+      "node_type": "while_statement",
+      "after_preview": "while (true) {  try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}  try {"
+    },
+    {
+      "rank": 14,
+      "template_idx": 1071,
+      "final_score": 0.5494,
+      "crash_rate": 0.0,
+      "crashes": 0,
+      "fis": 0.5452,
+      "mean_gain": 0.1514,
+      "consistency": 0.0,
+      "applied": 24,
+      "kind": "insert",
+      "node_type": "while_statement",
+      "after_preview": "while (true) {  try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}  try {"
+    },
+    {
+      "rank": 15,
+      "template_idx": 466,
+      "final_score": 0.5432,
+      "crash_rate": 0.0,
+      "crashes": 0,
+      "fis": 0.4304,
+      "mean_gain": 0.2012,
+      "consistency": 0.0,
+      "applied": 24,
+      "kind": "insert",
+      "node_type": "while_statement",
+      "after_preview": "while (true) {  try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}  try {"
+    },
+    {
+      "rank": 16,
+      "template_idx": 3848,
+      "final_score": 0.5265,
+      "crash_rate": 0.0,
+      "crashes": 0,
+      "fis": 0.4115,
+      "mean_gain": 0.1747,
+      "consistency": 0.0,
+      "applied": 24,
+      "kind": "insert",
+      "node_type": "parenthesized_expression",
+      "after_preview": "<VAR> = (<VAR> = <VAR>.<VAR>(<VAR>.<VAR>()));"
+    },
+    {
+      "rank": 17,
+      "template_idx": 2680,
+      "final_score": 0.5261,
+      "crash_rate": 0.0,
+      "crashes": 0,
+      "fis": 0.4164,
+      "mean_gain": 0.1711,
+      "consistency": 0.0,
+      "applied": 24,
+      "kind": "insert",
+      "node_type": "while_statement",
+      "after_preview": "while (true) {  try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}  try {"
+    },
+    {
+      "rank": 18,
+      "template_idx": 2990,
+      "final_score": 0.5252,
+      "crash_rate": 0.0,
+      "crashes": 0,
+      "fis": 0.4236,
+      "mean_gain": 0.1651,
+      "consistency": 0.0,
+      "applied": 24,
+      "kind": "insert",
+      "node_type": "while_statement",
+      "after_preview": "while (true) {  try { <VAR>.<VAR>(); } catch (<VAR>) {}  }"
+    },
+    {
+      "rank": 19,
+      "template_idx": 314,
+      "final_score": 0.5251,
+      "crash_rate": 0.0,
+      "crashes": 0,
+      "fis": 0.4736,
+      "mean_gain": 0.1371,
+      "consistency": 0.0,
+      "applied": 24,
+      "kind": "insert",
+      "node_type": "try_statement",
+      "after_preview": "try { while (true) {  try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {} "
+    },
+    {
+      "rank": 20,
+      "template_idx": 3142,
+      "final_score": 0.523,
+      "crash_rate": 0.0,
+      "crashes": 0,
+      "fis": 0.5012,
+      "mean_gain": 0.1172,
+      "consistency": 0.0,
+      "applied": 24,
+      "kind": "insert",
+      "node_type": "while_statement",
+      "after_preview": "while (true) {  try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}  try {"
+    }
+  ],
+  "top_important_features": [
+    [
+      "uses_embedded_wasm_binary",
+      1.0
+    ],
+    [
+      "gc_major",
+      0.9666676570324496
+    ],
+    [
+      "debugprint_call_count",
+      0.9587125438811169
+    ],
+    [
+      "use_of_proxy_reflect",
+      0.8627318566264813
+    ],
+    [
+      "back_pointer_is_null",
+      0.7828551295995726
+    ],
+    [
+      "undefined_variable_usage",
+      0.6408836931781461
+    ],
+    [
+      "no_object_allocation_in_optimized_function",
+      0.6056295556187892
+    ],
+    [
+      "builtin_operation_on_container",
+      0.5809977802533519
+    ],
+    [
+      "uses_typed_array",
+      0.49984803755957125
+    ],
+    [
+      "typedarray_dv_usage",
+      0.49492834448311634
+    ],
+    [
+      "gc_minor",
+      0.4725300226324106
+    ],
+    [
+      "opt_marked",
+      0.4465027504091385
+    ],
+    [
+      "prototype_failure_ics",
+      0.31265760982263163
+    ],
+    [
+      "uses_jit_intrinsics",
+      0.2965100594617658
+    ],
+    [
+      "type_diversion_func_args",
+      0.2799374622295421
+    ],
+    [
+      "has_maglev_or_turbofan_opt",
+      0.2596254365139288
+    ],
+    [
+      "ic_state_transitions",
+      0.25211646655662373
+    ],
+    [
+      "non_extensible_flag",
+      0.2394915617772308
+    ],
+    [
+      "loop_count_high_alloc",
+      0.22203877695543384
+    ],
+    [
+      "recursive_iife_depth",
+      0.21946613592249664
+    ],
+    [
+      "bucket_array_count",
+      0.19245158642814983
+    ],
+    [
+      "uses_proxy_on_regex_like_object",
+      0.17588590006024896
+    ],
+    [
+      "unique_map_types",
+      0.15384190836951997
+    ],
+    [
+      "function_complexity_score",
+      0.14916744568634951
+    ],
+    [
+      "megamorphic_ics",
+      0.13468928064832408
+    ],
+    [
+      "exception_handling",
+      0.1268817460373372
+    ],
+    [
+      "function_hotness",
+      0.12133424592477243
+    ],
+    [
+      "object_shape_mutation",
+      0.11001648997315905
+    ],
+    [
+      "triggers_gc",
+      0.10743869929339954
+    ],
+    [
+      "uses_allow_natives_syntax",
+      0.10202784668647602
+    ]
+  ]
+}

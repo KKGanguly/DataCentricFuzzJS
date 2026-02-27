@@ -110,6 +110,32 @@ def shap_scores_static():
         print(f"Error computing SHAP values: {e}")
         return jsonify({"error": str(e)}), 400
 
+# --- New endpoint ---
+@app.route("/feature_importance", methods=["GET"])
+def feature_importance():
+    """
+    Return normalized XGBoost feature importance from the calibrated submodel.
+    """
+    try:
+        # unwrap XGBoost estimator from CalibratedClassifierCV
+        fm = submodel  # or submodel_static for static model
+        if hasattr(fm, "base_estimator"):
+            fm = fm.base_estimator  # for CalibratedClassifierCV
+        if hasattr(fm, "get_booster"):  # XGBClassifier
+            booster = fm.get_booster()
+            # importance_type can be 'weight', 'gain', or 'cover'; gain is usually best
+            score = booster.get_score(importance_type="gain")
+            if not score:
+                return jsonify({"error": "XGBoost returned empty importance"}), 500
+
+            # normalize 0-1
+            max_val = max(score.values())
+            normalized = {k: v / max_val for k, v in score.items()}
+            return jsonify({"feature_importance": normalized})
+
+        return jsonify({"error": "submodel is not XGBoost"}), 500
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000, threaded=True)

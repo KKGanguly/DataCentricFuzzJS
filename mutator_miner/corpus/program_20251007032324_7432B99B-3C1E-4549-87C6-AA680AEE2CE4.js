@@ -1,0 +1,46 @@
+d8.file.execute("v8/test/mjsunit/wasm/wasm-module-builder.js");
+const v5 = new WasmModuleBuilder();
+const builder = v5;
+builder.addStruct([makeField(wasmRefNullType(kWasmNullRef), true),makeField(kWasmExternRef, true),makeField(kWasmI32, true)]);
+builder.addStruct([makeField(wasmRefNullType(kWasmI31Ref), false),makeField(wasmRefNullType(1), true),makeField(kWasmF32, false),makeField(kWasmI32, true)]);
+builder.addStruct([makeField(wasmRefNullType(kWasmNullRef), true),makeField(kWasmExternRef, true),makeField(kWasmI32, true),makeField(kWasmI32, false),makeField(kWasmF64, true),makeField(wasmRefNullType(1), false)], 0);
+builder.addStruct([makeField(wasmRefNullType(kWasmI31Ref), false),makeField(wasmRefNullType(1), true),makeField(kWasmF32, false),makeField(kWasmI32, true),makeField(wasmRefType(kWasmI31Ref), false)], 1);
+builder.addArray(wasmRefNullType(kWasmStructRef), true);
+builder.addArray(wasmRefNullType(kWasmArrayRef), true);
+builder.addArray(wasmRefNullType(kWasmArrayRef), true, 5);
+builder.addArray(kWasmI32, true);
+builder.addType(makeSig([kWasmI32,kWasmI32,kWasmI32], [kWasmI32]));
+builder.startRecGroup();
+builder.addType(makeSig([], []));
+builder.endRecGroup();
+builder.startRecGroup();
+builder.addType(makeSig([], []));
+builder.addType(makeSig([], []));
+builder.endRecGroup();
+builder.addMemory(16, 32);
+builder.addTable(kWasmFuncRef, 4, 4, undefined);
+builder.addActiveElementSegment(0, wasmI32Const(0), [[kExprRefFunc,0],[kExprRefFunc,1],[kExprRefFunc,2],[kExprRefFunc,3]], kWasmFuncRef);
+builder.addTag(makeSig([], []));
+const v244 = [kSimdPrefix,kExprS128Const,236,207,62,173,35,176,74,195,56,218,105,184,23,224,118,136,kSimdPrefix,kExprV128AnyTrue,kExprMemoryGrow,0,kExprI32Const,2,kExprCallIndirect,10,0,kExprCallFunction,3,kExprCallFunction,2,kExprCallFunction,2,kExprCallFunction,2,kExprCallFunction,2,kExprI32Const,170,127,kExprI32Const,72,kExprI32GeS,kExprI32Const,134,127,kAtomicPrefix,kExprI32AtomicSub8U,0,242,200,1,kExprI32LoadMem,0,128,8,kExprI32Const,187,254,153,155,124,kExprI32Const,221,226,255,205,3,kExprI32Const,18,kExprSelect,kExprI32Const,148,127,kExprCallFunction,0,kExprNop,kExprF32Const,83,72,248,92,kExprF32Const,27,136,220,6,kExprF32Eq,kExprI32Const,139,140,182,163,7,kExprI32LtU,kExprI32DivS,kAtomicPrefix,kExprI32AtomicOr8U,0,145,195,3,kExprIf,124,kExprF64Const,55,192,99,45,242,233,244,59,kExprElse,kExprF64Const,173,201,179,116,14,50,101,109,kExprEnd,kNumericPrefix,kExprI32SConvertSatF64,kExprEnd];
+builder.addFunction(undefined, 8).addBodyWithEnd(v244);
+const v269 = [kExprRefNull,108,kExprBrOnNull,0,kExprDrop,kExprI32Const,158,245,164,227,126,kExprI32Const,230,184,141,242,120,kAtomicPrefix,kExprI32AtomicStore8U,0,163,234,1,kExprEnd];
+builder.addFunction(undefined, 9).addLocals(kWasmI64, 1).addBodyWithEnd(v269);
+const v507 = [kSimdPrefix,kExprS128Const,241,216,242,6,111,39,226,108,204,8,45,185,197,16,68,188,kSimdPrefix,kExprF32x4NearestInt,kSimdPrefix,kExprI64x2UConvertI32x4Low,1,kSimdPrefix,kExprI16x8ExtractLaneS,2,kExprIf,64,kExprRefNull,112,kExprLoop,127,kExprCallFunction,2,kExprCallFunction,1,kExprF32Const,207,192,73,166,kExprLoop,64,kExprEnd,kExprRefNull,113,kExprRefNull,111,kExprI32Const,172,216,142,191,3,kGCPrefix,kExprStructNew,0,kExprI32Const,184,237,222,242,6,kGCPrefix,kExprStructSet,0,2,kNumericPrefix,kExprI64SConvertSatF32,kExprI64Const,229,0,kExprI64LtS,kSimdPrefix,kExprS128Load8x8U,3,198,141,2,kExprI32Const,0,kSimdPrefix,kExprI8x16Splat,kSimdPrefix,kExprS128Const,140,152,60,4,188,148,67,80,70,107,103,212,217,93,127,100,kSimdPrefix,kExprI8x16SubSatU,kSimdPrefix,kExprI32x4TruncSatF64x2UZero,1,kSimdPrefix,kExprF32x4SConvertI32x4,1,kSimdPrefix,kExprF32x4NearestInt,kExprI32Const,0,kSimdPrefix,kExprI8x16Splat,kExprI32Const,143,158,155,179,124,kExprI32Const,69,kAtomicPrefix,kExprI32AtomicAnd8U,0,127,kSimdPrefix,kExprI8x16ReplaceLane,0,kSimdPrefix,kExprF32x4Neg,1,kSimdPrefix,kExprF32x4Eq,kSimdPrefix,kExprI8x16Ne,kSimdPrefix,kExprV128AnyTrue,kExprIf,127,kExprTry,124,kExprCallFunction,2,kExprCallFunction,1,kExprRefNull,1,kExprI32Const,0,kSimdPrefix,kExprI8x16Splat,kSimdPrefix,kExprI64x2AllTrue,1,kGCPrefix,kExprStructSet,1,3,kExprI32Const,0,kSimdPrefix,kExprI8x16Splat,kSimdPrefix,kExprI64x2AllTrue,1,kExprBrIf,2,kExprI32Const,198,208,226,207,125,kExprRefNull,110,kExprBrOnNull,1,kExprDrop,kExprF64SConvertI32,kExprF64Ceil,kExprF64NearestInt,kExprF64Const,210,80,12,147,255,128,215,74,kExprCallFunction,3,kExprCallFunction,2,kExprI32Const,205,180,164,202,121,kExprF64Const,1,39,33,251,118,141,23,245,kExprF64StoreMem,1,243,228,1,kExprF64Max,kExprCatchAll,kExprF64Const,28,228,167,137,126,214,16,109,kExprEnd,kNumericPrefix,kExprI32SConvertSatF64,kExprElse,kExprCallFunction,2,kExprI32Const,0,kSimdPrefix,kExprI8x16Splat,kSimdPrefix,kExprI64x2AllTrue,1,kExprEnd,kExprEnd,kExprIf,124,kExprF64Const,44,208,97,138,232,178,28,57,kExprElse,kExprF64Const,112,227,171,181,69,221,225,37,kExprEnd,kNumericPrefix,kExprI32SConvertSatF64,kNumericPrefix,kExprTableGrow,0,kExprRefNull,110,kGCPrefix,kExprRefCastNull,108,kExprRefNull,1,kExprF32Const,157,132,134,11,kExprI32Const,204,206,231,154,125,kExprI32Const,244,174,128,45,kGCPrefix,kExprRefI31,kGCPrefix,kExprStructNew,3,kGCPrefix,kExprStructGet,3,3,kSimdPrefix,kExprI16x8Splat,kSimdPrefix,kExprS128Const,52,111,100,255,109,227,133,68,165,19,174,167,177,202,148,164,kSimdPrefix,kExprI8x16MaxU,kSimdPrefix,kExprS128Store8Lane,0,128,254,3,0,kExprEnd,kExprEnd];
+builder.addFunction(undefined, 10).addLocals(kWasmI32, 2).addBodyWithEnd(v507);
+const v526 = [kExprRefNull,113,kExprRefNull,111,kExprI32Const,128,207,148,177,4,kGCPrefix,kExprStructNew,0,kExprLocalSet,1,kExprRefFunc,3,kExprLocalSet,10,kExprEnd];
+const v528 = wasmRefNullType(kWasmI31Ref);
+const v532 = wasmRefType(11);
+const v535 = wasmRefNullType(8);
+const v537 = wasmRefNullType(kWasmI31Ref);
+const v540 = wasmRefNullType(8);
+const v545 = wasmRefNullType(6);
+const v548 = wasmRefType(kWasmAnyRef);
+const v551 = wasmRefNullType(kWasmNullFuncRef);
+builder.addFunction(undefined, 11).addLocals(v551, 1).addLocals(v548, 1).addLocals(v545, 1).addLocals(kWasmI32, 3).addLocals(kWasmI64, 1).addLocals(v540, 1).addLocals(v537, 1).addLocals(v535, 1).addLocals(v532, 1).addLocals(kWasmI32, 1).addLocals(v528, 1).addLocals(kWasmI32, 6).addBodyWithEnd(v526);
+builder.addExport("main", 0);
+const instance = builder.instantiate();
+try {
+    print(instance.exports.main(1, 2, 3));
+} catch(e581) {
+    print("caught exception", e581);
+}

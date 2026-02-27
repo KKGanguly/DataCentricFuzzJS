@@ -1,0 +1,7203 @@
+[
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>();"
+    ],
+    "after": [
+      "<VAR>();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.17618827641824084,
+    "original_file": "program_20251007032322_AE186A37-C74F-4516-BF0C-B4E71BD7EEF7.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "return { <VAR>: <VAR>, <VAR>: <VAR> };"
+    ],
+    "after": [
+      "try { [<VAR>,<VAR>,true,<VAR>]; } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.2974975953367926,
+    "original_file": "program_20251007032335_DB4D0EDA-A99C-4C83-8F44-F1CED822AB32.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = Array.prototype.<VAR>;"
+    ],
+    "after": [
+      "try { <VAR>(<VAR>, {}); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.487275526197989,
+    "original_file": "program_20251007032106_73E4A49B-A245-41AB-9E3E-87456C8064DB.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = Array.prototype.<VAR>;"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "formal_parameters",
+    "gain": 0.2827008490961081,
+    "original_file": "program_20251007032039_C7BDC3E0-93FC-4EE9-9CF2-8319F9FADF29.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = [<VAR>];"
+    ],
+    "after": [
+      "try { try { (<VAR> = <VAR>.<VAR>(<VAR>)); } catch (<VAR>) {} } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.17387838344577244,
+    "original_file": "program_20251007032250_F084A925-B1DF-431A-9171-44EF99F64329.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = [<VAR>];"
+    ],
+    "after": [
+      "try { let <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.11767182986994917,
+    "original_file": "program_20251007031711_044D4797-CAFB-4FD0-AF5A-30B9A6237732.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new Number();"
+    ],
+    "after": [
+      "const <VAR> = (([]).<VAR>);"
+    ],
+    "node_type": "arguments",
+    "gain": 0.14519740595298858,
+    "original_file": "program_20251007031704_E9092B18-D198-4372-A6F7-ECA623C3A7ED.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>.<VAR>(<VAR>);"
+    ],
+    "after": [
+      "try { <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "for_statement",
+    "gain": 0.14418941703243182,
+    "original_file": "program_20251007031822_40917AE2-AB93-4508-A015-B8DD63508661.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>();"
+    ],
+    "after": [
+      "try { <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "for_statement",
+    "gain": 0.13750504637584549,
+    "original_file": "program_20251007032344_AC902A8B-46CC-4F16-A6C8-96A3F9411EB1.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = [<VAR>,<<VAR>>,<VAR>,<<VAR>>,<VAR>,<<VAR>>,<VAR>,<VAR>,<VAR>,<VAR>];"
+    ],
+    "after": [
+      "try {",
+      " const <VAR> = <VAR>.<VAR>();",
+      " const <VAR> = Object.<VAR>(<VAR>);",
+      " } catch(<VAR>) {",
+      " const <VAR> = [];",
+      " function <VAR>() {",
+      " }",
+      " const <VAR> = new Proxy(<VAR>, <VAR>);",
+      " <VAR>.length = <VAR>;",
+      " }"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.21522033578507038,
+    "original_file": "program_20251007032003_BDC79850-54D2-46D0-9EAC-E9163DA725EC.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>(<<VAR>>);"
+    ],
+    "after": [
+      "for (let <VAR> = <ZERO>; <VAR> < <NUM>; <VAR>++) {",
+      " try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}",
+      " try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}",
+      " }"
+    ],
+    "node_type": "while_statement",
+    "gain": 0.43329256662854077,
+    "original_file": "program_20251007032107_A54CF663-CB77-4EDA-ACB7-FAE7EDDCDEB8.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = <VAR>.<VAR>(<<VAR>>);"
+    ],
+    "after": [
+      "for (let <VAR> = <ZERO>; <VAR> < <NUM>; <VAR>++) {",
+      " try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}",
+      " try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}",
+      " }"
+    ],
+    "node_type": "while_statement",
+    "gain": 0.7584531231220593,
+    "original_file": "program_20251007032325_118DF375-0915-4D10-8277-A6B7ADCB9A34.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "if (<VAR>) {",
+      " <VAR> = -<<VAR>>;",
+      " }"
+    ],
+    "after": [
+      "for (let <VAR> = <ZERO>; <VAR> < <NUM>; <VAR>++) {",
+      " try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}",
+      " try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}",
+      " }"
+    ],
+    "node_type": "while_statement",
+    "gain": 0.4859122762898368,
+    "original_file": "program_20251007032402_BB9432D2-1483-4589-B3D0-8685B32E7D73.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " var <VAR> = [<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>];",
+      " const <VAR> = new Proxy(<VAR>, <VAR>);",
+      " var <VAR> = <VAR>;",
+      " var <VAR> = Object.<VAR>(<VAR>);",
+      " var <VAR> = <VAR> / <<VAR>>;",
+      " var <VAR> = <VAR>.<VAR>(<VAR>);",
+      "}"
+    ],
+    "after": [
+      "for (let <VAR> = <ZERO>; <VAR> < <NUM>; <VAR>++) {",
+      " try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}",
+      " try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}",
+      " }"
+    ],
+    "node_type": "while_statement",
+    "gain": 0.5445968625506121,
+    "original_file": "program_20251007031741_BFEFB832-A44F-4695-96DE-21587666BFE3.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " var <VAR> = <VAR>;",
+      " <VAR> = {};",
+      " <VAR>(<VAR>, <<VAR>>, <VAR>);",
+      "}"
+    ],
+    "after": [
+      "for (let <VAR> = <ZERO>; <VAR> < <NUM>; <VAR>++) {",
+      " try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}",
+      " try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}",
+      " }"
+    ],
+    "node_type": "while_statement",
+    "gain": 0.6370096213627687,
+    "original_file": "program_20251007031805_B2940526-88C9-4B26-A21F-9644F4F95254.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = new <VAR>(<VAR>);"
+    ],
+    "after": [
+      "<VAR> = (<VAR> = <VAR>.<VAR>(<VAR>.<VAR>()));"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.2575099580556965,
+    "original_file": "program_20251007032008_9162DA07-7740-4EBC-BDBE-52D290CF76F4.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = [-<<VAR>>,-<<VAR>>,<<VAR>>,-<<VAR>>,<<VAR>>,-<<VAR>>,-<<VAR>>,-<<VAR>>];"
+    ],
+    "after": [
+      "for (let <VAR> = <ZERO>; <VAR> < <NUM>; <VAR>++) {",
+      " try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}",
+      " try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}",
+      " }"
+    ],
+    "node_type": "while_statement",
+    "gain": 0.4246309822605995,
+    "original_file": "program_20251007031907_34F8E5EA-BBC7-4199-AF55-566D7EE5485A.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>;"
+    ],
+    "after": [
+      "for (let <VAR> = <ZERO>; <VAR> < <NUM>; <VAR>++) {",
+      " try { <VAR>.<VAR>(); } catch (<VAR>) {}",
+      " }"
+    ],
+    "node_type": "while_statement",
+    "gain": 0.37876202449852187,
+    "original_file": "program_20251007032033_11B72B55-F554-437F-A490-805FB5BF3BE1.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try { <VAR> = new Proxy(<VAR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "try { for (let <VAR> = <ZERO>; <VAR> < <NUM>; <VAR>++) {",
+      " try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}",
+      " try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}",
+      " } } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.684385302887627,
+    "original_file": "program_20251007031947_15D77D2D-1E94-41B4-9A82-5560A598D30E.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " for (let <VAR> = <<VAR>>; <VAR> < <<VAR>>; <VAR>++) {",
+      " <VAR>();",
+      " }",
+      " <VAR>(<VAR>());",
+      "}"
+    ],
+    "after": [
+      "for (let <VAR> = <ZERO>; <VAR> < <NUM>; <VAR>++) {",
+      " try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}",
+      " try { <VAR>.<VAR>(<VAR>, <VAR>, true); } catch (<VAR>) {}",
+      " }"
+    ],
+    "node_type": "while_statement",
+    "gain": 0.35239722945216606,
+    "original_file": "program_20251007031707_D426B930-8FF0-4468-A85A-E6C9B87DF866.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "after": [
+      "return (<VAR> = <VAR>.<VAR>(<VAR>))(<VAR>, <VAR>);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.10460572003113892,
+    "original_file": "program_20251007032127_1F2F9E29-A814-4F8D-AC0E-9FFD44362138.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try { <VAR> = <VAR>.<VAR>(); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "try {",
+      " const <VAR> = <VAR>.<VAR>();",
+      " const <VAR> = Object.<VAR>(<VAR>);",
+      " } catch(<VAR>) {",
+      " const <VAR> = [];",
+      " function <VAR>() {",
+      " }",
+      " const <VAR> = new Proxy(<VAR>, <VAR>);",
+      " <VAR>.length = <VAR>;",
+      " }"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.719573366885164,
+    "original_file": "program_20251007031959_F3C758AB-15B4-43E6-A6D3-B6C9507B0470.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "for (let <VAR> = <<VAR>>; <VAR> < <<VAR>>; <VAR>++) {",
+      " <VAR>[<VAR> = <VAR> * <VAR>] = <VAR>;",
+      " }"
+    ],
+    "after": [
+      "for (let <VAR> = <ZERO>; <VAR> < <NUM>; <VAR>++) {",
+      " try { <VAR>.<VAR>(); } catch (<VAR>) {}",
+      "try { <VAR> = new <VAR>(<VAR>); } catch (<VAR>) {}",
+      " }"
+    ],
+    "node_type": "while_statement",
+    "gain": 0.23808255111877122,
+    "original_file": "program_20251007032127_78FE80B1-7276-41D1-B613-5E6EC300B7B7.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " <VAR>();",
+      " }"
+    ],
+    "after": [
+      "return <VAR>.<VAR>();"
+    ],
+    "node_type": "return_statement",
+    "gain": 0.4669659176024855,
+    "original_file": "program_20251007031806_0F87B0E2-129D-4587-98A6-5AB0D1A17E70.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = (<<VAR>> + (<<VAR>>).<VAR>(<<VAR>> * <<VAR>>)) + <<VAR>>;"
+    ],
+    "after": [
+      "for (let <VAR> = <ZERO>; <VAR> < <NUM>; <VAR>++) {",
+      " try { <VAR>.<VAR>(); } catch (<VAR>) {}",
+      " }"
+    ],
+    "node_type": "while_statement",
+    "gain": 0.19819786942981832,
+    "original_file": "program_20251007031940_F68D7D01-9C3B-4421-825E-3CF2927EDE5D.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "return <VAR>[<<VAR>>] - <VAR>[<<VAR>>];"
+    ],
+    "after": [
+      "return (<VAR>.<VAR>);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.3127817920625294,
+    "original_file": "program_20251007032138_7728DC41-76F5-4142-9C3A-21A6297A0525.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>();"
+    ],
+    "after": [
+      "return (<VAR>.<VAR>());"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.19437463964280843,
+    "original_file": "program_20251007031930_D7526435-8879-406E-9107-96DD04C08BE7.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "let <VAR> = <VAR>;"
+    ],
+    "after": [
+      "return (<VAR>.<VAR>);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.23374834154607754,
+    "original_file": "program_20251007031746_C021777A-6E26-4CA8-BF3C-99AE95D1FABC.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = (<VAR> + <<VAR>>) >>> <<VAR>>;"
+    ],
+    "after": [
+      "try {",
+      " return <VAR>(<VAR>);",
+      " } catch(<VAR>) {",
+      " const <VAR> = new Array();",
+      " return <VAR>;",
+      " }"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.23739121716098827,
+    "original_file": "program_20251007032337_4B66FBEA-8B55-4694-967A-6A19E57525F6.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " <VAR>();",
+      " }"
+    ],
+    "after": [
+      "if (<VAR>) {",
+      " return <VAR>.<VAR>();",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.4669659176024855,
+    "original_file": "program_20251007031806_0F87B0E2-129D-4587-98A6-5AB0D1A17E70.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "async function <VAR>() {",
+      " try {",
+      " await <VAR>();",
+      " } catch(<VAR>) {",
+      " console.<VAR>(<<VAR>>);",
+      " }",
+      "}"
+    ],
+    "after": [
+      "try { await <VAR>(); } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.3549294772384128,
+    "original_file": "program_20251007031720_ECE1CAC2-8F66-4B50-A8CA-08177D3822E4.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "return this;"
+    ],
+    "after": [
+      "try { super(); } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.45189257385181897,
+    "original_file": "program_20251007032112_A6495A4C-122A-4C97-9948-EA6F3C150E88.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = () => {",
+      " return this;",
+      " };"
+    ],
+    "after": [
+      "try { super(); } catch (<VAR>) {}"
+    ],
+    "node_type": "catch_clause",
+    "gain": 0.45189257385181897,
+    "original_file": "program_20251007032112_A6495A4C-122A-4C97-9948-EA6F3C150E88.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try {",
+      " await <VAR>();",
+      " } catch(<VAR>) {",
+      " console.<VAR>(<<VAR>>);",
+      " }"
+    ],
+    "after": [
+      "try { await <VAR>(); } catch (<VAR>) {}"
+    ],
+    "node_type": "catch_clause",
+    "gain": 0.3549294772384128,
+    "original_file": "program_20251007031720_ECE1CAC2-8F66-4B50-A8CA-08177D3822E4.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "if ((!<VAR>(<VAR>) && !<VAR>(<VAR>)) && (<VAR> = <VAR>.<VAR>(<VAR>))) {",
+      " return;",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.577429182101326,
+    "original_file": "program_20251007032327_3E6C55E6-CA4F-410F-B1A6-725F859C5831.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "return <VAR>;"
+    ],
+    "after": [
+      "try {",
+      " return <VAR> in <VAR>;",
+      " } catch(<VAR>) {",
+      " return false;",
+      " }"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.2948780527667984,
+    "original_file": "program_20251007031943_FD40115D-1D51-4120-8DD5-1529756B285B.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new Array(<<VAR>>, <<VAR>>, <<VAR>>, <<VAR>>);"
+    ],
+    "after": [
+      "for (let <VAR> = <ZERO>; <VAR> < <NUM>; <VAR>++) {",
+      " try { <VAR>.<VAR>(); } catch (<VAR>) {}",
+      "const <VAR> = [<VAR>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>];",
+      " }"
+    ],
+    "node_type": "while_statement",
+    "gain": 0.23055113204806216,
+    "original_file": "program_20251007032252_F0F2ECBF-5905-4034-9279-0EDF449A028B.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = Math.<VAR>((<<VAR>> ** <<VAR>>) - <<VAR>>, <VAR> + ((<<VAR>> ** <<VAR>>) - <<VAR>>)) - ((<<VAR>> ** <<VAR>>) - <<VAR>>);"
+    ],
+    "after": [
+      "try {",
+      " return <VAR>(<VAR>);",
+      " } catch(<VAR>) {",
+      " return null;",
+      " }"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.35353075543717466,
+    "original_file": "program_20251007032018_CDBA7711-25C1-45EA-A2DB-C20CE43B5F4F.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = [];"
+    ],
+    "after": [
+      "if ((<VAR>.<VAR>)) {",
+      " return;",
+      " }"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.6631856980572713,
+    "original_file": "program_20251007031653_25007601-E44C-4A32-966F-1E79D6CFEE31.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "return Symbol();"
+    ],
+    "after": [
+      "return (<VAR>.<VAR>);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.15093842935899326,
+    "original_file": "program_20251007032122_D9BA1CE1-2886-44EA-BE31-52D7A58583C9.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = this.<VAR>.<VAR>;"
+    ],
+    "after": [
+      "while ((<VAR> = <VAR>.<VAR>())) {",
+      " try { try { <VAR> = <VAR>.<VAR>; } catch (<VAR>) {} } catch (<VAR>) {}",
+      " }"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.5233005814855863,
+    "original_file": "program_20251007032017_91A416B2-B3CA-4AF8-98B7-FE4D248C4ADE.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = () => {",
+      " return /(<VAR>?;?){<<VAR>>}/.<VAR>(<<VAR>>);",
+      "};"
+    ],
+    "after": [
+      "return (<VAR>.<VAR>);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.45361109223832047,
+    "original_file": "program_20251007031834_E3655D15-D0E6-4826-90BC-ABD2F4EE6707.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "return (<<VAR>>).<VAR>(<VAR>, <VAR>);"
+    ],
+    "after": [
+      "return (<VAR>.<VAR>(<VAR>));"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.45361109223832047,
+    "original_file": "program_20251007032127_1F2F9E29-A814-4F8D-AC0E-9FFD44362138.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>;"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.7345435978074968,
+    "original_file": "program_20251007032057_7A72BE8A-FA4E-4051-8BC1-07D07E260EF9.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR> = [];"
+    ],
+    "after": [
+      "try { <VAR>.<VAR>(<VAR>, true); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.4740368665578791,
+    "original_file": "program_20251007031834_B3730C98-BD49-43D9-911C-D275D738759B.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR> = [];"
+    ],
+    "after": [
+      "try { <VAR> = []; } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.4244373011770043,
+    "original_file": "program_20251007031922_CD2B4578-EC56-478B-979C-9F27DA67A5FB.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new Array(<<VAR>>, <<VAR>>, <<VAR>>);"
+    ],
+    "after": [
+      "for (;;) {",
+      " if (true) {",
+      " } else {",
+      " yield;",
+      " }",
+      " }"
+    ],
+    "node_type": "for_statement",
+    "gain": 0.2703664098828863,
+    "original_file": "program_20251007032057_478E3B48-A0B0-4B76-9293-8681B8B49844.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<<VAR>>;"
+    ],
+    "after": [
+      "if (<VAR> === <VAR>) {",
+      " const <VAR> = new Error();",
+      " let <VAR> = [];",
+      "if (<VAR>) {",
+      " return <VAR>.<VAR>();",
+      " }",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.4669659176024855,
+    "original_file": "program_20251007031806_0F87B0E2-129D-4587-98A6-5AB0D1A17E70.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "return <VAR>.<VAR>(undefined, <VAR>);"
+    ],
+    "after": [
+      "return (<VAR>.<VAR>);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.14410975961768274,
+    "original_file": "program_20251007031930_D7526435-8879-406E-9107-96DD04C08BE7.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = { <VAR>: <<VAR>> };"
+    ],
+    "after": [
+      "(<VAR>.<VAR>());"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.5965435119240807,
+    "original_file": "program_20251007032019_B3D4AF62-C4B4-45F0-8F0B-9C01890C0D89.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>(<VAR>, <VAR>) {",
+      " <VAR>(<VAR>(<VAR>), <VAR>);",
+      "}"
+    ],
+    "after": [
+      "return (<VAR>.<VAR>);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.7361175619874625,
+    "original_file": "program_20251007032337_4B66FBEA-8B55-4694-967A-6A19E57525F6.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = {",
+      " <VAR>() {",
+      " return Symbol();",
+      " },",
+      "};"
+    ],
+    "after": [
+      "return ((<VAR>.<VAR>));"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.14846584929727424,
+    "original_file": "program_20251007032122_D9BA1CE1-2886-44EA-BE31-52D7A58583C9.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = (<VAR>) => {",
+      " <VAR>();",
+      "};"
+    ],
+    "after": [
+      "for (;;) {",
+      " if (true) {",
+      " } else {",
+      " yield;",
+      " }",
+      " }"
+    ],
+    "node_type": "for_statement",
+    "gain": 0.3373653959636955,
+    "original_file": "program_20251007032023_0D8B3E20-2C1E-4546-8EEF-20E57C326624.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = [<<VAR>>];"
+    ],
+    "after": [
+      "for (let <VAR> = <ZERO>; <VAR> < <NUM>; <VAR>++) {",
+      " try { <VAR>.<VAR>(); } catch (<VAR>) {}",
+      " }"
+    ],
+    "node_type": "while_statement",
+    "gain": 0.762575819776488,
+    "original_file": "program_20251007031811_74A86C8E-7101-4C44-85DB-1E1CEE3E36CD.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>(<VAR>) {",
+      " return <VAR>.<VAR>;",
+      "}"
+    ],
+    "after": [
+      "return (<VAR>.<VAR>);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.12983030617337143,
+    "original_file": "program_20251007031825_2512E89B-9AE2-41F3-AF21-0732C2956F0B.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR>.<VAR>(true);"
+    ],
+    "after": [
+      "for (let <VAR> = <ZERO>; <VAR> < <NUM>; <VAR>++) {",
+      " const <VAR> = <VAR>?.<VAR>;",
+      " try { (<VAR> = <VAR>.<VAR>()); } catch (<VAR>) {}",
+      " }"
+    ],
+    "node_type": "while_statement",
+    "gain": 0.4895673120591366,
+    "original_file": "program_20251007032307_35E07222-BFE6-4967-9B95-518432A86974.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>.<VAR>(<VAR>);"
+    ],
+    "after": [
+      "for (;;) {",
+      " if (true) {",
+      " } else {",
+      " yield;",
+      " }",
+      " }"
+    ],
+    "node_type": "for_statement",
+    "gain": 0.5047898397514223,
+    "original_file": "program_20251007031723_9416ED58-CA80-49FB-8BC0-04B99DAA34EA.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR>(<VAR>);"
+    ],
+    "after": [
+      "for (const <VAR> of <VAR>) {",
+      " try { <VAR>.<VAR>(...<VAR>); } catch (<VAR>) {}",
+      "}"
+    ],
+    "node_type": "for_in_statement",
+    "gain": 0.15467123846575725,
+    "original_file": "program_20251007031943_DBEA5789-0F2D-48F7-8120-2EB651BDF441.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR>, <VAR>);"
+    ],
+    "after": [
+      "return (<VAR>.<VAR>);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.39272162546087896,
+    "original_file": "program_20251007032127_1F2F9E29-A814-4F8D-AC0E-9FFD44362138.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = [<VAR>,<<VAR>>,<VAR>,<<VAR>>,<VAR>,<<VAR>>,<VAR>,<<VAR>>,<VAR>,<<VAR>>,<VAR>,<<VAR>>,<VAR>,<<VAR>>,<VAR>,<<VAR>>,<VAR>,<<VAR>>,<VAR>,<<VAR>>,<VAR>,<<VAR>>,<VAR>,<<VAR>>,<VAR>,<<VAR>>,<VAR>,<<VAR>>,<VAR>,<<VAR>>,<VAR>,<<VAR>>,<VAR>,<<VAR>>,<VAR>,<<VAR>>,<VAR>,<<VAR>>,<VAR>,<<VAR>>,<VAR>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<VAR>,<VAR>];"
+    ],
+    "after": [
+      "try {",
+      " <VAR>.<VAR>();",
+      " <VAR>();",
+      "} catch(<VAR>) {",
+      " <VAR>(<VAR> instanceof <VAR>);",
+      "}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.12954538259311482,
+    "original_file": "program_20251007032032_F7010420-3BC4-42BC-9B73-20162A2756F0.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>;"
+    ],
+    "after": [
+      "<VAR>.<VAR>();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5116472193851332,
+    "original_file": "program_20251007031958_D43A8BF3-D393-409C-B0F2-EA79D1B0E56B.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "let <VAR> = <VAR>;"
+    ],
+    "after": [
+      "try { try { <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}",
+      "try { <VAR> = <VAR>.<VAR>(); } catch (<VAR>) {}",
+      " } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.28474745645498356,
+    "original_file": "program_20251007031641_2128E228-F442-4E4C-B871-9964BDFF09DB.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try { <VAR>.<VAR>(<<VAR>>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "<VAR>.<VAR>.<VAR>(<VAR>, <VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.3349820308568906,
+    "original_file": "program_20251007031827_D3965491-02E7-4052-B218-B8F30011E7C6.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = (<VAR>) => {",
+      " return <VAR> * <<VAR>>;",
+      " };"
+    ],
+    "after": [
+      "return (<VAR>(<VAR>.<VAR>(<VAR>)))(<VAR>);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.5187297789614532,
+    "original_file": "program_20251007032008_2D21C2D2-1033-4628-BC77-5463A550AD4E.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>?.<VAR>;"
+    ],
+    "after": [
+      "const <VAR> = (<VAR> = <VAR>.<VAR>(<VAR>));"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.45950035937355505,
+    "original_file": "program_20251007031933_353B33DA-6F0D-4C48-A897-D3217A71D1B0.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "return /(<VAR>?;?){<<VAR>>}/.<VAR>(<<VAR>>);"
+    ],
+    "after": [
+      "return (<VAR>.<VAR>);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.44313553251199495,
+    "original_file": "program_20251007031834_E3655D15-D0E6-4826-90BC-ABD2F4EE6707.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "return Symbol();"
+    ],
+    "after": [
+      "return ((<VAR>.<VAR>));"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.15093842935899326,
+    "original_file": "program_20251007032122_D9BA1CE1-2886-44EA-BE31-52D7A58583C9.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "console.<VAR>(<VAR>.<VAR>() === <<VAR>>, <<VAR>> + <VAR>.<VAR>());"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.3514085273772539,
+    "original_file": "program_20251007031758_80CC65E5-E6B3-49D3-A41A-7094D551393A.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR> = null;"
+    ],
+    "after": [
+      "if ((<VAR> = <VAR>.<VAR>())) {",
+      " <VAR>++;",
+      " /()/<VAR>;",
+      " const <VAR> = [];",
+      " new <VAR>();",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.20696672656020065,
+    "original_file": "program_20251007031900_E8EC20C2-B05C-4A14-A1D0-BAB68541C809.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = Object.prototype.<VAR>;"
+    ],
+    "after": [
+      "const <VAR> = (<VAR> = <VAR>.<VAR>());"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.44313553251199495,
+    "original_file": "program_20251007031944_C714FDD0-054A-4387-A84D-66BAF2F3BC46.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = () => {",
+      " return <VAR>();",
+      " };"
+    ],
+    "after": [
+      "try { try { <VAR> = <VAR>.<VAR>(); } catch (<VAR>) {} } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.761597279936912,
+    "original_file": "program_20251007032122_ACA18E11-EB57-410E-A819-0DC9B12B8B12.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "return <VAR>.<VAR>(undefined, <VAR>);"
+    ],
+    "after": [
+      "return (<VAR>.<VAR>)(undefined, <VAR>);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.1908178731868626,
+    "original_file": "program_20251007031930_D7526435-8879-406E-9107-96DD04C08BE7.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try { <VAR> = new <VAR>(); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "<VAR>.<VAR> = <VAR>.prototype;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.6322929793009223,
+    "original_file": "program_20251007032130_43D14CD8-573E-47C8-AD5B-ECEDA18D1B4E.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR>(<VAR>);"
+    ],
+    "after": [
+      "if (<VAR> < <VAR>) {",
+      " let <VAR>;",
+      " try { <VAR> = <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}",
+      " try { <VAR>(null, <VAR>); } catch (<VAR>) {}",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.7361175619874625,
+    "original_file": "program_20251007032414_246084DE-0042-4152-9775-67227D11D075.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "throw <<VAR>>;"
+    ],
+    "after": [
+      "try { <VAR> = (<VAR>.prototype.call.bind(<VAR>))(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.3123374306055216,
+    "original_file": "program_20251007031818_A0CBBDD9-6003-429B-A35B-5F75A778DB5B.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR>.<VAR>(<VAR>));"
+    ],
+    "after": [
+      "<VAR>((<VAR>.<VAR> = <VAR>)(<VAR>));"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.6485538295654997,
+    "original_file": "program_20251007032127_D58C29A9-2AE0-4D36-B466-7899665B63AC.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = Object.prototype.<VAR>;"
+    ],
+    "after": [
+      "return ((new <VAR>()));"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.44313553251199495,
+    "original_file": "program_20251007031944_C714FDD0-054A-4387-A84D-66BAF2F3BC46.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "return this.<VAR>(<VAR>);"
+    ],
+    "after": [
+      "return (<VAR> = new <VAR>());"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.2126754227456315,
+    "original_file": "program_20251007031745_A7FA40A0-FDC7-4556-9ABF-FBC34854064A.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "let <VAR> = Math.<VAR>(<VAR> ? [] : <VAR>, -<<VAR>>) / <<VAR>>;"
+    ],
+    "after": [
+      "if (!<VAR>) {",
+      " return false;",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.570543695920357,
+    "original_file": "program_20251007031928_BB9432D2-1483-4589-B3D0-8685B32E7D73.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = (<VAR>) => {",
+      " const <VAR> = (<VAR>) => {",
+      " try {",
+      " <VAR>(<VAR>);",
+      " } catch(<VAR>) {",
+      " console.<VAR>([]);",
+      " }",
+      " };",
+      " return <VAR>(<VAR> = <VAR>);",
+      "};"
+    ],
+    "after": [
+      "if (<VAR> != <VAR>?.<VAR>?.<VAR>) {",
+      " return;",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.4890902180557181,
+    "original_file": "program_20251007031744_A4D2AFF2-26B8-4486-A8B3-5327CD11CE4B.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " try {",
+      " var <VAR> = <VAR>();",
+      " if (<VAR> == <<VAR>>) {",
+      " <VAR>();",
+      " }",
+      " return <VAR> - <<VAR>>;",
+      " } catch(<VAR>) {",
+      " return <VAR>;",
+      " }",
+      "}"
+    ],
+    "after": [
+      "if (<VAR> && <VAR>) {",
+      " return;",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.2948780527667984,
+    "original_file": "program_20251007031943_FD40115D-1D51-4120-8DD5-1529756B285B.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new Proxy(<VAR>, <VAR>);"
+    ],
+    "after": [
+      "if (!<VAR>) {",
+      " return false;",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.18410796759838743,
+    "original_file": "program_20251007032137_F0D45F70-2B29-4C4F-85FA-AD39EC145650.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>(<VAR>) {",
+      " <VAR>[<<VAR>>] = <VAR>;",
+      " try {",
+      " <VAR>(...<VAR>, ...<VAR>, ...<VAR>);",
+      " } catch(<VAR>) {",
+      " }",
+      "}"
+    ],
+    "after": [
+      "if (<VAR> != <VAR>?.[<VAR>]) {",
+      " return false;",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.1813649537392057,
+    "original_file": "program_20251007032242_5B63EB64-B811-4A6A-A610-812EF4BDF048.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try { <VAR> = <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "if (<VAR> != <VAR>?.[<VAR>]) {",
+      " return false;",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.13085924181052627,
+    "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "super.<VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "if (<VAR> != (Array.prototype.<VAR>)) {",
+      " return;",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.10294855310637946,
+    "original_file": "program_20251007031813_047E77E5-756B-4C66-983D-0B3B1B7723E7.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "if (<VAR>) {",
+      " return <VAR>;",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.6517515021317382,
+    "original_file": "program_20251007031906_D485E327-8500-4123-884F-CC001360A1F2.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>(<VAR>, <VAR>, <VAR>, <VAR>) {",
+      " if (!new.<VAR>) { throw <<VAR>>; }",
+      " <VAR>.<VAR> = <VAR>;",
+      "}"
+    ],
+    "after": [
+      "if (<VAR> !== <VAR>) {",
+      " return false;",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.3123374306055216,
+    "original_file": "program_20251007031818_A0CBBDD9-6003-429B-A35B-5F75A778DB5B.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try {",
+      " const <VAR> = <VAR>.<VAR>();",
+      " } catch(<VAR>) {",
+      " <VAR> = this.<VAR>;",
+      " }"
+    ],
+    "after": [
+      "if ((!<VAR>(<VAR>) && !<VAR>(<VAR>)) && !<VAR>(<VAR>)) {",
+      " return;",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.11925128151126707,
+    "original_file": "program_20251007031828_09C6DC95-7ABC-44AD-979A-C56F08A26672.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>[<VAR>] = <VAR>;"
+    ],
+    "after": [
+      "var <VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.5266313722467325,
+    "original_file": "program_20251007031841_14A16566-4C30-4B26-BD70-E8EAFE6DC9A1.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>;"
+    ],
+    "after": [
+      "for (;;) {",
+      " if (true) {",
+      " } else {",
+      " yield;",
+      " }",
+      " }"
+    ],
+    "node_type": "for_statement",
+    "gain": 0.6591549653154403,
+    "original_file": "program_20251007032033_11B72B55-F554-437F-A490-805FB5BF3BE1.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = [<VAR>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>];"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>(...this); } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.12954538259311482,
+    "original_file": "program_20251007032029_8D3F8F2B-ED12-42EB-9246-453820D52719.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = Math.<VAR>(-<<VAR>>, -<<VAR>>);"
+    ],
+    "after": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.3731372752328515,
+    "original_file": "program_20251007032127_78FE80B1-7276-41D1-B613-5E6EC300B7B7.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = {",
+      " <VAR> <VAR>() {",
+      " for (const <VAR> in this) {",
+      " }",
+      " return this;",
+      " },",
+      " <<VAR>>: <<VAR>>,",
+      " [<<VAR>>]: <<VAR>>,",
+      " <VAR>: <VAR>,",
+      " };"
+    ],
+    "after": [
+      "try { const <VAR> = /<VAR>*<VAR>/<VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.5101316215360604,
+    "original_file": "program_20251007032121_F55368D2-8B5E-42C9-8893-51578A710362.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "class <VAR> {",
+      " static {",
+      " super.<VAR> = <VAR>;",
+      " }",
+      " <<VAR>> = <VAR>;",
+      "}"
+    ],
+    "after": [
+      "try { /(?:<VAR>){<<VAR>>,<<VAR>>}/<VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.4580838008647538,
+    "original_file": "program_20251007032121_F55368D2-8B5E-42C9-8893-51578A710362.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>[<<VAR>>] = <VAR>;"
+    ],
+    "after": [
+      "try { /(?:<VAR>){<<VAR>>,<<VAR>>}/<VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "catch_clause",
+    "gain": 0.4580838008647538,
+    "original_file": "program_20251007032121_F55368D2-8B5E-42C9-8893-51578A710362.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "(<<VAR>>).<VAR>(<VAR>);"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>(<VAR>);"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.2082890250541678,
+    "original_file": "program_20251007031922_95DBC0E0-4246-4034-B02A-3A6A9293D72B.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "for (let <VAR> = <<VAR>>; <VAR> < <<VAR>>; <VAR>++) {",
+      " <VAR> = (<<VAR>> + <VAR>) + <VAR>;",
+      " }"
+    ],
+    "after": [
+      "try { try { <VAR> = new Proxy(<VAR>, <VAR>); } catch (<VAR>) {} } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.5725581624877691,
+    "original_file": "program_20251007031720_FF165F90-F91E-444F-B037-9072176CF76D.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>(<VAR>) {",
+      " <VAR> = <VAR> | <<VAR>>;",
+      " }"
+    ],
+    "after": [
+      "<VAR>.<VAR>();"
+    ],
+    "node_type": "member_expression",
+    "gain": 0.271830334015048,
+    "original_file": "program_20251007031838_E8ADBFAE-F667-4207-9186-9F0D2F1F7E1E.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new Proxy(<VAR>, {});"
+    ],
+    "after": [
+      "const <VAR> = (<VAR>.<VAR>);"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.4487537988540327,
+    "original_file": "program_20251007031945_593B4B24-9E4E-4064-9294-4EF3703CA685.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>();"
+    ],
+    "after": [
+      "<VAR>.<VAR>();"
+    ],
+    "node_type": "member_expression",
+    "gain": 0.3543946083230172,
+    "original_file": "program_20251007032006_D70C4FA9-4668-411E-B359-F5A5C1FC0D37.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR>, <VAR>);"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.44643537210130535,
+    "original_file": "program_20251007031759_6D4A2CC0-7BEC-4B6B-BA8D-2FB2713774E5.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>();"
+    ],
+    "after": [
+      "if (<VAR>) {",
+      " try { <VAR>.<VAR>(); } catch (<VAR>) {}",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.33039320337720307,
+    "original_file": "program_20251007031646_09094582-F982-4FE4-AE4C-28080328185D.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>?.<VAR>;"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>.<VAR>(undefined, <VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.5736193304000028,
+    "original_file": "program_20251007032130_43D14CD8-573E-47C8-AD5B-ECEDA18D1B4E.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "let <VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>.<VAR>(); } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.4210937648564048,
+    "original_file": "program_20251007031706_C61541A7-C6C5-4FE2-9399-4E03F436909F.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "let <VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "try {",
+      " <VAR>.<VAR> = null;",
+      " try { Object.<VAR>(<VAR>); } catch (<VAR>) {}",
+      "} catch(<VAR>) {",
+      "}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.4998055490647001,
+    "original_file": "program_20251007031816_40A0F793-719E-40E3-B151-0B13703C02E1.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "after": [
+      "try { <VAR>.<VAR>(...<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.4751108755194311,
+    "original_file": "program_20251007032411_09F11D02-F907-4B7B-85B3-0738AE58234D.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = <VAR>(<VAR>);"
+    ],
+    "after": [
+      "(<VAR>.<VAR>.apply);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.6663722751749178,
+    "original_file": "program_20251007032112_C0A52A7F-7E20-4A5F-A0CA-910F27D75493.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " return <<VAR>>;",
+      " }"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.46629989436759806,
+    "original_file": "program_20251007031644_7E1A2AE0-C610-45F4-8E7D-F8E86389F376.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "return <VAR>.<VAR>(undefined, <VAR>);"
+    ],
+    "after": [
+      "<VAR>.<VAR> = Array.prototype;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.14720380085744794,
+    "original_file": "program_20251007031930_D7526435-8879-406E-9107-96DD04C08BE7.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = [<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>];"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>(<VAR>);"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.7731367028525883,
+    "original_file": "program_20251007031655_EC7C648F-8DA2-45D7-BF29-8A421A2BE726.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> < <<VAR>>;"
+    ],
+    "after": [
+      "var <VAR> = <VAR>.<VAR>.call(<VAR>);"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.46780160913405244,
+    "original_file": "program_20251007032402_BB9432D2-1483-4589-B3D0-8685B32E7D73.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = [<VAR>];"
+    ],
+    "after": [
+      "try { <VAR>.<VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.24788965787960215,
+    "original_file": "program_20251007031834_8F8334A3-7EB8-4FF7-B379-B6B092CCB3DD.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>((<<VAR>> + Array(<<VAR>>).<VAR>(<<VAR>>).<VAR>(<<VAR>>)) + <<VAR>>);"
+    ],
+    "after": [
+      "const <VAR> = new Proxy(<VAR>, <VAR>);"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.20396948467276907,
+    "original_file": "program_20251007032128_A1FCAA42-3A7B-49D6-BA0C-04809D5D6140.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "let <VAR> = <VAR>();"
+    ],
+    "after": [
+      "try { <VAR>.<VAR>(<VAR>, null); } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.53055773848729,
+    "original_file": "program_20251007031957_6DC302F2-9B1B-44F9-9807-155AFBF08C71.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<<VAR>> + <VAR>++);"
+    ],
+    "after": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.5787088973870563,
+    "original_file": "program_20251007031835_724C6D67-C259-4958-8D41-DEC98F484B11.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "(<VAR>.<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.15967399871729904,
+    "original_file": "program_20251007031955_522472B9-B997-42E5-9183-6B8A8B25D5AC.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = (<<VAR>> + (<<VAR>>).<VAR>(<<VAR>> * <<VAR>>)) + <<VAR>>;"
+    ],
+    "after": [
+      "const <VAR> = <VAR>.prototype;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.19462894446686896,
+    "original_file": "program_20251007031940_F68D7D01-9C3B-4421-825E-3CF2927EDE5D.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<<VAR>>;"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.49039676402458654,
+    "original_file": "program_20251007031919_D60AD521-F494-4407-A7C4-7D758E69552A.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>;"
+    ],
+    "after": [
+      "if (<VAR>) {",
+      " try { <VAR>.<VAR>(<VAR>, <VAR>, <VAR>, <VAR>); } catch (<VAR>) {}",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.1466287877356468,
+    "original_file": "program_20251007032329_43CAB57D-4381-4084-9629-98743603D9C6.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = <VAR>.<VAR>(<VAR>);"
+    ],
+    "after": [
+      "<VAR>.<VAR>(<VAR>);"
+    ],
+    "node_type": "call_expression",
+    "gain": 0.2575099580556965,
+    "original_file": "program_20251007031742_DD40C14B-1FDA-4279-95A0-2061A9B7EF46.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>.<VAR>().<VAR>(<VAR>);"
+    ],
+    "after": [
+      "var <VAR> = (<VAR> = <VAR>.<VAR>(<VAR>))(<VAR>);"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.5210335428981412,
+    "original_file": "program_20251007032023_0D8B3E20-2C1E-4546-8EEF-20E57C326624.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR> === <VAR>);"
+    ],
+    "after": [
+      "(<VAR>.<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.2887397488466953,
+    "original_file": "program_20251007032020_2628EF48-AA74-4F2D-95B3-B7E7B15C2F7E.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "return <VAR>;"
+    ],
+    "after": [
+      "this[(<VAR>.<VAR>)] = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.42161163838642,
+    "original_file": "program_20251007032028_E15E9CD2-FCBF-4119-A3D1-6876F2BD387D.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try { <VAR>(); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "(<VAR>.<VAR>(<VAR>.<VAR>()));"
+    ],
+    "node_type": "member_expression",
+    "gain": 0.525649407800072,
+    "original_file": "program_20251007032246_1D945859-8831-4F41-8B4E-B7EE1916FADC.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR>, [<<VAR>>]);"
+    ],
+    "after": [
+      "(<VAR>.<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5167574509101974,
+    "original_file": "program_20251007031855_E8B45880-3155-446B-9382-30699575AAFE.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " <VAR>();",
+      " <VAR>[<<VAR>>] = <<VAR>>;",
+      " <VAR>();",
+      " <VAR>[<<VAR>>] = <VAR>;",
+      "}"
+    ],
+    "after": [
+      "if (<VAR>) {",
+      " try { <VAR>.<VAR>(); } catch (<VAR>) {}",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.12067797893818422,
+    "original_file": "program_20251007031955_522472B9-B997-42E5-9183-6B8A8B25D5AC.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = Reflect.<VAR>(Object, <VAR>, Proxy);"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.7360935923025137,
+    "original_file": "program_20251007031914_CDDF8562-66EC-4AA8-9EEC-8FEF6D96CCD0.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try {",
+      " const <VAR> = new <VAR>(<<VAR>>);",
+      " var <VAR> = <VAR>;",
+      " const <VAR> = new <VAR>(<VAR>);",
+      " var <VAR> = <VAR>;",
+      " return <VAR>.<VAR>() === <<VAR>>;",
+      " } catch(<VAR>) {",
+      " return true;",
+      " }"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.406867911171616,
+    "original_file": "program_20251007031643_B96BEF3D-1520-4ED2-8160-F77815DF2BD5.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>.<VAR>();"
+    ],
+    "after": [
+      "<VAR>.prototype = <VAR>;"
+    ],
+    "node_type": "member_expression",
+    "gain": 0.3983834154372823,
+    "original_file": "program_20251007032323_3242C8C3-38CC-44C3-BBEA-75ECAA7C9C49.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>([+<VAR>,-<<VAR>>,<<VAR>>]);"
+    ],
+    "after": [
+      "<VAR>.<VAR>.apply(<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.624670853555314,
+    "original_file": "program_20251007032107_C811EF76-E944-4584-9708-3DACDD367E80.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>[<VAR>] = <<VAR>>;"
+    ],
+    "after": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.16875272701456256,
+    "original_file": "program_20251007031830_16074A2B-9E53-4CF8-BEC3-844F72A3BCDE.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "if (!<VAR>) {",
+      " const <VAR> = <<VAR>>;",
+      " const <VAR> = new <VAR>();",
+      " throw <VAR>;",
+      " }"
+    ],
+    "after": [
+      "const <VAR> = <VAR>.prototype.call.bind(<VAR>);"
+    ],
+    "node_type": "call_expression",
+    "gain": 0.6356439405446909,
+    "original_file": "program_20251007032344_AC902A8B-46CC-4F16-A6C8-96A3F9411EB1.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = [<<VAR>>,<<VAR>>,<<VAR>>,<VAR>];"
+    ],
+    "after": [
+      "(<VAR>.<VAR>());"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5916794081842079,
+    "original_file": "program_20251007031914_6E181498-E9D2-4CFC-981C-E8B9C5C969B5.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>(<VAR>, <VAR>, <VAR>) {",
+      " <<VAR>>;",
+      " const <VAR> = <VAR>.<VAR>;",
+      " const <VAR> = new <VAR>(<VAR>);",
+      " var <VAR> = <VAR>;",
+      " function <VAR>(<VAR>) {",
+      " return +(<VAR>[(<VAR> = <VAR> | <<VAR>>) >> <<VAR>>] >>> <<VAR>>);",
+      " }",
+      " return { <VAR>: <VAR> };",
+      "}"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.357951159190943,
+    "original_file": "program_20251007031902_F8A195AB-BDB2-4137-BDBE-01561D329B4F.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.18311780257830235,
+    "original_file": "program_20251007032521_9DB61081-B240-4637-8D5D-7FB04D80147F.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<<VAR>> + (<<VAR>>).<VAR>(<<VAR>>));"
+    ],
+    "after": [
+      "const <VAR> = <VAR>.prototype;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.7769634939330825,
+    "original_file": "program_20251007031709_C42B2508-69A0-4A0A-ABCE-049602915720.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "([...[<<VAR>>,<<VAR>>,<<VAR>>]]).<VAR>(<<VAR>>);"
+    ],
+    "after": [
+      "var <VAR> = <VAR>.<VAR>;"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.4784395847446966,
+    "original_file": "program_20251007031750_CE578E7D-17F1-42E0-A34D-F88F63682756.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "[<<VAR>>,<<VAR>>];"
+    ],
+    "after": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.4719974390343312,
+    "original_file": "program_20251007032143_3D962D05-BFFF-41B1-B706-3627584DE54F.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>.length = <<VAR>>;"
+    ],
+    "after": [
+      "const <VAR> = (<VAR>.<VAR>);"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.17291742383513042,
+    "original_file": "program_20251007031711_C8457C5A-98BE-4F15-9694-C7BAC5D85864.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>.length = <<VAR>>;"
+    ],
+    "after": [
+      "(new Proxy(<VAR>, <VAR>));"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5608766815533109,
+    "original_file": "program_20251007031854_86B0E40B-EF8C-4C1E-838F-EAAFD2372F6D.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>;"
+    ],
+    "after": [
+      "try { <VAR> = new <VAR>(); } catch (<VAR>) {}"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.45311737439757077,
+    "original_file": "program_20251007032005_5689652F-4DE1-40CB-93DB-F101AD057B32.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "return Number.prototype.<VAR>.call(<VAR>, <<VAR>>);"
+    ],
+    "after": [
+      "const <VAR> = <VAR>.prototype.call.bind(<VAR>);"
+    ],
+    "node_type": "call_expression",
+    "gain": 0.5166996604242503,
+    "original_file": "program_20251007032138_9F09CE40-F7AC-4B03-AA77-1F7F4BD38794.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "this + !this;"
+    ],
+    "after": [
+      "/<VAR>/<VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5142086835748289,
+    "original_file": "program_20251007031725_386157CA-8E74-45DA-B8D4-CB57D563D95C.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = { <VAR>: <<VAR>>, <VAR>: <<VAR>>, <<VAR>>: <<VAR>> };"
+    ],
+    "after": [
+      "const <VAR> = /./<VAR>;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.29250825246555345,
+    "original_file": "program_20251007031934_282E29C7-61E4-47AA-852C-D751BEF223CB.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR>[<<VAR>>], -<<VAR>>);"
+    ],
+    "after": [
+      "/<VAR>/<VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.17272950740584073,
+    "original_file": "program_20251007031648_43BB3F50-016C-4B25-BB59-719410F0794C.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " let <VAR> = [];",
+      " return <VAR>[<<VAR>>];",
+      "}"
+    ],
+    "after": [
+      "/\\<<VAR>>/<VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.13772561801659922,
+    "original_file": "program_20251007032114_4E204F53-89DD-422D-B712-F06CE123F373.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = { <VAR>: <VAR> };"
+    ],
+    "after": [
+      "const <VAR> = /\\1112xyz{<<VAR>>,<<VAR>>}?<VAR>/<VAR>;"
+    ],
+    "node_type": "regex",
+    "gain": 0.19437463964280843,
+    "original_file": "program_20251007031930_D7526435-8879-406E-9107-96DD04C08BE7.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "for (let <VAR> = <<VAR>>; <VAR> < <<VAR>>; <VAR>++) {",
+      " const <VAR> = { <VAR>: parseInt };",
+      " <VAR>.<VAR>(<VAR>);",
+      " }"
+    ],
+    "after": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.11691492319609453,
+    "original_file": "program_20251007032427_FEAB6DC4-EE61-4C9D-833F-C5790DF0400C.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = Reflect.apply(<VAR>, <VAR>, <VAR>);"
+    ],
+    "after": [
+      "<VAR>.<VAR>();"
+    ],
+    "node_type": "call_expression",
+    "gain": 0.3522960134918249,
+    "original_file": "program_20251007032130_43D14CD8-573E-47C8-AD5B-ECEDA18D1B4E.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "let <VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "let <VAR> = (<VAR>.<VAR>);"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.20560922490409148,
+    "original_file": "program_20251007031743_1003AC84-794E-434D-A77F-5FE5C48AE5A0.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "for (let <VAR> = <<VAR>>; <VAR> < <<VAR>>; <VAR>++) {",
+      " <VAR> += <<VAR>>;",
+      " <VAR> += <<VAR>>;",
+      " <VAR>(<VAR>, {});",
+      " }"
+    ],
+    "after": [
+      "const <VAR> = [<VAR>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>];"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.3048049819675404,
+    "original_file": "program_20251007031753_A105CB85-E1BC-4F1F-AC31-7B27436BB3EF.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = {",
+      " <VAR>() {",
+      " <VAR> = super[<<VAR>>];",
+      " },",
+      " };"
+    ],
+    "after": [
+      "/<VAR>\\<VAR>\\<VAR>\\<VAR>((\\<VAR>\\<VAR>\\<VAR>))\\<VAR>/<VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.3504769508474702,
+    "original_file": "program_20251007031751_4D5C40F5-CA97-4F41-8324-22A966D38CFF.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>.<VAR>;"
+    ],
+    "after": [
+      "var <VAR> = Reflect.<VAR>(<VAR>);"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.7376467477585388,
+    "original_file": "program_20251007032102_2B685D8E-35AC-450A-A2E0-6DE3154363B2.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try { <VAR>.<VAR>(); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.15893570119690215,
+    "original_file": "program_20251007031641_3A998327-D3CB-42C0-B41F-645B79C94107.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "class <VAR> {",
+      " <<VAR>>;",
+      " [<VAR>];",
+      "}"
+    ],
+    "after": [
+      "<VAR>.prototype = <VAR>;"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.5217240510064073,
+    "original_file": "program_20251007031811_74A86C8E-7101-4C44-85DB-1E1CEE3E36CD.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>;"
+    ],
+    "after": [
+      "<VAR>.<VAR>(<VAR>, <VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.14418941703243182,
+    "original_file": "program_20251007031822_40917AE2-AB93-4508-A015-B8DD63508661.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = <VAR>(<<VAR>>);"
+    ],
+    "after": [
+      "const <VAR> = <VAR>.<VAR>;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.23947074089618386,
+    "original_file": "program_20251007032134_FF420792-F884-4F29-A887-D93163E9BB07.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "return <VAR>.<VAR>();"
+    ],
+    "after": [
+      "<VAR>.<VAR>();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.46194556647117935,
+    "original_file": "program_20251007031956_A1A809FB-1C1F-4A37-9562-5A866AB6DC7F.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>;"
+    ],
+    "after": [
+      "<VAR>.<VAR>(<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.562232238656177,
+    "original_file": "program_20251007031643_B96BEF3D-1520-4ED2-8160-F77815DF2BD5.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = Symbol();"
+    ],
+    "after": [
+      "<VAR>.constructor = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.20696672656020065,
+    "original_file": "program_20251007032250_F084A925-B1DF-431A-9171-44EF99F64329.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try { Object.<VAR>(<VAR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "<VAR>.<VAR>();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.4961835092472031,
+    "original_file": "program_20251007031959_2176CCC9-81A9-42DC-81DA-1B1DF9395476.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = {};"
+    ],
+    "after": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.3013267561725628,
+    "original_file": "program_20251007031729_9D5FD1D0-54FA-4AED-BC00-981C97046666.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "if (<VAR> === <VAR>) {",
+      " const <VAR> = new Error();",
+      " throw <VAR>;",
+      " }"
+    ],
+    "after": [
+      "const <VAR> = new Proxy(<VAR>, <VAR>);"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.5705805809981103,
+    "original_file": "program_20251007031743_4D975F2E-9FA9-4868-917B-AD1DEF43977B.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "(-<<VAR>>).<VAR>(<<VAR>>);"
+    ],
+    "after": [
+      "if (<VAR>) {",
+      " try { <VAR>.<VAR>(); } catch (<VAR>) {}",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.4719974390343312,
+    "original_file": "program_20251007032031_DBA67D37-B3F5-442D-8CE9-2F9EBACA4E2D.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>(<VAR>, <VAR>) {",
+      " const <VAR> = new <VAR>(<<VAR>>);",
+      " const <VAR> = <VAR>;",
+      " for (let <VAR> = <<VAR>>; <VAR> < <<VAR>>; <VAR>++) {",
+      " <VAR>[<VAR>] = <<VAR>>;",
+      " <VAR>[<VAR>] = <VAR>;",
+      " }",
+      " }"
+    ],
+    "after": [
+      "var <VAR> = (<VAR>.<VAR>);"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.16884240394255662,
+    "original_file": "program_20251007032007_281CE863-F515-4D4F-A27E-B4D949888BCD.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = () => {",
+      " };"
+    ],
+    "after": [
+      "if (<VAR> < <VAR>) {",
+      " let <VAR>;",
+      " try { <VAR> = <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}",
+      " try { <VAR>(null, <VAR>); } catch (<VAR>) {}",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.4807690230881017,
+    "original_file": "program_20251007032345_23C61707-2CBA-4AF4-A002-5F8F1EB9E2D9.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR> === <VAR>);"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.4885456515897928,
+    "original_file": "program_20251007032020_2628EF48-AA74-4F2D-95B3-B7E7B15C2F7E.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "let <VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "<VAR> = (<VAR> = <VAR>.<VAR>());"
+    ],
+    "node_type": "member_expression",
+    "gain": 0.20644541983571307,
+    "original_file": "program_20251007031952_98411E9D-347F-4114-A6A2-6FAFB5A8E804.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " var <VAR> = <<VAR>>;",
+      " new <VAR>(<VAR>, { <VAR>: <<VAR>> });",
+      " try { <VAR>(); } catch (<VAR>) {}",
+      " }"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "member_expression",
+    "gain": 0.5474104157858432,
+    "original_file": "program_20251007032246_1D945859-8831-4F41-8B4E-B7EE1916FADC.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "if (this.<VAR>) {",
+      " function <VAR>() {",
+      " var <VAR> = <<VAR>>;",
+      " new <VAR>(<VAR>, { <VAR>: <<VAR>> });",
+      " try { <VAR>(); } catch (<VAR>) {}",
+      " }",
+      " try { <VAR>(); } catch (<VAR>) {}",
+      "}"
+    ],
+    "after": [
+      "(<VAR>.<VAR>(<VAR>.<VAR>()));"
+    ],
+    "node_type": "arguments",
+    "gain": 0.525649407800072,
+    "original_file": "program_20251007032246_1D945859-8831-4F41-8B4E-B7EE1916FADC.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try { <VAR>.<VAR>(); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "var <VAR> = <VAR>.<VAR>(<VAR>).<VAR>();"
+    ],
+    "node_type": "call_expression",
+    "gain": 0.12954538259311482,
+    "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR>, -<<VAR>>);"
+    ],
+    "after": [
+      "<VAR>(<VAR>, (<VAR>.<VAR>.<VAR>));"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.23629687040639333,
+    "original_file": "program_20251007031926_874D1348-8052-4086-997A-DA95764FFF66.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<<VAR>>, <VAR>);"
+    ],
+    "after": [
+      "const <VAR> = (new Proxy(<VAR>, <VAR>)).<VAR>;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.20388096609909462,
+    "original_file": "program_20251007031829_86829C8B-619C-4414-8C3B-185E91A26BD7.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>;"
+    ],
+    "after": [
+      "try { <VAR>.<VAR>(); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.4423811109377117,
+    "original_file": "program_20251007032107_A54CF663-CB77-4EDA-ACB7-FAE7EDDCDEB8.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>(<VAR>, <VAR>) {",
+      " <VAR>.<VAR> = <<VAR>>;",
+      " <VAR>.<VAR>(<<VAR>>);",
+      " <VAR>.<VAR> = <<VAR>>;",
+      "}"
+    ],
+    "after": [
+      "(<VAR>.length);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.1917650589048101,
+    "original_file": "program_20251007032106_73E4A49B-A245-41AB-9E3E-87456C8064DB.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>();"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.39185994751753206,
+    "original_file": "program_20251007031911_4EE6008C-EDC5-4F11-9174-B0B0FBCDF007.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>;"
+    ],
+    "after": [
+      "try { <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.24533136201639116,
+    "original_file": "program_20251007032112_C0A52A7F-7E20-4A5F-A0CA-910F27D75493.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>?.<VAR>?.<VAR>;"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.13130012178126604,
+    "original_file": "program_20251007032404_530870F4-F03C-4E49-BACF-DAA5ED8C75AE.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>.<VAR>;"
+    ],
+    "after": [
+      "try { <VAR>.<VAR>.<VAR>(<VAR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.23739121716098827,
+    "original_file": "program_20251007031738_4B66FBEA-8B55-4694-967A-6A19E57525F6.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(Array.<VAR>(Array.of.apply(Array, <VAR>)), true);"
+    ],
+    "after": [
+      "<VAR>(Array.<VAR>((<VAR> = <VAR>.<VAR>(<VAR>))), true);"
+    ],
+    "node_type": "true",
+    "gain": 0.4566421235039007,
+    "original_file": "program_20251007032137_B1B76577-20D6-4BE9-9CCE-71C6C3AA93A9.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR>(<<VAR>>, <VAR>);"
+    ],
+    "after": [
+      "const <VAR> = (<VAR> < <VAR>.length);"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.10131559267410717,
+    "original_file": "program_20251007032040_DA0BBB85-F671-4670-AE81-5E7D6CDDACEE.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>(<VAR>, <VAR>, <VAR>) {",
+      " <<VAR>>;",
+      " let <VAR> = <VAR>;",
+      " }"
+    ],
+    "after": [
+      "const <VAR> = <VAR>.<VAR>;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.28616314734864856,
+    "original_file": "program_20251007031710_58101404-B39D-466F-A2E1-F96CD5A39382.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " const <VAR> = new <VAR>(<<VAR>>);",
+      " let <VAR> = <VAR>;",
+      " for (let <VAR> = <<VAR>>; <VAR> < <<VAR>>; <VAR>++) {",
+      " parseInt();",
+      " }",
+      " <VAR>[<<VAR>>] = <<VAR>>;",
+      " <VAR>[-<<VAR>>] = <<VAR>>;",
+      "}"
+    ],
+    "after": [
+      "<VAR>.<VAR>();"
+    ],
+    "node_type": "member_expression",
+    "gain": 0.19476882200383638,
+    "original_file": "program_20251007031807_EA07A8B3-4AB9-4830-850F-5D57F29EF9D8.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "Object.<VAR>(<VAR>, <<VAR>>, { <VAR>: true });"
+    ],
+    "after": [
+      "<VAR>.<VAR>();"
+    ],
+    "node_type": "member_expression",
+    "gain": 0.49705760039040986,
+    "original_file": "program_20251007031913_AB89DD81-6F67-4974-AE0D-AEA11BE04D59.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>([<<VAR>>], /.(?<!\\<VAR>.)/<VAR>.<VAR>(<<VAR>>));"
+    ],
+    "after": [
+      "const <VAR> = new Proxy([], <VAR>);"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.10705340880261417,
+    "original_file": "program_20251007031704_2DB5BDD5-78C3-4220-BBA2-0BC1722D0D68.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR>(<<VAR>>);"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.2979047774517477,
+    "original_file": "program_20251007032108_3C7B35DE-2F2B-48B5-B11F-F00003FCC8A0.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = {};"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.5008215035654786,
+    "original_file": "program_20251007031723_DF33CFC9-C4B9-4F80-97C6-45F78B904683.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR> === <<VAR>>;"
+    ],
+    "after": [
+      "const <VAR> = Reflect.<VAR>(Object, <VAR>, Proxy);"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.7575931354852836,
+    "original_file": "program_20251007032304_B3DD153B-DC5F-40FC-BAA1-22DEF9214AC8.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = {};"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "member_expression",
+    "gain": 0.4861801657722502,
+    "original_file": "program_20251007032121_F55368D2-8B5E-42C9-8893-51578A710362.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR>[<<VAR>>], <<VAR>>);"
+    ],
+    "after": [
+      "<VAR>.<VAR>();"
+    ],
+    "node_type": "member_expression",
+    "gain": 0.488925953001675,
+    "original_file": "program_20251007031730_90517707-9AAA-486C-B8EA-39EB316BD65F.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR>, { <VAR>: <VAR> });"
+    ],
+    "after": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.49676967402169253,
+    "original_file": "program_20251007032118_B7FE0DD0-2F66-43C0-A72F-6E4E8C6CB9BE.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>((<<VAR>> ** <<VAR>>) - <<VAR>>, (<<VAR>> ** <<VAR>>) - <<VAR>>);"
+    ],
+    "after": [
+      "const <VAR> = <VAR>.prototype;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.35783856612104936,
+    "original_file": "program_20251007031931_A8ACDCF0-D235-44D4-AAFD-2D30E6364DD3.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try { new <VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "(<VAR> = <VAR>.<VAR>(<VAR>));"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.17387838344577244,
+    "original_file": "program_20251007032250_F084A925-B1DF-431A-9171-44EF99F64329.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = Object(<VAR>);"
+    ],
+    "after": [
+      "const <VAR> = new Proxy(<VAR>, { <VAR>: <VAR>, <VAR>: <VAR> });"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.1814288793798462,
+    "original_file": "program_20251007031834_8F8334A3-7EB8-4FF7-B379-B6B092CCB3DD.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "parseInt();"
+    ],
+    "after": [
+      "<VAR>(<VAR>, <VAR>);"
+    ],
+    "node_type": "for_statement",
+    "gain": 0.49481172879759383,
+    "original_file": "program_20251007031706_C61541A7-C6C5-4FE2-9399-4E03F436909F.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "for (let <VAR> = <<VAR>>; <VAR> < <<VAR>>; <VAR>++) {",
+      " <VAR>--;",
+      " <VAR>++;",
+      " }"
+    ],
+    "after": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.19615036794315366,
+    "original_file": "program_20251007031830_16074A2B-9E53-4CF8-BEC3-844F72A3BCDE.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>[Symbol.<VAR>] = <VAR>;"
+    ],
+    "after": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.19539000398882683,
+    "original_file": "program_20251007031725_63CDA4A4-E6E9-4AE1-B86B-FB5EA490AF12.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>();"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.49481172879759383,
+    "original_file": "program_20251007031706_C61541A7-C6C5-4FE2-9399-4E03F436909F.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "this.<VAR> = <VAR>;"
+    ],
+    "after": [
+      "(<VAR>.<VAR>(<VAR>)) = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.4998055490647001,
+    "original_file": "program_20251007031816_40A0F793-719E-40E3-B151-0B13703C02E1.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = { <VAR>: <<VAR>>, <VAR>: <<VAR>> };"
+    ],
+    "after": [
+      "const <VAR> = (<VAR>.<VAR>);"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.16612116686223732,
+    "original_file": "program_20251007032040_DA0BBB85-F671-4670-AE81-5E7D6CDDACEE.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "if ((!<VAR>(<VAR>) && !<VAR>(<VAR>)) && !<VAR>(<VAR>)) {",
+      " return;",
+      " }"
+    ],
+    "after": [
+      "const <VAR> = <VAR>.<VAR>(<VAR>);"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.5217709348162863,
+    "original_file": "program_20251007032335_DB4D0EDA-A99C-4C83-8F44-F1CED822AB32.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "for (<VAR> = <<VAR>>; <VAR> <= <<VAR>>; <VAR> += <<VAR>>) {",
+      " <VAR>(<VAR>).<VAR>;",
+      " }"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.40364047276959986,
+    "original_file": "program_20251007032113_3317A89E-62F1-4D06-A26F-19D7F4CBB677.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = () => {",
+      " let <VAR>;",
+      " try { <VAR> = Math.<VAR>(); } catch (<VAR>) {}",
+      " let <VAR>;",
+      " try { <VAR> = <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}",
+      " return <VAR>;",
+      "};"
+    ],
+    "after": [
+      "for (const <VAR> in <VAR>) {",
+      " delete <VAR>.<VAR>;",
+      " <VAR>();",
+      "}"
+    ],
+    "node_type": "in",
+    "gain": 0.2608545244714306,
+    "original_file": "program_20251007032008_9162DA07-7740-4EBC-BDBE-52D290CF76F4.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = {",
+      " <VAR>() {",
+      " <VAR> (<VAR>) {",
+      " }",
+      " },",
+      "};"
+    ],
+    "after": [
+      "const <VAR> = (<VAR>.<VAR>);"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.6855358926098377,
+    "original_file": "program_20251007031914_4EF35192-8820-4047-9237-791C9BED41BB.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "Array.prototype.<VAR>.call(<<VAR>>);"
+    ],
+    "after": [
+      "<VAR>.prototype = <VAR>;"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.641379188177044,
+    "original_file": "program_20251007031850_C780B615-F26A-4FDD-92EC-B7A9A52B9516.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = [<<VAR>>,-<<VAR>>];"
+    ],
+    "after": [
+      "(<VAR> < <VAR>.length);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.28551752311588396,
+    "original_file": "program_20251007032113_1F3498BB-36B0-4D95-A8AC-419E8209BA86.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = {};"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.22623612646763702,
+    "original_file": "program_20251007031723_8C0774F3-593E-4624-A6CC-0AD85B8DFC81.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<<VAR>>;"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "member_expression",
+    "gain": 0.357951159190943,
+    "original_file": "program_20251007031902_F8A195AB-BDB2-4137-BDBE-01561D329B4F.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "if (!<VAR>) {",
+      " <VAR> = true;",
+      " <VAR>.length = <<VAR>>;",
+      " <VAR>.length = <<VAR>>;",
+      " <VAR>.length = <VAR>;",
+      " }"
+    ],
+    "after": [
+      "<VAR>.<VAR> = {};"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.44825946586939275,
+    "original_file": "program_20251007031930_9437A2A7-777D-4608-9AE7-4492DD6AA2C1.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "let <VAR> = <VAR>;"
+    ],
+    "after": [
+      "(<VAR>.<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.16078502832360034,
+    "original_file": "program_20251007031814_792513BB-8BFC-42FB-996E-6AE94469D9D3.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>(<VAR>);"
+    ],
+    "after": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.562232238656177,
+    "original_file": "program_20251007031643_B96BEF3D-1520-4ED2-8160-F77815DF2BD5.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>(<VAR>, <VAR>) {",
+      "}"
+    ],
+    "after": [
+      "for (;;) {",
+      " if (true) {",
+      " } else {",
+      " yield;",
+      " }",
+      " }"
+    ],
+    "node_type": "for_statement",
+    "gain": 0.30204067382075844,
+    "original_file": "program_20251007031831_B04B4C93-DC47-4D11-9AFA-0426E34E26FB.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try { <VAR> = new <VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "const <VAR> = { <VAR>: <VAR> };"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.296656974091248,
+    "original_file": "program_20251007032255_5BB6E369-3ED6-4349-8028-0070ED6E86D5.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>();"
+    ],
+    "after": [
+      "<VAR>.<VAR>();"
+    ],
+    "node_type": "member_expression",
+    "gain": 0.6457945665537612,
+    "original_file": "program_20251007031706_C61541A7-C6C5-4FE2-9399-4E03F436909F.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>();"
+    ],
+    "after": [
+      "<VAR>.<VAR>();"
+    ],
+    "node_type": "member_expression",
+    "gain": 0.3143382127479116,
+    "original_file": "program_20251007032337_6AABB668-8ECF-4CE7-AEC9-7ED020E3FCC6.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR>.<VAR>(undefined), <VAR>);"
+    ],
+    "after": [
+      "const <VAR> = (<VAR>.<VAR> = <VAR>);"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.4775293701793637,
+    "original_file": "program_20251007031749_B1BFFE89-AD86-4817-991E-898491F53781.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> {",
+      " const <VAR> = --<VAR>;",
+      " const <VAR> = (<<VAR>>).<VAR>;",
+      " let <VAR>;",
+      " try { <VAR> = <VAR>.<VAR>(); } catch (<VAR>) {}",
+      " const <VAR> = <VAR>;",
+      " } while (<VAR> > <VAR>)"
+    ],
+    "after": [
+      "var <VAR> = <VAR>.<VAR>(<VAR>);"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.48701758862909866,
+    "original_file": "program_20251007032352_1B6E849E-51D6-401C-AF8C-02F64029334A.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = {",
+      " <VAR>: <VAR>,",
+      " ...<VAR>,",
+      " <VAR>(<VAR>, <VAR>) {",
+      " return <VAR>;",
+      " },",
+      " };"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>(<VAR>);"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.4709110575846078,
+    "original_file": "program_20251007031800_0E395D7A-0381-4485-8616-3FF4DB5C933C.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try { <VAR>(); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.5474104157858432,
+    "original_file": "program_20251007032246_1D945859-8831-4F41-8B4E-B7EE1916FADC.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR>);"
+    ],
+    "after": [
+      "var <VAR> = Object.<VAR>(<VAR>, <VAR>);"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.5826741939903173,
+    "original_file": "program_20251007032112_C0A52A7F-7E20-4A5F-A0CA-910F27D75493.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>;"
+    ],
+    "after": [
+      "let <VAR> = <VAR>;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.5116472193851332,
+    "original_file": "program_20251007031958_D43A8BF3-D393-409C-B0F2-EA79D1B0E56B.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new Proxy(<VAR>, <VAR>);"
+    ],
+    "after": [
+      "(<VAR>.<VAR>) = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.707542168127364,
+    "original_file": "program_20251007032247_A920EE87-6B69-4634-A80E-DC70EF07629C.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR>(<<VAR>>, <VAR>);"
+    ],
+    "after": [
+      "({}).<VAR>(<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.6631856980572713,
+    "original_file": "program_20251007031653_25007601-E44C-4A32-966F-1E79D6CFEE31.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = {};"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.5570615210337563,
+    "original_file": "program_20251007032043_C37DB195-7DB6-4D5A-AC0E-A89948F57329.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>(<VAR>, <VAR>, <VAR>, <VAR>) {",
+      " if (!new.<VAR>) { throw <<VAR>>; }",
+      " this.<VAR> = <VAR>;",
+      "}"
+    ],
+    "after": [
+      "(<VAR>.<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.2615389889557268,
+    "original_file": "program_20251007031816_40A0F793-719E-40E3-B151-0B13703C02E1.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "if (<VAR>) {",
+      " } else {",
+      " const <VAR> = <VAR> || <<VAR>>;",
+      " }"
+    ],
+    "after": [
+      "<VAR>.<VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5636695006837301,
+    "original_file": "program_20251007031907_21BD92CA-65EF-4D67-8D39-607DDAF0AE7E.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = /^([^\\(]+?)=>/;"
+    ],
+    "after": [
+      "const <VAR> = new Proxy([], <VAR>);"
+    ],
+    "node_type": "new_expression",
+    "gain": 0.3373653959636955,
+    "original_file": "program_20251007032023_0D8B3E20-2C1E-4546-8EEF-20E57C326624.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>();"
+    ],
+    "after": [
+      "<VAR>.<VAR>();"
+    ],
+    "node_type": "member_expression",
+    "gain": 0.4309093243889422,
+    "original_file": "program_20251007031828_F824097A-71C6-49C5-A333-0BAAD35E75C0.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      "}"
+    ],
+    "after": [
+      "<VAR>.<VAR>(<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.40761083209497184,
+    "original_file": "program_20251007031816_DB919C91-2AAC-4301-828F-9497001C7DEC.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "let <VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.15093842935899326,
+    "original_file": "program_20251007031828_D5AE6906-CF46-497E-A416-9282E86E69B7.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>(<VAR>, <VAR>) {",
+      " <VAR>[<VAR>] = <<VAR>>;",
+      "}"
+    ],
+    "after": [
+      "<VAR>.<VAR>();"
+    ],
+    "node_type": "member_expression",
+    "gain": 0.4432595168051996,
+    "original_file": "program_20251007031926_874D1348-8052-4086-997A-DA95764FFF66.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "new <VAR>(<<VAR>>);"
+    ],
+    "after": [
+      "(Math.<VAR>().<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.44202595245158327,
+    "original_file": "program_20251007032006_871892D2-382D-4E46-B005-52E9477677B5.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "this[Symbol.<VAR>] = <VAR>;"
+    ],
+    "after": [
+      "const <VAR> = <VAR>.prototype;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.4528991824792084,
+    "original_file": "program_20251007032010_383E62BE-C351-4D78-ADDE-F7474977322C.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR>(<<VAR>>);"
+    ],
+    "after": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.2082890250541678,
+    "original_file": "program_20251007031719_0D34D70B-30B7-41BA-B2C2-E93AD2DC9C84.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try {",
+      " <VAR>(<VAR>);",
+      " } catch(<VAR>) {",
+      " console.<VAR>([]);",
+      " }"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "assignment_expression",
+    "gain": 0.7687828921840386,
+    "original_file": "program_20251007031744_A4D2AFF2-26B8-4486-A8B3-5327CD11CE4B.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "for (let <VAR> = <<VAR>>; <VAR> < <VAR>; <VAR>++) {",
+      " <VAR>[<VAR>] = <VAR>;",
+      " }"
+    ],
+    "after": [
+      "const <VAR> = <VAR>.<VAR>;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.5242010320514845,
+    "original_file": "program_20251007031723_F5B51788-2F46-4516-8D6E-96D9883CA936.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "after": [
+      "(<VAR>.<VAR>) = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.1322156141415138,
+    "original_file": "program_20251007032429_608C0435-571E-4E4E-A96E-32E507A1EFFD.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "if (<VAR>(<VAR>, <VAR>)) {",
+      " const <VAR> = <VAR>?.length;",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.314785042166445,
+    "original_file": "program_20251007032020_2628EF48-AA74-4F2D-95B3-B7E7B15C2F7E.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR>(<VAR>);"
+    ],
+    "after": [
+      "const <VAR> = <VAR>.<VAR>;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.11125268148074008,
+    "original_file": "program_20251007031640_5490D065-B04F-4369-9D4C-F870A28B6B4D.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "class <VAR> {",
+      " static {",
+      " super.<VAR> = <VAR>;",
+      " }",
+      " <<VAR>> = <VAR>;",
+      "}"
+    ],
+    "after": [
+      "const <VAR> = [<VAR>];"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.4861801657722502,
+    "original_file": "program_20251007032121_F55368D2-8B5E-42C9-8893-51578A710362.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR>(<VAR>, <VAR>);"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.28668594634913686,
+    "original_file": "program_20251007032333_C5C2107B-C49D-473B-B801-848DB07F9C96.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "class <VAR> extends <VAR> {",
+      " static [<VAR>];",
+      " static <VAR> <VAR>() {",
+      " const <VAR> = this ^ <VAR>;",
+      " const <VAR> = ~<VAR>;",
+      " <VAR> << <VAR>;",
+      " <VAR> ** <VAR>;",
+      " }",
+      "}"
+    ],
+    "after": [
+      "const <VAR> = [<VAR>];"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.3543946083230172,
+    "original_file": "program_20251007032006_D70C4FA9-4668-411E-B359-F5A5C1FC0D37.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " <VAR>(this.<VAR>.<VAR>().<VAR>());",
+      "}"
+    ],
+    "after": [
+      "<VAR>((<VAR>.<VAR>).<VAR>());"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5837588628849442,
+    "original_file": "program_20251007032019_27A315A8-D65A-4738-A5AC-59297979FA5C.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "(<<VAR>>).<VAR>();"
+    ],
+    "after": [
+      "(new <VAR>())();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5661699762923876,
+    "original_file": "program_20251007031942_BD033368-875A-481E-81A2-B22FB340735E.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "new <VAR>(<<VAR>>, <<VAR>>, <VAR>, <<VAR>>, <VAR>, null, null);"
+    ],
+    "after": [
+      "<VAR> = (<VAR> = false)();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.3193888661674906,
+    "original_file": "program_20251007032108_3C7B35DE-2F2B-48B5-B11F-F00003FCC8A0.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>?.[<<VAR>>];"
+    ],
+    "after": [
+      "var <VAR> = <VAR>.<VAR>(<VAR>).<VAR>();"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.5420252876832797,
+    "original_file": "program_20251007032043_C37DB195-7DB6-4D5A-AC0E-A89948F57329.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "for (let <VAR> = <<VAR>>; <VAR> < <<VAR>>; <VAR>++) {",
+      " if (<VAR> === <VAR>) {",
+      " const <VAR> = new Error();",
+      " throw <VAR>;",
+      " }",
+      "}"
+    ],
+    "after": [
+      "<VAR>.<VAR>();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.48060816396083184,
+    "original_file": "program_20251007031743_4D975F2E-9FA9-4868-917B-AD1DEF43977B.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "if (<VAR> instanceof <VAR>) {",
+      " }"
+    ],
+    "after": [
+      "((Array.<VAR>(Array.of.apply(null, <VAR>))));"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5008215035654786,
+    "original_file": "program_20251007031723_DF33CFC9-C4B9-4F80-97C6-45F78B904683.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>([<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>]);"
+    ],
+    "after": [
+      "<VAR>((<VAR>.<VAR>));"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.6178193975453685,
+    "original_file": "program_20251007032127_D58C29A9-2AE0-4D36-B466-7899665B63AC.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = { <VAR>: <VAR> };"
+    ],
+    "after": [
+      "const <VAR> = /\\1112xyz{<<VAR>>,<<VAR>>}?<VAR>/<VAR>;"
+    ],
+    "node_type": "arguments",
+    "gain": 0.19437463964280843,
+    "original_file": "program_20251007031930_D7526435-8879-406E-9107-96DD04C08BE7.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " try {",
+      " const <VAR> = new <VAR>(<<VAR>>);",
+      " var <VAR> = <VAR>;",
+      " const <VAR> = new <VAR>(<VAR>);",
+      " var <VAR> = <VAR>;",
+      " return <VAR>.<VAR>() === <<VAR>>;",
+      " } catch(<VAR>) {",
+      " return true;",
+      " }",
+      "}"
+    ],
+    "after": [
+      "const <VAR> = (<VAR>.<VAR>);"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.562232238656177,
+    "original_file": "program_20251007031643_B96BEF3D-1520-4ED2-8160-F77815DF2BD5.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>.prototype;"
+    ],
+    "after": [
+      "(<VAR>.<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.49705760039040986,
+    "original_file": "program_20251007031913_AB89DD81-6F67-4974-AE0D-AEA11BE04D59.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "Array.prototype.<VAR>.call(<VAR>);"
+    ],
+    "after": [
+      "(<VAR>.<VAR> = <VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5499067899044771,
+    "original_file": "program_20251007031655_EC7C648F-8DA2-45D7-BF29-8A421A2BE726.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>[-<<VAR>>] = <<VAR>>;"
+    ],
+    "after": [
+      "const <VAR> = <VAR>?.<VAR>;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.19476882200383638,
+    "original_file": "program_20251007031807_EA07A8B3-4AB9-4830-850F-5D57F29EF9D8.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "Math.<VAR>(<VAR>);"
+    ],
+    "after": [
+      "const <VAR> = <VAR>?.<VAR>;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.6481244296022567,
+    "original_file": "program_20251007031943_B0731319-F2FA-4816-A07E-365914A7A1CA.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> < <<VAR>>;"
+    ],
+    "after": [
+      "const <VAR> = new Proxy(<VAR>, {});"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.4810123194986599,
+    "original_file": "program_20251007032007_281CE863-F515-4D4F-A27E-B4D949888BCD.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " let <VAR>;",
+      " let <VAR>;",
+      " let <VAR>;",
+      " function <VAR>() {",
+      " try { <VAR>(); } catch (<VAR>) {}",
+      " }",
+      " try { <VAR>(); } catch (<VAR>) {}",
+      "}"
+    ],
+    "after": [
+      "const <VAR> = [<VAR>,<VAR>];"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.7651465622464396,
+    "original_file": "program_20251007031721_A780913B-BCC3-4796-9B5A-DEB846A9E0A2.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "(<<VAR>>).<VAR>();"
+    ],
+    "after": [
+      "<VAR>.<VAR>();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5745655876263288,
+    "original_file": "program_20251007031942_BD033368-875A-481E-81A2-B22FB340735E.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>.<VAR>;"
+    ],
+    "after": [
+      "const <VAR> = (<VAR>[Symbol] = <VAR>);"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.11144468018809517,
+    "original_file": "program_20251007031900_00D86081-6DDC-4CF7-BAFE-6B930C5A6383.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "for (let <VAR> = <<VAR>>; <VAR> < <<VAR>>; <VAR>++) {",
+      " <VAR>[<VAR>] = [];",
+      " var <VAR> = <VAR>[<VAR>];",
+      " var <VAR> = <VAR>();",
+      " <VAR>[<<VAR>>] = <VAR>;",
+      " <VAR>.<VAR>(<<VAR>>, <<VAR>>);",
+      " }"
+    ],
+    "after": [
+      "<VAR>(<VAR>.length);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.22248652489055828,
+    "original_file": "program_20251007031904_DFC2C1BB-911A-4049-AA18-5EF6ECB0FD32.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = new <VAR>(<VAR>);"
+    ],
+    "after": [
+      "for (const <VAR> of <VAR>) {",
+      " }"
+    ],
+    "node_type": "for_in_statement",
+    "gain": 0.14390991736840075,
+    "original_file": "program_20251007032329_43CAB57D-4381-4084-9629-98743603D9C6.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "const <VAR> = <VAR>.prototype;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.35924739751885604,
+    "original_file": "program_20251007032246_1D945859-8831-4F41-8B4E-B7EE1916FADC.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = () => {",
+      " <VAR>.<VAR>();",
+      " return <VAR>[Symbol.<VAR>]();",
+      "};"
+    ],
+    "after": [
+      "(<VAR>.<VAR>) = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.45415500183702084,
+    "original_file": "program_20251007032411_09F11D02-F907-4B7B-85B3-0738AE58234D.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " <VAR>(<<VAR>>, <<VAR>>, <<VAR>>);",
+      "}"
+    ],
+    "after": [
+      "const <VAR> = <VAR>?.[<VAR>];"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.44643537210130535,
+    "original_file": "program_20251007031759_6D4A2CC0-7BEC-4B6B-BA8D-2FB2713774E5.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>(<VAR>, <VAR>) {",
+      " <<VAR>>;",
+      " var <VAR> = <VAR>.<VAR>;",
+      " function <VAR>(<VAR>) {",
+      " <VAR> = <VAR> | <<VAR>>;",
+      " }",
+      " return { <VAR>: <VAR> };",
+      " }"
+    ],
+    "after": [
+      "const <VAR> = { <VAR>: <VAR> };"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.271830334015048,
+    "original_file": "program_20251007031838_E8ADBFAE-F667-4207-9186-9F0D2F1F7E1E.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR>.<VAR>(undefined), <VAR>);"
+    ],
+    "after": [
+      "let <VAR> = <VAR>.length;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.4775293701793637,
+    "original_file": "program_20251007031749_B1BFFE89-AD86-4817-991E-898491F53781.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = Math.<VAR>(<<VAR>> / <<VAR>>) + <<VAR>>;"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.3659974551273111,
+    "original_file": "program_20251007031911_4EE6008C-EDC5-4F11-9174-B0B0FBCDF007.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>[<VAR>] = <VAR>;"
+    ],
+    "after": [
+      "if (<VAR> != <VAR>) {",
+      " try { <VAR>(<VAR>, <VAR>, <VAR>); } catch (<VAR>) {}",
+      " }"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.14153990501173397,
+    "original_file": "program_20251007031646_09094582-F982-4FE4-AE4C-28080328185D.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR>, {});"
+    ],
+    "after": [
+      "(<VAR> < <VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.18422095290939727,
+    "original_file": "program_20251007031753_A105CB85-E1BC-4F1F-AC31-7B27436BB3EF.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try {",
+      " const <VAR> = new <VAR>(<<VAR>>);",
+      " var <VAR> = <VAR>;",
+      " const <VAR> = new <VAR>(<VAR>);",
+      " var <VAR> = <VAR>;",
+      " return <VAR>.<VAR>() === <<VAR>>;",
+      " } catch(<VAR>) {",
+      " return true;",
+      " }"
+    ],
+    "after": [
+      "const <VAR> = { <VAR>: <VAR> };"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.562232238656177,
+    "original_file": "program_20251007031643_B96BEF3D-1520-4ED2-8160-F77815DF2BD5.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "throw <<VAR>>;"
+    ],
+    "after": [
+      "const <VAR> = (<VAR>.<VAR> = <VAR>);"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.1303443283576714,
+    "original_file": "program_20251007032121_6626DC39-457E-4753-A199-8FD36622FADE.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = <VAR>(<VAR>);"
+    ],
+    "after": [
+      "const <VAR> = { <VAR>: <VAR> };"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.21002511858722211,
+    "original_file": "program_20251007031723_9416ED58-CA80-49FB-8BC0-04B99DAA34EA.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = /^/<VAR>;"
+    ],
+    "after": [
+      "(<VAR>(<VAR>));"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.4415306633259701,
+    "original_file": "program_20251007031811_74A86C8E-7101-4C44-85DB-1E1CEE3E36CD.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try {",
+      " yield <<VAR>>;",
+      " } catch(<VAR>) {",
+      " }"
+    ],
+    "after": [
+      "<VAR>(<VAR>.<VAR>(undefined), <VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.46046764284392616,
+    "original_file": "program_20251007031855_46077FAC-B5D5-4954-AB7D-AA1630EB0E5F.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = [<VAR>];"
+    ],
+    "after": [
+      "var <VAR> = <VAR>.bind();"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.4890025182805664,
+    "original_file": "program_20251007031751_E5F9B23C-07DA-4443-A326-B720F5D920BD.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>([<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>]);"
+    ],
+    "after": [
+      "const <VAR> = (<VAR>.return);"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.166827192340686,
+    "original_file": "program_20251007032237_D092BCBA-168D-4DF4-AB2C-783FB5985112.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "Math.<VAR>();"
+    ],
+    "after": [
+      "(<VAR>.<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.4501482444918666,
+    "original_file": "program_20251007032411_D3769FB5-F58B-4BE3-8A04-752895C9DE6E.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try {",
+      " <VAR>(<VAR>);",
+      " } catch(<VAR>) {",
+      " console.<VAR>([]);",
+      " }"
+    ],
+    "after": [
+      "(<VAR>.<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.6727877621271102,
+    "original_file": "program_20251007031744_A4D2AFF2-26B8-4486-A8B3-5327CD11CE4B.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "return <VAR>();"
+    ],
+    "after": [
+      "(<VAR>.<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.48795756057698525,
+    "original_file": "program_20251007032122_ACA18E11-EB57-410E-A819-0DC9B12B8B12.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try {",
+      " (-<<VAR>>).<VAR>(<<VAR>>);",
+      "} catch(<VAR>) {",
+      "}"
+    ],
+    "after": [
+      "<VAR> && <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.18232038407037632,
+    "original_file": "program_20251007032307_35E07222-BFE6-4967-9B95-518432A86974.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try { <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "const <VAR> = () => {",
+      " let <VAR>;",
+      " try { <VAR> = Reflect.apply(<VAR>, <VAR>, <VAR>); } catch (<VAR>) {}",
+      " return <VAR>;",
+      " };"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.11623381850888947,
+    "original_file": "program_20251007032338_6BDD146D-7084-4742-9567-D4CF1EB89CA2.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " <<VAR>>;",
+      " function <VAR>() {",
+      " }",
+      " return <VAR>;",
+      "}"
+    ],
+    "after": [
+      "const <VAR> = [<VAR>];"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.5399709611335923,
+    "original_file": "program_20251007031725_016A3933-6005-46DD-91ED-21431E533BE2.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "let <VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "const <VAR> = Reflect.<VAR>(Object, <VAR>, Proxy);"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.29296054277072514,
+    "original_file": "program_20251007031828_09C6DC95-7ABC-44AD-979A-C56F08A26672.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR>());"
+    ],
+    "after": [
+      "<VAR>(<VAR>, <VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.28609964804304916,
+    "original_file": "program_20251007031707_D426B930-8FF0-4468-A85A-E6C9B87DF866.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "Reflect.<VAR>(<VAR>, undefined);"
+    ],
+    "after": [
+      "<VAR>(<VAR>, null);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.17230626236774482,
+    "original_file": "program_20251007031854_E5D0E58B-71DB-46FD-9A3A-0A918E69C7B4.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>[<<VAR>>] = <VAR>;"
+    ],
+    "after": [
+      "var <VAR> = <VAR>;"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.7744590013465554,
+    "original_file": "program_20251007031833_B6998A08-EE5D-40E6-8B90-5EEF85CD40E7.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " <VAR> = this;",
+      " return <<VAR>>;",
+      " }"
+    ],
+    "after": [
+      "const <VAR> = { <VAR>: <VAR> };"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.1138159430464658,
+    "original_file": "program_20251007032134_5594D03B-97B8-463F-9264-C7DD0DE70E48.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR>();"
+    ],
+    "after": [
+      "var <VAR> = <VAR>.<VAR>(<VAR>).<VAR>();"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.12954538259311482,
+    "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " var <VAR> = <<VAR>>;",
+      " new <VAR>(<VAR>, { <VAR>: <<VAR>> });",
+      " try { <VAR>(); } catch (<VAR>) {}",
+      " }"
+    ],
+    "after": [
+      "(<VAR>.<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.4660139793976843,
+    "original_file": "program_20251007032246_1D945859-8831-4F41-8B4E-B7EE1916FADC.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR>(<<VAR>>, <VAR>);"
+    ],
+    "after": [
+      "const <VAR> = [...<VAR>,...<VAR>,<VAR>,...<VAR>,...<VAR>,...<VAR>,...<VAR>,...<VAR>,...<VAR>,...<VAR>,...<VAR>];"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.6631856980572713,
+    "original_file": "program_20251007031653_25007601-E44C-4A32-966F-1E79D6CFEE31.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "<VAR>(<VAR>.<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.35924739751885604,
+    "original_file": "program_20251007032246_1D945859-8831-4F41-8B4E-B7EE1916FADC.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "new <VAR>(<<VAR>>);"
+    ],
+    "after": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.44202595245158327,
+    "original_file": "program_20251007032006_871892D2-382D-4E46-B005-52E9477677B5.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>(<VAR>) {",
+      " let <VAR> = [];",
+      " <VAR>[<<VAR>>] = <<VAR>>;",
+      " <VAR>[<<VAR>>] = <<VAR>>;",
+      " <VAR>[<<VAR>>] = <<VAR>>;",
+      " let <VAR> = <VAR>(<VAR>);",
+      " <VAR>(<VAR>);",
+      " <VAR>[<<VAR>>] = <<VAR>>;",
+      " return <VAR>[<<VAR>>];",
+      "}"
+    ],
+    "after": [
+      "(<VAR> = new <VAR>(<VAR>));"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.14911893085589534,
+    "original_file": "program_20251007031653_98967920-2F90-460C-96C7-849A8A62EECC.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = Math.<VAR>;"
+    ],
+    "after": [
+      "<VAR> < <VAR>?.length;"
+    ],
+    "node_type": "binary_expression",
+    "gain": 0.40364047276959986,
+    "original_file": "program_20251007032113_3317A89E-62F1-4D06-A26F-19D7F4CBB677.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " return <VAR>;",
+      "}"
+    ],
+    "after": [
+      "<VAR>.constructor = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.3997197393739545,
+    "original_file": "program_20251007032330_E39FEB12-FC65-4DCF-ABCA-D8503F33B4BF.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = {",
+      " <VAR>() {",
+      " super.<VAR> = <<VAR>>;",
+      " },",
+      " };"
+    ],
+    "after": [
+      "<VAR>.<VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.4661056662870072,
+    "original_file": "program_20251007032108_29B25665-9940-405E-B228-6175428067A4.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = { <VAR>: <VAR>, <VAR>: <VAR> };"
+    ],
+    "after": [
+      "const <VAR> = <VAR>.<VAR>;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.45709220049420884,
+    "original_file": "program_20251007031933_353B33DA-6F0D-4C48-A897-D3217A71D1B0.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "Symbol[<VAR>] = <<VAR>>;"
+    ],
+    "after": [
+      "<VAR>.<VAR>();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.4069141705103091,
+    "original_file": "program_20251007031710_58101404-B39D-466F-A2E1-F96CD5A39382.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>;"
+    ],
+    "after": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.24662078051667644,
+    "original_file": "program_20251007031749_B1BFFE89-AD86-4817-991E-898491F53781.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = Object.<VAR>(Object);"
+    ],
+    "after": [
+      "const <VAR> = <VAR>.<VAR>;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.24017019212567353,
+    "original_file": "program_20251007031837_5E3FFF14-84F7-49D1-B268-40EA926E7C41.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = Array(<<VAR>>);"
+    ],
+    "after": [
+      "<VAR>(Array.<VAR>((<VAR> = <VAR>.<VAR>(<VAR>))), true);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.4566421235039007,
+    "original_file": "program_20251007032137_B1B76577-20D6-4BE9-9CCE-71C6C3AA93A9.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = super.<VAR>.call(this, <VAR>);"
+    ],
+    "after": [
+      "<VAR>.<VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.10944919673348101,
+    "original_file": "program_20251007032130_2747BEEF-8E00-4BC9-BE81-B238F73C4C00.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "Array.prototype.<VAR>.call(<VAR>);"
+    ],
+    "after": [
+      "(<VAR>?.prototype);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.3500846103392444,
+    "original_file": "program_20251007031856_600EC272-8053-414D-A700-FEF77687BB5F.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "return <VAR>;"
+    ],
+    "after": [
+      "(<VAR>.<VAR>.apply);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.12184452934975817,
+    "original_file": "program_20251007032013_9C37CD38-0DB3-467D-B5EA-535A78375031.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "(<<VAR>>).<VAR>();"
+    ],
+    "after": [
+      "const <VAR> = [<VAR>];"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.6914109376993794,
+    "original_file": "program_20251007031942_BD033368-875A-481E-81A2-B22FB340735E.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = <VAR>.<VAR>(<VAR>);"
+    ],
+    "after": [
+      "<VAR>.<VAR>(<VAR>);"
+    ],
+    "node_type": "call_expression",
+    "gain": 0.5663436227894143,
+    "original_file": "program_20251007031719_8BD5A8BD-9A56-4840-91DA-027879446192.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR> = new <VAR>(<VAR>);"
+    ],
+    "after": [
+      "const <VAR> = <VAR>.constructor;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.296656974091248,
+    "original_file": "program_20251007032337_6AABB668-8ECF-4CE7-AEC9-7ED020E3FCC6.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "if (<VAR>++ > <<VAR>>) {",
+      " return;",
+      " }"
+    ],
+    "after": [
+      "const <VAR> = [<VAR>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>,<VAR>];"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.47808268796835396,
+    "original_file": "program_20251007031653_25007601-E44C-4A32-966F-1E79D6CFEE31.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(false);"
+    ],
+    "after": [
+      "<VAR>.<VAR> = {};"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.410702079674625,
+    "original_file": "program_20251007031928_BB9432D2-1483-4589-B3D0-8685B32E7D73.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = {",
+      " <VAR>() {",
+      " const <VAR> = new Error(<<VAR>>);",
+      " throw <VAR>;",
+      " },",
+      " };"
+    ],
+    "after": [
+      "const <VAR> = <VAR>;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.13312169589542563,
+    "original_file": "program_20251007031708_2DC8F0E6-91DE-4365-96D9-BFEF4946096D.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR>());"
+    ],
+    "after": [
+      "<VAR>.length = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.44529877270914586,
+    "original_file": "program_20251007032056_6AE0B62A-F3CE-4987-8449-E028D963124E.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "try {",
+      " <VAR>.<VAR>(<<VAR>>);",
+      " <VAR>(false);",
+      "} catch(<VAR>) {",
+      " <VAR>(<<VAR>> + <VAR>);",
+      "}"
+    ],
+    "after": [
+      "(Reflect.<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.20988914030488726,
+    "original_file": "program_20251007031719_0D34D70B-30B7-41BA-B2C2-E93AD2DC9C84.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "let <VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "const <VAR> = <VAR>.bind;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.6477759024429287,
+    "original_file": "program_20251007031648_43BB3F50-016C-4B25-BB59-719410F0794C.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>(<VAR>);"
+    ],
+    "after": [
+      "(<VAR>.<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.15093842935899326,
+    "original_file": "program_20251007031828_D5AE6906-CF46-497E-A416-9282E86E69B7.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "new <VAR>(<VAR>);"
+    ],
+    "after": [
+      "Array.prototype.<VAR>.call(<VAR>);"
+    ],
+    "node_type": "call_expression",
+    "gain": 0.4433681203500289,
+    "original_file": "program_20251007031942_DC7C2D30-C465-455F-81F4-C97C4342689D.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>?.<VAR>;"
+    ],
+    "after": [
+      "const <VAR> = (<VAR>.<VAR>);"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.15467123846575725,
+    "original_file": "program_20251007031943_DBEA5789-0F2D-48F7-8120-2EB651BDF441.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>();"
+    ],
+    "after": [
+      "var <VAR> = <VAR>?.<VAR>;"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.4961835092472031,
+    "original_file": "program_20251007031959_2176CCC9-81A9-42DC-81DA-1B1DF9395476.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "let <VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "const <VAR> = new Proxy(<VAR>, Reflect);"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.6855358926098377,
+    "original_file": "program_20251007031914_4EF35192-8820-4047-9237-791C9BED41BB.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR>(<VAR>, { <VAR>: <VAR> });"
+    ],
+    "after": [
+      "(<VAR>.<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.44060409618383684,
+    "original_file": "program_20251007031922_CD2B4578-EC56-478B-979C-9F27DA67A5FB.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>();"
+    ],
+    "after": [
+      "try { var <VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.5431734650307654,
+    "original_file": "program_20251007031745_D851C7AD-7A02-48FC-9102-FF12EB604CE2.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>(<VAR>, <VAR>);"
+    ],
+    "after": [
+      "try { <VAR> = Object.<VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.38796359769341987,
+    "original_file": "program_20251007031951_DE9BD565-F3CC-4DFA-A138-8137F84F562D.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "let <VAR> = <VAR>(<VAR>);"
+    ],
+    "after": [
+      "try { <VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.15068262877145744,
+    "original_file": "program_20251007031653_98967920-2F90-460C-96C7-849A8A62EECC.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "after": [
+      "let <VAR> = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.45053003219548016,
+    "original_file": "program_20251007031854_86B0E40B-EF8C-4C1E-838F-EAAFD2372F6D.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.18311780257830235,
+    "original_file": "program_20251007032521_9DB61081-B240-4637-8D5D-7FB04D80147F.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "after": [
+      "<VAR>.call();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.23507909529586113,
+    "original_file": "program_20251007032521_9DB61081-B240-4637-8D5D-7FB04D80147F.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = {};"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>.<VAR>(); } catch (<VAR>) {}"
+    ],
+    "node_type": "call_expression",
+    "gain": 0.5570615210337563,
+    "original_file": "program_20251007032043_C37DB195-7DB6-4D5A-AC0E-A89948F57329.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR>[<VAR>] = <VAR>;"
+    ],
+    "after": [
+      "try { let <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "for_statement",
+    "gain": 0.18796523026780032,
+    "original_file": "program_20251007031647_6C0D1BB1-4306-47A0-82F3-7AE2C156B688.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = { <VAR>: <VAR> };"
+    ],
+    "after": [
+      "const <VAR> = new Proxy(<VAR>, <VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5396636517125654,
+    "original_file": "program_20251007031634_D7DC4A5B-4296-4896-A05D-48532A2FD343.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR>[<VAR>] = <VAR>;"
+    ],
+    "after": [
+      "const <VAR> = {",
+      " <VAR>: <VAR>,",
+      " [<VAR>](<VAR>, <VAR>) {",
+      " },",
+      "};"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.4033296404315082,
+    "original_file": "program_20251007031907_34F8E5EA-BBC7-4199-AF55-566D7EE5485A.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "let <VAR> = {};"
+    ],
+    "after": [
+      "try { let <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.25742530175267925,
+    "original_file": "program_20251007032134_FF420792-F884-4F29-A887-D93163E9BB07.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "try { <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "<VAR>.<VAR>(<VAR>);"
+    ],
+    "node_type": "call_expression",
+    "gain": 0.6065708524766262,
+    "original_file": "program_20251007031707_FB682998-5CD6-4F6C-A1BB-A8D88741C69A.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = {};"
+    ],
+    "after": [
+      "var <VAR> = [<VAR>,<VAR>,{}];"
+    ],
+    "node_type": "for_in_statement",
+    "gain": 0.12408933345414078,
+    "original_file": "program_20251007032002_0C740BE3-FB51-4846-9186-72DCEA71AFC9.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "let <VAR> = <VAR>(<VAR>);"
+    ],
+    "after": [
+      "<VAR> = <VAR>(<VAR>, <VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.15068262877145744,
+    "original_file": "program_20251007031653_98967920-2F90-460C-96C7-849A8A62EECC.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>;"
+    ],
+    "after": [
+      "try { <VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.18373352649805144,
+    "original_file": "program_20251007031749_B1BFFE89-AD86-4817-991E-898491F53781.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR>();"
+    ],
+    "after": [
+      "function <VAR>(){}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.46629989436759806,
+    "original_file": "program_20251007031644_7E1A2AE0-C610-45F4-8E7D-F8E86389F376.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>;"
+    ],
+    "after": [
+      "try { try { const <VAR> = [<VAR>,<VAR>]; } catch (<VAR>) {} } catch (<VAR>) {}"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.12954538259311482,
+    "original_file": "program_20251007031906_BEF956CB-61C5-45DC-B1EA-688A7C4667EF.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>;"
+    ],
+    "after": [
+      "try { <VAR> = new <VAR>(); } catch (<VAR>) {}"
+    ],
+    "node_type": "call_expression",
+    "gain": 0.5118228498924087,
+    "original_file": "program_20251007031747_E5B5A5A9-E764-46F9-A782-B872E4187B40.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>;"
+    ],
+    "after": [
+      "(<VAR>?.prototype);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5024378615231104,
+    "original_file": "program_20251007032112_C0A52A7F-7E20-4A5F-A0CA-910F27D75493.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>;"
+    ],
+    "after": [
+      "delete <VAR>.<VAR>;"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.1656860166260754,
+    "original_file": "program_20251007032058_89492D2B-BBA3-40C1-B913-89A9DF1C0934.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>;"
+    ],
+    "after": [
+      "const <VAR> = new <VAR>([,{}]);"
+    ],
+    "node_type": "return_statement",
+    "gain": 0.4775293701793637,
+    "original_file": "program_20251007031749_B1BFFE89-AD86-4817-991E-898491F53781.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR> = new <VAR>(<VAR>);"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>(<VAR>, false, false, <VAR>);"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.30608719814722585,
+    "original_file": "program_20251007032337_6AABB668-8ECF-4CE7-AEC9-7ED020E3FCC6.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>;"
+    ],
+    "after": [
+      "try { let <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.4421105141941434,
+    "original_file": "program_20251007032109_A3D863C5-3F1C-497B-ADE7-060573626B03.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR> = new <VAR>();"
+    ],
+    "after": [
+      "<VAR> = (<VAR> = <VAR>.<VAR>());"
+    ],
+    "node_type": "arguments",
+    "gain": 0.6065708524766262,
+    "original_file": "program_20251007031707_FB682998-5CD6-4F6C-A1BB-A8D88741C69A.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>;"
+    ],
+    "after": [
+      "try { var <VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.13915224336962467,
+    "original_file": "program_20251007031725_63CDA4A4-E6E9-4AE1-B86B-FB5EA490AF12.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>();"
+    ],
+    "after": [
+      "var <VAR> = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.6773122840252122,
+    "original_file": "program_20251007031745_D851C7AD-7A02-48FC-9102-FF12EB604CE2.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>();"
+    ],
+    "after": [
+      "let <VAR> = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.3983834154372823,
+    "original_file": "program_20251007032323_3242C8C3-38CC-44C3-BBEA-75ECAA7C9C49.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "return <VAR>();"
+    ],
+    "after": [
+      "(<VAR>.<VAR>);"
+    ],
+    "node_type": "call_expression",
+    "gain": 0.48795756057698525,
+    "original_file": "program_20251007032122_ACA18E11-EB57-410E-A819-0DC9B12B8B12.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR>, <VAR>);"
+    ],
+    "after": [
+      "const <VAR> = <VAR>(<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.4501482444918666,
+    "original_file": "program_20251007032411_D3769FB5-F58B-4BE3-8A04-752895C9DE6E.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "let <VAR>;"
+    ],
+    "after": [
+      "var <VAR> = <VAR>;"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.4652927388382626,
+    "original_file": "program_20251007032043_2FC052E3-0422-4F39-BE6E-B5DA091407C4.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>;"
+    ],
+    "after": [
+      "try { var <VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "arguments",
+    "gain": 0.44575573501337296,
+    "original_file": "program_20251007032107_A54CF663-CB77-4EDA-ACB7-FAE7EDDCDEB8.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>;"
+    ],
+    "after": [
+      "try { var <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.3599486474946156,
+    "original_file": "program_20251007031653_2DAE1174-F28D-4634-95DF-C32311669BC8.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "let <VAR>;"
+    ],
+    "after": [
+      "try { <VAR> = new <VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.6065708524766262,
+    "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " }"
+    ],
+    "after": [
+      "try { var <VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.15911965325316546,
+    "original_file": "program_20251007032138_B934208C-113C-416A-884F-43BA825BFDAC.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>(<VAR>);"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>(<VAR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.42762624861558207,
+    "original_file": "program_20251007031956_561D99F6-7DDE-4848-912C-DE19927B8ED4.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "let <VAR>;"
+    ],
+    "after": [
+      "try { let <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.34867064737001213,
+    "original_file": "program_20251007031757_7D02645F-8A08-4E3C-8FC9-4141F7CD171F.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "let <VAR>;"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.13085924181052627,
+    "original_file": "program_20251007031711_9246A227-F712-4529-9DBB-BB1260DE7A6E.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>.prototype;"
+    ],
+    "after": [
+      "try { <VAR>.<VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.22719323085662324,
+    "original_file": "program_20251007031745_A7FA40A0-FDC7-4556-9ABF-FBC34854064A.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = [];"
+    ],
+    "after": [
+      "<VAR> < <VAR>?.length;"
+    ],
+    "node_type": "arguments",
+    "gain": 0.48409382229512365,
+    "original_file": "program_20251007031653_25007601-E44C-4A32-966F-1E79D6CFEE31.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>;"
+    ],
+    "after": [
+      "const <VAR> = String.prototype.<VAR>;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.3166794350240941,
+    "original_file": "program_20251007032012_64360A91-6DD4-4D13-B642-AAE45359A6A7.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>.<VAR>;"
+    ],
+    "after": [
+      "try { const <VAR> = <VAR>.<VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.5885685087154073,
+    "original_file": "program_20251007032019_B3D4AF62-C4B4-45F0-8F0B-9C01890C0D89.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>.<VAR>;"
+    ],
+    "after": [
+      "try { var <VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.5557973683480119,
+    "original_file": "program_20251007031959_E06CE361-8E65-4560-B803-75902F2DB4B2.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "let <VAR>;"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "arguments",
+    "gain": 0.1961237918374129,
+    "original_file": "program_20251007031831_1DB8AFF5-1E70-4AB4-B81E-9D58FDDD2CFF.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "new <VAR>(<VAR>);"
+    ],
+    "after": [
+      "(<VAR> = <VAR>.<VAR>(<VAR>));"
+    ],
+    "node_type": "arguments",
+    "gain": 0.17387838344577244,
+    "original_file": "program_20251007032250_F084A925-B1DF-431A-9171-44EF99F64329.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>;"
+    ],
+    "after": [
+      "<VAR> = new <VAR>(<VAR>);"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.11587858951608532,
+    "original_file": "program_20251007032413_8AC5A355-E4D1-41AC-BB33-9D9CF3ECBC97.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new Array();"
+    ],
+    "after": [
+      "try { const <VAR> = new Array(); } catch (<VAR>) {}"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.4191653501330764,
+    "original_file": "program_20251007031752_C39F130D-09E6-458D-88A2-3DF04234EC05.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>;"
+    ],
+    "after": [
+      "<VAR>(<VAR>, <VAR>);"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.6593340107287917,
+    "original_file": "program_20251007031708_2DC8F0E6-91DE-4365-96D9-BFEF4946096D.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>?.<VAR>;"
+    ],
+    "after": [
+      "try { try { <VAR>(); } catch (<VAR>) {} } catch (<VAR>) {}"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.48764534456743275,
+    "original_file": "program_20251007032412_549762C1-25B2-4838-9C83-43976BA6AAD6.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR> = new <VAR>();"
+    ],
+    "after": [
+      "var <VAR>;"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.4652927388382626,
+    "original_file": "program_20251007032043_2FC052E3-0422-4F39-BE6E-B5DA091407C4.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "try { <VAR> = new <VAR>(); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "try { var <VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.4382269382079881,
+    "original_file": "program_20251007031959_F3C758AB-15B4-43E6-A6D3-B6C9507B0470.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR> = <VAR>.<VAR>(<VAR>);"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.2867346808069118,
+    "original_file": "program_20251007032028_BBF05DC1-E74A-428C-A522-9A8F26EF0B5A.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "try { <VAR> = <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>(<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.24722103689477706,
+    "original_file": "program_20251007031910_3CA1D689-435B-4E3B-A575-FA5199BC70DE.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>(<VAR>.<VAR>(<VAR>));"
+    ],
+    "after": [
+      "<VAR> = <VAR>(<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.23739121716098827,
+    "original_file": "program_20251007031738_4B66FBEA-8B55-4694-967A-6A19E57525F6.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR>.length;"
+    ],
+    "after": [
+      "(<VAR>.<VAR>);"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.18791822957844825,
+    "original_file": "program_20251007032002_0C740BE3-FB51-4846-9186-72DCEA71AFC9.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR> = new <VAR>();"
+    ],
+    "after": [
+      "try { <VAR>(); } catch (<VAR>) {}"
+    ],
+    "node_type": "arguments",
+    "gain": 0.13647161926428503,
+    "original_file": "program_20251007031753_D9390863-2FBC-40EB-B185-FC3D734E36AC.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "try { <VAR>.<VAR>(); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "var <VAR> = <VAR>;"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.12954538259311482,
+    "original_file": "program_20251007032239_C0DC4AD0-B01F-44F3-A84D-2B5B5F88CA29.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "try { <VAR> = new <VAR>(); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "try { var <VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.12954538259311482,
+    "original_file": "program_20251007032112_3FDFE347-BB90-4A0A-AFE4-29050B128F44.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "try { <VAR> = new <VAR>(); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "try { const <VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.11986861321372083,
+    "original_file": "program_20251007032037_1DA9CB61-B672-4E63-8E3B-6BA46B7C156D.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "try { <VAR> = <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "let <VAR> = <VAR>;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.11285778498639615,
+    "original_file": "program_20251007032028_BBF05DC1-E74A-428C-A522-9A8F26EF0B5A.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "let <VAR>;"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "arguments",
+    "gain": 0.6130621802616902,
+    "original_file": "program_20251007031807_A17F630A-508C-4398-8D9E-78D9870E3E5D.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "return <VAR>;"
+    ],
+    "after": [
+      "try { new <VAR>(); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.2596576973685334,
+    "original_file": "program_20251007031951_67CD1B4A-9264-4153-89F5-3AEAE3A2D2F2.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = [];"
+    ],
+    "after": [
+      "try { var <VAR> = []; } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.7610227045681908,
+    "original_file": "program_20251007031910_9739B49D-DECD-455F-875A-3E57ECBF0F51.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = [];"
+    ],
+    "after": [
+      "try { try { var <VAR> = []; } catch (<VAR>) {} } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.5465710106711807,
+    "original_file": "program_20251007031910_9739B49D-DECD-455F-875A-3E57ECBF0F51.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = [];"
+    ],
+    "after": [
+      "try { var <VAR> = []; } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.2795467608404879,
+    "original_file": "program_20251007031926_874D1348-8052-4086-997A-DA95764FFF66.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = [];"
+    ],
+    "after": [
+      "try { <VAR>(false, <VAR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.6631856980572713,
+    "original_file": "program_20251007031653_25007601-E44C-4A32-966F-1E79D6CFEE31.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = () => {",
+      " return <VAR>();",
+      " };"
+    ],
+    "after": [
+      "const <VAR> = () => {",
+      " return (<VAR>.<VAR>);",
+      " };"
+    ],
+    "node_type": "formal_parameters",
+    "gain": 0.48795756057698525,
+    "original_file": "program_20251007032122_ACA18E11-EB57-410E-A819-0DC9B12B8B12.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "let <VAR>;"
+    ],
+    "after": [
+      "try { <VAR> = new <VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.296656974091248,
+    "original_file": "program_20251007032255_5BB6E369-3ED6-4349-8028-0070ED6E86D5.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR>, <VAR>);"
+    ],
+    "after": [
+      "<VAR>(true);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.7265059065747198,
+    "original_file": "program_20251007031641_BF94902F-6170-478B-9F7C-4C1F7CC88FB5.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "let <VAR>;"
+    ],
+    "after": [
+      "try { <VAR> = new <VAR>(<VAR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.20744923718058725,
+    "original_file": "program_20251007031743_1003AC84-794E-434D-A77F-5FE5C48AE5A0.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "let <VAR>;"
+    ],
+    "after": [
+      "try { const <VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.4883887481527656,
+    "original_file": "program_20251007031844_D4E41C01-CC31-4737-AE21-46D71FED86BE.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "after": [
+      "try { const <VAR> = Object.<VAR>(Object); } catch (<VAR>) {}"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.12171524429911434,
+    "original_file": "program_20251007031837_5E3FFF14-84F7-49D1-B268-40EA926E7C41.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " }"
+    ],
+    "after": [
+      "function <VAR>(<VAR>) {",
+      " }"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5919632008072798,
+    "original_file": "program_20251007031913_AB89DD81-6F67-4974-AE0D-AEA11BE04D59.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>(<VAR>);"
+    ],
+    "after": [
+      "var <VAR> = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5118685951510547,
+    "original_file": "program_20251007031841_14A16566-4C30-4B26-BD70-E8EAFE6DC9A1.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>(<VAR>);"
+    ],
+    "after": [
+      "var <VAR> = <VAR>;"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.21236836888020294,
+    "original_file": "program_20251007031946_84505EA3-7BB3-43C4-A513-D331B01AF47C.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>(<VAR>);"
+    ],
+    "after": [
+      "const <VAR> = <VAR>?.<VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.1222342540963165,
+    "original_file": "program_20251007032406_E27CA069-4BED-4373-8005-4A7B8B21C323.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "return <VAR>;"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "call_expression",
+    "gain": 0.42044597416843754,
+    "original_file": "program_20251007031959_2176CCC9-81A9-42DC-81DA-1B1DF9395476.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR>);"
+    ],
+    "after": [
+      "const <VAR> = (<VAR> ?? <VAR>);"
+    ],
+    "node_type": "arguments",
+    "gain": 0.6663722751749178,
+    "original_file": "program_20251007032112_C0A52A7F-7E20-4A5F-A0CA-910F27D75493.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>(<VAR>);"
+    ],
+    "after": [
+      "<VAR> = <VAR>(<VAR>, <VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.42762624861558207,
+    "original_file": "program_20251007031956_561D99F6-7DDE-4848-912C-DE19927B8ED4.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "after": [
+      "try { <VAR>.call(); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.4423811109377117,
+    "original_file": "program_20251007032521_9DB61081-B240-4637-8D5D-7FB04D80147F.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "let <VAR> = <VAR>;"
+    ],
+    "after": [
+      "try { const <VAR> = <VAR>?.<VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.6065708524766262,
+    "original_file": "program_20251007032102_425FEE9B-E07A-4273-9230-052F5523D026.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = [];"
+    ],
+    "after": [
+      "if ((<VAR>.<VAR>)) {",
+      " return;",
+      " }"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.6631856980572713,
+    "original_file": "program_20251007031653_25007601-E44C-4A32-966F-1E79D6CFEE31.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "let <VAR> = <VAR>;"
+    ],
+    "after": [
+      "<VAR>(<VAR>, {});"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.34137461798811336,
+    "original_file": "program_20251007032016_F15DD011-0F8D-48DC-B03E-F08EB50586C1.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "let <VAR>;"
+    ],
+    "after": [
+      "try { var <VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.34904881829660317,
+    "original_file": "program_20251007032107_DE4FA610-3B48-4B08-860A-D12750F25617.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "let <VAR> = <VAR>;"
+    ],
+    "after": [
+      "parseInt();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.16038211587824192,
+    "original_file": "program_20251007031807_EA07A8B3-4AB9-4830-850F-5D57F29EF9D8.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR> = <VAR>;"
+    ],
+    "after": [
+      "try { <VAR>.<VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.3872447173194761,
+    "original_file": "program_20251007032521_9DB61081-B240-4637-8D5D-7FB04D80147F.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "return <VAR>.<VAR>();"
+    ],
+    "after": [
+      "<VAR>.<VAR>();"
+    ],
+    "node_type": "call_expression",
+    "gain": 0.46194556647117935,
+    "original_file": "program_20251007031956_A1A809FB-1C1F-4A37-9562-5A866AB6DC7F.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "return <VAR>.<VAR>;"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.14706872804256543,
+    "original_file": "program_20251007031825_2512E89B-9AE2-41F3-AF21-0732C2956F0B.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = { <VAR>: <VAR> };"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>(<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5070368025126013,
+    "original_file": "program_20251007031812_0F6E7EF6-B6BA-4844-96DC-762DE3A43046.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = [];"
+    ],
+    "after": [
+      "<VAR>(false, <VAR>, <VAR>);"
+    ],
+    "node_type": "formal_parameters",
+    "gain": 0.6631856980572713,
+    "original_file": "program_20251007031653_25007601-E44C-4A32-966F-1E79D6CFEE31.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR> < <VAR>;"
+    ],
+    "after": [
+      "<VAR>(<VAR>, <VAR>, <VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.31764420463802934,
+    "original_file": "program_20251007031723_F5B51788-2F46-4516-8D6E-96D9883CA936.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = () => {",
+      " <VAR>.<VAR>();",
+      " return <VAR>[Symbol.<VAR>]();",
+      "};"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>.<VAR>(); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.7744590013465554,
+    "original_file": "program_20251007032411_09F11D02-F907-4B7B-85B3-0738AE58234D.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = [<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>];"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.7731367028525883,
+    "original_file": "program_20251007031655_EC7C648F-8DA2-45D7-BF29-8A421A2BE726.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "let <VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "try { <VAR>(<VAR>.length, <VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.7700611830882756,
+    "original_file": "program_20251007031930_9437A2A7-777D-4608-9AE7-4492DD6AA2C1.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "console.<VAR>([]);"
+    ],
+    "after": [
+      "const <VAR> = (<VAR>) => {",
+      " const <VAR> = (<VAR>) => {",
+      " try {",
+      " <VAR>(<VAR>);",
+      " } catch(<VAR>) {",
+      " try { <VAR> = <VAR>.<VAR>(); } catch (<VAR>) {}",
+      " }",
+      " };",
+      " return <VAR>(<VAR> = <VAR>);",
+      "};"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.7687828921840386,
+    "original_file": "program_20251007031744_A4D2AFF2-26B8-4486-A8B3-5327CD11CE4B.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "try { for (const <VAR> in <VAR>) {",
+      " delete <VAR>.<VAR>;",
+      " (<VAR>.<VAR>);",
+      "} } catch (<VAR>) {}"
+    ],
+    "node_type": "for_in_statement",
+    "gain": 0.7604734159456116,
+    "original_file": "program_20251007031745_D851C7AD-7A02-48FC-9102-FF12EB604CE2.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = /^/<VAR>;"
+    ],
+    "after": [
+      "for (let <VAR> = <ZERO>; <VAR> < <NUM>; <VAR>++) {",
+      " try { <VAR>.<VAR>(); } catch (<VAR>) {}",
+      " }"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.762575819776488,
+    "original_file": "program_20251007031811_74A86C8E-7101-4C44-85DB-1E1CEE3E36CD.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = (<VAR>, <VAR>) => {",
+      " <VAR>.<VAR>();",
+      " const <VAR> = -<<VAR>>;",
+      " <VAR>[<VAR>.length] = <VAR>;",
+      " return <VAR> - <VAR>;",
+      "};"
+    ],
+    "after": [
+      "try { <VAR>.<VAR>(); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.7589480716334805,
+    "original_file": "program_20251007031931_DE9E38CC-21A8-4669-AD8C-E6D219B67B73.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "for (let <VAR> = <<VAR>>; <VAR> < <<VAR>>; <VAR>++) {",
+      " }"
+    ],
+    "after": [
+      "<VAR> = new <VAR>();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.7575931354852836,
+    "original_file": "program_20251007032304_B3DD153B-DC5F-40FC-BAA1-22DEF9214AC8.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "try { <VAR>(); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.7425530941599185,
+    "original_file": "program_20251007031945_593B4B24-9E4E-4064-9294-4EF3703CA685.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "try { Object.<VAR>(<<VAR>>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "<VAR>.prototype = <VAR>;"
+    ],
+    "node_type": "call_expression",
+    "gain": 0.7351915280122981,
+    "original_file": "program_20251007031943_B0731319-F2FA-4816-A07E-365914A7A1CA.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "Object.<VAR>(<<VAR>>);"
+    ],
+    "after": [
+      "<VAR>.prototype = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.7351915280122981,
+    "original_file": "program_20251007031943_B0731319-F2FA-4816-A07E-365914A7A1CA.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " var <VAR> = [];",
+      " for (let <VAR> = <<VAR>>; <VAR> < <<VAR>>; <VAR>++) {",
+      " <VAR>[<VAR>] = <VAR>;",
+      " }",
+      " return { <VAR>: <VAR> };",
+      "}"
+    ],
+    "after": [
+      "var <VAR> = <VAR>[<VAR>];"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.72822272084209,
+    "original_file": "program_20251007031904_DFC2C1BB-911A-4049-AA18-5EF6ECB0FD32.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "return { <VAR>: <VAR> };"
+    ],
+    "after": [
+      "try { var <VAR> = <VAR>(); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.72822272084209,
+    "original_file": "program_20251007031904_DFC2C1BB-911A-4049-AA18-5EF6ECB0FD32.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "function <VAR>(){}"
+    ],
+    "node_type": "formal_parameters",
+    "gain": 0.7254900690233623,
+    "original_file": "program_20251007031752_8AA1AC4E-9203-4A4E-861C-62A45C3A364E.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>(<<VAR>>);"
+    ],
+    "after": [
+      "const <VAR> = (<VAR> = <VAR>.<VAR>(<VAR>));"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.7238445204317632,
+    "original_file": "program_20251007031945_593B4B24-9E4E-4064-9294-4EF3703CA685.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>([[,<VAR>]]);"
+    ],
+    "after": [
+      "return <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.7172899700073301,
+    "original_file": "program_20251007031749_B1BFFE89-AD86-4817-991E-898491F53781.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " return {};",
+      "}"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.7179694115574451,
+    "original_file": "program_20251007032037_70D695BD-066B-42E7-B7C7-A9D883BA8926.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new Proxy(<VAR>, <VAR>);"
+    ],
+    "after": [
+      "try { try { var <VAR> = <VAR>; } catch (<VAR>) {} } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.7148775302820431,
+    "original_file": "program_20251007032057_7A72BE8A-FA4E-4051-8BC1-07D07E260EF9.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      "}"
+    ],
+    "after": [
+      "try { var <VAR> = this; } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.7117324354803598,
+    "original_file": "program_20251007032008_20063D03-B520-4C14-B23B-70A5643A48DB.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "Object.<VAR>(<VAR>, <VAR>);"
+    ],
+    "after": [
+      "<VAR>();"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.7093587766777844,
+    "original_file": "program_20251007032008_20063D03-B520-4C14-B23B-70A5643A48DB.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR>;"
+    ],
+    "after": [
+      "try { var <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.683697177436912,
+    "original_file": "program_20251007031834_F0C7E897-86BA-4E01-A1F7-F6538D9F527C.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new Array(<<VAR>>, <<VAR>>, <<VAR>>, <<VAR>>, <<VAR>>, <<VAR>>, <<VAR>>, <<VAR>>);"
+    ],
+    "after": [
+      "try { var <VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.6752467734727048,
+    "original_file": "program_20251007032001_E8D9B11D-EEF7-4696-A07A-50350D07BBB7.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "function <VAR>(<VAR>) {",
+      " const <VAR> = <VAR>.prototype;",
+      " <VAR>.<VAR> = <VAR>;",
+      " <VAR>[<<VAR>>] = {};",
+      " return this.<VAR>(<VAR>);",
+      "}"
+    ],
+    "after": [
+      "const <VAR> = <VAR>.prototype;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.6674073936668078,
+    "original_file": "program_20251007031745_A7FA40A0-FDC7-4556-9ABF-FBC34854064A.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<VAR>, <<VAR>>);"
+    ],
+    "after": [
+      "const <VAR> = () => {",
+      " return <VAR>(<VAR>);",
+      " };"
+    ],
+    "node_type": "arguments",
+    "gain": 0.6593340107287917,
+    "original_file": "program_20251007031708_2DC8F0E6-91DE-4365-96D9-BFEF4946096D.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR>(<<VAR>>, Error.prototype.<VAR>);"
+    ],
+    "after": [
+      "let <VAR> = ({}).<VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.6617381183311006,
+    "original_file": "program_20251007031801_E2CC0F3C-AA3B-419F-934F-B92555966866.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>([<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>]);"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.6613513158888995,
+    "original_file": "program_20251007032127_D58C29A9-2AE0-4D36-B466-7899665B63AC.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "const <VAR> = <VAR>;"
+    ],
+    "node_type": "formal_parameters",
+    "gain": 0.6527359977552035,
+    "original_file": "program_20251007032031_9CAE0B4E-545C-40BF-B82F-3686D337ECE5.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR>[<<VAR>>] = -<<VAR>>;"
+    ],
+    "after": [
+      "try { <VAR>.<VAR>(); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.6477759024429287,
+    "original_file": "program_20251007031648_43BB3F50-016C-4B25-BB59-719410F0794C.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR> < <<VAR>>;"
+    ],
+    "after": [
+      "(<VAR>());"
+    ],
+    "node_type": "call_expression",
+    "gain": 0.6448823410858879,
+    "original_file": "program_20251007031706_C61541A7-C6C5-4FE2-9399-4E03F436909F.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " return <VAR>;",
+      " }"
+    ],
+    "after": [
+      "return <VAR>(<VAR>, <VAR>);"
+    ],
+    "node_type": "for_statement",
+    "gain": 0.6445392123607123,
+    "original_file": "program_20251007031944_CDB390B8-20E5-4C84-941A-109B0238A7D1.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = {};"
+    ],
+    "after": [
+      "try { (<VAR>.<VAR> = <VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.646021789830143,
+    "original_file": "program_20251007031707_C80FB821-3713-49E3-A5A2-1FD260EE2131.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " <VAR>(true);",
+      " for (let <VAR> = <<VAR>>; <VAR> < <<VAR>>; <VAR>++) {",
+      " <VAR>(false, {});",
+      " }",
+      " let <VAR> = <VAR>(true);",
+      " <VAR>(<VAR>[<<VAR>>] === <<VAR>>);",
+      "}"
+    ],
+    "after": [
+      "try { <VAR>(true); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.6380943486778287,
+    "original_file": "program_20251007031641_BF94902F-6170-478B-9F7C-4C1F7CC88FB5.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "if (!(<VAR> === Error)) {",
+      " const <VAR> = new Error(<<VAR>> + <VAR>);",
+      " throw <VAR>;",
+      "}"
+    ],
+    "after": [
+      "try { if (!(<VAR> === Error)) {",
+      " const <VAR> = new Error((<VAR> = <VAR>.<VAR>()));",
+      " throw <VAR>;",
+      "} } catch (<VAR>) {}"
+    ],
+    "node_type": "if_statement",
+    "gain": 0.6360996521109245,
+    "original_file": "program_20251007031828_476035F1-A57D-46EE-A2F0-408AF57A5708.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "function <VAR>(){}"
+    ],
+    "node_type": "for_statement",
+    "gain": 0.6259432977129815,
+    "original_file": "program_20251007032028_B6B61250-C50D-4747-AA2C-503B26668C28.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "(() => {",
+      " <VAR> = <<VAR>>;",
+      " })();"
+    ],
+    "after": [
+      "let <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.6257904829064517,
+    "original_file": "program_20251007032043_2FC052E3-0422-4F39-BE6E-B5DA091407C4.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR>.prototype.call;"
+    ],
+    "after": [
+      "const <VAR> = new Proxy(<VAR>, {});"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.6264343553719175,
+    "original_file": "program_20251007032131_79F5AC16-B700-4D38-BB0D-9BDBEE19AEF1.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<<VAR>>);"
+    ],
+    "after": [
+      "function <VAR>(<VAR>) {",
+      " }"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.6232170962941616,
+    "original_file": "program_20251007031859_FB106238-1143-41F5-B88F-5E100E60BA5A.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>(<<VAR>>, <<VAR>>, <<VAR>>, <<VAR>>, <<VAR>>, <<VAR>>, <<VAR>>);"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>();"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.6021106469166577,
+    "original_file": "program_20251007032118_8B604D19-E8EF-4AD4-91D7-DACBDD395175.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = [<<VAR>>];"
+    ],
+    "after": [
+      "const <VAR> = { <VAR>: <VAR> };"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5968435259100927,
+    "original_file": "program_20251007031831_8792BE5F-EDC6-4666-82BF-6C2A75D24F62.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "function <VAR>(<VAR>, <VAR>, <VAR>) {",
+      " <<VAR>>;",
+      " var <VAR> = Math.<VAR>;",
+      " const <VAR> = <VAR>.<VAR>;",
+      " const <VAR> = new <VAR>(<VAR>);",
+      " var <VAR> = <VAR>;",
+      " function <VAR>(<VAR>) {",
+      " <VAR>[(((<<VAR>> - <VAR>(<VAR>)) >>> <<VAR>>) % <<VAR>>) & <VAR>] = <<VAR>>;",
+      " }",
+      " return <VAR>;",
+      "}"
+    ],
+    "after": [
+      "try { var <VAR> = Math.<VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.5951841060349596,
+    "original_file": "program_20251007031959_E06CE361-8E65-4560-B803-75902F2DB4B2.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>(<<VAR>>);"
+    ],
+    "after": [
+      "const <VAR> = <VAR>.<VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5947913373998223,
+    "original_file": "program_20251007031859_FB106238-1143-41F5-B88F-5E100E60BA5A.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " function <VAR>() {",
+      " }",
+      " delete <VAR>.length;",
+      " const <VAR> = <VAR>.prototype;",
+      " Object.<VAR>(<VAR>, <<VAR>>, { <VAR>: true });",
+      " <VAR>.length = <<VAR>>;",
+      "}"
+    ],
+    "after": [
+      "function <VAR>() {",
+      " }"
+    ],
+    "node_type": "function_declaration",
+    "gain": 0.5919632008072798,
+    "original_file": "program_20251007031913_AB89DD81-6F67-4974-AE0D-AEA11BE04D59.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "try { <VAR> = <VAR>.<VAR>(<<VAR>>); } catch (<VAR>) {}"
+    ],
+    "after": [
+      "try { try { <VAR> = <VAR>?.<VAR>; } catch (<VAR>) {} } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5934885356320521,
+    "original_file": "program_20251007032325_118DF375-0915-4D10-8277-A6B7ADCB9A34.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "class <VAR> {",
+      " #<VAR> = <VAR>;",
+      " #<VAR>(<VAR>) {",
+      " }",
+      "}"
+    ],
+    "after": [
+      "<VAR>.<VAR>(<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5889876214026103,
+    "original_file": "program_20251007031914_6E181498-E9D2-4CFC-981C-E8B9C5C969B5.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR>;"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5881293400913574,
+    "original_file": "program_20251007031653_2DAE1174-F28D-4634-95DF-C32311669BC8.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " <VAR>(this.<VAR>.<VAR>().<VAR>());",
+      "}"
+    ],
+    "after": [
+      "<VAR>((<VAR>.<VAR>).<VAR>());"
+    ],
+    "node_type": "call_expression",
+    "gain": 0.5837588628849442,
+    "original_file": "program_20251007032019_27A315A8-D65A-4738-A5AC-59297979FA5C.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "if (!new.<VAR>) { throw <<VAR>>; }"
+    ],
+    "after": [
+      "let <VAR> = [];"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.581522371469819,
+    "original_file": "program_20251007031955_F99FA46D-14C8-452E-9D2C-133E48D932FB.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = {};"
+    ],
+    "after": [
+      "function <VAR>(){}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5768528461852597,
+    "original_file": "program_20251007032129_CF74DAD7-8249-4523-BF2C-F9F9149CC053.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " var <VAR> = [];",
+      " var <VAR> = [,true,false,null,,,<VAR>];",
+      " var <VAR> = <<VAR>>;",
+      " for (const <VAR> of <VAR>.<VAR>()) {",
+      " <VAR>[<VAR>++] = <VAR>;",
+      " }",
+      " for (let <VAR> = <<VAR>>; <VAR> < <VAR>.length; <VAR>++) {",
+      " }",
+      " try { <VAR>(); } catch (<VAR>) {}",
+      "}"
+    ],
+    "after": [
+      "var <VAR> = [{}];"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.5748253632380801,
+    "original_file": "program_20251007031640_BC8516EA-D5F7-4972-B1A5-4D17B21B2BF8.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "(<<VAR>>).<VAR>();"
+    ],
+    "after": [
+      "function <VAR>(){}"
+    ],
+    "node_type": "arguments",
+    "gain": 0.5745655876263288,
+    "original_file": "program_20251007031942_BD033368-875A-481E-81A2-B22FB340735E.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = {",
+      " <VAR>() {",
+      " return <<VAR>>;",
+      " },",
+      "};"
+    ],
+    "after": [
+      "<VAR> = <VAR>.<VAR>(<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5718415834570172,
+    "original_file": "program_20251007032057_7A72BE8A-FA4E-4051-8BC1-07D07E260EF9.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR> = new <VAR>(<VAR>);"
+    ],
+    "after": [
+      "try { <VAR> = (<VAR>.<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.5694885763760561,
+    "original_file": "program_20251007032000_D19DDF30-37BD-4F33-B903-0398EA26D504.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR>(<<VAR>>, <<VAR>>, <<VAR>>, <<VAR>>);"
+    ],
+    "after": [
+      "try { const <VAR> = <VAR>?.<VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.5663436227894143,
+    "original_file": "program_20251007031959_F3C758AB-15B4-43E6-A6D3-B6C9507B0470.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = [];"
+    ],
+    "after": [
+      "try { (new <VAR>(<VAR>)).<VAR>.apply(<VAR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5661699762923876,
+    "original_file": "program_20251007031931_94C3FAC0-0164-437C-A98A-4F81BB9F3F92.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = (<VAR>) => {",
+      " <VAR>();",
+      "};"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>.<VAR>(); } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.5661699762923876,
+    "original_file": "program_20251007032023_0D8B3E20-2C1E-4546-8EEF-20E57C326624.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>(<<VAR>>, <<VAR>>, <<VAR>>, <<VAR>>, <<VAR>>, <<VAR>>, <<VAR>>);"
+    ],
+    "after": [
+      "try { var <VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.5661699762923876,
+    "original_file": "program_20251007032118_8B604D19-E8EF-4AD4-91D7-DACBDD395175.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "const <VAR> = {",
+      " <VAR>(<VAR>, <VAR>) {",
+      " <VAR>();",
+      " },",
+      "};"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5661699762923876,
+    "original_file": "program_20251007031855_323F9DD9-F2A3-4A0E-848D-FDA439494999.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = (<VAR>) => {",
+      " <VAR>();",
+      "};"
+    ],
+    "after": [
+      "try { var <VAR> = <VAR>.<VAR>().<VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.5661699762923876,
+    "original_file": "program_20251007032023_0D8B3E20-2C1E-4546-8EEF-20E57C326624.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "console.<VAR>();"
+    ],
+    "after": [
+      "try { console.<VAR>();",
+      "var <VAR> = <VAR>;",
+      " } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5661699762923876,
+    "original_file": "program_20251007032121_730527C7-5858-435D-B5D6-CD491FF751F7.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "(<<VAR>>).<VAR>();"
+    ],
+    "after": [
+      "try { (new <VAR>())(); } catch (<VAR>) {}"
+    ],
+    "node_type": "arguments",
+    "gain": 0.5661699762923876,
+    "original_file": "program_20251007031942_BD033368-875A-481E-81A2-B22FB340735E.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "class <VAR> extends Object {",
+      " constructor() {",
+      " const <VAR> = () => {",
+      " return this;",
+      " };",
+      " var <VAR> = <VAR>;",
+      " super();",
+      " <VAR>();",
+      " }",
+      "}"
+    ],
+    "after": [
+      "function <VAR>(){}"
+    ],
+    "node_type": "formal_parameters",
+    "gain": 0.5659408211682725,
+    "original_file": "program_20251007032112_A6495A4C-122A-4C97-9948-EA6F3C150E88.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = <VAR> + <<VAR>>;"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5652248496219878,
+    "original_file": "program_20251007031907_21BD92CA-65EF-4D67-8D39-607DDAF0AE7E.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "if (<VAR>) {",
+      " <VAR> = -<<VAR>>;",
+      " }"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5622759131677395,
+    "original_file": "program_20251007031840_814AF418-B1A6-4BF6-AC64-0DEDDAF8E4FC.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR>[<<VAR>>] = <VAR>;"
+    ],
+    "after": [
+      "(<VAR>.<VAR> = <VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5596745086850176,
+    "original_file": "program_20251007031833_B6998A08-EE5D-40E6-8B90-5EEF85CD40E7.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " <VAR>.<VAR> = <<VAR>>;",
+      " parseInt();",
+      "}"
+    ],
+    "after": [
+      "try { parseInt(); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5596165487391495,
+    "original_file": "program_20251007031706_C61541A7-C6C5-4FE2-9399-4E03F436909F.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "try { var <VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.5544173257648702,
+    "original_file": "program_20251007031835_724C6D67-C259-4958-8D41-DEC98F484B11.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = [<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>];"
+    ],
+    "after": [
+      "try { <VAR> = new <VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5499067899044771,
+    "original_file": "program_20251007031655_EC7C648F-8DA2-45D7-BF29-8A421A2BE726.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "Array.prototype.<VAR>.call(<VAR>);"
+    ],
+    "after": [
+      "try { <VAR> = new <VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "arguments",
+    "gain": 0.5499067899044771,
+    "original_file": "program_20251007031655_EC7C648F-8DA2-45D7-BF29-8A421A2BE726.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = /5F\\<VAR>{<<VAR>>}\\<VAR>{<<VAR>>}<VAR>.<VAR>+/<VAR>;"
+    ],
+    "after": [
+      "<VAR> = new <VAR>(<VAR>);"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5509997011842748,
+    "original_file": "program_20251007032055_9574D406-89C2-4664-BD0F-4051BA26A637.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "new <VAR>(<VAR>, { <VAR>: <<VAR>> });"
+    ],
+    "after": [
+      "try { <VAR>(); } catch (<VAR>) {}"
+    ],
+    "node_type": "call_expression",
+    "gain": 0.5474104157858432,
+    "original_file": "program_20251007032246_1D945859-8831-4F41-8B4E-B7EE1916FADC.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " return false;",
+      "}"
+    ],
+    "after": [
+      "try { var <VAR> = { <VAR>: <VAR> }; } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.5396636517125654,
+    "original_file": "program_20251007031634_D7DC4A5B-4296-4896-A05D-48532A2FD343.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = {",
+      " <VAR> <VAR>() {",
+      " delete this.<VAR>;",
+      " <VAR>.<VAR>();",
+      " },",
+      "};"
+    ],
+    "after": [
+      "delete (<VAR>.prototype = {});"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.53055773848729,
+    "original_file": "program_20251007031957_6DC302F2-9B1B-44F9-9807-155AFBF08C71.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = {",
+      " <VAR> <VAR>() {",
+      " delete this.<VAR>;",
+      " <VAR>.<VAR>();",
+      " },",
+      "};"
+    ],
+    "after": [
+      "try { <VAR>(<VAR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5280623272995774,
+    "original_file": "program_20251007031957_6DC302F2-9B1B-44F9-9807-155AFBF08C71.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "let <VAR> = <VAR>();"
+    ],
+    "after": [
+      "function <VAR>(){}"
+    ],
+    "node_type": "call_expression",
+    "gain": 0.5280623272995774,
+    "original_file": "program_20251007031957_6DC302F2-9B1B-44F9-9807-155AFBF08C71.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = (<VAR>) => {",
+      " const <VAR> = new <VAR>(<<VAR>>);",
+      " let <VAR> = <VAR>;",
+      " const <VAR> = new <VAR>(<VAR>);",
+      " let <VAR> = <VAR>;",
+      " const <VAR> = new <VAR>(<VAR>);",
+      " let <VAR> = <VAR>;",
+      " <VAR>[<<VAR>>] = <VAR>;",
+      " let <VAR> = (<VAR>[<<VAR>>] * <<VAR>>) + <VAR>[<<VAR>>];",
+      " return <VAR>;",
+      "};"
+    ],
+    "after": [
+      "try { let <VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.5265083997134041,
+    "original_file": "program_20251007031711_C8457C5A-98BE-4F15-9694-C7BAC5D85864.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "function <VAR>() {",
+      " var <VAR> = <<VAR>>;",
+      " new <VAR>(<VAR>, { <VAR>: <<VAR>> });",
+      " try { <VAR>(); } catch (<VAR>) {}",
+      " }"
+    ],
+    "after": [
+      "try { (<VAR>.<VAR>(<VAR>.<VAR>())); } catch (<VAR>) {}"
+    ],
+    "node_type": "call_expression",
+    "gain": 0.525649407800072,
+    "original_file": "program_20251007032246_1D945859-8831-4F41-8B4E-B7EE1916FADC.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "(<<VAR>>).<VAR>();"
+    ],
+    "after": [
+      "<VAR> = new <VAR>();"
+    ],
+    "node_type": "arguments",
+    "gain": 0.5254147750901005,
+    "original_file": "program_20251007031942_BD033368-875A-481E-81A2-B22FB340735E.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = {",
+      " <VAR> <VAR>() {",
+      " },",
+      " <<VAR>>: <<VAR>>,",
+      " <VAR>: <<VAR>>,",
+      "};"
+    ],
+    "after": [
+      "try { let <VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.5254147750901005,
+    "original_file": "program_20251007031840_229A0A4C-D391-45A3-8D82-C2A6E192CB7C.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "while (<VAR>.<VAR> !== <<VAR>>) {",
+      " <VAR> = <VAR>.<VAR>;",
+      " }"
+    ],
+    "after": [
+      "var <VAR> = this.<VAR>.<VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5223675039098349,
+    "original_file": "program_20251007032017_91A416B2-B3CA-4AF8-98B7-FE4D248C4ADE.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "return <<VAR>>;"
+    ],
+    "after": [
+      "<VAR>++;"
+    ],
+    "node_type": "call_expression",
+    "gain": 0.5217709348162863,
+    "original_file": "program_20251007032335_DB4D0EDA-A99C-4C83-8F44-F1CED822AB32.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "class <VAR> {",
+      " <<VAR>>;",
+      " [<VAR>];",
+      "}"
+    ],
+    "after": [
+      "<VAR>.prototype = <VAR>;"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5217240510064073,
+    "original_file": "program_20251007031811_74A86C8E-7101-4C44-85DB-1E1CEE3E36CD.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>.<VAR>().<VAR>(<VAR>);"
+    ],
+    "after": [
+      "var <VAR> = <VAR>;"
+    ],
+    "node_type": "arguments",
+    "gain": 0.5210335428981412,
+    "original_file": "program_20251007032023_0D8B3E20-2C1E-4546-8EEF-20E57C326624.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = Array?.prototype;"
+    ],
+    "after": [
+      "const <VAR> = { <VAR>: <VAR> };"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.5196545246660833,
+    "original_file": "program_20251007031856_998FBB1B-8E01-4671-82A6-EE17CDD7685D.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = Symbol.<VAR>;"
+    ],
+    "after": [
+      "try { <VAR>.constructor = { [<VAR>]: <VAR> }; } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5187297789614532,
+    "original_file": "program_20251007032008_2D21C2D2-1033-4628-BC77-5463A550AD4E.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new Promise(<VAR>);"
+    ],
+    "after": [
+      "try { var <VAR> = <VAR>; } catch (<VAR>) {}"
+    ],
+    "node_type": "variable_declaration",
+    "gain": 0.5181363021088896,
+    "original_file": "program_20251007032012_4CA0BD3F-6AFC-48DD-8B42-8C2CA332327D.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>([<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>]);"
+    ],
+    "after": [
+      "try { <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "call_expression",
+    "gain": 0.5170722960628911,
+    "original_file": "program_20251007032127_D58C29A9-2AE0-4D36-B466-7899665B63AC.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = <VAR>[<<VAR>>];"
+    ],
+    "after": [
+      "try { <VAR> = new <VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5167574509101974,
+    "original_file": "program_20251007031855_E8B45880-3155-446B-9382-30699575AAFE.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "[<<VAR>>,<<VAR>>];"
+    ],
+    "after": [
+      "function <VAR>(){}"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.5142086835748289,
+    "original_file": "program_20251007032143_3D962D05-BFFF-41B1-B706-3627584DE54F.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>(<<VAR>>);"
+    ],
+    "after": [
+      "try { <VAR> = new <VAR>(); } catch (<VAR>) {}"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.5122971132405243,
+    "original_file": "program_20251007031711_C8457C5A-98BE-4F15-9694-C7BAC5D85864.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = {",
+      " <VAR> <VAR>() {",
+      " for (const <VAR> in this) {",
+      " }",
+      " return this;",
+      " },",
+      " <<VAR>>: <<VAR>>,",
+      " [<<VAR>>]: <<VAR>>,",
+      " <VAR>: <VAR>,",
+      " };"
+    ],
+    "after": [
+      "/\\<<VAR>>/<VAR>;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.5101316215360604,
+    "original_file": "program_20251007032121_F55368D2-8B5E-42C9-8893-51578A710362.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "<VAR>.<VAR> = <<VAR>>;"
+    ],
+    "after": [
+      "try { parseInt(); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.5092545261031752,
+    "original_file": "program_20251007031706_C61541A7-C6C5-4FE2-9399-4E03F436909F.js"
+  }
+]

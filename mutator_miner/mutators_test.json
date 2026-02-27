@@ -1,0 +1,225 @@
+[
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = new <VAR>(<<VAR>>, <VAR>);"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.8044107631725258,
+    "original_file": "program_20251007031733_416B8E91-3C67-4668-A236-5A9884AA21B1.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "var <VAR> = { <VAR>: <<VAR>>, <VAR>: <<VAR>>, <VAR>: <<VAR>> };"
+    ],
+    "after": [
+      "try {",
+      " <VAR>.<VAR>(this);",
+      " } catch(<VAR>) {",
+      " }"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.8044107631725258,
+    "original_file": "program_20251007031733_416B8E91-3C67-4668-A236-5A9884AA21B1.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<<VAR>> + (<<VAR>>).<VAR>(<<VAR>>));"
+    ],
+    "after": [
+      "<VAR> ?? <VAR>;"
+    ],
+    "node_type": "binary_expression",
+    "gain": 0.7769634939330825,
+    "original_file": "program_20251007031709_C42B2508-69A0-4A0A-ABCE-049602915720.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<<VAR>> + (<<VAR>>).<VAR>(<<VAR>>));"
+    ],
+    "after": [
+      "const <VAR> = <VAR>.prototype;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.7769634939330825,
+    "original_file": "program_20251007031709_C42B2508-69A0-4A0A-ABCE-049602915720.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<<VAR>> + (<<VAR>>).<VAR>(<<VAR>>));"
+    ],
+    "after": [
+      "try { <VAR> = (<VAR> = <VAR>.<VAR>(<VAR>)); } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.7769634939330825,
+    "original_file": "program_20251007031709_C42B2508-69A0-4A0A-ABCE-049602915720.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<<VAR>> + (<<VAR>>).<VAR>(<<VAR>>));"
+    ],
+    "after": [
+      "try { <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.7769634939330825,
+    "original_file": "program_20251007031709_C42B2508-69A0-4A0A-ABCE-049602915720.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<<VAR>>);"
+    ],
+    "after": [
+      "try { <VAR>.<VAR>(); } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.7756411954391154,
+    "original_file": "program_20251007031822_D4E21A0C-4F7C-42FD-A41B-4F6719CC7313.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "<VAR>(<<VAR>>);"
+    ],
+    "after": [
+      "try { try { <VAR> = (<VAR>.<VAR>(<VAR>));",
+      "try { <VAR>.<VAR>(<VAR>); } catch (<VAR>) {}",
+      " } catch (<VAR>) {} } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.7756411954391154,
+    "original_file": "program_20251007031822_D4E21A0C-4F7C-42FD-A41B-4F6719CC7313.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "Array.prototype.<VAR>.call(<VAR>);"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>.<VAR>(); } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.7744590013465554,
+    "original_file": "program_20251007031655_EC7C648F-8DA2-45D7-BF29-8A421A2BE726.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = [<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>];"
+    ],
+    "after": [
+      "try { try { <VAR> = <VAR>.<VAR>(<VAR>); } catch (<VAR>) {} } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.7744590013465554,
+    "original_file": "program_20251007031655_EC7C648F-8DA2-45D7-BF29-8A421A2BE726.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = [<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>,<<VAR>>];"
+    ],
+    "after": [
+      "(<VAR>.<VAR>).call(<VAR>);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.7744590013465554,
+    "original_file": "program_20251007031655_EC7C648F-8DA2-45D7-BF29-8A421A2BE726.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "(<<VAR>>).<VAR>(<<VAR>> >>> <<VAR>>, <<VAR>>);"
+    ],
+    "after": [
+      "try { <VAR> = new <VAR>(<VAR>, <VAR>); } catch (<VAR>) {}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.7744590013465554,
+    "original_file": "program_20251007031833_4FAD2763-A0A1-4B25-8290-A49F2DA4E392.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "this + !this;"
+    ],
+    "after": [
+      "const <VAR> = <VAR>.<VAR>;"
+    ],
+    "node_type": "lexical_declaration",
+    "gain": 0.7744590013465554,
+    "original_file": "program_20251007031725_386157CA-8E74-45DA-B8D4-CB57D563D95C.js"
+  },
+  {
+    "kind": "insert",
+    "scope": "statement",
+    "before": [
+      "this + !this;"
+    ],
+    "after": [
+      "(Array.prototype.<VAR>.call);"
+    ],
+    "node_type": "parenthesized_expression",
+    "gain": 0.7744590013465554,
+    "original_file": "program_20251007031725_386157CA-8E74-45DA-B8D4-CB57D563D95C.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "const <VAR> = () => {",
+      " <VAR>.<VAR>();",
+      " return <VAR>[Symbol.<VAR>]();",
+      "};"
+    ],
+    "after": [
+      "try { <VAR> = <VAR>.<VAR>(); } catch (<VAR>) {}"
+    ],
+    "node_type": "expression_statement",
+    "gain": 0.7744590013465554,
+    "original_file": "program_20251007032411_09F11D02-F907-4B7B-85B3-0738AE58234D.js"
+  },
+  {
+    "kind": "replace",
+    "scope": "statement",
+    "before": [
+      "try {",
+      " <VAR>.<VAR>.<VAR>(true);",
+      "} catch(<VAR>) {",
+      "}"
+    ],
+    "after": [
+      "try {",
+      " try { (console.<VAR>).<VAR>(true); } catch (<VAR>) {}",
+      "} catch(<VAR>) {",
+      "}"
+    ],
+    "node_type": "try_statement",
+    "gain": 0.7737393418247742,
+    "original_file": "program_20251007032307_35E07222-BFE6-4967-9B95-518432A86974.js"
+  }
+
+]
