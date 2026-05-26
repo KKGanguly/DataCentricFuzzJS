@@ -124,9 +124,9 @@ To run the ablation study that compares the performance of the static-only, dyna
 python3.13 prediction_compare_time_aware.py > compare.txt
 ```
 
-### RQ5 (Feature-Guided Fuzzing)
+### RQ5, RQ6 & RQ7 (Feature-Guided Fuzzing)
 
-Running the full feature-guided fuzzer is a multi-step process. It requires populating the database, launching the prediction services, and then starting the fuzzer.
+Running the full feature-guided fuzzer is a multi-step process. It requires populating the database, launching the prediction services, and then starting the fuzzer. The fuzzer outputs stats such as execution time, crashes etc. which are used to answer these research questions.
 
 **1. Populate the Database**
 
