@@ -19,6 +19,15 @@ To do this, we use:
 
 Our results show this model is highly precise (over 85% precision) with a very low false alarm rate (under 1%). We also found that only the **top 25%** of features are needed for this performance, making the fuzzer fast and efficient.
 
+## 📊 Datasets
+
+Our evaluation is based on a highly imbalanced dataset mimicking real-world fuzzing scenarios:
+* **Positive Samples:** 160 historically verified, vulnerability-triggering Proofs-of-Concept (PoCs) retrieved from the Chromium bug repository.
+* **Negative Samples:** 8,498 benign JS code seeds extracted from V8's `mjsunit` regression suite.
+* **Features:** A total of 164 features (115 static source-code regex features and 49 dynamic runtime features extracted using just 5 V8 trace flags).
+
+The folds directory contains the datasets divided by time folds. 
+
 ## 🛠️ Installation and Setup
 
 ### 1. Install Dependencies
